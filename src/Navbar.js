@@ -6,8 +6,10 @@ export default function Navbar() {
      return (
        <BrowserRouter>
          <nav className="nav">
-           <div className="nav-right">MentalLand</div>
            <div className="nav-left">
+             MentalLand
+           </div>
+           <div className="nav-right">
              <ul className="ul">
                <li className="list">
                  <Link to="/pages/Home" className="link">

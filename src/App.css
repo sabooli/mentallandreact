@@ -5,7 +5,7 @@ body {
   margin-left: 100px;
   z-index: 0;
   width: 100%;
-  
+  background: transparent;
 }
 .header {
   display: flex;
@@ -13,7 +13,7 @@ body {
   position: absolute;
   width: 100%;
   height: 126px;
-  padding-left: 100px;
+  padding-left: 100px !important;
   padding-right: 100px;
 }
 .nav {
@@ -25,27 +25,24 @@ body {
   height: 126px;
   margin-left: 0px;
   margin-top: 113px;
-  padding-left: 100px;
+  padding-left: 100px !important;
   padding-right: 97px;
-  margin-left: -100px;
-  z-index: 1;
 }
-.nav-right {
-  font-family: "Gilroy-Black";
-  font-size: 32px;
-  line-height: 37.5px;
-  color: #02979d;
-  margin-top: 43px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
-.nav-left {
-  width: 66px;
+.nav-right { 
   height: 40px;
   font-family: "Gilroy-Regular";
   font-size: 24px;
   line-height: 40px;
+}
+.nav-left {
+ font-family: "Gilroy-Black";
+  font-size: 32px;
+  line-height: 37.5px;
+  color: #02979d;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin-top: 43px;
 }
 .ul {
   margin-top: 43px;
@@ -68,7 +65,6 @@ body {
 }
 .buttons {
   display: flex;
-  align-items: center;
   justify-content: center;
   margin-top: 31px;
 }
@@ -109,4 +105,179 @@ flex: none;
 order: 0;
 flex-grow: 0;
 margin-right: 7.5px;
+}
+
+.search {
+position: absolute;
+display: flex;
+justify-content: center;
+width: 315px;
+height: 50px;
+left: 562px;
+top: 32px;
+background: #FAFEFE;
+border: 1px solid #BEBEBE;
+border-radius: 30px;
+}
+::placeholder {
+background-image: url(./icons/search-normal.svg);
+position: absolute;
+width: 79px;
+height: 21px;
+left: 616px;
+top: 45px;
+font-family: 'Gilroy-Medium';
+font-size: 20px;
+line-height: 23px;
+color: #BEBEBE;
+}
+.calls {
+  margin-top: 31px;
+  display: flex;
+  justify-content: center;
+}
+.call {
+justify-content: center;
+margin: 5px;
+gap: 30px;
+width: 50px;
+height: 50px;
+background: #EDA12F;
+border-radius: 10px;
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.language {
+  margin-top: 31px;
+ background: transparent;
+}
+.Country {
+position: absolute;
+left: 31.25%;
+right: 67.01%;
+top: 1.13%;
+bottom: 97.67%;
+font-family: 'Gilroy-Regular';
+font-size: 20px;
+line-height: 40px;
+text-align: right;
+text-transform: capitalize;
+color: #000B0C;
+}
+.flag {
+left: 28.82%;
+right: 69.24%;
+top: 1.4%;
+bottom: 98.02%;
+}
+.CompInfo {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 597px;
+  margin-left: 0px;
+  margin-top: 162.5px;
+  padding-top: 33px;
+  padding-left: 100px !important;
+  padding-right: 100px;
+  background: linear-gradient(100.35deg, #02979D 7.72%, #00888D 92.28%);
+  padding-bottom: 32px;
+}
+.fh1 {
+position: absolute;
+width: 177px;
+height: 40px;
+top: 33px;
+font-family: 'Gilroy-Black';
+font-size: 32px;
+line-height: 38px;
+color: #FAFEFE;
+}
+.ftext {
+position: absolute;
+width: 315px;
+height: 328px;
+top: 85px;
+font-family: 'Gilroy-Regular';
+font-size: 20px;
+text-align: justify;
+line-height: 40px;
+text-transform: capitalize;
+color: #FFFFFF;
+}
+.fcalls {
+position: absolute;
+bottom: 0;
+display: flex;
+padding: 10px;
+gap: 5px;
+width: 50px;
+height: 50px;
+background: #FAFEFE !important;
+border-radius: 10px;
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.fh2 {
+position: absolute;
+width: 270px;
+height: 30px;
+top: 38px;
+font-family: 'Gilroy-Bold';
+font-size: 24px;
+line-height: 28px;
+text-transform: uppercase;
+color: #FAFEFE;
+}
+.formn, .forme, .formm {
+position: absolute;
+width: 359px;
+left: 500px;
+background: #FAFEFE;
+border-radius: 15px;
+border: 1px solid #FAFEFE;
+}
+.formn {
+top: 115px;
+height: 55px;
+}
+.forme {
+  top: 209px;
+  height: 55px;
+}
+.formm {
+  top: 308px;
+  height: 175px;
+}
+.fname,.femail, .fmessage {
+position: absolute;
+bottom: 0;
+font-family: 'Gilroy-Regular';
+font-size: 20px;
+text-align: justify;
+line-height: 40px;
+color: #FFFFFF;
+}
+.fname {
+top: 81px;
+}
+.femail {
+  top: 175px;
+}
+.fmessage {
+  top:224px;
+}
+.fh22 {
+display: inline-block;
+position: absolute;
+width: 170px;
+height: 30px;
+top: 38px;
+font-family: 'Gilroy-Bold';
+font-size: 24px;
+line-height: 28px;
+text-transform: uppercase;
+color: #FAFEFE;
 }
