@@ -14,14 +14,14 @@ export default function Flag() {
 
 return (
   <Dropdown className="language">
-    <Dropdown.Toggle variant="light bg-0 boder-0" >
+    <Dropdown.Toggle variant="0 bg-0 boder-0" className="toggle">
       {language === "English" ? (
-        <span className="Country">
-          <img src={flag} className="flag" alt="English flag" /> EN
+        <span className="Country" >
+          <img src={flag} className="flag" alt="English flag" /> EN{" "}
         </span>
       ) : (
         <span className="Country">
-          <img src={flag} alt="Persian flag" /> PR
+          <img src={flag} alt="Persian flag" /> PR{" "}
         </span>
       )}
     </Dropdown.Toggle>
@@ -30,7 +30,7 @@ return (
         <img src={flag} alt="English flag" /> English
       </Dropdown.Item>
       <Dropdown.Item onClick={() => handleLanguageChange("Spanish")}>
-        <img src={flag} alt="Persian flag" /> Persian
+        <img src={flag} alt="Persian flag" /> فارسی
       </Dropdown.Item>
     </Dropdown.Menu>
   </Dropdown>

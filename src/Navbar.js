@@ -4,7 +4,7 @@ import "./App.css";
 
 export default function Navbar() {
      return (
-       <BrowserRouter>
+      
          <nav className="nav">
            <div className="nav-left">
              MentalLand
@@ -34,7 +34,7 @@ export default function Navbar() {
              </ul>
            </div>
          </nav>
-       </BrowserRouter>
+     
      );
 }
 
