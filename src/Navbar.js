@@ -1,10 +1,9 @@
 import React from "react";
-import { BrowserRouter, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./App.css";
 
 export default function Navbar() {
      return (
-      
          <nav className="nav">
            <div className="nav-left">
              MentalLand

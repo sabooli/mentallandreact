@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
 import phone from "./icons/Component 6.svg";

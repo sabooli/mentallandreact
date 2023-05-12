@@ -6,6 +6,7 @@ import Navbar from "../Navbar";
 import Footer from "../footer";
 import "./index.css";
 import Filter from "./filter";
+import Doctors from "./Doctors";
 
 
 export default function Services() {
@@ -27,11 +28,36 @@ export default function Services() {
         </div>
       </div>
       <div className="row">
-        <div className="col-lg-4">
+        <div className="col-lg-4 d-none d-lg-block">
           <Filter />
         </div>
-        <div className="col-lg-8"></div>
+        <div className="col-lg-8">
+          <div className="row threeitems ms-5">
+            <div className="col-lg-3">
+              <button className="top">
+                <div className="Trated">Top rated</div>
+              </button>
+            </div>
+            <div className="col-lg-6">
+              <div className="flexContainer">
+                <input
+                  type="search"
+                  placeholder="Write the name..."
+                  className="phname"
+                />
+                <button type="submit" className="find">
+                  <div className="fitext">Search</div>
+                </button>
+              </div>
+            </div>
+            <div className="col-lg-3">
+              <div className="number">740 Psychologists</div>
+            </div>
+          </div>
+          <Doctors />
+        </div>
       </div>
+
       <Footer />
     </div>
   );

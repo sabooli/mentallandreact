@@ -31,10 +31,6 @@ const Filter = () => {
     }
   };
 
-  const filteredOptions = options.filter((option) =>
-    checkedValues.includes(option.value)
-  );
-
    const groups = options.reduce((accumulator, option) => {
      if (accumulator[option.category]) {
        accumulator[option.category].push(option);
