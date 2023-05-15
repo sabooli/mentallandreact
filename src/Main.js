@@ -4,6 +4,7 @@ import About from "./pages/aboutus";
 import Contact from "./pages/contactus";
 import Services from "./pages/depressionadults";
 import Home from "./pages/Home";
+import Counsel from "./pages/consultantadults";
 
 export default function Main() {
   return (
@@ -12,8 +13,9 @@ export default function Main() {
         <Route exact path="/" element={<Home />} />
         <Route path="/pages" element={<Outlet />}>
           <Route path="depressionadults" element={<Services />} />
-          <Route path="App" element={<About />} />
+          <Route path="aboutus" element={<About />} />
           <Route path="contactus" element={<Contact />} />
+          <Route path="consultantadults" element={<Counsel />} />
         </Route>
       </Routes>
     </BrowserRouter>

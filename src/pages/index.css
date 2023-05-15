@@ -1,21 +1,53 @@
+
+@font-face {
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-Regular.ttf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-Bold.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-Black.ttf);
+}
+@font-face {
+  font-family: "Gilroy-SemiBold";
+  src: url(../fonts/Gilroy-SemiBold\ -\ Copy.ttf);
+}
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: url(../fonts/Gilroy-Medium.ttf);
+}
+body {
+  margin: 0 auto;
+  font-size: 16px;
+  max-width: 1800px;
+  width: 100%;
+}
+.full {
+  overflow: auto;
+}
+.container-fluid {
+  display: flex;
+  flex-wrap: wrap;
+}
 .Dep {
   position: relative;
   width: 243px;
   height: 46px;
-  font-family: "Alice";
+  font-family: "Alice", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 2.5em;
   line-height: 46px;
   text-transform: uppercase;
   color: #000b0c;
   margin-top: 140px;
-  margin-left: 100px;
+  margin-inline-start: 100px;
   margin-bottom: 30px;
-}
-.maincontent {
-  display: flex;
-  flex-wrap: wrap;
 }
 .content {
   position: relative;
@@ -28,30 +60,49 @@
   font-size: 24px;
   line-height: 40px;
   color: #000b0c;
-  margin-left: 100px;
+  margin-inline-start: 100px;
+  margin-inline-end: 100px;
   margin-top: 30px;
-  margin-bottom: 100px;
-  margin-right: 100px;
+}
+.main {
+  position:relative;
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  overflow: hidden;
+  margin-top:100px;
+  margin-inline-end: 100px;
+  width: 100%;
+}
+.psychologist {
+  overflow: hidden;
+}
+.threeitems {
+  position: relative;
+  display: flex;
+  justify-content:space-around;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
 }
 .label {
-  margin-left: 26px;
+  position: relative;
+  margin-inline-start: 26px;
   width: 347px;
   height: 40px;
-  top: 831px;
+  top: 5px;
   font-family: "Gilroy-Regular";
-  font-size: 18px;
+  font-size: 1.125em;
   line-height: 40px;
   display: flex;
   align-items: center;
   text-transform: capitalize;
   color: #000b0c;
-  gap: 7px;
+  gap: 0.5em;
 }
 .title {
   width: 88px;
   height: 40px;
-  margin-left: 26px;
-  top: 786px;
+  margin-inline-start: 26px;
+  top: 19px;
   font-family: "Gilroy-Regular";
   font-size: 20px;
   line-height: 40px;
@@ -64,13 +115,15 @@
   background-clip: text;
 }
 .box {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
   box-sizing: border-box;
   width: 387px;
-  margin-left: 100px;
-  margin-right: 20px;
+  margin-inline-start: 100px;
+  margin-inline-end: 20px;
+  margin-bottom: 1425px;
   padding-bottom: 43px;
-  top: 21.33%;
-  bottom: 60.32%;
   background: #fafefe;
   border: 0.2px solid #02979d;
   box-shadow: 0px 1px 25px rgba(2, 151, 157, 0.1);
@@ -79,7 +132,7 @@
   position: relative;
   width: 65px;
   height: 40px;
-  margin-left: 26px;
+  margin-inline-start: 26px;
   margin-bottom: 26px;
   margin-top: 12px;
   font-family: "Gilroy-SemiBold";
@@ -92,40 +145,32 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-.threeitems {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin-bottom: 1.5rem;
+.top {
+  width: 140px;
+  height: 56px;
+  background: #fafefe;
+  border-radius: 10px;
+  border: 0.5px solid #02979d;
 }
 .Trated {
   width: 88.83px;
   height: 40px;
-  font-family: "Gilroy-Regular";
+  font-family: "Gilroy-Regular",sans-serif;
   font-size: 20px;
   line-height: 40px;
   display: inline-block;
   align-items: center;
   color: #000b0c;
 }
-.top {
-  position: relative;
-  width: 162px;
-  height: 56px;
-  background: #fafefe;
-  border-radius: 10px;
-  border: 0.5px solid #02979d;
-  overflow: hidden;
-}
 .phname {
-  position: relative;
   border-radius: 10px;
   border: 0.5px solid #02979d;
   height: 56px;
-  width: 429px;
-  margin-left: -20px;
-  padding: 0;
-  flex: 1;
+  width: 420px;
+}
+::placeholderr {
+  font-family: "Gilroy-Regular", sans-serif;
+  padding-inline-start: 10px;
 }
 .find {
   width: 129px;
@@ -134,74 +179,80 @@
   color: #fafefe;
   border: 0.5px solid #02979d;
   border-radius: 10px;
-  margin-left: -129px;
-  z-index: 1;
+  margin-inline-start: -129px;
   font-size: 20px;
-  font-family: "Gilroy-bold";
-  padding-left: 32px;
+  font-family: "Gilroy-Bold", sans-serif;
 }
 .fitext {
+  font-family: "Gilroy-bold", sans-serif;
   width: 65px;
   height: 25px;
   line-height: 100%;
   font-size: 20px;
   vertical-align: center;
+  display: flex;
+  text-align: center;
+  padding-inline-start: 16%;
 }
 .number {
-  position: relative;
-  margin-left: -25px;
-  width: 180px;
+  width: 165px;
   height: 40px;
-  font-family: "Gilroy-SemiBold";
+  font-family: "Gilroy-SemiBold", sans-serif;
   font-size: 20px;
   line-height: 40px;
-  overflow: hidden;
-  text-align: right;
+  position: relative;
   color: #02979d;
+  padding-top: 5px;
 }
-.flexContainer {
-  display: flex;
+
+.justnow {
+  font-family: "Gilroy-Bold", sans-serif;
+  width: 156px;
+  height: 25px;
+  font-size: 20px;
+  line-height: 23.44px;
+  position: relative;
 }
 .counsel {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 486px;
   height: 50px;
   margin-top: 1rem;
-  left: 19px;
   border-radius: 35px;
   border: 0.5px solid #02979d;
-  padding: 10px;
-  gap: 5px;
+  padding: 5px 155px;
   background-color: #02979d;
   color: #ffffff;
-  margin-left: -20px;
+  text-decoration: none;
+}
+.counsel:hover {
+  color: #ffffff;
 }
 .drname {
   margin-top: 1.5rem;
-  width: 132px;
   height: 24px;
-  font-family: "Gilroy-Medium";
+  font-family: "Gilroy-Medium", sans-serif;
   font-size: 20px;
   line-height: 100%;
-  text-align: left;
   vertical-align: top;
   color: #000b0c;
 }
 .dreducation {
   margin-top: 0.75rem;
-  width: 137px;
   height: 19px;
-  font-family: "Gilroy-Medium";
+  font-family: "Gilroy-Regular",sans-serif;
   font-size: 16px;
   line-height: 100%;
-  text-align: left;
   vertical-align: top;
   color: #000b0c;
 }
 .star {
   width: 18px;
   height: 18px;
-  margin-right: 5px;
+  margin-inline-end: 5px;
   margin-top: -4px;
 }
 .rate {
@@ -209,7 +260,7 @@
   width: 21px;
   height: 14px;
   padding-top: 20px;
-  font-family: "Gilroy-Medium";
+  font-family: "Gilroy-Regular",sans-serif;
   font-size: 16px;
   line-height: 100%;
   text-align: left;
@@ -219,30 +270,32 @@
   margin-top: 1.5rem;
   width: 160px;
   height: 19px;
-  font-family: "Gilroy-Medium";
+  font-family: "Gilroy-Regular", sans-serif;
   font-size: 16px;
   margin-top: 20px;
   line-height: 100%;
   text-align: left;
-  margin-left: 38px;
+  margin-inline-start: 38px;
   color: #000b0c;
 }
 .bar {
   position: relative;
-  margin-left: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  margin-top: 26px;
   margin-bottom: 20px;
-  width: 800px;
+  max-width: 760px;
   height: 258px;
   border-width: 0.2px;
   box-shadow: 0px 1px 25px rgba(2, 151, 157, 0.1);
 }
 .field {
   position: relative;
-  font-family: "Gilroy-Regular";
-  margin-top: 23px;
+  font-family: "Gilroy-Regular", sans-serif;
+  margin-top: 21px;
   font-size: 14px;
   line-height: 40px;
-  width: 71px;
   vertical-align: center;
   color: #000b0c;
 }
@@ -253,16 +306,16 @@
   color: rgba(2, 151, 157, 0.08);
   background-color: #ecf7f7;
   margin-top: 23px;
-  margin-right: 8px;
+  margin-inline-end: 8px;
 }
 .bgphoconsult,
 .bgtxconsult {
   position: relative;
-  width: 185px;
+  width: 170px;
   height: 42px;
   margin-bottom: 8px;
   margin-top: 20px;
-  margin-left: -60px;
+  margin-inline-start: -28px;
 }
 .bgphoconsult {
   background-color: #ecf7f7;
@@ -276,13 +329,11 @@
   width: 126px;
   height: 15.52px;
   font-size: 14px;
-  text-align: left;
-  margin-left: 14.08px;
+  text-align: start;
+  margin-inline-start: 14.08px;
   color: #000b0c;
-  top: 10px;
+  top: 8px;
 }
-
-
 .bgfield1 {
   width: 87px;
 }
@@ -290,5 +341,32 @@
   width: 64px;
 }
 .bgfield3 {
-  width: 130px;
+  width: 139px;
 }
+@media screen and (max-width: 1200px) {
+  body {
+    background-color: rgb(236, 201, 201);
+  }
+  .visit {
+    display: flex;
+    flex-direction: column;
+  }
+ .phname {
+  margin-top: 10px;
+ }
+  .number {
+    display: none;
+  }
+ 
+}
+@media screen and (max-width: 900px) {
+  body {
+    background-color: rgb(226, 243, 226);
+  }
+}
+@media screen and (max-width: 600px) {
+  body {
+    background-color: rgb(203, 203, 240);
+  }
+}
+

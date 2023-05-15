@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
 
+
 const options = [
   { value: "option1", label: "Depression", category: "Category" },
   { value: "option2", label: "Anxiety", category: "Category" },
@@ -45,7 +46,7 @@ const Filter = () => {
         <div className="filter">Filters</div>
       {Object.entries(groups).map(([category, options]) => (
         <div key={category}>
-          <h2 className="title">{category}:</h2>
+          <h2 className="title">{category}</h2>
           {options.map((option) => (
             <label key={option.value} className="label">
               <input

@@ -30,11 +30,7 @@ export default function Header() {
         <Flag />
       </div>
       <div className="center">
-        <input
-          type="search"
-          placeholder="Search"
-          className="search"
-        />
+        <input type="search" placeholder="Search" className="search" />
       </div>
       <div className="calls">
         <img src={phone} className="call" alt="phone key" />
