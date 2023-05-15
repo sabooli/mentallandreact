@@ -48,7 +48,7 @@ export default function Footer() {
         <div className="column web">
           <div className="inner-column">
             <h2 className="fh22">Quick Access</h2>
-            <Link to="/pages/Home" class="fqaccess fhome">
+            <Link to="/pages/Home" className="fqaccess fhome">
               Home
             </Link>
             <br />
@@ -68,9 +68,9 @@ export default function Footer() {
               Articles
             </Link>
           </div>
-          <div class="inner-column">
-            <h2 class="fh22">Helpful Links</h2>
-            <Link to="/pages/aboutus" class="fqaccess fhome">
+          <div className="inner-column">
+            <h2 className="fh22">Helpful Links</h2>
+            <Link to="/pages/aboutus" className="fqaccess fhome">
               Link 1
             </Link>
             <br />

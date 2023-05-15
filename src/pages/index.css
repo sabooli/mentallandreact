@@ -24,15 +24,15 @@
 body {
   margin: 0 auto;
   font-size: 16px;
-  max-width: 1800px;
-  width: 100%;
+   width: 100%;
 }
 .full {
   overflow: auto;
 }
 .container-fluid {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
+  max-width: 1800px;
 }
 .Dep {
   position: relative;
@@ -367,6 +367,7 @@ body {
 @media screen and (max-width: 600px) {
   body {
     background-color: rgb(203, 203, 240);
+
   }
 }
 

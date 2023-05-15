@@ -21,9 +21,7 @@
   src: url(./fonts/Gilroy-SemiBold.ttf);
 }
 body {
-  font-family: "Gilroy", sans-serif;
   background: transparent;
-  box-sizing: border-box;
  
 }
 
@@ -33,18 +31,17 @@ body {
   justify-content: space-between;
   padding-top: 1rem;
   margin-bottom: 1rem;
-  position: relative;
   width: 100%;
   height: 126px;
   padding-inline-start: 84px;
   padding-inline-end: 84px;
   max-width: 1800px;
+  overflow: hidden;
 }
 .nav {
   display: flex;
   justify-content: space-between;
   background-color: #ecf7f7;
-  position: relative;
   width: 100%;
   height: 126px;
   padding-inline-start: 100px;
@@ -133,13 +130,12 @@ body {
 }
 
 .search {
-  position: relative;
   display: flex;
   justify-content: center;
   padding-inline-start: 20px;
   max-width: 315px;
   height: 50px;
-  top: 32px;
+  margin-top: 31px;
   background: #fafefe;
   border: 1px solid #bebebe;
   border-radius: 30px;
@@ -205,11 +201,12 @@ body {
 }
 body {
   font-size: 16px;
+  margin: 0 auto;
+  width: 100%; 
+  max-width: 1800px;
 }
 
-.CompInfo {
-  width: 100%;
-}
+
 .main-container {
   background: linear-gradient(100.35deg, #02979d 7.72%, #00888d 92.28%);
   display: grid;
@@ -219,8 +216,6 @@ body {
   height: 597px;
   gap: 52px;
   padding-top: 2rem;
-  max-width: 1800px;
-  min-width: 100%;
 }
 .column {
   width: 100%;
@@ -369,6 +364,7 @@ font-family: "Gilroy-Regular", sans-serif;
     display: grid;
     grid-template-columns: 4fr 4fr;
     grid-template-rows: 1fr;
+    overflow: hidden;
   }
   .web {
     display: none;

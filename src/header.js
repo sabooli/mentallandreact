@@ -13,32 +13,33 @@ import "./App.css";
 
 export default function Header() {
   return (
-    <nav className="header">
-      <div className="buttons">
-        <button className="btn-head">
-          <div className="login">
-            <img src={login} className="svg" alt="login key" />
-            Login
-          </div>
-        </button>
-        <button className="btn-head">
-          <div className="login">
-            <img src={shopping} className="svg" alt="shopping" />
-            Cart
-          </div>
-        </button>
-        <Flag />
-      </div>
-      <div className="center">
-        <input type="search" placeholder="Search" className="search" />
-      </div>
-      <div className="calls">
-        <img src={phone} className="call" alt="phone key" />
-        <img src={linkedin} className="call" alt="linkedin key" />
-        <img src={instagram} className="call" alt="instagram key" />
-        <img src={facebook} className="call" alt="facebook key" />
-        <img src={twitter} className="call" alt="twitter key" />
-      </div>
-    </nav>
+    
+      <nav className="header">
+        <div className="buttons">
+          <button className="btn-head">
+            <div className="login">
+              <img src={login} className="svg" alt="login key" />
+              Login
+            </div>
+          </button>
+          <button className="btn-head">
+            <div className="login">
+              <img src={shopping} className="svg" alt="shopping" />
+              Cart
+            </div>
+          </button>
+          <Flag />
+        </div>
+        <div className="center">
+          <input type="search" placeholder="Search" className="search" />
+        </div>
+        <div className="calls">
+          <img src={phone} className="call" alt="phone key" />
+          <img src={linkedin} className="call" alt="linkedin key" />
+          <img src={instagram} className="call" alt="instagram key" />
+          <img src={facebook} className="call" alt="facebook key" />
+          <img src={twitter} className="call" alt="twitter key" />
+        </div>
+      </nav>
   );
 }

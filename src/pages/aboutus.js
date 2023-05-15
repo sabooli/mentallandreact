@@ -52,7 +52,6 @@ export default function About() {
             arcu arcu eget. Nunc a quis enim nibh posuere cras aenean purus.
             Nulla sagittis semper cum rhoncus varius quis vitae venenatis nibh.
           </div>
-          <section></section>
         </div>
       </div>
       <Footer />
