@@ -16,7 +16,7 @@ export default function Services() {
     <div className="full">
       <Header />
       <Navbar />
-      <div className="container-fluid">
+      <div className="containerFluid">
         <div className="maincontent">
           <h1 className="Dep">{t("DEPRESSION")} </h1>
           <div className="content">
@@ -29,34 +29,57 @@ export default function Services() {
             esse cillum dolore eu fugiat nulla pariatur.
           </div>
         </div>
+        <section className="abnormal">
+          <div className="hope">
+            <button className="top">
+              <img src={sort} className="sort" alt="top rated" />
+              <div className="Trated">Top rated</div>
+            </button>
+          </div>
+          <div className="flexContainer hope">
+            <input
+              type="search"
+              placeholder="Write the name..."
+              className="phname"
+            />
+            <button type="submit" className="find">
+              <div className="fitext">Search</div>
+            </button>
+          </div>
+          <div className="hopp">740 Psychologists</div>
+        </section>
         <div className="main">
           <section className="check">
             <Filter />
           </section>
           <section className="psychologist">
             <div className="threeitems">
-              <div className="hope">
-                <button className="top">
-                  <img src={sort} className="sort pe-2 pb-1" alt="top rated" />
-                  <div className="Trated">Top rated</div>
-                </button>
+              <div className="normal">
+                <div className="hope">
+                  <button className="top">
+                    <img src={sort} className="sort" alt="top rated" />
+                    <div className="Trated">Top rated</div>
+                  </button>
+                </div>
+                <div className="number hops">740 Psychologists</div>
+                <div className="flexContainer hope">
+                  <input
+                    type="search"
+                    placeholder="Write the name..."
+                    className="phname"
+                  />
+                  <button type="submit" className="find">
+                    <div className="fitext">Search</div>
+                  </button>
+                </div>
+                <div className="number hope">740 Psychologists</div>
               </div>
-              <div className="flexContainer hope">
-                <input
-                  type="search"
-                  placeholder="Write the name..."
-                  className="phname"
-                />
-                <button type="submit" className="find">
-                  <div className="fitext">Search</div>
-                </button>
-              </div>
-              <div className="number hope">740 Psychologists</div>
               <Doctors />
             </div>
           </section>
         </div>
-     </div> <Footer />
+      </div>{" "}
+      <Footer />
     </div>
   );
 }
