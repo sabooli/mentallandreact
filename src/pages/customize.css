@@ -1,0 +1,174 @@
+
+@font-face {
+  font-family: "Alice";
+  src: url(../fonts/Alice-Regular.ttf);
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-Regular.ttf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-Bold.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-Black.ttf);
+}
+
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: url(../fonts/Gilroy-Medium.ttf);
+}
+
+body {
+    font-size: 16px;
+    margin: 0 auto;
+}
+.contain {
+    max-width: 1800px; 
+}
+.adultspsy {
+    margin-inline: 100px;
+}
+.part1 {
+     width: 100%;
+}
+.topic {
+    font-family: "Alice", sans-serif;
+    font-size: 2.5em;
+    line-height: 45.72px;
+    color: #000b0c;
+    margin-top: 150px;
+    margin-bottom: 80px;
+}
+.subjects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 100%;
+}
+figure {
+    text-align: center;
+}
+.label {
+   width: 190px;
+   height: 246px;
+}
+.captionl {
+  display: block;
+  margin: 0 auto;
+  font-family: "Alice", sans-serif;
+  font-size: 1.625em;
+  line-height: 39px;
+  color: #000b0c;
+  margin-top: 10px;
+  margin-bottom: 239px;
+}
+.meet, .article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.article2 {
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+}
+.meetad {
+    padding-inline-start: 20px;
+    width: 100%;
+}
+.articlead {
+    padding-inline-end: 63px;
+}
+.article2ad {
+    padding-inline-start: 70px;
+    padding-top: 140.5px;
+    width: 100%;
+}
+.meetph, .article2ph {
+    margin-inline-start: -100px;  
+}
+.meettitle, .articletitle, .article2title {
+    font-family: "Alice", sans-serif;
+    font-size: 37px;
+    line-height: 42.29px;
+    color: #000b0c;
+    margin-bottom: 30px;
+}
+.meetcontent, .articlecontent, .article2content {
+font-family: "Girloy-Regular", sans-serif;
+    font-size: 1.5em;
+    line-height: 40px;
+    color: #000b0c;
+    margin-bottom: 28px;
+    width: 100%;
+    height: auto;
+}
+.part3 {
+    margin-top: 210px;
+    margin-bottom: 200px;
+}
+.part5 {
+    margin-top: 59.5px;
+    margin-bottom: 213px;
+}
+
+@media screen and (max-width: 1360px) {
+   .subjects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+} 
+.captionl {
+    margin-bottom: 20%;
+}
+}
+@media screen and (max-width: 900px) {
+   .subjects {
+    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+} 
+.captionl {
+    margin-bottom: 20%;
+}
+.meet, .article, .article2 {
+    grid-template-columns: 1fr;
+   display: flex;
+   flex-direction: column;
+}
+.meetph {
+    margin-inline-start: 50px;
+    margin-bottom: 8%;
+}
+}
+
+@media screen and (max-width: 680px) {
+    .adultspsy {
+    margin-inline: 50px;
+    }
+   .subjects {
+    grid-template-columns: 1fr;
+    display: flex;
+   flex-direction: column;
+}
+.label {
+    width: 100%;
+    margin-inline-start: -5%;
+}
+.captionl {
+    margin-bottom: 20%;
+}
+.article2ad {
+    margin-inline-start: -50px;
+    padding-top: -130px;
+}
+}
+
+
+
+
+

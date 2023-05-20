@@ -4,6 +4,7 @@ import Navbar from "../Navbar";
 import Footer from "../footer";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
+import { Link } from "react-router-dom";
 
 
 export default function Home() {
@@ -11,7 +12,10 @@ export default function Home() {
    <div>
     <Header />
     <Navbar />
-    <div>Home</div>
+    <div>Home
+      <Link to="/pages/psychology">Psychology</Link>
+      <Link to="/pages/psychologyAdults">Psychology-adults</Link>
+    </div>
     <Footer />
     </div>
   );

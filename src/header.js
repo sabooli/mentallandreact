@@ -10,24 +10,25 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
 import Flag from "./Flag";
 import "./App.css";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
     
       <nav className="header">
         <div className="buttons">
-          <button className="btn-head">
+          <Link to="/" className="btn-head">
             <div className="login">
               <img src={login} className="svg" alt="login key" />
               Login
             </div>
-          </button>
-          <button className="btn-head">
+          </Link>
+          <Link to="/" className="btn-head">
             <div className="login">
               <img src={shopping} className="svg" alt="shopping" />
               Cart
             </div>
-          </button>
+          </Link>
           <Flag />
         </div>
         <div className="center">

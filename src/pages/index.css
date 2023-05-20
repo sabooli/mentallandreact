@@ -337,7 +337,7 @@ body {
 .workField {
   grid-column: span 2;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   margin-inline: 8px;
 }
 .knowme {
@@ -350,6 +350,7 @@ body {
 border: 1px solid #02979d;
  background-color: #FAFEFE;
 }
+
 .knowing {
   margin-bottom: 300px;
 }
@@ -364,6 +365,11 @@ border: 1px solid #02979d;
   align-content: center;
   margin-top: 12.5px;
   margin-bottom: 12.5px;
+}
+nav a.active {
+  background-color: #02979D;
+  color: #FAFEFE;
+  text-decoration: none;
 }
 .aboutme {
   border-top-left-radius: 25px;

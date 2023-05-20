@@ -1,0 +1,346 @@
+
+@font-face {
+  font-family: "Alice";
+  src: url(../fonts/Alice-Regular.ttf);
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-Regular.ttf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-Bold.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-Black.ttf);
+}
+
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: url(../fonts/Gilroy-Medium.ttf);
+}
+
+body {
+  font-size: 16px;
+  margin: 0 auto;
+}
+.fullcontent {
+  max-width: 1800px;
+}
+.psycho {
+  margin-inline: 100px;
+}
+.choose {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-width: 0.2px;
+  box-shadow: 0px 1px 25px rgba(2, 151, 157, 0.1);
+  min-height: 190px;
+  width: 100%;
+  height: 100%;
+  border-radius: 80px;
+  margin-top: -95px;
+  padding-top: 63px;
+  padding-bottom: 63px;
+  padding-inline: 5%;
+  gap: 5%;
+  background-color: #fafefe;
+}
+.selecting {
+  width: 100%;
+  height: 64px;
+  border-radius: 20px;
+  border-width: 0.5px;
+  color: #02979d;
+}
+.request {
+  width: 100%;
+  height: 64px;
+  background-color: #02979d;
+  border-radius: 25px;
+  padding-top: 4%;
+}
+.appoint {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.25em;
+  line-height: 23.44px;
+  width: 100%;
+  padding-inline: 0;
+}
+.flow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 178px;
+  margin-bottom: 200px;
+  width: 100%;
+}
+.fl {
+  padding: auto;
+  margin: auto;
+}
+.statics {
+  font-family: "Gilroy-SemiBold", sans-serif;
+  font-size: 4em;
+  line-height: 75px;
+  color: #000b0c;
+  position: absolute;
+  transform: translate(-110%, 60%);
+}
+.stat {
+  position: absolute;
+  font-family: "Gilroy-Regular", sans-serif;
+  font-size: 1.5em;
+  line-height: 40px;
+  color: #000b0c;
+  transform: translate(-100%, 100%);
+}
+.department {
+  width: 100%;
+}
+.forYou {
+  font-family: "Alice", sans-serif;
+  font-size: 2.5em;
+  line-height: 45.72px;
+  color: #000b0c;
+  text-transform: uppercase;
+  vertical-align: center;
+  margin-bottom: 80px;
+}
+.forYou span {
+  color: #eda12f;
+}
+.figures {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.caption {
+  font-family: "Alice", sans-serif;
+  font-size: 1.875em;
+  line-height: 45px;
+  color: #000b0c;
+}
+figure {
+  width: 100%;
+  margin-inline-end: 20px;
+}
+.detail {
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+.adps,
+.chps,
+.pusem,
+.spzsem {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.adps {
+  margin-inline-start: -100px;
+}
+.chps {
+  margin-inline-end: -100px;
+}
+.more {
+  font-size: 20px;
+  line-height: 23.44px;
+}
+.learnMore {
+  width: 220px;
+  background-color: #02979d;
+  border-radius: 35px;
+  color: #fafefe;
+  padding: 17.5px 57.5px;
+  text-decoration: none;
+  margin-top: 72.5px;
+}
+.learnMore:hover {
+  color: #fafefe;
+}
+.ximg {
+  width: 100%;
+  height: 100%;
+}
+.adpsy {
+  padding-inline-start: 50px;
+}
+.chpsy {
+  padding-inline-end: 50px;
+  margin-top: 26px;
+}
+.subtitle {
+  font-family: "Alice", sans-serif;
+  font-size: 37px;
+  line-height: 32px;
+  color: #000b0c;
+}
+.summary {
+  font-family: "Gilroy-Regular", sans-serif;
+  font-size: 1.5em;
+  line-height: 40px;
+  color: #000b0c;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 72.5px;
+}
+.separate {
+  background-color: #eaf6f6;
+  position: relative;
+  min-height: 882px;
+  padding-top: 7.5%;
+  padding-inline: 7.5%;
+  margin-inline: -100px !important;
+  margin-bottom: 200px;
+}
+.pubsem {
+  font-family: "Gilroy-SemiBold", sans-serif;
+  font-size: 38px;
+  line-height: 44.53px;
+  color: #000b0c;
+  margin-bottom: 5%;
+}
+.card-content {
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+.description {
+  font-family: "Gilroy-Regular", sans-serif;
+  font-size: 15px;
+  color: #000b0c;
+  text-align: start;
+}
+.card {
+  border: 0.5px solid #fafefe;
+}
+.properties {
+  font-family: "Gilroy-Regular", sans-serif;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  font-size: 14px;
+  line-height: 26.45px;
+  color: #000b0c;
+  grid-column-gap: 20px;
+  text-align: start;
+}
+.arrow {
+  color: #fafefe;
+}
+.click {
+  background-color: #02979d;
+  border-radius: 50px;
+  width: 71px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 17px;
+  margin-inline: 40%;
+}
+.specialized {
+  padding-inline-start: 98px;
+}
+.see {
+  font-family: "Gilroy-Bold", sans-serif;
+  font-size: 1.25em;
+  line-height: 23.44px;
+  color: #fafefe;
+}
+.seeAll {
+  background-color: #02979d;
+  border-radius: 35px;
+  width: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 65px;
+  padding-bottom: 17.5px;
+  padding-top: 17.5px;
+  margin-inline: 40%;
+  text-decoration: none;
+}
+.freq {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+}
+.frequent {
+  font-family: "Gilroy-SemiBold", sans-serif;
+  font-size: 38px;
+  line-height: 44.53px;
+  color: #000b0c;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.questions {
+  display: none;
+}
+.questions:checked ~ .plus {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.showing {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.plus {
+  position: absolute;
+  margin-left: 10px;
+  z-index: 5;
+  font-size: 2em;
+  line-height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.questions:checked ~ .answers {
+  height: auto;
+  opacity: 1;
+  padding: 15px;
+}
+.myFaq {
+  font-weight: 900;
+  color: #eda12f;
+  padding-inline-end: 27px;
+}
+.question {
+  padding-inline-start: 27px;
+  margin-bottom: 200px;
+}
+.swiper-button-next, .swiper-button-prev {
+background-color: #02979d;
+position: absolute;
+border-radius: 100px;
+padding: 20px;
+color: #fafefe;
+transform: translate(0, -600%);
+z-index: 1000;
+}
+.swiper-button-prev {
+  position: absolute;
+  margin-inline-start: 1060px;
+  margin-bottom: 320px;
+}
+.swiper-navigation {
+  width: 8.6px;
+  height: 17px;
+}

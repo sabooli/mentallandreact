@@ -4,8 +4,6 @@ import "./App.css";
 import { useTranslation } from "react-i18next";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
-import { Dropdown } from "react-bootstrap";
-import DropdownButton from "react-bootstrap/DropdownButton";
 
 
 export default function Navbar() {

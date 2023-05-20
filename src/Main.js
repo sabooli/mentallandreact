@@ -5,6 +5,9 @@ import Contact from "./pages/contactus";
 import Services from "./pages/depressionadults";
 import Home from "./pages/Home";
 import Counsel from "./pages/consultantadults";
+import Psychology from "./pages/psychology";
+import Seminar from "./pages/seminar";
+import Psyadults from "./pages/psychologyAdults";
 
 export default function Main() {
   return (
@@ -16,6 +19,9 @@ export default function Main() {
           <Route path="aboutus" element={<About />} />
           <Route path="contactus" element={<Contact />} />
           <Route path="consultantadults" element={<Counsel />} />
+          <Route path="psychology" element={<Psychology />} />
+          <Route path="seminar" element={<Seminar />} />
+          <Route path="psychologyAdults" element={<Psyadults />} />
         </Route>
       </Routes>
     </BrowserRouter>
