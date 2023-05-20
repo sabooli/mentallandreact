@@ -33,6 +33,31 @@ body {
 .psycho {
   margin-inline: 100px;
 }
+.strategy {
+max-width: 620px;
+min-height: 380px;
+width: 100%;
+border: 1px solid #eda12f;
+padding-inline: 41px;
+padding-top: 47px;
+padding-bottom: 48px;
+margin-top: -30%;
+margin-bottom: 20%;
+margin-inline-start: 20%;
+position: absolute;
+}
+.mainTopic {
+font-family: "Alice", sans-serif;
+font-size: 4em;
+line-height: 70px;
+color: #eda12f;
+}
+.subTopic {
+font-family: "Gilroy-Regular", sans-serif;
+font-size: 1.5em;
+line-height: 40px;
+color: #fafefe;
+}
 .choose {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -332,13 +357,14 @@ position: absolute;
 border-radius: 100px;
 padding: 20px;
 color: #fafefe;
-transform: translate(0, -600%);
 z-index: 1000;
+margin-bottom: 100px;
+}
+.swiper-button-next {
+  transform: translate(-280%, -850%);
 }
 .swiper-button-prev {
-  position: absolute;
-  margin-inline-start: 1060px;
-  margin-bottom: 320px;
+  transform: translate(2800%, -850%);
 }
 .swiper-navigation {
   width: 8.6px;

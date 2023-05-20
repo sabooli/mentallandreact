@@ -33,6 +33,31 @@ body {
 .adultspsy {
     margin-inline: 100px;
 }
+.happy {
+max-width: 860px;
+min-height: 364px;
+width: 100%;
+border: 1px solid #eda12f;
+padding-top: 37px;
+padding-bottom: 62px;
+margin-top: -50%;
+margin-inline-start: 10%;
+position: absolute;
+}
+.beHappy {
+font-family: "Alice", sans-serif;
+font-size: 3em;
+line-height: 60px;
+color: #eda12f;
+padding-bottom: 25px;
+}
+.getHelp {
+font-family: "Gilroy-Regular", sans-serif;
+font-size: 1.5em;
+line-height: 40px;
+color: #fafefe;
+
+}
 .part1 {
      width: 100%;
 }

@@ -29,7 +29,8 @@ export default function Header() {
               Cart
             </div>
           </Link>
-          <Flag />
+          <span className="flag"><Flag /></span>
+          
         </div>
         <div className="center">
           <input type="search" placeholder="Search" className="search" />

@@ -38,6 +38,10 @@ export default function Psychology() {
       </div>
       <div className="fullcontent">
         <div className="psycho">
+          <div className="strategy text-center">
+            <h1 className="mainTopic">Heal Your Mind & Soul</h1>
+            <h2 className="subTopic">Lorem ipsum dolor sit amet consectetur. Amet velit convallis amet mi leo aliquet in vestibulum consectetur. Lectus magna eleifend </h2>
+          </div>
           <div className="choose">
             <div className="selecting">
               <Form.Select aria-label="wid">

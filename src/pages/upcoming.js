@@ -33,7 +33,7 @@ export default function Upcoming() {
           },
         }}
         style={{
-          "--swiper-navigation-size": "20px",
+          "--swiper-navigation-size": "20px", position: 'unset',
         }}
       >
         <SwiperSlide>

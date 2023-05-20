@@ -29,6 +29,16 @@ export default function Psyadults() {
         </div>
         <div className="contain">
           <div className="adultspsy">
+            <div className="happy text-center">
+              <h1 className="beHappy">
+                Get Help, Get Better You Deserve to be Happy
+              </h1>
+              <h2 className="getHelp">
+                Lorem ipsum dolor sit amet consectetur. Amet velit convallis
+                amet mi leo aliquet in vestibulum consectetur. Lectus magna
+                eleifend
+              </h2>
+            </div>
             <div className="part1">
               <h1 className="topic text-center">Adults Psychology Services</h1>
               <div className="subjects">
@@ -139,7 +149,8 @@ export default function Psyadults() {
                     urna ultrices vitae. Sed magna vitae placerat eu leo potenti
                     semper id. Sed elementum eget adipiscing nisl in vestibulum.
                     Volutpat.
-                    <br /><br />
+                    <br />
+                    <br />
                     In pellentesque volutpat urna ultrices vitae. Sed magna
                     vitae placerat eu leo potenti semper id. Sed elementum eget
                     adipiscing nisl in vestibulum. Volutpat.
