@@ -40,7 +40,10 @@ export default function Psychology() {
         <div className="psycho">
           <div className="strategy text-center">
             <h1 className="mainTopic">Heal Your Mind & Soul</h1>
-            <h2 className="subTopic">Lorem ipsum dolor sit amet consectetur. Amet velit convallis amet mi leo aliquet in vestibulum consectetur. Lectus magna eleifend </h2>
+            <h2 className="subTopic">
+              Lorem ipsum dolor sit amet consectetur. Amet velit convallis amet
+              mi leo aliquet in vestibulum consectetur. Lectus magna eleifend{" "}
+            </h2>
           </div>
           <div className="choose">
             <div className="selecting">
@@ -75,12 +78,15 @@ export default function Psychology() {
             <div className="">
               <img src={exp} className="img-fluid fl" alt="experience" />
               <span className="statics">+10</span>
-              <span className="stat">Years of Experience</span>
+              <span className="stat text-center">Years of Experience</span>
             </div>
             <div className="">
               <img src={help} className="img-fluid fl" alt="patients" />
               <span className="statics">+1300</span>
-              <span className="stat">Patients Received Help This Year</span>
+              <span className="statb text-center">
+                Patients Received Help
+                <br /> This Year
+              </span>
             </div>
             <div className="">
               <img
@@ -89,12 +95,18 @@ export default function Psychology() {
                 alt="professinal treatment"
               />
               <span className="statics">+100</span>
-              <span className="stat">Professional Psychologists</span>
+              <span className="stat text-center">
+                Professional Psychologists
+              </span>
             </div>
             <div className="">
-              <img src={imp} className="img-fluid fl" alt="results" />
+              <img src={imp} className="img-fluid fl" alt="result" />
               <span className="statics">98%</span>
-              <span className="stat">Clients improved their condition</span>
+              <span className="statl text-center">
+                Clients improved
+                <br />
+                their condition
+              </span>
             </div>
           </div>
           <div className="department">
@@ -148,7 +160,11 @@ export default function Psychology() {
           </div>
           <div className="detail">
             <div className="adps">
-              <img src={adps} className="ximg" alt="psychology services" />
+              <img
+                src={adps}
+                className="ximg img-fluid"
+                alt="psychology services"
+              />
               <div className="adpsy">
                 <h2 className="subtitle">Adults Psychology</h2>
                 <div className="summary">
@@ -185,12 +201,20 @@ export default function Psychology() {
                   <span className="more">Learn more</span>
                 </Link>
               </div>
-              <img src={chps} className="ximg" alt="children psychology" />
+              <img
+                src={chps}
+                className="ximg img-fluid"
+                alt="children psychology"
+              />
             </div>
           </div>
           <div className="sems">
             <div className="pusem">
-              <img src={semps} className="" alt="psychology services" />
+              <img
+                src={semps}
+                className="public img-fluid"
+                alt="psychology services"
+              />
               <div className="sempsy">
                 <h2 className="subtitle">Adults Psychology</h2>
                 <div className="summary">
@@ -211,7 +235,7 @@ export default function Psychology() {
               </div>
             </div>
           </div>
-          <Upcoming />
+          <Upcoming heading="Upcoming Public Seminars & Events" />
           <div className="spzsems">
             <div className="spzsem">
               <div className="spzpsy">
@@ -234,36 +258,18 @@ export default function Psychology() {
               </div>
               <img
                 src={spzsem}
-                className="specialized"
+                className="specialized img-fluid"
                 alt="psychology services"
               />
             </div>
-          </div>     
-      <Upcoming />
-      <Mfaq />
-      
-        <div class="accordion"> 
-<div>
-  <div class="plus pt-2 showing">◾</div>
-  <div class="question">
-    How to register in Buynex?
-  </div>
-  <div class="answer1">
-All Buynex trainings, including registration, how to deposit and invest, are available in video form on the <a class="blog" href="blog.html"> blog site page</a>.</div>
-</div>
-
-<div>
-  <input type="checkbox" id="question2" name="q" class="questions" />
-  <div class="plus pt-2">◾</div>
-  <label for="question2" class="question">
-    What is the advantage of investing in Buynex compared to similar sites?
-  </label>
-  <div class="answers">
-    By paying reasonable profit and referral and having a professional team, Buynex tries to develop its family by relying on honesty.</div>
-</div>
-</div>
-<div></div>
-      </div>
+          </div>
+          <Upcoming
+            heading="Upcoming Specialized Seminars & Events"
+            color="#FBEAD1"
+          />
+          <Mfaq />
+          <div></div>
+        </div>
       </div>
       <Footer />
     </div>

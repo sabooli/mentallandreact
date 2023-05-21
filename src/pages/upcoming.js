@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useRef} from "react";
 import "./design.css";
 import {Swiper, SwiperSlide} from "swiper/react";
-import { Navigation } from "swiper";
+import { Navigation, Pagination } from "swiper";
+import "swiper/swiper-bundle.css";
 import slide1 from "../icons/Rectangle 24.svg";
 import slide2 from "../icons/Rectangle 242.svg";
 import slide3 from "../icons/Rectangle 243.svg";
@@ -12,15 +13,22 @@ import arrowRight from "../icons/arrow-right.svg";
 import { Link } from "react-router-dom";
 
 
-export default function Upcoming() {
+export default function Upcoming({heading, color}) {
+  const prevRef = useRef(null);
+  const nextRef = useRef(null); 
   return (
-    <div className="separate">
-      <h1 className="pubsem">Upcoming Public Seminars & Events</h1>
+    <div className="separate" style={{ backgroundColor: color }}>
+      <h1 className="pubsem">{heading}</h1>
       <Swiper
         modules={[Navigation]}
+        onInit={(swiper) => {
+          swiper.params.navigation.prevEl = prevRef.current;
+          swiper.params.navigation.nextEl = nextRef.current;
+          swiper.navigation.init();
+          swiper.navigation.update();
+        }}
         spaceBetween={20}
         slidesPerView={3}
-        navigation
         breakpoints={{
           640: {
             slidesPerView: 1,
@@ -33,7 +41,8 @@ export default function Upcoming() {
           },
         }}
         style={{
-          "--swiper-navigation-size": "20px", position: 'unset',
+          "--swiper-navigation-size": "20px",
+          position: "unset",
         }}
       >
         <SwiperSlide>
@@ -228,6 +237,12 @@ export default function Upcoming() {
             </Link>
           </div>
         </SwiperSlide>
+        <div ref={prevRef} className="swiper-navigation__prev">
+          Prev
+        </div>
+        <div ref={nextRef} className="swiper-navigation__next">
+          Next
+        </div>
       </Swiper>
       <Link to="/" className="seeAll">
         <span className="see">see all</span>

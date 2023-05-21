@@ -74,6 +74,69 @@ color: #fafefe;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     width: 100%;
 }
+.consultants{
+  position: relative;
+  min-height: 848px;
+  padding-top: 6%;
+  padding-inline: 7.5%;
+  margin-inline: -100px !important;
+  margin-bottom: 200px;
+}
+.cons {
+  font-family: "Alice", sans-serif;
+  font-size: 37px;
+  line-height: 42px;
+  color: #000b0c;
+  margin-bottom: 3%;
+  text-transform: uppercase;
+}
+.dr {
+    max-width: 277px;
+}
+.constext {
+font-family: "Gilroy-Regular", sans-serif;
+  font-size: 24px;
+  line-height: 40px;
+margin-bottom: 7%;
+}
+.surname {
+font-family: "Gilroy-Regular", sans-serif;
+  font-size: 24px;
+  line-height: 28.13px; 
+  color: #02979D;
+  padding-top: 51px;
+  padding-bottom: 51px;
+}
+.card {
+  border: 0.13px solid #02979D;
+  border-radius: 5%;
+  max-width: 295px;
+  height: 386px;
+}
+.swiper-navigation_prev, .swiper-navigation_next {
+ position: absolute;
+  top: 0%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  background-color: #02979d;
+  color: #fafefe;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+.swiper-navigation_prev {
+  left: 1120px;
+}
+
+.swiper-navigation_next {
+  right: 100px;
+}
 figure {
     text-align: center;
 }

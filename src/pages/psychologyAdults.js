@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../header";
 import Navbar from "../Navbar";
-import Footer from "../footer";
 import back from "../icons/Rectangle 45ad.png";
 import "./customize.css";
 import depression from "../icons/Group 806.svg";
@@ -12,6 +11,9 @@ import issues from "../icons/Group 810.svg";
 import meet from "../icons/Rectangle 67ad.svg";
 import article from "../icons/Group 936.svg";
 import article2ph from "../icons/Group 934.svg";
+import ok from "../icons/okVector.svg";
+import Consultants from "./consultants";
+import Patientcomments from "./patientcomments";
 
 
 
@@ -93,18 +95,27 @@ export default function Psyadults() {
                     urna ultrices vitae. Sed magna vitae placerat eu leo potenti
                     semper id. Sed elementum eget adipiscing nisl in vestibulum.
                     Volutpat. <br />
-                    Lorem ipsum dolor sit amet consectetur. Pretium rutrum nisi
-                    mollis sit tortor proin proin sagittis.
+                    <img src={ok} className="ok" /> Lorem ipsum dolor sit amet
+                    consectetur. Pretium rutrum nisi mollis sit tortor proin
+                    proin sagittis.
                     <br />
-                    Lorem ipsum dolor sit amet consectetur.
+                    <img src={ok} className="ok" /> Lorem ipsum dolor sit amet
+                    consectetur.
                     <br />
-                    Lorem ipsum dolor sit amet consectetur. <br />
-                    Lorem ipsum dolor sit amet consectetur.
+                    <img src={ok} className="ok" /> Lorem ipsum dolor sit amet
+                    consectetur. <br />
+                    <img src={ok} className="ok" /> Lorem ipsum dolor sit amet
+                    consectetur.
                   </div>
                 </div>
               </div>
             </div>
-            <div className="part3"></div>
+            <div className="part3">
+              <Consultants
+                heading="Adults Psychology Consultants & Psychologists"
+                color="#eaf6f6"
+              />
+            </div>
             <div className="part4">
               <div className="article">
                 <div className="articlead">
@@ -157,6 +168,9 @@ export default function Psyadults() {
                   </div>
                 </div>
               </div>
+            </div>
+            <div className="part6">
+              <Patientcomments heading="What Our Patients Say About US" />
             </div>
           </div>
         </div>
