@@ -8,6 +8,11 @@ import Counsel from "./pages/consultantadults";
 import Psychology from "./pages/psychology";
 import Seminar from "./pages/seminar";
 import Psyadults from "./pages/psychologyAdults";
+import Psychildren from "./pages/psychologyChildren";
+import Seminars from "./pages/seminars";
+import Upcoming from "./pages/upcoming";
+import Patientcomments from "./pages/patientcomments";
+import Consultants from "./pages/consultants";
 
 export default function Main() {
   return (
@@ -22,6 +27,11 @@ export default function Main() {
           <Route path="psychology" element={<Psychology />} />
           <Route path="seminar" element={<Seminar />} />
           <Route path="psychologyAdults" element={<Psyadults />} />
+          <Route path="psychologyChildren" element={<Psychildren />} />
+          <Route path="seminars" element={<Seminars />} />
+          <Route path="upcoming" element={<Upcoming />} />
+          <Route path="patientcomments" element={<Patientcomments />} />
+          <Route path="consultants" element={<Consultants />} />
         </Route>
       </Routes>
     </BrowserRouter>

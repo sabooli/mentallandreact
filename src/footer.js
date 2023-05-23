@@ -2,11 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
-import phone from "./icons/Component 6.svg";
-import linkedin from "./icons/Component 3.svg";
-import instagram from "./icons/Component 4.svg";
-import facebook from "./icons/Component 5.svg";
-import twitter from "./icons/psychology.svg";
+import wphone from "./icons/Component 6w.svg";
+import wlinkedin from "./icons/Component 3w.svg";
+import winstagram from "./icons/Component 4w.svg";
+import wfacebook from "./icons/Component 5w.svg";
+import wtwitter from "./icons/mainw.svg";
 import "./App.css";
 
 export default function Footer() {
@@ -22,11 +22,11 @@ export default function Footer() {
             aliquip ex ea commodo consequat.
           </div>
           <div className="fcalls">
-            <img src={phone} className="fcall" alt="phone key" />
-            <img src={linkedin} className="fcall" alt="linkedin key" />
-            <img src={instagram} className="fcall" alt="instagram key" />
-            <img src={facebook} className="fcall" alt="facebook key" />
-            <img src={twitter} className="fcall" alt="twitter key" />
+            <img src={wphone} className="fcall" alt="phone key" />
+            <img src={wlinkedin} className="fcall" alt="linkedin key" />
+            <img src={winstagram} className="fcall" alt="instagram key" />
+            <img src={wfacebook} className="fcall" alt="facebook key" />
+            <img src={wtwitter} className="fcall" alt="twitter key" />
           </div>
         </div>
         <div className="column first">

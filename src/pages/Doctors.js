@@ -1,8 +1,6 @@
 import React from "react";
 import "./index.css";
 import star from "../icons/Star 9.svg";
-import phone from "../icons/call-calling.svg";
-import messages from "../icons/messages.svg";
 import { Link } from "react-router-dom";
 import photo from "../icons/Rectangle 8.svg";
 
@@ -22,20 +20,6 @@ export default function Doctors() {
             <span className="experience">+1000 Consultations</span>
           </div>
         </div>
-        <div className="sub method">
-          <div className="bgphoconsult">
-            <span className="phoconsult">
-              <img src={phone} className="phone pe-2" alt="phone" /> Phone
-              Consultation
-            </span>
-          </div>
-          <div className="bgtxconsult">
-            <span className="txconsult">
-              <img src={messages} className="messages pe-2" alt="messages" />
-              Text Consultation
-            </span>
-          </div>
-        </div>
         <div className="row workField">
           <div className="bgfield1">
             <span className="field">Depression</span>
@@ -49,7 +33,7 @@ export default function Doctors() {
         </div>
         <div className="hhh">
           <Link to="/pages/consultantadults" className="counsel">
-            <div className="justnow">Start Counseling</div><span className="short">Counsel</span>
+            <div className="justnow">Start Counseling</div>
           </Link>
         </div>
       </div>

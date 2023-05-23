@@ -13,8 +13,6 @@ const options = [
     category: "Category",
   },
   { value: "option5", label: "Adjustment Issues", category: "Category" },
-  { value: "option6", label: "Phone Consultation", category: "Type" },
-  { value: "option7", label: "Text Consultation", category: "Type" },
   { value: "option8", label: "Online Only", category: "Status" },
 ];
 
@@ -48,7 +46,7 @@ const Filter = () => {
         <div key={category}>
           <h2 className="title">{category}</h2>
           {options.map((option) => (
-            <label key={option.value} className="label">
+            <label key={option.value} className="labell">
               <input
                 type="checkbox"
                 value={option.value}

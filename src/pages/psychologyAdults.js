@@ -14,6 +14,7 @@ import article2ph from "../icons/Group 934.svg";
 import ok from "../icons/okVector.svg";
 import Consultants from "./consultants";
 import Patientcomments from "./patientcomments";
+import Footer from "../footer";
 
 
 
@@ -28,19 +29,20 @@ export default function Psyadults() {
         >
           <Header />
           <Navbar />
+          <div className="happy">
+            <h1 className="beHappy text-center">
+              <span className="f">Get Help, Get Better</span>
+              <br />
+              <span className="s">You Deserve to be Happy</span>
+            </h1>
+            <div className="getHelp  text-center">
+              Lorem ipsum dolor sit amet consectetur. Amet velit convallis amet
+              mi leo aliquet in vestibulum consectetur. Lectus magna eleifend
+            </div>
+          </div>
         </div>
         <div className="contain">
           <div className="adultspsy">
-            <div className="happy text-center">
-              <h1 className="beHappy">
-                Get Help, Get Better You Deserve to be Happy
-              </h1>
-              <h2 className="getHelp">
-                Lorem ipsum dolor sit amet consectetur. Amet velit convallis
-                amet mi leo aliquet in vestibulum consectetur. Lectus magna
-                eleifend
-              </h2>
-            </div>
             <div className="part1">
               <h1 className="topic text-center">Adults Psychology Services</h1>
               <div className="subjects">
@@ -95,17 +97,17 @@ export default function Psyadults() {
                     urna ultrices vitae. Sed magna vitae placerat eu leo potenti
                     semper id. Sed elementum eget adipiscing nisl in vestibulum.
                     Volutpat. <br />
-                    <img src={ok} className="ok" /> Lorem ipsum dolor sit amet
-                    consectetur. Pretium rutrum nisi mollis sit tortor proin
-                    proin sagittis.
+                    <img src={ok} className="ok" alt="ok vector" /> Lorem ipsum
+                    dolor sit amet consectetur. Pretium rutrum nisi mollis sit
+                    tortor proin proin sagittis.
                     <br />
-                    <img src={ok} className="ok" /> Lorem ipsum dolor sit amet
-                    consectetur.
+                    <img src={ok} className="ok" alt="ok vector" /> Lorem ipsum
+                    dolor sit amet consectetur.
                     <br />
-                    <img src={ok} className="ok" /> Lorem ipsum dolor sit amet
-                    consectetur. <br />
-                    <img src={ok} className="ok" /> Lorem ipsum dolor sit amet
-                    consectetur.
+                    <img src={ok} className="ok" alt="ok vector" /> Lorem ipsum
+                    dolor sit amet consectetur. <br />
+                    <img src={ok} className="ok" alt="ok vector" /> Lorem ipsum
+                    dolor sit amet consectetur.
                   </div>
                 </div>
               </div>
@@ -174,6 +176,7 @@ export default function Psyadults() {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     );
 }

@@ -29,7 +29,6 @@ setText(<Weeklyplan />);
          className={active ? "active col comments" : "col comments"}
          onClick={() => {
            handleClick();
-           changeText();
          }}
        >
          <span className="tx">Comments</span>

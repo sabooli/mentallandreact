@@ -27,27 +27,7 @@ export default function Services() {
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur. Duis aute irure dolor in reprehenderit in voluptate velit
             esse cillum dolore eu fugiat nulla pariatur.
-          </div>
-        </div>
-        <section className="abnormal">
-          <div className="hope">
-            <button className="top">
-              <img src={sort} className="sort" alt="top rated" />
-              <div className="Trated">Top rated</div>
-            </button>
-          </div>
-          <div className="flexContainer hope">
-            <input
-              type="search"
-              placeholder="Write the name..."
-              className="phname"
-            />
-            <button type="submit" className="find">
-              <div className="fitext">Search</div>
-            </button>
-          </div>
-          <div className="hopp">740 Psychologists</div>
-        </section>
+          </div>        
         <div className="main">
           <section className="check">
             <Filter />
@@ -61,11 +41,10 @@ export default function Services() {
                     <div className="Trated">Top rated</div>
                   </button>
                 </div>
-                <div className="number hops">740 Psychologists</div>
                 <div className="flexContainer hope">
                   <input
                     type="search"
-                    placeholder="Write the name..."
+                    placeholder="Name..."
                     className="phname"
                   />
                   <button type="submit" className="find">
@@ -77,6 +56,7 @@ export default function Services() {
               <Doctors />
             </div>
           </section>
+        </div>
         </div>
       </div>{" "}
       <Footer />

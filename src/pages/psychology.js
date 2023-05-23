@@ -35,37 +35,41 @@ export default function Psychology() {
       >
         <Header />
         <Navbar />
+        <div className="strategy">
+          <h1 className="mainTopic">
+            Heal Your <br />
+            Mind & Soul
+          </h1>
+          <h2 className="subTopic">
+            Lorem ipsum dolor sit amet consectetur. Amet velit convallis amet mi
+            leo aliquet in vestibulum consectetur. Lectus magna eleifend{" "}
+          </h2>
+        </div>
       </div>
       <div className="fullcontent">
         <div className="psycho">
-          <div className="strategy text-center">
-            <h1 className="mainTopic">Heal Your Mind & Soul</h1>
-            <h2 className="subTopic">
-              Lorem ipsum dolor sit amet consectetur. Amet velit convallis amet
-              mi leo aliquet in vestibulum consectetur. Lectus magna eleifend{" "}
-            </h2>
-          </div>
           <div className="choose">
             <div className="selecting">
               <Form.Select aria-label="wid">
-                <option>Select the Field</option>
+                <option>Select the Field...</option>
                 <option value="1">Depression</option>
                 <option value="2">Anxiety</option>
                 <option value="3">Unhealthy Eating</option>
-                <option value="4">Anxiety</option>
-                <option value="5">Anxiety</option>
-                <option value="6">Anxiety</option>
+                <option value="4">
+                  Life Transitions, Relationship Difficulties
+                </option>
+                <option value="5">Adjustment Issues</option>
               </Form.Select>
             </div>
             <div className="selecting">
               <Form.Select aria-label="wid">
-                <option>Select the Field</option>
-                <option value="1">Dr. </option>
-                <option value="2">Anxiety</option>
-                <option value="3">Unhealthy Eating</option>
-                <option value="4">Anxiety</option>
-                <option value="5">Anxiety</option>
-                <option value="6">Anxiety</option>
+                <option>Select the Psychologist...</option>
+                <option value="1">Dr. Mary Green</option>
+                <option value="2">Dr. Tom Brown</option>
+                <option value="3">Dr. Elizabeth Smith</option>
+                <option value="4">Dr. Mary Green</option>
+                <option value="5">Dr. Tom Brown</option>
+                <option value="6">Dr. Hue Smith</option>
               </Form.Select>
             </div>
             <div className="request">
@@ -183,30 +187,30 @@ export default function Psychology() {
                 </Link>
               </div>
             </div>
-            <div className="chps">
-              <div className="chpsy">
-                <h2 className="subtitle">Children/Teenagers Psychology</h2>
-                <div className="summary">
-                  Lorem ipsum dolor sit amet consectetur. Mi pellentesque quis
-                  eu vestibulum lectus. Porttitor integer consectetur mattis
-                  elementum malesuada. Egestas ac dignissim amet pretium
-                  ultricies. Molestie integer ornare nisl et nunc quisque non
-                  sollicitudin. Aliquam fringilla rutrum morbi pellentesque id
-                  orci commodo libero phasellus. Duis urna vel amet cras non sem
-                  vitae sapien. Maecenas eget consequat euismod fusce vehicula
-                  purus sed lorem. Adipiscing nulla amet morbi ipsum nec
-                  lobortis egestas nec.
-                </div>
-                <Link to="/" className="learnMore">
-                  <span className="more">Learn more</span>
-                </Link>
+          </div>
+          <div className="chps">
+            <div className="chpsy">
+              <h2 className="subtitle">Children / Teenagers Psychology</h2>
+              <div className="summary">
+                Lorem ipsum dolor sit amet consectetur. Mi pellentesque quis eu
+                vestibulum lectus. Porttitor integer consectetur mattis
+                elementum malesuada. Egestas ac dignissim amet pretium
+                ultricies. Molestie integer ornare nisl et nunc quisque non
+                sollicitudin. Aliquam fringilla rutrum morbi pellentesque id
+                orci commodo libero phasellus. Duis urna vel amet cras non sem
+                vitae sapien. Maecenas eget consequat euismod fusce vehicula
+                purus sed lorem. Adipiscing nulla amet morbi ipsum nec lobortis
+                egestas nec.
               </div>
-              <img
-                src={chps}
-                className="ximg img-fluid"
-                alt="children psychology"
-              />
+              <Link to="/" className="learnMore">
+                <span className="more">Learn more</span>
+              </Link>
             </div>
+            <img
+              src={chps}
+              className="ximg img-fluid"
+              alt="children psychology"
+            />
           </div>
           <div className="sems">
             <div className="pusem">

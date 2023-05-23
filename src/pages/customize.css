@@ -27,39 +27,39 @@ body {
     font-size: 16px;
     margin: 0 auto;
 }
-.contain {
+.contain, .kids, .seminars {
     max-width: 1800px; 
+    width:100%;
 }
-.adultspsy {
+.adultspsy, .childpsy, .sliders {
     margin-inline: 100px;
 }
 .happy {
-max-width: 860px;
-min-height: 364px;
-width: 100%;
-border: 1px solid #eda12f;
-padding-top: 37px;
-padding-bottom: 62px;
-margin-top: -50%;
-margin-inline-start: 10%;
-position: absolute;
+  max-width: 860px;
+  margin: 107px auto 218px;
+  backdrop-filter: blur(10px) brightness(90%); 
+  padding: 37px 100px 62px;
+  text-align: center;
 }
 .beHappy {
-font-family: "Alice", sans-serif;
-font-size: 3em;
-line-height: 60px;
-color: #eda12f;
-padding-bottom: 25px;
+  font-family: "Alice", sans-serif;
+  font-size: 48px;
+  line-height: 60px;
+  margin-bottom: 25px;
+  width: 100%;
 }
 .getHelp {
-font-family: "Gilroy-Regular", sans-serif;
-font-size: 1.5em;
-line-height: 40px;
-color: #fafefe;
-
+  font-family: "Gilroy-Regular", sans-serif;
+  font-size: 1.5em;
+  line-height: 40px;
+  width: 100%;
+  color: #fafefe;
 }
-.part1 {
-     width: 100%;
+.f {
+  color: #fafefe;
+}
+.s {
+  color: #eda12f;
 }
 .topic {
     font-family: "Alice", sans-serif;
@@ -79,6 +79,7 @@ color: #fafefe;
   min-height: 848px;
   padding-top: 6%;
   padding-inline: 7.5%;
+  padding-bottom: 3%;
   margin-inline: -100px !important;
   margin-bottom: 200px;
 }
@@ -91,7 +92,8 @@ color: #fafefe;
   text-transform: uppercase;
 }
 .dr {
-    max-width: 277px;
+    max-width: 295px;
+    width: 100%;
 }
 .constext {
 font-family: "Gilroy-Regular", sans-serif;
@@ -109,14 +111,15 @@ font-family: "Gilroy-Regular", sans-serif;
 }
 .card {
   border: 0.13px solid #02979D;
+  gap: 20px;
+  width: 100%;
   border-radius: 5%;
-  max-width: 295px;
-  height: 386px;
+  min-height: 403px;
 }
 .swiper-navigation_prev, .swiper-navigation_next {
- position: absolute;
+ position: relative;
   top: 0%;
-  transform: translateY(-50%);
+  transform: translateY(0%);
   cursor: pointer;
   z-index: 10;
   width: 50px;
@@ -131,11 +134,13 @@ font-family: "Gilroy-Regular", sans-serif;
   font-weight: bold;
 }
 .swiper-navigation_prev {
-  left: 1120px;
+  left: 85%;
+  bottom: 475px;
 }
 
 .swiper-navigation_next {
-  right: 100px;
+  right: -92%;
+  bottom: 525px;
 }
 figure {
     text-align: center;
@@ -154,7 +159,7 @@ figure {
   margin-top: 10px;
   margin-bottom: 239px;
 }
-.meet, .article {
+.meet, .article, .article2child {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -169,10 +174,21 @@ figure {
 .articlead {
     padding-inline-end: 63px;
 }
+.meetch {
+  padding-inline-end: 18px;
+}
+.meetph {
+margin-inline-end: -100px;
+}
 .article2ad {
     padding-inline-start: 70px;
     padding-top: 140.5px;
     width: 100%;
+}
+.article2ch {
+   padding-inline-start: 70px;
+   padding-top: 78px;
+   width: 100%;
 }
 .meetph, .article2ph {
     margin-inline-start: -100px;  
@@ -201,6 +217,141 @@ font-family: "Girloy-Regular", sans-serif;
     margin-top: 59.5px;
     margin-bottom: 213px;
 }
+.part6 {
+  margin-bottom: 200px;
+}
+.cardp {
+  border: 0.15px Solid rgba(2, 151, 157, 0.7);
+  max-width: 364.82px;
+  height: 421.36px;
+  padding-inline: 7%;
+}
+.patient {
+  width: 82.08px;
+  height: 82.08px;
+  margin-inline: 38.75%;
+  margin-top: 8.87%;
+}
+.comment {
+  margin-top: 2.5%;
+  font-family: "Girloy-Regular", sans-serif;
+    font-size: 1em;
+    line-height: 36.48px;
+    color: #000b0c;
+}
+.patientName {
+  font-family: "Girloy-Regular", sans-serif;
+    font-size: 1.25em;
+    line-height: 36.48px;
+    color: #02979d;
+    margin-top: 3.5%;
+}
+.date {
+display: grid;
+grid-template-columns: 1fr 1fr;
+column-gap: 54%;
+font-family: "Girloy-Regular", sans-serif;
+    font-size: 1em;
+    line-height: 36.48px;
+    color: #D74E7F;
+}
+.patientSay {
+  font-family: "Alice", sans-serif;
+    font-size: 2.5em;
+    line-height: 45.72px;
+    color: #000b0c;
+    margin-bottom: 50px;
+}
+.swiper-navigation___prev, .swiper-navigation___next {
+ position: relative;
+  top: 0%;
+  transform: translateY(120%);
+  cursor: pointer;
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  background-color: #02979d;
+  color: #fafefe;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+.swiper-navigation___prev {
+ left: 43%;
+}
+
+.swiper-navigation___next {
+  right: -50%;
+  bottom: 50px;
+}
+
+.downdesign {
+  width: 100%;
+}
+.psychservices {
+   font-family: "Alice", sans-serif;
+    font-size: 2.5em;
+    line-height: 45.72px;
+    color: #000b0c;
+    margin-bottom: 80px;
+    margin-top: 74.34px;
+}
+.partb {
+  margin-bottom: 210px;
+}
+.partd {
+margin-bottom: 200px;
+}
+.parte {
+  margin-bottom: 244px;
+}
+.partf {
+  margin-bottom: 200px;
+}
+.see {
+  font-family: "Gilroy-Bold", sans-serif;
+  font-size: 1.25em;
+  line-height: 23.44px;
+  color: #fafefe;
+}
+.seeAll {
+  background-color: #02979d;
+  border-radius: 35px;
+  max-width: 220px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 65px;
+  padding-bottom: 17.5px;
+  padding-top: 17.5px;
+  margin-inline: 40%;
+  text-decoration: none;
+}
+.lets {
+font-family: "Alice", sans-serif;
+  font-size: 4em;
+  line-height: 73px;
+  color: #000b0c;
+  margin-top: -675px;
+  margin-bottom: 69px;
+  width: 100%;
+}
+.enjoy {
+font-family: "Gilroy-Medium", sans-serif;
+  font-size: 1.5em;
+  line-height: 40px;
+  color: #000b0c;
+  margin-bottom: 526px;
+  width: 100%;
+}
+.spzseminars {
+  margin-top: 140px;
+}
+
 
 @media screen and (max-width: 1360px) {
    .subjects {
@@ -213,6 +364,11 @@ font-family: "Girloy-Regular", sans-serif;
     margin-bottom: 20%;
 }
 }
+@media screen and (max-width: 1000px) {
+.swiper-navigation_next, .swiper-navigation_prev, .swiper-navigation___prev, .swiper-navigation___next {
+  display: none;
+}
+}
 @media screen and (max-width: 900px) {
    .subjects {
     grid-template-columns: 1fr 1fr;
@@ -223,7 +379,7 @@ font-family: "Girloy-Regular", sans-serif;
 .captionl {
     margin-bottom: 20%;
 }
-.meet, .article, .article2 {
+.meet, .article, .article2, .article2child {
     grid-template-columns: 1fr;
    display: flex;
    flex-direction: column;
@@ -233,11 +389,15 @@ font-family: "Girloy-Regular", sans-serif;
     margin-bottom: 8%;
 }
 }
-
+@media screen and (max-width: 800px) {
+.getHelp {
+  display: none;
+}
+.beHappy {
+  font-size: 28px;
+}
+}
 @media screen and (max-width: 680px) {
-    .adultspsy {
-    margin-inline: 50px;
-    }
    .subjects {
     grid-template-columns: 1fr;
     display: flex;
@@ -253,6 +413,38 @@ font-family: "Girloy-Regular", sans-serif;
 .article2ad {
     margin-inline-start: -50px;
     padding-top: -130px;
+}
+.seeAll {
+  background-color: #02979d;
+  border-radius: 35px;
+  max-width: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 65px;
+  padding-bottom: 17.5px;
+  padding-top: 17.5px;
+  margin-inline: 40%;
+  text-decoration: none;
+}
+}
+@media screen and (max-width: 440px) {
+.adultspsy, .childpsy {
+    margin-inline: 40px;
+    }
+    .consultants {
+padding-inline: 60px;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    .consultants {
+padding-inline: 100px;
+    }
+  }
+@media screen and (max-width: 390px) {
+.happy {
+  display: none;
 }
 }
 

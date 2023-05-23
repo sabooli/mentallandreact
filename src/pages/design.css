@@ -35,30 +35,25 @@ body {
 }
 .strategy {
 max-width: 620px;
-min-height: 380px;
-width: 100%;
-height: fit-content;
-border: 1px solid #eda12f;
-padding-inline: 41px;
-padding-top: 47px;
-padding-bottom: 48px;
-margin-top: -560px;
-margin-bottom: 20%;
-margin-inline-start: 22%;
+  margin: 97px auto 117px;
+  padding: 47px 41px 48px;
+  text-align: center;
+  border: 1px solid #eda12f;
 }
 .mainTopic {
 font-family: "Alice", sans-serif;
-font-size: 4em;
-line-height: 70px;
-color: #eda12f;
-width: 100%;
+  font-size: 64px;
+  line-height: 70px;
+  margin-bottom: 25px;
+  color:#eda12f;
+  width: 100%;
 }
 .subTopic {
-font-family: "Gilroy-Regular", sans-serif;
-font-size: 1.5em;
-line-height: 40px;
-color: #fafefe;
-width: 100%;
+ font-family: "Gilroy-Regular", sans-serif;
+  font-size: 1.5em;
+  line-height: 40px;
+  width: 100%;
+  color: #fafefe;
 }
 .choose {
   display: grid;
@@ -69,9 +64,9 @@ width: 100%;
   width: 100%;
   height: 100%;
   border-radius: 80px;
-  margin-top: -120px;
-  padding-top: 63px;
-  padding-bottom: 63px;
+  margin-top: -95px;
+  padding-top: 7%;
+  padding-bottom: 5%;
   padding-inline: 5%;
   gap: 5%;
   background-color: #fafefe;
@@ -84,16 +79,16 @@ width: 100%;
   color: #02979d;
 }
 .request {
-  width: 100%;
-  height: 64px;
+  height: 42px;
   background-color: #02979d;
-  border-radius: 25px;
-  padding-top: 4%;
+  border-radius: 10px;
+  padding-top: 2%;
+  padding-inline: 20%;
 }
-.appoint {
+.appoint, .appoint:hover {
   text-decoration: none;
   color: #ffffff;
-  font-size: 1.25em;
+  font-size: 1.2em;
   line-height: 23.44px;
   width: 100%;
   padding-inline: 0;
@@ -184,6 +179,7 @@ figure {
 }
 .chps {
   margin-inline-end: -100px;
+  margin-bottom: 212px;
 }
 .more {
   font-size: 20px;
@@ -231,9 +227,9 @@ figure {
   background-color: #eaf6f6;
   position: relative;
   min-height: 882px;
-  padding-top: 7.5%;
+  padding-top: 5%;
   padding-inline: 7.5%;
-  margin-inline: -100px !important;
+  margin-inline: -100px;
   margin-bottom: 200px;
 }
 .pubsem {
@@ -265,9 +261,9 @@ figure {
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   font-size: 14px;
-  line-height: 26.45px;
+  line-height: 23.44px;
   color: #000b0c;
-  grid-column-gap: 20px;
+  grid-column-gap: 5px;
   text-align: start;
 }
 .arrow {
@@ -301,9 +297,7 @@ figure {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 65px;
   padding-bottom: 17.5px;
-  padding-top: 17.5px;
   margin-inline: 40%;
   text-decoration: none;
 }
@@ -331,19 +325,11 @@ figure {
   padding-inline-start: 27px;
   margin-bottom: 200px;
 }
-.swiper-button-next, .swiper-button-prev {
-background-color: #02979d;
-position: absolute;
-border-radius: 100px;
-padding: 20px;
-color: #fafefe;
-z-index: 1000;
-margin-bottom: 100px;
-}
+
 .swiper-navigation__prev, .swiper-navigation__next {
- position: absolute;
+  position: relative;
   top: 0%;
-  transform: translateY(170%);
+  transform: translateY(0%);
   cursor: pointer;
   z-index: 10;
   width: 50px;
@@ -358,20 +344,13 @@ margin-bottom: 100px;
   font-weight: bold;
 }
 .swiper-navigation__prev {
-  left: 1120px;
+  left: 80%;
+  bottom: 580px;
 }
 
 .swiper-navigation__next {
-  right: 100px;
-}
-
-@media screen and (max-width: 13500px) {
-  .swiper-button-next {
-  transform: translate(-280%, -850%);
-}
-.swiper-button-prev {
-  transform: translate(2450%, -850%);
-}
+  right: -87%;
+  bottom: 630px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -379,11 +358,69 @@ margin-bottom: 100px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
   }
+  .swiper-navigation__prev {
+  left: 82%;
+  bottom: 570px;
+}
+.swiper-navigation__next {
+  right: -90%;
+  bottom: 620px;
+}
+}
+@media screen and (max-width: 1100px) {
+.swiper-navigation__next, .swiper-navigation__prev {
+  display: none;
+}
+}
+@media screen and (max-width: 900px) {
+  .adps, .chps, .pusem, .chpsy, .spzsem, .freq {
+    grid-template-columns: 1fr;
+   display: flex;
+   flex-direction: column;
+}
+.learnMore {
+  margin-bottom: 10%;
+}
+h2 {
+  margin-top: 5%;
+}
+.public {
+  margin-top: 10%;
+}
+.specialized {
+  margin-bottom: 15%;
+}
+.question {
+  margin-top: 5%;
+}
+}
+
+@media screen and (max-width: 800px) {
+.subTopic {
+  display: none;
+}
+.beHappy {
+  font-size: 28px;
+}
 }
 @media screen and (max-width: 700px) {
   .flow,.figures {
     grid-template-columns: 1fr;
     display: flex;
     flex-direction: column;
+    row-gap: 30%;
   }
+  
+}
+@media screen and (max-width: 500px) {
+.psycho {
+ margin-inline: 40px;
+}
+swiper {
+  padding-inline: 20px;
+}
+.pubsem {
+  text-align: center;
+  padding-inline: 40px;
+}
 }

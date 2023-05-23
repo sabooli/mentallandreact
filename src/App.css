@@ -356,7 +356,7 @@ body {
 }
 
 .nav-elements ul li:not(:last-child) {
-  margin-right: 50px;
+  margin-inline-end: 50px;
 }
 
 .nav-elements ul a {

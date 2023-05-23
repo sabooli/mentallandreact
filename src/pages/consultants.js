@@ -7,6 +7,8 @@ import R8a from "../icons/Rectangle 8a.svg";
 import R8b from "../icons/Rectangle 8b.svg";
 import R8c from "../icons/Rectangle 8c.svg";
 import R8d from "../icons/Rectangle 8d.svg";
+import rvector from "../icons/RVector.svg";
+import lvector from "../icons/LVector.svg";
 import "./customize.css";
 
 export default function Consultants({ heading, color }) {
@@ -21,27 +23,31 @@ export default function Consultants({ heading, color }) {
         bibendum at purus elit. Vel vehicula donec amet a dolor sollicitudin ut.
       </div>
       <Swiper
-        modules={[Navigation]}
+        modules={[Navigation, Pagination]}
         onInit={(swiper) => {
           swiper.params.navigation.prevEl = prevRef.current;
           swiper.params.navigation.nextEl = nextRef.current;
           swiper.navigation.init();
           swiper.navigation.update();
         }}
+        pagination
         spaceBetween={20}
         slidesPerView={4}
         breakpoints={{
-          640: {
+          300: {
             slidesPerView: 1,
           },
-          768: {
+          400: {
             slidesPerView: 2,
           },
-          1024: {
+          720: {
             slidesPerView: 3,
           },
-          1200: {
+          1056: {
             slidesPerView: 4,
+          },
+          1470: {
+            slidesPerView: 5,
           },
         }}
       >
@@ -49,7 +55,7 @@ export default function Consultants({ heading, color }) {
           <div className="card swiper-slide">
             <div className="image-content">
               <div className="card-image">
-                <img src={R8a} alt="consultant" className="dr" />
+                <img src={R8a} alt="consultant" className="dr img-fluid" />
               </div>
             </div>
             <div className="card-content">
@@ -93,13 +99,13 @@ export default function Consultants({ heading, color }) {
             </div>
           </div>
         </SwiperSlide>
-        <div ref={prevRef} className="swiper-navigation_prev">
-          Prev
-        </div>
-        <div ref={nextRef} className="swiper-navigation_next">
-          Next
-        </div>
       </Swiper>
+      <div ref={prevRef} className="swiper-navigation_prev">
+        <img src={lvector} alt="left vector" />
+      </div>
+      <div ref={nextRef} className="swiper-navigation_next">
+        <img src={rvector} alt="right vector" />
+      </div>
       <Link to="/" className="seeAll">
         <span className="see">see all</span>
       </Link>

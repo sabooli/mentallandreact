@@ -17,7 +17,8 @@ const resources = {
       Home: "خانه",
       About: "درباره ما",
       "Our Services": "خدمات ما",
-      "Contact Us": "تماس با ما",
+      "Contact": "تماس با ما",
+      
     },
   },
 };

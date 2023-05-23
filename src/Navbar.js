@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./App.css";
 import { useTranslation } from "react-i18next";
 import "bootstrap/dist/css/bootstrap.css";
@@ -20,7 +20,7 @@ export default function Navbar() {
           MentalLand
         </div>
         <div className="menu-icon" onClick={handleShowNavbar}>
-         <img src={Hamburger} />
+         <img src={Hamburger} alt="menu icon" />
         </div>
         <div className={`nav-elements nav-right  ${showNavbar && 'active'}`}>
           <ul>
