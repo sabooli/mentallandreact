@@ -14,12 +14,18 @@ import Upcoming from "./pages/upcoming";
 import Patientcomments from "./pages/patientcomments";
 import Consultants from "./pages/consultants";
 import Teamslider from "./pages/teamslider";
+import Header from "./header";
+import Navbar from "./Navbar";
+import Footer from "./footer";
 
 export default function Main() {
   return (
     <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<Home />} />
+        <Route path="header" element={<Header />} />
+        <Route path="Navbar" element={<Navbar />} />
+        <Route path="footer" element={<Footer />} />
         <Route path="/pages" element={<Outlet />}>
           <Route path="depressionadults" element={<Services />} />
           <Route path="aboutus" element={<About />} />
@@ -33,7 +39,7 @@ export default function Main() {
           <Route path="upcoming" element={<Upcoming />} />
           <Route path="patientcomments" element={<Patientcomments />} />
           <Route path="consultants" element={<Consultants />} />
-          <Route path="teamslider" element={<Teamslider />} /> 
+          <Route path="teamslider" element={<Teamslider />} />
         </Route>
       </Routes>
     </BrowserRouter>
