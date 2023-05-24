@@ -26,9 +26,8 @@ body {
 }
 
 .header {
-  display: flex;
-  font-family: "Gilroy-Regular", sans-serif;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 5fr 3fr 6fr 7fr;
   padding-top: 1rem;
   margin-bottom: 1rem;
   width: 100%;
@@ -73,7 +72,7 @@ body {
 }
 .btn-head {
   font-family: "Gilroy-Regular", sans-serif;
-  padding: 1rem;
+  padding: 12px;
   margin-inline-end: 1rem;
   padding-inline: 1.5rem;
   width: 134px;
@@ -103,14 +102,11 @@ body {
   height: 24px;
   margin-right: 7.5px;
 }
-.flag {
-  margin-inline-start: auto;
-}
 .search {
   display: flex;
   justify-content: center;
   padding-inline: 20px;
-  max-width: 315px;
+  width: 315px;
   height: 50px;
   margin-top: 1.5rem;
   background: #fafefe;
@@ -155,6 +151,7 @@ body {
 }
 .language {
   background: transparent;
+  margin-top: 17%;
 }
 .Country {
   position: flex;
@@ -390,6 +387,13 @@ body {
     padding-bottom: 15%;
   }
 }
+@media screen and (max-width: 1100px) {
+.header {
+  grid-template-columns: 5fr 3fr 6fr;
+  grid-template-rows: auto;
+  width: 100%;
+}
+}
 @media screen and (max-width: 900px) {
   .main-container {
     display: grid;
@@ -407,7 +411,28 @@ body {
     padding-inline-end: 4%;
   }
 }
-@media (max-width: 768px) {
+
+@media screen and (max-width: 850px) {
+.header {
+  grid-template-columns: 4fr 4fr;
+  grid-template-rows: auto;
+  width: 100%;
+}
+.language {
+  margin-top: 9%;
+}
+}
+@media screen and (max-width: 768px) {
+  .header {
+  grid-template-columns: 4fr 4fr;
+  grid-template-rows: auto;
+}
+.language {
+  margin-top: 0;
+}
+.search{
+  width: 215px;
+}
   .main-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -450,12 +475,20 @@ body {
     display: block;
     cursor: pointer;
   }
+  .header {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .language {
+    text-align: center;
+  }
   .nav-elements {
     position: absolute;
     right: 0;
     top: 60px;
     background-color: #ecf7f7;
     width: 0px;
+    z-index: 10;
     height: calc(100vh - 60px);
     transition: all 0.3s ease-in;
     overflow: hidden;
@@ -472,7 +505,6 @@ body {
     margin-top: 22px;
   }
 }
-
 @media screen and (max-width: 600px) {
   .main-container {
     display: grid;

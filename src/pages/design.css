@@ -93,7 +93,7 @@ font-family: "Alice", sans-serif;
   width: 100%;
   padding-inline: 0;
 }
-h1 {
+h1, h2 {
   text-transform: uppercase;
 }
 .flow {
@@ -301,6 +301,37 @@ figure {
   margin-inline: 40%;
   text-decoration: none;
 }
+.qa {
+  border: 1px solid #eda12f;
+  padding: 26px 15px 42px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+.qb {
+  border: 1px solid #02979d;
+  border-radius: 12px;
+  padding: 18px 15px 17px;
+  margin-bottom: 40px;
+}
+.fq {
+  font-family: "Gilroy-SemiBold", sans-serif;
+  color: #000b0c;
+  font-size: 20px;
+  line-height: 40px;
+  vertical-align: top;
+}
+.aa {
+  font-family: "Gilroy-Regular", sans-serif;
+  color: #000b0c;
+  font-size: 20px;
+  line-height: 40px;
+  vertical-align: top;
+}
+.minus {
+  text-align: end;
+  width: 12px;
+  margin-inline-end: 0;
+  }
 .freq {
   display: grid;
   grid-template-columns: 7fr 3fr;
@@ -316,11 +347,7 @@ figure {
   align-items: center;
   margin-bottom: 50px;
 }
-.myFaq {
-  font-weight: 900;
-  color: #eda12f;
-  padding-inline-end: 27px;
-}
+
 .question {
   padding-inline-start: 27px;
   margin-bottom: 200px;

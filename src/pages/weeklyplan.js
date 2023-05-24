@@ -20,20 +20,6 @@ export default function Weeklyplan() {
           adipiscing. Ligula elit ut cras magna non sit vel. Ut quam elit est
           volutpat dui. Diam sapien odio ultricies lacus lectus.
         </span>
-        <span className="ep">
-          Lorem ipsum dolor sit amet consectetur. Nunc pharetra massa velit
-          consectetur lectus erat. Tincidunt dis egestas aliquet adipiscing
-          donec. Sed cras vulputate amet scelerisque. Varius etiam enim velit
-          arcu arcu eget. Nunc a quis enim nibh posuere cras aenean purus. Nulla
-          sagittis semper cum rhoncus varius quis vitae venenatis nibh. Senectus
-          fames quisque porta vitae facilisis commodo consequat. Feugiat enim
-          odio in sed condimentum. Id et purus est risus. Tristique aliquam
-          dictum arcu ornare fames nulla. Euismod aliquet in a morbi feugiat.
-          Arcu sed mattis non elit leo vivamus. Bibendum ultricies vestibulum
-          purus ultrices id arcu ut. Justo rhoncus arcu platea nisi. Ac enim a
-          ac pellentesque amet turpis. Massa facilisis aenean quis aliquam eu
-          metus urna. Vel commodo quis molestie malesuada.{" "}
-        </span>
       </div>
     );
 }

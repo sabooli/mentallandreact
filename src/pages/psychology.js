@@ -21,6 +21,7 @@ import semps from "../icons/Group 811.svg";
 import Upcoming from "./upcoming";
 import bgImage from "../icons/Rectangle.png";
 import spzsem from "../icons/Group 1027.svg";
+import question from "../icons/Group 817.svg";
 import Mfaq from "./mfaq";
 
 
@@ -271,8 +272,39 @@ export default function Psychology() {
             heading="Upcoming Specialized Seminars & Events"
             color="#FBEAD1"
           />
-          <Mfaq />
-          <div></div>
+          <div className="faq">
+            <h1 className="frequent">Most Frequently Asked Questions</h1>
+            <div className="freq">
+              <div>
+                <Mfaq
+                  index={0}
+                  question="Lorem ipsum dolor sit amet consectetur. Est ut vulputate scelerisque nibh?"
+                  answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
+                />
+                <Mfaq
+                  index={1}
+                  question="Lorem ipsum dolor sit amet consectetur. Donec at ut diam sit vitae gravida nisi ?"
+                  answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
+                />
+                <Mfaq
+                  index={2}
+                  question="Lorem ipsum dolor sit amet consectetur. Nibh nisi nec velit arcu tristique. Justo nulla?"
+                  answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
+                />
+                <Mfaq
+                  index={3}
+                  question="Lorem ipsum dolor sit amet consectetur. Ut neque pellentesque felis orci.?"
+                  answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
+                />
+                <Mfaq
+                  index={4}
+                  question="Lorem ipsum dolor sit amet consectetur. Amet mi viverra praesent imperdiet proin ne?"
+                  answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
+                />
+              </div>
+              <img src={question} alt="faq" className="question" />
+            </div>
+          </div>
         </div>
       </div>
       <Footer />

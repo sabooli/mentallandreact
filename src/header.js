@@ -17,25 +17,21 @@ export default function Header() {
     <nav className="header">
       <div className="buttons">
         <Link to="/" className="btn-head">
-          <div className="login">
-            {""}
+          <span className="login">
             <img src={login} className="svg" alt="login key" />
-            {""}Login
-          </div>
+            {""}Login</span>
         </Link>
         <Link to="/" className="btn-head">
-          <div className="login">
+          <span className="login">
             <img src={shopping} className="svg" alt="shopping" />
-            {""}Cart
-          </div>
-        </Link>
+            {""}Cart</span>
+        </Link></div>
+        <div>
         <span className="flag">
           <Flag />
-        </span>
-      </div>
-      <div className="center">
-        <input type="search" placeholder="Search" className="search" />
-      </div>
+        </span></div>
+        <div>
+        <input type="search" placeholder="Search" className="search" /></div>
       <div className="calls">
         <img src={phone} className="call" alt="phone key" />
         <img src={linkedin} className="call" alt="linkedin key" />

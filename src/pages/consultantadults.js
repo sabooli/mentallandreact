@@ -13,6 +13,50 @@ import { Link } from "react-router-dom";
 
 
 export default function Counsel() {
+  let doctors = [
+    {
+      name: "Dr. Smith",
+      about:
+        "Dr. Smith is an experienced cardiologist with a focus on prevention and lifestyle modification.",
+      comments: [
+        "I felt very reassured after my appointment with Dr. Smith",
+        "Highly recommend Dr. Smith for heart health concerns",
+      ],
+      weeklyPlan: [
+        "Monday: 9am - 12pm: Office hours",
+        "Wednesday: 1pm - 5pm: Hospital rounds",
+        "Saturday: 10am - 2pm: Cardiology clinic",
+      ],
+    },
+    {
+      name: "Dr. Lee",
+      about:
+        "Dr. Lee is a general practitioner with a passion for holistic health and wellness.",
+      comments: [
+        "Dr. Lee really takes the time to listen to me and my concerns",
+        "I appreciate how Dr. Lee looks at the whole picture, not just individual symptoms",
+      ],
+      weeklyPlan: [
+        "Tuesday: 10am - 12pm: Office hours",
+        "Thursday: 2pm - 5pm: Home visits",
+        "Friday: 9am - 12pm: Holistic medicine clinic",
+      ],
+    },
+    {
+      name: "Dr. Chang",
+      about:
+        "Dr. Chang is a renowned neurosurgeon who has pioneered new techniques in brain surgery.",
+      comments: [
+        "I am so grateful to Dr. Chang for saving my life",
+        "Dr. Chang made me feel at ease during a very stressful time",
+      ],
+      weeklyPlan: [
+        "Monday: 1pm - 5pm: Office hours",
+        "Wednesday: 9am - 12pm: Surgery consultations",
+        "Thursday: 9am - 2pm: Hospital surgeries",
+      ],
+    },
+  ];
     return (
       <div>
         <Header />
@@ -52,7 +96,7 @@ export default function Counsel() {
               </div>
             </div>
           </div>
-          <Explain />
+          <Explain data={doctors} />
         </div>
         <Footer />
       </div>

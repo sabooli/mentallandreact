@@ -1,48 +1,67 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
 import "./index.css";
-import Weeklyplan from "./weeklyplan";
 
-export default function Explain() {    
-  const [active, setActive] = useState("");
-  const [text, setText] = useState("");
-  function handleClick () {
-    setActive(true);
-  }; 
-  function changeText() {
-setText(<Weeklyplan />);
-  }
- return (
-   <section className="knowing">
-     <div className="knowme">
-       <button
-         className={active ? "active col aboutme" : "col aboutme"}
-         onClick={() => {
-           handleClick();
-           changeText();
-         }}
-       >
-         <span className="tx">About me</span>
-       </button>
-       <button
-         className={active ? "active col comments" : "col comments"}
-         onClick={() => {
-           handleClick();
-         }}
-       >
-         <span className="tx">Comments</span>
-       </button>
-       <button
-         className={active ? "active col weeklyplan" : "col weeklyplan"}
-         onClick={handleClick}
-       >
-         <span className="tx">Weekly plan</span>
-       </button>
-     </div>
-     <div className="explain">
-       <span className="exp">{text}</span>
-     </div>
-   </section>
- );
+export default function Explain(props) {
+  const [activeButton, setActiveButton] = useState(0);
+
+  const handleButtonClick = (index) => {
+    setActiveButton(index);
+  };
+
+  return (
+    <div>
+      <section className="knowing">
+        {" "}
+        <div className="knowme">
+          <span
+            className={activeButton === 0 ? "active aboutme" : "aboutme"}
+            onClick={() => handleButtonClick(0)}
+          >
+            <span className="tx">About me</span>
+          </span>
+          <span
+            className={activeButton === 1 ? "active comments" : "comments"}
+            onClick={() => handleButtonClick(1)}
+          >
+            <span className="tx">Comments</span>
+          </span>
+          <span
+            className={activeButton === 2 ? "active weeklyplan" : "weeklyplan"}
+            onClick={() => handleButtonClick(2)}
+          >
+            <span className="tx">Weekly Plan</span>
+          </span>
+        </div>
+        <div className="explain">
+          {props.data.map((doctor) => (
+            <tr key={doctor.name} className="exp">
+              {activeButton === 0 && (
+                <>
+                  <td>{doctor.about}</td>
+                  <td></td>
+                  <td></td>
+                </>
+              )}
+              {activeButton === 1 && (
+                <>
+                  <td></td>
+                  <td>{doctor.comments}</td>
+                  <td></td>
+                </>
+              )}
+              {activeButton === 2 && (
+                <>
+                  <td></td>
+                  <td></td>
+                  <td>{doctor.weeklyPlan}</td>
+                </>
+              )}
+            </tr>
+          ))}
+        </div>
+      </section>
+    </div>
+  );
 }

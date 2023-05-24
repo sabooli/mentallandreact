@@ -322,6 +322,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
+
 .aboutme,
 .comments,
 .weeklyplan {
@@ -331,6 +332,7 @@ body {
 
 .knowing {
   margin-bottom: 300px;
+  margin-top: 80px;
 }
 .tx {
   font-family: "Gilroy-Bold", sans-serif;
@@ -343,6 +345,12 @@ body {
   align-content: center;
   margin-top: 12.5px;
   margin-bottom: 12.5px;
+}
+span.active {
+  background-color: #02979d;
+}
+span.active .tx {
+  color: #fff;
 }
 nav a.active {
   background-color: #02979d;

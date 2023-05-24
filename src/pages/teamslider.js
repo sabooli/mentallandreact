@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Swiper } from "swiper/react";
 import { SwiperSlide } from "swiper/react/swiper-slide";
 import SwiperCore, { Navigation, Pagination, Zoom } from "swiper";
@@ -9,7 +9,6 @@ import "swiper/swiper-bundle.css";
 import "./style.css";
 import image1 from "../icons/Rectangle 9a.svg";
 import image2 from "../icons/Rectangle 9.svg";
-import image3 from "../icons/Rectangle 10.svg";
 import image4 from "../icons/Rectangle 10a.svg";
 import image5 from "../icons/Rectangle 11.svg";
 
@@ -36,7 +35,7 @@ export default function Teamslider() {
             slidesPerView: 5,
           },
         }}
-        zoom={{maxRatio: 5}}
+        zoom={{ maxRatio: 5 }}
         navigation={{
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
@@ -49,52 +48,92 @@ export default function Teamslider() {
       >
         <SwiperSlide>
           <div className="swiper-zoom-container">
-            <img src={image1} className="teamphoto" />
+            <img
+              src={image1}
+              className="teamphoto"
+              alt="one of the members of Mentalland team"
+            />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-zoom-container">
-            <img src={image2} className="teamphoto" />
+            <img
+              src={image2}
+              className="teamphoto"
+              alt="one of the members of Mentalland team"
+            />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-zoom-container">
-            <img src={image1} className="teamphoto" />
+            <img
+              src={image1}
+              className="teamphoto"
+              alt="one of the members of Mentalland team"
+            />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-zoom-container">
-            <img src={image4} className="teamphoto" />
+            <img
+              src={image4}
+              className="teamphoto"
+              alt="one of the members of Mentalland team"
+            />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-zoom-container">
-            <img src={image5} className="teamphoto" />
+            <img
+              src={image5}
+              className="teamphoto"
+              alt="one of the members of Mentalland team"
+            />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-zoom-container">
-            <img src={image1} className="teamphoto" />
+            <img
+              src={image1}
+              className="teamphoto"
+              alt="one of the members of Mentalland team"
+            />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-zoom-container">
-            <img src={image2} className="teamphoto" />
+            <img
+              src={image2}
+              className="teamphoto"
+              alt="one of the members of Mentalland team"
+            />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-zoom-container">
-            <img src={image1} className="teamphoto" />
+            <img
+              src={image1}
+              className="teamphoto"
+              alt="one of the members of Mentalland team"
+            />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-zoom-container">
-            <img src={image4} className="teamphoto" />
+            <img
+              src={image4}
+              className="teamphoto"
+              alt="one of the members of Mentalland team"
+            />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-zoom-container">
-            <img src={image5} className="teamphoto" />
+            <img
+              src={image5}
+              className="teamphoto"
+              alt="one of the members of Mentalland team"
+            />
           </div>
         </SwiperSlide>{" "}
         <div className="swiper-button-next"></div>
