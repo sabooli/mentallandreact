@@ -6,25 +6,35 @@
 @font-face {
   font-family: "Gilroy";
   src: url(../fonts/Gilroy-Regular.ttf);
+  src: url(../fonts/Gilroy-Regular.woff);
+  src: url(../fonts/Gilroy-Regular.eot);
   font-weight: normal;
 }
 @font-face {
   font-family: "Gilroy-Bold";
   src: url(../fonts/Gilroy-Bold.ttf);
+  src: url(../fonts/Gilroy-Bold.woff);
+  src: url(../fonts/Gilroy-Bold.eot);
   font-weight: bold;
 }
 @font-face {
   font-family: "Gilroy-Black";
   src: url(../fonts/Gilroy-Black.ttf);
+  src: url(../fonts/Gilroy-Black.woff);
+  src: url(../fonts/Gilroy-Black.eot);
 }
 
 @font-face {
   font-family: "Gilroy-Medium";
   src: url(../fonts/Gilroy-Medium.ttf);
+  src: url(../fonts/Gilroy-Medium.woff);
+  src: url(../fonts/Gilroy-Medium.eot);
 }
 @font-face {
   font-family: "Gilroy-SemiBold";
   src: url(../fonts/Gilroy-SemiBold.ttf);
+  src: url(../fonts/Gilroy-SemiBold.woff);
+  src: url(../fonts/Gilroy-SemiBold.eot);
 }
 
 body {
@@ -38,14 +48,14 @@ body {
   margin-inline: 100px;
 }
 .strategy {
-max-width: 620px;
+  max-width: 620px;
   margin: 97px auto 117px;
   padding: 47px 41px 48px;
   text-align: center;
   border: 1px solid #eda12f;
 }
 .mainTopic {
-font-family: "Alice", sans-serif;
+  font-family: "Alice", sans-serif;
   font-size: 64px;
   line-height: 70px;
   margin-bottom: 25px;
@@ -53,7 +63,7 @@ font-family: "Alice", sans-serif;
   width: 100%;
 }
 .subTopic {
- font-family: "Gilroy-Regular", sans-serif;
+  font-family: "Gilroy-Regular", sans-serif;
   font-size: 1.5em;
   line-height: 40px;
   width: 100%;
