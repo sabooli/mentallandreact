@@ -13,6 +13,7 @@ import Seminars from "./pages/seminars";
 import Upcoming from "./pages/upcoming";
 import Patientcomments from "./pages/patientcomments";
 import Consultants from "./pages/consultants";
+import Teamslider from "./pages/teamslider";
 
 export default function Main() {
   return (
@@ -32,6 +33,7 @@ export default function Main() {
           <Route path="upcoming" element={<Upcoming />} />
           <Route path="patientcomments" element={<Patientcomments />} />
           <Route path="consultants" element={<Consultants />} />
+          <Route path="teamslider" element={<Teamslider />} /> 
         </Route>
       </Routes>
     </BrowserRouter>
