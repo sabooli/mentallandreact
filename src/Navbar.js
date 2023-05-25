@@ -31,7 +31,7 @@ export default function Navbar() {
               <NavLink to="/pages/depressionadults">{t("Our Services")}</NavLink>
             </li>
             <li>
-              <NavLink to="/pages/aboutus">{t("About")}</NavLink>
+              <NavLink to="/pages/aboutus"><span className="activePart">{t("About")}</span></NavLink>
             </li>
             <li>
               <NavLink to="/pages/contactus">{t("Contact")}</NavLink>

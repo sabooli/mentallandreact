@@ -330,20 +330,19 @@ figure {
 .fq {
   font-family: "Gilroy-SemiBold", sans-serif;
   color: #000b0c;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 40px;
   vertical-align: top;
 }
 .aa {
   font-family: "Gilroy-Regular", sans-serif;
   color: #000b0c;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 40px;
   vertical-align: top;
 }
 .minus {
   text-align: end;
-  width: 12px;
   margin-inline-end: 0;
   }
 .freq {

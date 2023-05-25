@@ -174,7 +174,7 @@ figure {
   margin-top: 10px;
   margin-bottom: 239px;
 }
-.meet, .article, .article2child {
+.meet, .article, .article2child, .meetc {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -191,6 +191,10 @@ figure {
 }
 .meetch {
   padding-inline-end: 18px;
+  width: 100%;
+}
+.meetchph {
+  margin-inline-end: -100px;
 }
 .meetph {
 margin-inline-end: -100px;

@@ -111,7 +111,7 @@ export default function Psychildren() {
               </div>
             </div>
             <div className="partb">
-              <div className="meet">
+              <div className="meetc">
                 <div className="meetch">
                   <h2 className="meettitle">Children / Teenagers Psychology</h2>
                   <div className="meetcontent">

@@ -21,16 +21,13 @@ export default function Patientcomments({heading}) {
     <div>
       <h1 className="patientSay text-center">{heading}</h1>
       <Swiper
-        modules={[Navigation, Pagination, Zoom]}
+        modules={[Navigation, Zoom]}
         onInit={(swiper) => {
           console.log("Swiper initialized:", swiper);
           swiper.params.navigation.prevEl = prevRef.current;
           swiper.params.navigation.nextEl = nextRef.current;
           swiper.navigation.init();
           swiper.navigation.update();
-        }}
-        pagination={{
-          clickable: true,
         }}
         zoom={{maxRatio: 2}}
         spaceBetween={20}
