@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: "Alice";
   src: url(../fonts/Alice-Regular.ttf);
@@ -7,52 +6,46 @@
 @font-face {
   font-family: "Gilroy";
   src: url(../fonts/Gilroy-Regular.ttf);
-  src: url(../fonts/Gilroy-Regular.woff);
-  src: url(../fonts/Gilroy-Regular.eot);
   font-weight: normal;
 }
 @font-face {
   font-family: "Gilroy-Bold";
   src: url(../fonts/Gilroy-Bold.ttf);
-  src: url(../fonts/Gilroy-Bold.woff);
-  src: url(../fonts/Gilroy-Bold.eot);
   font-weight: bold;
 }
 @font-face {
   font-family: "Gilroy-Black";
   src: url(../fonts/Gilroy-Black.ttf);
-  src: url(../fonts/Gilroy-Black.woff);
-  src: url(../fonts/Gilroy-Black.eot);
 }
 
 @font-face {
   font-family: "Gilroy-Medium";
   src: url(../fonts/Gilroy-Medium.ttf);
-  src: url(../fonts/Gilroy-Medium.woff);
-  src: url(../fonts/Gilroy-Medium.eot);
 }
 @font-face {
   font-family: "Gilroy-SemiBold";
   src: url(../fonts/Gilroy-SemiBold.ttf);
-  src: url(../fonts/Gilroy-SemiBold.woff);
-  src: url(../fonts/Gilroy-SemiBold.eot);
 }
 
 body {
-    font-size: 16px;
-    margin: 0 auto;
+  font-size: 16px;
+  margin: 0 auto;
 }
-.contain, .kids, .seminars {
-    max-width: 1800px; 
-    width:100%;
+.contain,
+.kids,
+.seminars {
+  max-width: 1800px;
+  width: 100%;
 }
-.adultspsy, .childpsy, .sliders {
-    margin-inline: 100px;
+.adultspsy,
+.childpsy,
+.sliders {
+  margin-inline: 100px;
 }
 .happy {
   max-width: 860px;
   margin: 107px auto 218px;
-  backdrop-filter: blur(10px) brightness(90%); 
+  backdrop-filter: blur(10px) brightness(90%);
   padding: 37px 100px 62px;
   text-align: center;
 }
@@ -77,19 +70,19 @@ body {
   color: #eda12f;
 }
 .topic {
-    font-family: "Alice", sans-serif;
-    font-size: 2.5em;
-    line-height: 45.72px;
-    color: #000b0c;
-    margin-top: 150px;
-    margin-bottom: 80px;
+  font-family: "Alice", sans-serif;
+  font-size: 2.5em;
+  line-height: 45.72px;
+  color: #000b0c;
+  margin-top: 150px;
+  margin-bottom: 80px;
 }
 .subjects {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  width: 100%;
 }
-.consultants{
+.consultants {
   position: relative;
   min-height: 848px;
   padding-top: 6%;
@@ -107,32 +100,33 @@ body {
   text-transform: uppercase;
 }
 .dr {
-    max-width: 295px;
-    width: 100%;
+  max-width: 295px;
+  width: 100%;
 }
 .constext {
-font-family: "Gilroy-Regular", sans-serif;
+  font-family: "Gilroy-Regular", sans-serif;
   font-size: 24px;
   line-height: 40px;
-margin-bottom: 7%;
+  margin-bottom: 7%;
 }
 .surname {
-font-family: "Gilroy-Regular", sans-serif;
+  font-family: "Gilroy-Regular", sans-serif;
   font-size: 24px;
-  line-height: 28.13px; 
-  color: #02979D;
+  line-height: 28.13px;
+  color: #02979d;
   padding-top: 51px;
   padding-bottom: 51px;
 }
 .card {
-  border: 0.13px solid #02979D;
+  border: 0.13px solid #02979d;
   gap: 20px;
   width: 100%;
   border-radius: 5%;
   min-height: 403px;
 }
-.swiper-navigation_prev, .swiper-navigation_next {
- position: relative;
+.swiper-navigation_prev,
+.swiper-navigation_next {
+  position: relative;
   top: 0%;
   transform: translateY(0%);
   cursor: pointer;
@@ -158,11 +152,11 @@ font-family: "Gilroy-Regular", sans-serif;
   bottom: 525px;
 }
 figure {
-    text-align: center;
+  text-align: center;
 }
 .label {
-   width: 190px;
-   height: 246px;
+  width: 190px;
+  height: 246px;
 }
 .captionl {
   display: block;
@@ -174,20 +168,23 @@ figure {
   margin-top: 10px;
   margin-bottom: 239px;
 }
-.meet, .article, .article2child, .meetc {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.meet,
+.article,
+.article2child,
+.meetc {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 .article2 {
-    display: grid;
-    grid-template-columns: 4fr 8fr;
+  display: grid;
+  grid-template-columns: 4fr 8fr;
 }
 .meetad {
-    padding-inline-start: 20px;
-    width: 100%;
+  padding-inline-start: 20px;
+  width: 100%;
 }
 .articlead {
-    padding-inline-end: 63px;
+  padding-inline-end: 63px;
 }
 .meetch {
   padding-inline-end: 18px;
@@ -197,44 +194,49 @@ figure {
   margin-inline-end: -100px;
 }
 .meetph {
-margin-inline-end: -100px;
+  margin-inline-end: -100px;
 }
 .article2ad {
-    padding-inline-start: 70px;
-    padding-top: 140.5px;
-    width: 100%;
+  padding-inline-start: 70px;
+  padding-top: 140.5px;
+  width: 100%;
 }
 .article2ch {
-   padding-inline-start: 70px;
-   padding-top: 78px;
-   width: 100%;
+  padding-inline-start: 70px;
+  padding-top: 78px;
+  width: 100%;
 }
-.meetph, .article2ph {
-    margin-inline-start: -100px;  
+.meetph,
+.article2ph {
+  margin-inline-start: -100px;
 }
-.meettitle, .articletitle, .article2title {
-    font-family: "Alice", sans-serif;
-    font-size: 37px;
-    line-height: 42.29px;
-    color: #000b0c;
-    margin-bottom: 30px;
+.meettitle,
+.articletitle,
+.article2title {
+  font-family: "Alice", sans-serif;
+  font-size: 37px;
+  line-height: 42.29px;
+  color: #000b0c;
+  margin-bottom: 30px;
 }
-.meetcontent, .articlecontent, .article2content {
-font-family: "Girloy-Regular", sans-serif;
-    font-size: 1.5em;
-    line-height: 40px;
-    color: #000b0c;
-    margin-bottom: 28px;
-    width: 100%;
-    height: auto;
+.meetcontent,
+.articlecontent,
+.article2content {
+  font-family: "Girloy-Regular", sans-serif;
+  font-size: 1.5em;
+  line-height: 40px;
+  color: #000b0c;
+  margin-bottom: 28px;
+  width: 100%;
+  height: auto;
 }
 .part3 {
-    margin-top: 210px;
-    margin-bottom: 200px;
+  margin-top: 210px;
+  margin-bottom: 200px;
 }
 .part5 {
-    margin-top: 59.5px;
-    margin-bottom: 213px;
+  margin-top: 59.5px;
+  margin-bottom: 213px;
 }
 .part6 {
   margin-bottom: 200px;
@@ -254,35 +256,36 @@ font-family: "Girloy-Regular", sans-serif;
 .comment {
   margin-top: 2.5%;
   font-family: "Girloy-Regular", sans-serif;
-    font-size: 1em;
-    line-height: 36.48px;
-    color: #000b0c;
+  font-size: 1em;
+  line-height: 36.48px;
+  color: #000b0c;
 }
 .patientName {
   font-family: "Girloy-Regular", sans-serif;
-    font-size: 1.25em;
-    line-height: 36.48px;
-    color: #02979d;
-    margin-top: 3.5%;
+  font-size: 1.25em;
+  line-height: 36.48px;
+  color: #02979d;
+  margin-top: 3.5%;
 }
 .date {
-display: grid;
-grid-template-columns: 1fr 1fr;
-column-gap: 54%;
-font-family: "Girloy-Regular", sans-serif;
-    font-size: 1em;
-    line-height: 36.48px;
-    color: #D74E7F;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 54%;
+  font-family: "Girloy-Regular", sans-serif;
+  font-size: 1em;
+  line-height: 36.48px;
+  color: #d74e7f;
 }
 .patientSay {
   font-family: "Alice", sans-serif;
-    font-size: 2.5em;
-    line-height: 45.72px;
-    color: #000b0c;
-    margin-bottom: 50px;
+  font-size: 2.5em;
+  line-height: 45.72px;
+  color: #000b0c;
+  margin-bottom: 50px;
 }
-.swiper-navigation___prev, .swiper-navigation___next {
- position: relative;
+.swiper-navigation___prev,
+.swiper-navigation___next {
+  position: relative;
   top: 0%;
   transform: translateY(120%);
   cursor: pointer;
@@ -299,7 +302,7 @@ font-family: "Girloy-Regular", sans-serif;
   font-weight: bold;
 }
 .swiper-navigation___prev {
- left: 43%;
+  left: 43%;
 }
 
 .swiper-navigation___next {
@@ -311,18 +314,18 @@ font-family: "Girloy-Regular", sans-serif;
   width: 100%;
 }
 .psychservices {
-   font-family: "Alice", sans-serif;
-    font-size: 2.5em;
-    line-height: 45.72px;
-    color: #000b0c;
-    margin-bottom: 80px;
-    margin-top: 74.34px;
+  font-family: "Alice", sans-serif;
+  font-size: 2.5em;
+  line-height: 45.72px;
+  color: #000b0c;
+  margin-bottom: 80px;
+  margin-top: 74.34px;
 }
 .partb {
   margin-bottom: 210px;
 }
 .partd {
-margin-bottom: 200px;
+  margin-bottom: 200px;
 }
 .parte {
   margin-bottom: 244px;
@@ -351,7 +354,7 @@ margin-bottom: 200px;
   text-decoration: none;
 }
 .lets {
-font-family: "Alice", sans-serif;
+  font-family: "Alice", sans-serif;
   font-size: 4em;
   line-height: 73px;
   color: #000b0c;
@@ -360,7 +363,7 @@ font-family: "Alice", sans-serif;
   width: 100%;
 }
 .enjoy {
-font-family: "Gilroy-Medium", sans-serif;
+  font-family: "Gilroy-Medium", sans-serif;
   font-size: 1.5em;
   line-height: 40px;
   color: #000b0c;
@@ -371,103 +374,104 @@ font-family: "Gilroy-Medium", sans-serif;
   margin-top: 140px;
 }
 
-
 @media screen and (max-width: 1360px) {
-   .subjects {
+  .subjects {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     width: 100%;
-} 
-.captionl {
+  }
+  .captionl {
     margin-bottom: 20%;
-}
+  }
 }
 @media screen and (max-width: 1000px) {
-.swiper-navigation_next, .swiper-navigation_prev, .swiper-navigation___prev, .swiper-navigation___next {
-  display: none;
-}
+  .swiper-navigation_next,
+  .swiper-navigation_prev,
+  .swiper-navigation___prev,
+  .swiper-navigation___next {
+    display: none;
+  }
 }
 @media screen and (max-width: 900px) {
-   .subjects {
+  .subjects {
     grid-template-columns: 1fr 1fr;
     display: flex;
     flex-direction: column;
     width: 100%;
-} 
-.captionl {
+  }
+  .captionl {
     margin-bottom: 20%;
-}
-.meet, .article, .article2, .article2child {
-    grid-template-columns: 1fr;
-   display: flex;
-   flex-direction: column;
-}
-.meetph {
-    margin-inline-start: 50px;
-    margin-bottom: 8%;
-}
-}
-@media screen and (max-width: 800px) {
-.getHelp {
-  display: none;
-}
-.beHappy {
-  font-size: 28px;
-}
-}
-@media screen and (max-width: 680px) {
-   .subjects {
+  }
+  .meet,
+  .article,
+  .article2,
+  .article2child {
     grid-template-columns: 1fr;
     display: flex;
-   flex-direction: column;
+    flex-direction: column;
+  }
+  .meetph {
+    margin-inline-start: 50px;
+    margin-bottom: 8%;
+  }
 }
-.label {
+@media screen and (max-width: 800px) {
+  .getHelp {
+    display: none;
+  }
+  .beHappy {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .subjects {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+  }
+  .label {
     width: 100%;
     margin-inline-start: -5%;
-}
-.captionl {
+  }
+  .captionl {
     margin-bottom: 20%;
-}
-.article2ad {
+  }
+  .article2ad {
     margin-inline-start: -50px;
     padding-top: -130px;
-}
-.seeAll {
-  background-color: #02979d;
-  border-radius: 35px;
-  max-width: 150px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 65px;
-  padding-bottom: 17.5px;
-  padding-top: 17.5px;
-  margin-inline: 40%;
-  text-decoration: none;
-}
+  }
+  .seeAll {
+    background-color: #02979d;
+    border-radius: 35px;
+    max-width: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 65px;
+    padding-bottom: 17.5px;
+    padding-top: 17.5px;
+    margin-inline: 40%;
+    text-decoration: none;
+  }
 }
 @media screen and (max-width: 440px) {
-.adultspsy, .childpsy {
+  .adultspsy,
+  .childpsy {
     margin-inline: 40px;
-    }
-    .consultants {
-padding-inline: 60px;
-    }
   }
-  @media screen and (max-width: 400px) {
-    .consultants {
-padding-inline: 100px;
-    }
+  .consultants {
+    padding-inline: 60px;
   }
+}
+@media screen and (max-width: 400px) {
+  .consultants {
+    padding-inline: 100px;
+  }
+}
 @media screen and (max-width: 390px) {
-.happy {
-  display: none;
+  .happy {
+    display: none;
+  }
 }
-}
-
-
-
-
-

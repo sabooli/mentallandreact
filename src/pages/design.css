@@ -6,35 +6,25 @@
 @font-face {
   font-family: "Gilroy";
   src: url(../fonts/Gilroy-Regular.ttf);
-  src: url(../fonts/Gilroy-Regular.woff);
-  src: url(../fonts/Gilroy-Regular.eot);
   font-weight: normal;
 }
 @font-face {
   font-family: "Gilroy-Bold";
   src: url(../fonts/Gilroy-Bold.ttf);
-  src: url(../fonts/Gilroy-Bold.woff);
-  src: url(../fonts/Gilroy-Bold.eot);
   font-weight: bold;
 }
 @font-face {
   font-family: "Gilroy-Black";
   src: url(../fonts/Gilroy-Black.ttf);
-  src: url(../fonts/Gilroy-Black.woff);
-  src: url(../fonts/Gilroy-Black.eot);
 }
 
 @font-face {
   font-family: "Gilroy-Medium";
   src: url(../fonts/Gilroy-Medium.ttf);
-  src: url(../fonts/Gilroy-Medium.woff);
-  src: url(../fonts/Gilroy-Medium.eot);
 }
 @font-face {
   font-family: "Gilroy-SemiBold";
   src: url(../fonts/Gilroy-SemiBold.ttf);
-  src: url(../fonts/Gilroy-SemiBold.woff);
-  src: url(../fonts/Gilroy-SemiBold.eot);
 }
 
 body {
