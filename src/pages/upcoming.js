@@ -1,4 +1,4 @@
-import React, {useRef} from "react";
+import React, { useRef, useCallback } from "react";
 import "./design.css";
 import { Swiper } from "swiper/react";
 import { SwiperSlide } from "swiper/react/swiper-slide";
@@ -18,21 +18,24 @@ import lvector from "../icons/LVector.svg";
 
 SwiperCore.use([Navigation, Pagination]);
 
-export default function Upcoming({heading, color}) {
-  const prevRef = useRef(null);
-  const nextRef = useRef(null); 
+export default function Upcoming({ heading, color }) {
+    const sliderRef = useRef(null);
+  const handlePrev = useCallback(() => {
+    if (!sliderRef.current) return;
+    sliderRef.current.swiper.slidePrev();
+  }, []);
+
+  const handleNext = useCallback(() => {
+    if (!sliderRef.current) return;
+    sliderRef.current.swiper.slideNext();
+  }, []);
+
   return (
     <div className="separate" style={{ backgroundColor: color }}>
       <div className="sepa">
         <h1 className="pubsem">{heading}</h1>
         <Swiper
-          modules={[Navigation, Pagination]}
-          onInit={(swiper) => {
-            swiper.params.navigation.prevEl = prevRef.current;
-            swiper.params.navigation.nextEl = nextRef.current;
-            swiper.navigation.init();
-            swiper.navigation.update();
-          }}
+          ref={sliderRef}
           pagination={{
             clickable: true,
           }}
@@ -252,10 +255,12 @@ export default function Upcoming({heading, color}) {
             </div>
           </SwiperSlide>
         </Swiper>{" "}
-        <div ref={prevRef} className="swiper-navigation__prev">
+        <div className="swiper-navigation__prev" onClick={handlePrev}>
+          {" "}
           <img src={lvector} alt="left vector" />
         </div>
-        <div ref={nextRef} className="swiper-navigation__next">
+        <div className="swiper-navigation__next" onClick={handleNext}>
+          {" "}
           <img src={rvector} alt="right vector" />
         </div>
         <Link to="/" className="seeAll">
@@ -265,4 +270,3 @@ export default function Upcoming({heading, color}) {
     </div>
   );
 }
-
