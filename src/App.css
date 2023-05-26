@@ -29,38 +29,32 @@ body {
 .header {
   display: grid;
   grid-template-columns: 5fr 3fr 6fr 7fr;
-  padding-top: 1rem;
-  margin-bottom: 1rem;
+  padding-top: 0.2rem;
+  margin-bottom: 0.3rem;
   width: 100%;
-  min-height: 126px;
-  padding-inline-start: 6%;
-  padding-inline-end: 6%;
+  min-height: 100px;
+  padding-inline-start: 3%;
+  padding-inline-end: 3%;
   max-width: 1800px;
 }
 
 .nav {
   background-color: #ecf7f7;
   width: 100%;
-  height: 126px;
-  padding-inline-start: 6% !important;
-  padding-inline-end: 6% !important;
+  min-height: 100px;
+  padding-inline-start: 5% !important;
+  padding-inline-end: 5% !important;
   max-width: 1800px;
 }
 .nav-right {
   display: flex;
   justify-content: space-between;
-  height: 40px;
+  height: 32px;
   font-family: "Gilroy-Regular", sans-serif;
-  font-size: 24px;
-  line-height: 40px;
+  font-size: 18px;
+  line-height: 32px;
 }
-.nav-left {
-  font-family: "Gilroy-Black", sans-serif;
-  font-size: 32px;
-  line-height: 37.5px;
-  color: #02979d;
-  margin-top: 43px;
-}
+
 
 .link {
   color: #000b0c;
@@ -70,27 +64,25 @@ body {
   font-family: "Gilroy-Regular", sans-serif;
   display: flex;
   justify-content: center;
-  margin-top: 31px;
+  margin-top: 1.5em;
 }
 .btn-head {
   font-family: "Gilroy-Regular", sans-serif;
-  padding: 12px;
-  margin-inline-end: 1rem;
-  padding-inline: 1.5rem;
-  width: 134px;
-  height: 50px;
+  padding: 10px;
+  margin-inline-end: 0.8rem;
+  padding-inline: 1.4rem;
+  width: 124px;
+  height: 45px;
   background: #02979d;
   border: 1px solid #02979d;
-  border-radius: 35px;
+  border-radius: 30px;
   text-decoration: none;
 }
 
 .login {
-  width: 51px;
-  height: 25px;
   font-family: "Gilroy-Bold", sans-serif;
-  font-size: 20px;
-  line-height: 23px;
+  font-size: 18px;
+  line-height: 21px;
   display: flex;
   align-items: center;
   text-align: start;
@@ -100,21 +92,21 @@ body {
   color: #ffffff;
 }
 .svg {
-  width: 24px;
-  height: 24px;
-  margin-right: 7.5px;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
 }
 .search {
   display: flex;
   justify-content: center;
   padding-inline: 20px;
-  width: 315px;
-  height: 50px;
-  margin-top: 1.5rem;
+  width: 300px;
+  height: 45px;
+  margin-top: 0.7rem;
   background: #fafefe;
   border: 1px solid #bebebe;
-  border-radius: 30px;
-  margin-block-start: 10%;
+  border-radius: 25px;
+  margin-block-start: 8%;
   margin-inline-end: 15%;
 }
 ::placeholder {
@@ -125,12 +117,12 @@ body {
   padding-inline-start: 30px;
   position: relative;
   padding: 2rem;
-  max-width: 79px;
-  height: 21px;
+  max-width: 74px;
+  height: 18px;
   top: 1px;
   font-family: "Gilroy-Medium", sans-serif;
-  font-size: 20px;
-  line-height: 23px;
+  font-size: 18px;
+  line-height: 21px;
   color: #bebebe;
 }
 .calls {
@@ -145,15 +137,15 @@ body {
 .call {
   margin-bottom: 0.5rem;
   justify-content: center;
-  margin-right: 1rem;
-  width: 50px;
-  height: 50px;
+  margin-right: 0.6rem;
+  width: 45px;
+  height: 45px;
   fill: #eda12f !important;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 .language {
   background: transparent;
-  margin-top: 17%;
+  margin-top: 12%;
 }
 .Country {
   position: flex;
@@ -164,7 +156,7 @@ body {
   left: 31.25%;
   right: 67.01%;
   font-family: "Gilroy-Regular", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 0px;
   text-transform: capitalize;
   background-size: 0;
@@ -188,11 +180,11 @@ body {
   background: linear-gradient(100.35deg, #02979d 7.72%, #00888d 92.28%);
   display: grid;
   grid-template-columns: 4fr 4fr 5fr;
-  padding-inline-start: 7%;
-  padding-inline-end: 5%;
-  min-height: 597px;
-  gap: 5%;
-  padding-top: 33px;
+  padding-inline-start: 5%;
+  padding-inline-end: 4%;
+  min-height: 427px;
+  gap: 6%;
+  padding-top: 26px;
 }
 .column {
   width: 100%;
@@ -208,35 +200,35 @@ body {
 }
 .fh1 {
   font-family: "Gilroy-Black", sans-serif;
-  font-size: 32px;
-  line-height: 37.5px;
+  font-size: 28px;
+  line-height: 28px;
   color: #fafefe;
 }
 .ftext {
-  height: 328px;
-  margin-top: 12px;
-  margin-bottom: 101.15px;
+  height: 268px;
+  margin-top: 16px;
+  margin-bottom: 88.15px;
   font-family: "Gilroy-Regular", sans-serif;
-  font-size: 20px;
-  line-height: 40px;
+  font-size: 17px;
+  line-height: 34px;
   color: #ffffff;
 }
 .fcalls {
   display: flex;
   width: 100%;
-  gap: 10px;
+  gap: 4px;
 }
 .fcall {
   width: 100%;
-  height: 50px;
-  border-radius: 10px;
+  height: 45px;
+  border-radius: 8px;
 }
 .fh2 {
-  height: 30px;
+  height: 28px;
   margin-top: 5px;
   font-family: "Gilroy-Bold", sans-serif;
-  font-size: 1.5em;
-  line-height: 28px;
+  font-size: 1.25em;
+  line-height: 24px;
   text-transform: uppercase;
   color: #fafefe;
 }
@@ -250,17 +242,17 @@ body {
 }
 .formn,
 .forme {
-  height: 55px;
+  height: 46px;
 }
 .formm {
-  height: 175px;
+  height: 155px;
 }
 .fname,
 .femail,
 .fmessage {
   font-family: "Gilroy-Regular", sans-serif;
-  font-size: 1.25em;
-  line-height: 40px;
+  font-size: 1em;
+  line-height: 36px;
   color: #ffffff;
 }
 
@@ -268,20 +260,20 @@ body {
   display: flex;
   justify-content: center;
   width: 60%;
-  height: 50px;
-  margin-inline: 15%;
-  margin-top: 32px;
+  height: 45px;
+  margin-inline: 18%;
+  margin-top: 38px;
   background: #fafefe;
-  border-radius: 35px;
+  border-radius: 30px;
   border: 1px solid #fafefe;
 }
 .fbt {
   position: relative;
   top: 25%;
-  max-width: 135px;
-  height: 25px;
+  max-width: 125px;
+  height: 22px;
   font-family: "Gilroy-Bold", sans-serif;
-  font-size: 1.25em;
+  font-size: 1em;
   line-height: 23px;
   background: linear-gradient(100.35deg, #02979d 7.72%, #00888d 92.28%);
   -webkit-background-clip: text;
@@ -289,13 +281,13 @@ body {
   background-clip: text;
 }
 .web {
-  padding-top: 6px;
+  padding-top: 4px;
 }
 .fh22 {
   font-family: "Gilroy-Bold", sans-serif;
   height: 30px;
-  top: 38px;
-  font-size: 1.5em;
+  top: 28px;
+  font-size: 1.15em;
   line-height: 28px;
   text-transform: uppercase;
   color: #fafefe;
@@ -303,11 +295,11 @@ body {
 .fqaccess {
   height: 25px;
   font-family: "Gilroy-Medium", sans-serif;
-  font-size: 1.25em;
-  line-height: 23.44px;
+  font-size: 1.05em;
+  line-height: 21.44px;
   color: #fafefe;
   text-decoration: none;
-  padding-top: 55px;
+  padding-top: 45px;
 }
 
 .fqaccess:hover {
@@ -318,12 +310,12 @@ body {
 .bottom {
   grid-column: span 2;
   bottom: 20px;
-  height: 40px;
-  line-height: 40px;
+  height: 28px;
+  line-height: 28px;
   text-transform: capitalize;
   color: #ffffff;
   font-family: "Gilroy-Regular", sans-serif;
-  font-size: 0.96em;
+  font-size: 0.82em;
   width: 100%;
 }
 
@@ -334,17 +326,13 @@ body {
   height: 100%;
 }
 
-.navbar {
-  min-height: 126px;
-}
-
 .menu-icon {
   display: none;
 }
 .logo {
   font-family: "Gilroy-Black", sans-serif;
-  font-size: 32px;
-  line-height: 37.5px;
+  font-size: 28px;
+  line-height: 30px;
   color: #02979d;
 }
 
@@ -355,7 +343,7 @@ body {
 }
 
 .nav-elements ul li:not(:last-child) {
-  margin-inline-end: 50px;
+  margin-inline-end: 45px;
 }
 
 .nav-elements ul a {
