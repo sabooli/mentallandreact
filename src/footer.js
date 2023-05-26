@@ -1,7 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap/dist/js/bootstrap.js";
 import wphone from "./icons/Component 6w.svg";
 import wlinkedin from "./icons/Component 3w.svg";
 import winstagram from "./icons/Component 4w.svg";
@@ -30,7 +28,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="column first">
-          <h2 className="fh2">WRITE US</h2>
+          <div className="fh2">WRITE US</div>
           <div className="fname">Name</div>
           <input type="full name" className="formn" autoComplete="off" />
 
@@ -47,7 +45,7 @@ export default function Footer() {
 
         <div className="column web">
           <div className="inner-column">
-            <h2 className="fh22">Quick Access</h2>
+            <div className="fh22">Quick Access</div>
             <Link to="/pages/Home" className="fqaccess fhome">
               Home
             </Link>
@@ -69,7 +67,7 @@ export default function Footer() {
             </Link>
           </div>
           <div className="inner-column">
-            <h2 className="fh22">Helpful Links</h2>
+            <div className="fh22">Helpful Links</div>
             <Link to="/pages/aboutus" className="fqaccess fhome">
               Link 1
             </Link>

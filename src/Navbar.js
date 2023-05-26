@@ -2,8 +2,6 @@ import React, {useState} from "react";
 import { NavLink } from "react-router-dom";
 import "./App.css";
 import { useTranslation } from "react-i18next";
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap/dist/js/bootstrap.js";
 import Hamburger from "./icons/hamburger.svg";
 
 export default function Navbar() {
@@ -16,9 +14,9 @@ export default function Navbar() {
 
      return (
     <nav className="navbar nav">
-        <div className="logo">
+        <h1 className="logo">
           MentalLand
-        </div>
+        </h1>
         <div className="menu-icon" onClick={handleShowNavbar}>
          <img src={Hamburger} alt="menu icon" />
         </div>
@@ -31,7 +29,7 @@ export default function Navbar() {
               <NavLink to="/pages/depressionadults">{t("Our Services")}</NavLink>
             </li>
             <li>
-              <NavLink to="/pages/aboutus"><span className="activePart">{t("About")}</span></NavLink>
+              <NavLink to="/pages/aboutus">{t("About")}</NavLink>
             </li>
             <li>
               <NavLink to="/pages/contactus">{t("Contact")}</NavLink>

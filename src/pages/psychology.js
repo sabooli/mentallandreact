@@ -2,8 +2,6 @@ import React from "react";
 import Header from "../header";
 import Navbar from "../Navbar";
 import Footer from "../footer";
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap/dist/js/bootstrap.js";
 import "./design.css";
 import Form from "react-bootstrap/Form";
 import { Link } from "react-router-dom";
@@ -41,10 +39,10 @@ export default function Psychology() {
             Heal Your <br />
             Mind & Soul
           </h1>
-          <h2 className="subTopic">
+          <div className="subTopic">
             Lorem ipsum dolor sit amet consectetur. Amet velit convallis amet mi
             leo aliquet in vestibulum consectetur. Lectus magna eleifend{" "}
-          </h2>
+          </div>
         </div>
       </div>
       <div className="fullcontent">
@@ -115,11 +113,11 @@ export default function Psychology() {
             </div>
           </div>
           <div className="department">
-            <h1 className="forYou text-center">
+            <h2 className="forYou text-center">
               <span>What can we do for you</span>
               <br />
               in psychology department
-            </h1>
+            </h2>
             <div className="figures">
               <figure className="">
                 <img
@@ -171,7 +169,7 @@ export default function Psychology() {
                 alt="psychology services"
               />
               <div className="adpsy">
-                <h2 className="subtitle">Adults Psychology</h2>
+                <h3 className="subtitle">Adults Psychology</h3>
                 <div className="summary">
                   Lorem ipsum dolor sit amet consectetur. Mi pellentesque quis
                   eu vestibulum lectus. Porttitor integer consectetur mattis
@@ -191,7 +189,7 @@ export default function Psychology() {
           </div>
           <div className="chps">
             <div className="chpsy">
-              <h2 className="subtitle">Children / Teenagers Psychology</h2>
+              <h3 className="subtitle">Children / Teenagers Psychology</h3>
               <div className="summary">
                 Lorem ipsum dolor sit amet consectetur. Mi pellentesque quis eu
                 vestibulum lectus. Porttitor integer consectetur mattis
@@ -221,7 +219,7 @@ export default function Psychology() {
                 alt="psychology services"
               />
               <div className="sempsy">
-                <h2 className="subtitle">Adults Psychology</h2>
+                <h3 className="subtitle">Adults Psychology</h3>
                 <div className="summary">
                   Lorem ipsum dolor sit amet consectetur. Pretium rutrum nisi
                   mollis sit tortor proin proin sagittis. Id nec suspendisse
@@ -244,7 +242,7 @@ export default function Psychology() {
           <div className="spzsems">
             <div className="spzsem">
               <div className="spzpsy">
-                <h2 className="subtitle">Adults Psychology</h2>
+                <h3 className="subtitle">Adults Psychology</h3>
                 <div className="summary">
                   Lorem ipsum dolor sit amet consectetur. Pretium rutrum nisi
                   mollis sit tortor proin proin sagittis. Id nec suspendisse
@@ -273,7 +271,7 @@ export default function Psychology() {
             color="#FBEAD1"
           />
           <div className="faq">
-            <h1 className="frequent">Most Frequently Asked Questions</h1>
+            <h2 className="frequent">Most Frequently Asked Questions</h2>
             <div className="freq">
               <div>
                 <Mfaq

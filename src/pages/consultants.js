@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
 import { Link } from "react-router-dom";
-import "swiper/swiper-bundle.css";
 import R8a from "../icons/Rectangle 8a.svg";
 import R8b from "../icons/Rectangle 8b.svg";
 import R8c from "../icons/Rectangle 8c.svg";

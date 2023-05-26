@@ -4,8 +4,6 @@ import { SwiperSlide } from "swiper/react/swiper-slide";
 import SwiperCore, { Navigation, Pagination, Zoom } from "swiper";
 import "swiper/modules/navigation/navigation";
 import "swiper/modules/pagination/pagination";
-import "swiper/swiper.min.css";
-import "swiper/swiper-bundle.css";
 import "./style.css";
 import image1 from "../icons/Rectangle 9a.svg";
 import image2 from "../icons/Rectangle 9.svg";

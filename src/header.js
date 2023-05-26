@@ -6,8 +6,6 @@ import linkedin from "./icons/Component 3.svg";
 import instagram from "./icons/Component 4.svg";
 import facebook from "./icons/Component 5.svg";
 import twitter from "./icons/psychology.svg";
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap/dist/js/bootstrap.js";
 import Flag from "./Flag";
 import "./App.css";
 import { Link } from "react-router-dom";

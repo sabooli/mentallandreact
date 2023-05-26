@@ -3,8 +3,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Zoom, Navigation, Pagination } from "swiper";
 import "swiper/modules/navigation/navigation";
 import "swiper/modules/pagination/pagination";
-import "swiper/swiper.min.css";
-import "swiper/swiper-bundle.css";
 import "./customize.css";
 import patienta from "../icons/Ellipse 5.svg";
 import patientb from "../icons/patientb.svg";

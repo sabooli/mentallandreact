@@ -1,6 +1,4 @@
 import React, { useState} from "react";
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap/dist/js/bootstrap.js";
 import { Dropdown } from "react-bootstrap";
 import flag from "./icons/En.svg";
 import "./App.css";
