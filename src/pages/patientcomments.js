@@ -1,9 +1,9 @@
 import React, { useRef, useCallback } from "react";
+import "./customize.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Zoom, Navigation, Pagination } from "swiper";
 import "swiper/modules/navigation/navigation";
 import "swiper/modules/pagination/pagination";
-import "./customize.css";
 import patienta from "../icons/Ellipse 5.svg";
 import patientb from "../icons/patientb.svg";
 import patientc from "../icons/Ellipse 5c.svg";
