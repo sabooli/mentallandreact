@@ -1,4 +1,5 @@
-import React, { useRef } from "react";
+import React, { useRef, useCallback } from "react";
+import "./customize.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
 import { Link } from "react-router-dom";
@@ -8,11 +9,19 @@ import R8c from "../icons/Rectangle 8c.svg";
 import R8d from "../icons/Rectangle 8d.svg";
 import rvector from "../icons/RVector.svg";
 import lvector from "../icons/LVector.svg";
-import "./customize.css";
+
 
 export default function Consultants({ heading, color }) {
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
+ const sliderRef = useRef(null);
+ const handlePrev = useCallback(() => {
+   if (!sliderRef.current) return;
+   sliderRef.current.swiper.slidePrev();
+ }, []);
+
+ const handleNext = useCallback(() => {
+   if (!sliderRef.current) return;
+   sliderRef.current.swiper.slideNext();
+ }, []);
   return (
     <div className="consultants" style={{ backgroundColor: color }}>
       <h1 className="cons text-center">{heading}</h1>
@@ -23,13 +32,10 @@ export default function Consultants({ heading, color }) {
       </div>
       <Swiper
         modules={[Navigation, Pagination]}
-        onInit={(swiper) => {
-          swiper.params.navigation.prevEl = prevRef.current;
-          swiper.params.navigation.nextEl = nextRef.current;
-          swiper.navigation.init();
-          swiper.navigation.update();
+        ref={sliderRef}
+        paginationpagination={{
+          clickable: true,
         }}
-        pagination
         spaceBetween={20}
         slidesPerView={4}
         breakpoints={{
@@ -99,10 +105,12 @@ export default function Consultants({ heading, color }) {
           </div>
         </SwiperSlide>
       </Swiper>
-      <div ref={prevRef} className="swiper-navigation_prev">
+      <div className="swiper-navigation_prev" onClick={handlePrev}>
+        {" "}
         <img src={lvector} alt="left vector" />
       </div>
-      <div ref={nextRef} className="swiper-navigation_next">
+      <div className="swiper-navigation_next" onClick={handleNext}>
+        {" "}
         <img src={rvector} alt="right vector" />
       </div>
       <Link to="/" className="seeAll">

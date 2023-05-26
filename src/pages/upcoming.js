@@ -31,7 +31,7 @@ export default function Upcoming({ heading, color }) {
   }, []);
 
   return (
-    <div className="separate" style={{ backgroundColor: color }}>
+    <div className="separate pb-5" style={{ backgroundColor: color }}>
       <div className="sepa">
         <h1 className="pubsem">{heading}</h1>
         <Swiper

@@ -359,7 +359,7 @@ figure {
 .swiper-navigation__prev, .swiper-navigation__next {
   position: relative;
   top: 0%;
-  transform: translateY(0%);
+  transform: translateY(-1360%);
   cursor: pointer;
   z-index: 10;
   width: 50px;
@@ -374,13 +374,12 @@ figure {
   font-weight: bold;
 }
 .swiper-navigation__prev {
-  left: 80%;
-  bottom: 580px;
+  left: 86%;
+top: 50px;
 }
 
 .swiper-navigation__next {
-  right: -87%;
-  bottom: 630px;
+  right: -92%;
 }
 
 @media screen and (max-width: 1200px) {
