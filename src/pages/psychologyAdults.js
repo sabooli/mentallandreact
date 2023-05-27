@@ -24,7 +24,7 @@ export default function Psyadults() {
         <div
           style={{
             backgroundImage: `url(${back})`,
-            height: `928px`,
+            height: `653px`,
           }}
         >
           <Header />
@@ -35,7 +35,7 @@ export default function Psyadults() {
               <br />
               <span className="s">You Deserve to be Happy</span>
             </h1>
-            <div className="getHelp  text-center">
+            <div className="getHelp text-center">
               Lorem ipsum dolor sit amet consectetur. Amet velit convallis amet
               mi leo aliquet in vestibulum consectetur. Lectus magna eleifend
             </div>

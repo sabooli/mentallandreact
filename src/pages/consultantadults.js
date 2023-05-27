@@ -75,7 +75,7 @@ export default function Counsel() {
                     <span className="experience">+1000 Consultations</span>
                   </div>
                 </div>
-                <div className="row workField">
+                <div className="workFieldBigbar">
                   <div className="bgfield1">
                     <span className="field">Depression</span>
                   </div>

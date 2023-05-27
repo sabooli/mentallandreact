@@ -29,7 +29,7 @@ export default function Psychology() {
       <div
         style={{
           backgroundImage: `url(${bgImage})`,
-          height: `928px`,
+          height: `653px`,
         }}
       >
         <Header />
@@ -136,7 +136,7 @@ export default function Psychology() {
                   alt="psychology services"
                 />
                 <figcaption className="caption text-center">
-                  Children Psychology
+                  Children / Teenagers Psychology
                 </figcaption>
               </figure>
               <figure className="">

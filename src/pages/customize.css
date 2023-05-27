@@ -40,26 +40,26 @@ body {
 .adultspsy,
 .childpsy,
 .sliders {
-  margin-inline: 100px;
+  margin-inline: 85px;
 }
 .happy {
-  max-width: 860px;
-  margin: 107px auto 218px;
+  max-width: 664px;
+  margin: 75px auto;
   backdrop-filter: blur(10px) brightness(90%);
-  padding: 37px 100px 62px;
+  padding: 32px 60px 47px;
   text-align: center;
 }
 .beHappy {
   font-family: "Alice", sans-serif;
-  font-size: 48px;
-  line-height: 60px;
+  font-size: 40px;
+  line-height: 50px;
   margin-bottom: 25px;
   width: 100%;
 }
 .getHelp {
   font-family: "Gilroy-Regular", sans-serif;
-  font-size: 1.5em;
-  line-height: 40px;
+  font-size: 1em;
+  line-height: 36px;
   width: 100%;
   color: #fafefe;
 }
@@ -71,11 +71,11 @@ body {
 }
 .topic {
   font-family: "Alice", sans-serif;
-  font-size: 2.5em;
-  line-height: 45.72px;
+  font-size: 2em;
+  line-height: 36px;
   color: #000b0c;
-  margin-top: 150px;
-  margin-bottom: 80px;
+  margin-top: 100px;
+  margin-bottom: 65px;
 }
 .subjects {
   display: grid;
@@ -84,17 +84,16 @@ body {
 }
 .consultants {
   position: relative;
-  min-height: 848px;
-  padding-top: 6%;
+  padding-top: 3%;
   padding-inline: 7.5%;
   padding-bottom: 3%;
-  margin-inline: -100px !important;
-  margin-bottom: 200px;
+  margin-inline: -85px !important;
+  margin-bottom: 150px;
 }
 .cons {
   font-family: "Alice", sans-serif;
-  font-size: 37px;
-  line-height: 42px;
+  font-size: 32px;
+  line-height: 40px;
   color: #000b0c;
   margin-bottom: 3%;
   text-transform: uppercase;
@@ -105,24 +104,23 @@ body {
 }
 .constext {
   font-family: "Gilroy-Regular", sans-serif;
-  font-size: 24px;
-  line-height: 40px;
-  margin-bottom: 7%;
+  font-size: 1.125em;
+  line-height: 32px;
+  margin-bottom: 3%;
 }
 .surname {
   font-family: "Gilroy-Regular", sans-serif;
-  font-size: 24px;
-  line-height: 28.13px;
+  font-size: 1.25em;
+  line-height: 25px;
   color: #02979d;
-  padding-top: 51px;
-  padding-bottom: 51px;
+  padding-top: 26px;
+  padding-bottom: 26px;
 }
 .card {
   border: 0.13px solid #02979d;
   gap: 20px;
   width: 100%;
   border-radius: 5%;
-  min-height: 403px;
 }
 .swiper-navigation_prev,
 .swiper-navigation_next {
@@ -131,42 +129,42 @@ body {
   transform: translateY(0%);
   cursor: pointer;
   z-index: 10;
-  width: 50px;
-  height: 50px;
+  width: 36px;
+  height: 36px;
   background-color: #02979d;
   color: #fafefe;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
 }
 .swiper-navigation_prev {
-  left: 85%;
-  bottom: 475px;
+  left: 87%;
+  bottom: 416px;
 }
 
 .swiper-navigation_next {
   right: -92%;
-  bottom: 525px;
+  bottom: 452px;
 }
 figure {
   text-align: center;
 }
 .label {
-  width: 190px;
-  height: 246px;
+  width: 133px;
+  height: 172.2px;
 }
 .captionl {
   display: block;
   margin: 0 auto;
   font-family: "Alice", sans-serif;
-  font-size: 1.625em;
-  line-height: 39px;
+  font-size: 1.175em;
+  line-height: 32px;
   color: #000b0c;
   margin-top: 10px;
-  margin-bottom: 239px;
+  margin-bottom: 48px;
 }
 .meet,
 .article,
@@ -180,7 +178,6 @@ figure {
   grid-template-columns: 4fr 8fr;
 }
 .meetad {
-  padding-inline-start: 20px;
   width: 100%;
 }
 .articlead {
@@ -191,10 +188,10 @@ figure {
   width: 100%;
 }
 .meetchph {
-  margin-inline-end: -100px;
+  margin-inline-end: -85px;
 }
 .meetph {
-  margin-inline-end: -100px;
+  margin-inline-end: -85px;
 }
 .article2ad {
   padding-inline-start: 70px;
@@ -208,14 +205,14 @@ figure {
 }
 .meetph,
 .article2ph {
-  margin-inline-start: -100px;
+  margin-inline-start: -85px;
 }
 .meettitle,
 .articletitle,
 .article2title {
   font-family: "Alice", sans-serif;
-  font-size: 37px;
-  line-height: 42.29px;
+  font-size: 32px;
+  line-height: 36px;
   color: #000b0c;
   margin-bottom: 30px;
 }
@@ -223,29 +220,28 @@ figure {
 .articlecontent,
 .article2content {
   font-family: "Girloy-Regular", sans-serif;
-  font-size: 1.5em;
-  line-height: 40px;
+  font-size: 1.1em;
+  line-height: 36px;
   color: #000b0c;
-  margin-bottom: 28px;
   width: 100%;
   height: auto;
 }
 .part3 {
-  margin-top: 210px;
-  margin-bottom: 200px;
+  margin-top: 158px;
+  margin-bottom: 150px;
 }
 .part5 {
   margin-top: 59.5px;
-  margin-bottom: 213px;
+  margin-bottom: 157px;
 }
 .part6 {
-  margin-bottom: 200px;
+  margin-bottom: 150px;
 }
 .cardp {
   border: 0.15px Solid rgba(2, 151, 157, 0.7);
   max-width: 364.82px;
-  min-height: 421.36px;
-  padding-inline: 7%;
+  min-height: 360px;
+  padding-inline: 6%;
 }
 .patient {
   width: 82.08px;
@@ -255,14 +251,14 @@ figure {
 .comment {
   margin-top: 2.5%;
   font-family: "Girloy-Regular", sans-serif;
-  font-size: 1em;
-  line-height: 36.48px;
+  font-size:15px;
+  line-height: 24px;
   color: #000b0c;
 }
 .patientName {
   font-family: "Girloy-Regular", sans-serif;
-  font-size: 1.25em;
-  line-height: 36.48px;
+  font-size: 1.1em;
+  line-height: 32px;
   color: #02979d;
   margin-top: 3.5%;
 }
@@ -271,16 +267,16 @@ figure {
   grid-template-columns: 1fr 1fr;
   column-gap: 54%;
   font-family: "Girloy-Regular", sans-serif;
-  font-size: 1em;
-  line-height: 36.48px;
+  font-size: 15px;
+  line-height: 32px;
   color: #d74e7f;
 }
 .patientSay {
   font-family: "Alice", sans-serif;
-  font-size: 2.5em;
-  line-height: 45.72px;
+  font-size: 2em;
+  line-height: 40px;
   color: #000b0c;
-  margin-bottom: 50px;
+  margin-bottom: 38px;
 }
 .swiper-navigation___prev,
 .swiper-navigation___next {
@@ -289,24 +285,24 @@ figure {
   transform: translateY(120%);
   cursor: pointer;
   z-index: 10;
-  width: 50px;
-  height: 50px;
+  width: 36px;
+  height: 36px;
   background-color: #02979d;
   color: #fafefe;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
 }
 .swiper-navigation___prev {
-  left: 43%;
+  left: 47%;
 }
 
 .swiper-navigation___next {
-  right: -50%;
-  bottom: 50px;
+  right: -52%;
+  bottom: 38px;
 }
 
 .downdesign {
@@ -314,59 +310,60 @@ figure {
 }
 .psychservices {
   font-family: "Alice", sans-serif;
-  font-size: 2.5em;
-  line-height: 45.72px;
+  font-size: 2em;
+  line-height: 40px;
   color: #000b0c;
-  margin-bottom: 80px;
-  margin-top: 74.34px;
+  margin-bottom: 60px;
+  margin-top: 54.34px;
 }
 .partb {
-  margin-bottom: 210px;
+  margin-top: 100px;
+  margin-bottom: 155px;
 }
 .partd {
-  margin-bottom: 200px;
+  margin-bottom: 150px;
 }
 .parte {
-  margin-bottom: 244px;
+  margin-bottom: 174px;
 }
 .partf {
-  margin-bottom: 200px;
+  margin-bottom: 150px;
 }
 .see {
   font-family: "Gilroy-Bold", sans-serif;
-  font-size: 1.25em;
-  line-height: 23.44px;
+  font-size: 1.125em;
+  line-height: 21px;
   color: #fafefe;
 }
 .seeAll {
   background-color: #02979d;
-  border-radius: 35px;
-  max-width: 220px;
+  border-radius: 30px;
+  max-width: 160px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 65px;
-  padding-bottom: 17.5px;
-  padding-top: 17.5px;
-  margin-inline: 40%;
+  padding-bottom: 12px;
+  padding-top: 12px;
+  margin-inline: 43%;
+  margin-bottom: -25px;
   text-decoration: none;
 }
 .lets {
   font-family: "Alice", sans-serif;
-  font-size: 4em;
-  line-height: 73px;
+  font-size: 2.5em;
+  line-height: 60px;
   color: #000b0c;
-  margin-top: -675px;
-  margin-bottom: 69px;
+  margin-top: -365px;
+  margin-bottom: 46px;
   width: 100%;
 }
 .enjoy {
   font-family: "Gilroy-Medium", sans-serif;
-  font-size: 1.5em;
-  line-height: 40px;
+  font-size: 1em;
+  line-height: 36px;
   color: #000b0c;
-  margin-bottom: 526px;
+  margin-bottom: 270px;
   width: 100%;
 }
 .spzseminars {
@@ -442,15 +439,15 @@ figure {
   }
   .seeAll {
     background-color: #02979d;
-    border-radius: 35px;
+    border-radius: 30px;
     max-width: 150px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 65px;
-    padding-bottom: 17.5px;
-    padding-top: 17.5px;
+    padding-bottom: 12px;
+    padding-top: 12px;
     margin-inline: 40%;
     text-decoration: none;
   }

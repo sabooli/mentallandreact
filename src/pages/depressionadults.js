@@ -35,7 +35,6 @@ export default function Services() {
               <div className="normal">
                 <div className="hope">
                   <button className="top">
-                    <img src={sort} className="sort" alt="top rated" />
                     <div className="Trated">Top rated</div>
                   </button>
                 </div>
