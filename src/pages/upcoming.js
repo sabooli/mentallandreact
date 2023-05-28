@@ -1,5 +1,4 @@
 import React, { useRef, useCallback } from "react";
-import "./design.css";
 import { Swiper } from "swiper/react";
 import { SwiperSlide } from "swiper/react/swiper-slide";
 import SwiperCore, { Navigation, Pagination } from "swiper";

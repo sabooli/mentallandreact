@@ -5,7 +5,6 @@ import wlinkedin from "./icons/Component 3w.svg";
 import winstagram from "./icons/Component 4w.svg";
 import wfacebook from "./icons/Component 5w.svg";
 import wtwitter from "./icons/mainw.svg";
-import "./App.css";
 
 export default function Footer() {
   return (

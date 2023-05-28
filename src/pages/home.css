@@ -1,0 +1,155 @@
+@font-face {
+ font-family: "Alice";
+    src: url(../fonts/Alice-Regular.ttf);
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Gilroy-SemiBold";
+  src: url(../fonts/Gilroy-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Gilroy-SemiBold";
+  src: url(../fonts/Gilroy-Light.ttf);
+}
+
+body {
+font-size: 16px;
+margin: 0 auto;
+}
+.subsume {
+    margin-inline: 85px;
+}
+.ourServices {
+    font-family: "Alice", sans-serif;
+    font-size: 2em;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 3%;
+}
+.summarize {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.boxy {
+    max-width: 400px;
+    height: 164px;
+    border: 1px solid #02979d;
+    border-radius: 20px;
+    margin-inline: 5%;
+}
+.heading {
+    font-family: "Gilroy-Light", sans-serif;
+    font-size: 1.5em;
+    color: #02979d;
+    text-align: center;
+    text-transform:capitalize;
+    padding-top: 64px;
+}
+.activecase {
+    position: relative;
+    background-color: #02979d;
+    max-width: 400px;
+    height: 164px;
+    border: 1px solid #02979d;
+    border-radius: 20px;
+    margin-inline: 5%;
+}
+.activecase .heading {
+    font-family: "Gilroy-SemiBold", sans-serif;
+    color: #fafefe;
+    text-align: center;
+    text-transform:capitalize;
+}
+.setup {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5%;
+    margin-top: 7%;
+}
+.homepsy {
+    font-family: "Gilroy-Regular", sans-serif;
+    font-size: 1em;
+    line-height: 36px;
+    padding-inline-start: 5%;
+}
+.words {
+    margin-bottom: 7%;
+}
+.homepsychology {
+    width: 100%;
+    height: 347px;
+}
+.introduction {
+    font-family: "Alice", sans-serif;
+    font-size: 2em;
+    text-align: center;
+    margin-top: 12%;
+    margin-bottom: 3%;
+}
+.introwords {
+   font-family: "Gilroy-Regular", sans-serif;
+    font-size: 1em;
+    line-height: 36px;
+    text-align: center;
+    margin-bottom: 5%;
+}
+.circles {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-bottom: 5%;
+}
+.circle {
+    width: 127.54px;
+    height: 127.54px;
+    background-color: #02979d;
+    border-radius: 50%;
+    display: inline-block;    
+}
+.bigcircle {
+    width: 142.54px;
+    height: 142.54px;
+    border: 1px solid #02979d;
+    border-radius: 50%;
+    padding-top: 2%;
+    margin-inline: 28%;
+    box-shadow: #02979d;  
+}
+.firstyear {
+border: 1px dashed #02979d;
+}
+.establishyear {
+    font-family: "Alice",sans-serif;
+    font-size: 1.5em;
+    line-height: 32px;
+    color: #fafefe;
+    margin-top: 30px;
+}
+.circlecaption {
+    font-family: "Alice",sans-serif;
+    font-size: 1em;
+    margin-top: 3%;
+    text-align: center;
+    text-transform: uppercase;
+}
+.vision {
+  font-family: "Alice", sans-serif;
+    font-size: 2em;
+    text-align: start;
+    margin-top: 10%;
+    margin-bottom: 3%;   
+}
+.visionwords {
+ font-family: "Gilroy-Regular", sans-serif;
+    font-size: 1em;
+    line-height: 36px;
+    text-align: start;
+    margin-bottom: 5%;   
+}
+.mission {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}

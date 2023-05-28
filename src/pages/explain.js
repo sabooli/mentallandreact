@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./index.css";
 
 export default function Explain(props) {
   const [activeButton, setActiveButton] = useState(0);

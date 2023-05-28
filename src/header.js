@@ -7,7 +7,6 @@ import instagram from "./icons/Component 4.svg";
 import facebook from "./icons/Component 5.svg";
 import twitter from "./icons/psychology.svg";
 import Flag from "./Flag";
-import "./App.css";
 import { Link } from "react-router-dom";
 
 export default function Header() {

@@ -2,7 +2,6 @@ import React from "react";
 import Header from "../header";
 import Navbar from "../Navbar";
 import Footer from "../footer";
-import "./design.css";
 import Form from "react-bootstrap/Form";
 import { Link } from "react-router-dom";
 import exp from "../icons/Group 1022.svg";

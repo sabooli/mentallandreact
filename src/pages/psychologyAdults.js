@@ -2,7 +2,6 @@ import React from "react";
 import Header from "../header";
 import Navbar from "../Navbar";
 import back from "../icons/Rectangle 45ad.png";
-import "./customize.css";
 import depression from "../icons/Group 806.svg";
 import anxiety from "../icons/Group 807.svg";
 import unhealthyEat from "../icons/Group 808.svg";

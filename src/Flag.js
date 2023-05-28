@@ -1,7 +1,6 @@
 import React, { useState} from "react";
 import { Dropdown } from "react-bootstrap";
 import flag from "./icons/En.svg";
-import "./App.css";
 import { useTranslation } from "react-i18next";
 
 

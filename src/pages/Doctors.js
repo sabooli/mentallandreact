@@ -1,5 +1,4 @@
 import React from "react";
-import "./index.css";
 import star from "../icons/Star 9.svg";
 import { Link } from "react-router-dom";
 import photo from "../icons/Rectangle 8.svg";

@@ -2,8 +2,6 @@ import React from "react";
 import Header from "../header";
 import Navbar from "../Navbar";
 import Footer from "../footer";
-import "./style.css";
-import "./index.css";
 import photo from "../icons/Rectangle 8.svg";
 import star from "../icons/Star 9.svg";
 import Explain from "./explain";

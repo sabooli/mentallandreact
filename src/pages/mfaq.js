@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./design.css";
 
 export default function Mfaq({ question, answer, index }) {
    const [isExpanded, setIsExpanded] = useState(index === 0);

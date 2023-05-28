@@ -1,10 +1,7 @@
 import React from "react";
 import Header from "../header";
 import Navbar from "../Navbar";
-import "./customize.css";
 import union from "../icons/Union.png";
-import vector8 from "../icons/Vector 8.png";
-import BG from "../icons/Group 1249.png";
 import Consultants from "./consultants";
 import Patientcomments from "./patientcomments";
 import Footer from "../footer";

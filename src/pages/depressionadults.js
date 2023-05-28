@@ -2,11 +2,9 @@ import React from "react";
 import Header from "../header";
 import Navbar from "../Navbar";
 import Footer from "../footer";
-import "./index.css";
 import Filter from "./filter";
 import Doctors from "./Doctors";
 import { useTranslation } from "react-i18next";
-import sort from "../icons/sort.svg";
 
 export default function Services() {
   const { t } = useTranslation();

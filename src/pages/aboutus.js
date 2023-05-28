@@ -2,7 +2,6 @@ import React from "react";
 import Header from "../header";
 import Navbar from "../Navbar";
 import Footer from "../footer";
-import "./style.css";
 import group from "../icons/Group 1077.svg";
 import story from "../icons/Group 1102.svg";
 import "swiper/swiper-bundle.css";
