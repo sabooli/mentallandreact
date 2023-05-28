@@ -149,7 +149,124 @@ border: 1px dashed #02979d;
     text-align: start;
     margin-bottom: 5%;   
 }
+.partIII {
+    margin-bottom: 160px;
+}
 .mission {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3%;
+}
+.VM {
+    padding-inline: 1%;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 20px;
+    padding-bottom: 5%;
+    border-bottom-width: 28px;
+    border-bottom-color: #02979d;
+    padding-inline: 25px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.12);
+}
+.VMheading {
+    font-family: "Gilroy-SemiBold", sans-serif;
+    font-size: 1.5em;
+    color: #02979d;
+    text-transform:uppercase;
+    margin-top: 3%;
+    margin-bottom: 2%;
+}
+.VMimage {
+    width: 84px;
+    height: auto;
+    margin-top: -30px;
+}
+.VMtext {
+    font-family: "Gilroy-Regular", sans-serif;
+    font-size: 0.8em;
+    line-height: 20px;
+    margin-bottom: 5%; 
+    text-align: center;
+}
+.partIV {
+    margin-inline: -85px;
+    margin-bottom: 150px;
+}
+.mentallandonphone {
+display: grid;
+grid-template-columns: 9fr 13fr;
+}
+.MoPhheading {
+ font-family: "Alice", sans-serif;
+    font-size: 2em;
+    text-align: start;
+    margin-top: 8%;
+    margin-bottom: 3%;   
+}
+.MoPhtext {
+font-family: "Gilroy-Regular", sans-serif;
+    font-size: 1em;
+    line-height: 36px;
+    text-align: start;
+    margin-bottom: 5%; 
+    margin-inline-end: 85px;
+}
+.Monphonedl {
+margin-top: 8%;
+}
+.MoPhimage {
+    margin-inline-start: 85px;
+    margin-top: 8%;
+width: 426px;
+}
+.customersayH {
+    font-family: "Gilroy-SemiBold", sans-serif;
+    font-size: 1.6em; 
+    margin-bottom: 3%;
+}
+.customersay {
+   font-family: "Gilroy-Regular", sans-serif;
+    font-size: 14px; 
+    margin-bottom: 5%;
+}
+.cu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 54%;
+  font-family: "Girloy-Regular", sans-serif;
+  font-size: 15px;
+  line-height: 32px;
+  color: #02979d;
+}
+.swiper-navigation_cprev, .swiper-navigation_cnext {
+   position: relative;
+  top: 0%;
+  transform: translateY(120%);
+  cursor: pointer;
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+  background-color: #02979d;
+  color: #fafefe;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+.swiper-navigation_cprev {
+ left: 87%;
+  bottom: 546px;
+}
+.swiper-navigation_cnext {
+   right: -92%;
+  bottom: 582px; 
+}
+.partVI {
+   margin-inline: -85px;  
+   margin-top: 100px;
+}
+.latestArticles {
+   padding-inline: 85px;
+    text-align: center;
 }

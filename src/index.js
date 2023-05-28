@@ -6,6 +6,7 @@ import "./pages/customize.css";
 import "./pages/index.css";
 import "./pages/design.css";
 import "./pages/style.css";
+import "./pages/home.css";
 import "./App.css";
 import "swiper/swiper.min.css";
 import "swiper/swiper-bundle.css";

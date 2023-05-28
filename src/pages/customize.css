@@ -242,6 +242,7 @@ figure {
   max-width: 364.82px;
   min-height: 360px;
   padding-inline: 6%;
+  box-shadow: 5px 5px 10px rgba(2, 151, 157, 0.1);
 }
 .patient {
   width: 82.08px;

@@ -1,0 +1,170 @@
+import React, { useRef, useCallback } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Zoom, Navigation, Pagination } from "swiper";
+import "swiper/modules/navigation/navigation";
+import "swiper/modules/pagination/pagination";
+import patienta from "../icons/Ellipse 5.svg";
+import patientb from "../icons/patientb.svg";
+import patientc from "../icons/Ellipse 5c.svg";
+import rvector from "../icons/RVector.svg";
+import lvector from "../icons/LVector.svg";
+
+SwiperCore.use([Zoom, Navigation, Pagination]);
+
+export default function Customercomments({ heading }) {
+  const sliderRef = useRef(null);
+  const handlePrev = useCallback(() => {
+    if (!sliderRef.current) return;
+    sliderRef.current.swiper.slidePrev();
+  }, []);
+
+  const handleNext = useCallback(() => {
+    if (!sliderRef.current) return;
+    sliderRef.current.swiper.slideNext();
+  }, []);
+  return (
+    <div>
+      <h1 className="customersayH text-start">{heading}</h1>
+      <div className="customersay">
+        Lorem ipsum dolor sit amet consectetur. Ut turpis nunc ac felis sapien
+        diam. Sed velit dignissim viverra natoque. Ut mattis egestas{" "}
+      </div>
+      <Swiper
+        ref={sliderRef}
+        zoom={{ maxRatio: 2 }}
+        spaceBetween={20}
+        slidesPerView={3}
+        breakpoints={{
+          300: {
+            slidesPerView: 1,
+          },
+          640: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        }}
+      >
+        <SwiperSlide>
+          <div className="swiper-zoom-container">
+            <div className="cardp swiper-slide">
+              <div className="image-content">
+                <div className="card-image">
+                  <img
+                    src={patienta}
+                    alt="patient comment"
+                    className="card-img patient"
+                  />
+                </div>
+                <div className="patientName text-center">Benjamin Smith</div>
+                <div className="cu">
+                  <span>October 9</span>
+                  <span>Music</span>
+                </div>
+              </div>
+              <div className="card-content">
+                <p className="comment text-center">
+                  Lorem ipsum dolor sit amet consectetur. Scelerisque risus
+                  nulla viverra orci tristique magna et. Sagittis enim ut
+                  gravida sed volutpat est arcu vitae ....
+                </p>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="swiper-zoom-container">
+            <div className="cardp swiper-slide">
+              <div className="image-content">
+                <div className="card-image">
+                  <img
+                    src={patientb}
+                    alt="patient comment"
+                    className="card-img patient"
+                  />
+                </div>
+                <div className="patientName text-center">Benjamin Smith</div>
+                <div className="cu">
+                  <span>October 9</span>
+                  <span>Painting</span>
+                </div>
+              </div>
+              <div className="card-content">
+                <p className="comment text-center">
+                  Lorem ipsum dolor sit amet consectetur. Neque nam sed a sit
+                  cras laoreet sed. Non felis lacus.
+                </p>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="swiper-zoom-container">
+            <div className="cardp swiper-slide">
+              <div className="image-content">
+                <div className="card-image">
+                  <img
+                    src={patientc}
+                    alt="patient comment"
+                    className="card-img patient"
+                  />
+                </div>
+                <div className="patientName text-center">Benjamin Smith</div>
+                <div className="cu">
+                  <span>October 9</span>
+                  <span>Acting</span>
+                </div>
+              </div>
+              <div className="card-content">
+                <p className="comment text-center">
+                  Lorem ipsum dolor sit amet consectetur. Felis in pretium
+                  ornare nunc facilisi tellus ornare massa. Posuere mauris cum
+                  pellentesque.
+                </p>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="swiper-zoom-container">
+            <div className="cardp swiper-slide">
+              <div className="image-content">
+                <div className="card-image">
+                  <img
+                    src={patienta}
+                    alt="patient comment"
+                    className="card-img patient"
+                  />
+                </div>
+                <div className="patientName text-center">Benjamin Smith</div>
+                <div className="cu">
+                  <span>October 9</span>
+                  <span>Music</span>
+                </div>
+              </div>
+              <div className="card-content">
+                <p className="comment text-center">
+                  Lorem ipsum dolor sit amet consectetur. Scelerisque risus
+                  nulla viverra orci tristique magna et. Sagittis enim ut
+                  gravida sed volutpat est arcu vitae ....
+                </p>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+      </Swiper>{" "}
+      <div className="swiper-navigation_cprev" onClick={handlePrev}>
+        {" "}
+        <img src={lvector} alt="left vector" />
+      </div>
+      <div className="swiper-navigation_cnext" onClick={handleNext}>
+        {" "}
+        <img src={rvector} alt="right vector" />
+      </div>
+    </div>
+  );
+}

@@ -5,14 +5,20 @@ import Navbar from "../Navbar";
 import Footer from "../footer";
 import homepsychology from "../icons/Rectangle 11home.svg";
 import { Link } from "react-router-dom";
-import { FaSuitcase } from "react-icons/fa";
+import telescope from "../icons/Group 768.svg";
+import mission from "../icons/Group 768m.svg";
+import value from "../icons/Group 768v.svg";
+import goal from "../icons/Group 768g.svg";
+import mentalonphoneback from "../icons/Rectangle 12.png";
+import mentalonphone from "../icons/Group 779.svg";
+import Customercomments from "./customercomments";
 
-export default function Home(data) {
+export default function Home() {
   const [activeButton, setActiveButton] = useState(0);
 
   const handleButtonClick = (index) => {
     setActiveButton(index);
-  }; 
+  };
   return (
     <div>
       <Header />
@@ -150,7 +156,116 @@ export default function Home(data) {
                 nulla enim. Nisl phasellus viverra quisque egestas in nec luctus
                 ornare amet. In pellentesque volutpat urna ultrices vitae.
               </div>
-              <div className="mission"></div>
+              <div className="mission">
+                <div className="VM text-center">
+                  <img src={telescope} className="VMimage" />
+                  <h4 className="VMheading">Vision</h4>
+                  <span className="VMtext">
+                    Lorem ipsum dolor sit amet consectetur. Pretium rutrum nisi
+                    mollis sit tortor proin proin sagittis. Id nec suspendisse
+                    lacus erat. Vivamus orci bibendum at purus elit. Vel
+                    vehicula donec amet a dolor sollicitudin ut. Lectus
+                    cvolutpat urna ultrices vitae.
+                  </span>
+                </div>
+                <div className="VM text-center">
+                  <img src={mission} className="VMimage" />
+                  <h4 className="VMheading">Mission</h4>
+                  <span className="VMtext">
+                    Lorem ipsum dolor sit amet consectetur. Pretium rutrum nisi
+                    mollis sit tortor proin proin sagittis. Id nec suspendisse
+                    lacus erat. Vivamus orci bibendum at purus elit. Vel
+                    vehicula donec amet a dolor sollicitudin ut. Lectus
+                    cvolutpat urna ultrices vitae.
+                  </span>
+                </div>
+                <div className="VM text-center">
+                  <img src={value} className="VMimage" />
+                  <h4 className="VMheading">Value</h4>
+                  <span className="VMtext">
+                    Lorem ipsum dolor sit amet consectetur. Pretium rutrum nisi
+                    mollis sit tortor proin proin sagittis. Id nec suspendisse
+                    lacus erat. Vivamus orci bibendum at purus elit. Vel
+                    vehicula donec amet a dolor sollicitudin ut. Lectus
+                    cvolutpat urna ultrices vitae.
+                  </span>
+                </div>
+                <div className="VM text-center">
+                  <img src={goal} className="VMimage" />
+                  <h4 className="VMheading">Goal</h4>
+                  <span className="VMtext">
+                    Lorem ipsum dolor sit amet consectetur. Pretium rutrum nisi
+                    mollis sit tortor proin proin sagittis. Id nec suspendisse
+                    lacus erat. Vivamus orci bibendum at purus elit. Vel
+                    vehicula donec amet a dolor sollicitudin ut. Lectus
+                    cvolutpat urna ultrices vitae.
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="partIV">
+              <div>
+                <div
+                  style={{
+                    backgroundImage: `url(${mentalonphoneback})`,
+                    height: `563px`,
+                  }}
+                >
+                  <div className="mentallandonphone">
+                    <div>
+                      <img src={mentalonphone} className="MoPhimage" />
+                    </div>
+                    <div>
+                      <h3 className="MoPhheading">Mentalland on your phone</h3>
+                      <div className="MoPhtext">
+                        Lorem ipsum dolor sit amet consectetur. Pretium rutrum
+                        nisi mollis sit tortor proin proin sagittis. Id nec
+                        suspendisse lacus erat. Vivamus orci bibendum at purus
+                        elit. Vel vehicula donec amet a dolor sollicitudin ut.
+                        Lectus cursus ipsum mi feugiat nulla enim. Nisl
+                        phasellus viverra quisque egestas in nec luctus ornare
+                        amet.
+                        <ul>
+                          <li>
+                            Lorem ipsum dolor sit amet consectetur. Pretium
+                            rutrum{" "}
+                          </li>
+                          <li>
+                            Lorem ipsum dolor sit amet consectetur. Pretium
+                            rutrum nisi
+                          </li>
+                          <li>Lorem ipsum dolor sit amet consectetur </li>
+                          <li>
+                            Lorem ipsum dolor sit amet consectetur. Pretium
+                            rutrum nisi{" "}
+                          </li>
+                        </ul>
+                        <div className="Monphonedl">
+                          <Link to="/" className="learnMore">
+                            <span className="more">Download</span>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="partV">
+              <Customercomments heading="What Our Patients Say" />
+            </div>
+            <div className="partVI">
+              <div
+                  style={{
+                    backgroundImage: `url(${mentalonphoneback})`,
+                    height: `563px`,
+                  }}
+                >
+                  <div className="latestArticles">
+                    
+                  </div>
+                  </div> 
+
             </div>
           </div>
         </div>
