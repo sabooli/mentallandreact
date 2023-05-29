@@ -12,6 +12,8 @@ import goal from "../icons/Group 768g.svg";
 import mentalonphoneback from "../icons/Rectangle 12.png";
 import mentalonphone from "../icons/Group 779.svg";
 import Customercomments from "./customercomments";
+import Peace from "../icons/Rectangle 44-min.png";
+import latearticle from "../icons/Rectangle 31a.svg";
 
 export default function Home() {
   const [activeButton, setActiveButton] = useState(0);
@@ -21,9 +23,51 @@ export default function Home() {
   };
   return (
     <div>
-      <Header />
-      <Navbar />
+      <div
+        style={{
+          backgroundImage: `url("${Peace}")`,
+          backgroundSize: "cover",
+          backgroundPosition: "center center",
+          backgroundRepeat: "no-repeat",
+          height: "calc(130vh - 50px)",
+        }}
+      >
+        <Header />
+        <Navbar />
+        <div className="homeStrategy text-start">
+          <h1 className="homemainTopic">
+            <span>mentalland</span> where you can learn, improve, get calm & Be happy
+          </h1>
+          <h2 className="homesubTopic">
+            Lorem ipsum dolor sit amet consectetur. Amet velit convallis amet mi
+            leo aliquet in vestibulum consectetur. Lectus magna eleifend{" "}
+          </h2>
+          <div>
+          <Link to="/" className="learnMore">
+            <span className="more">Learn more</span>
+          </Link>
+          </div>
+        </div>
+      </div>
       <div>
+        <div className="band">
+          <div className="tab">
+            <div className="count">+4000</div>
+            <span className="matter">Treated Patients</span>
+          </div>
+          <div className="tab">
+            <div className="count">+250</div>
+            <span className="matter">graduated art students</span>
+          </div>
+          <div className="tab">
+            <div className="count">+100</div>
+            <span className="matter">performed seminars</span>
+          </div>
+          <div className="tab">
+            <div className="count">+1200</div>
+            <span className="matter">job opportunities</span>
+          </div>
+        </div>
         <div className="subsume">
           <div className="home">
             <div className="partI">
@@ -256,17 +300,36 @@ export default function Home() {
             </div>
             <div className="partVI">
               <div
-                  style={{
-                    backgroundImage: `url(${mentalonphoneback})`,
-                    height: `563px`,
-                  }}
-                >
-                  <div className="latestArticles">
-                    
+                style={{
+                  backgroundImage: `url(${mentalonphoneback})`,
+                  height: `563px`,
+                }}
+              >
+                <div className="latestArticles">
+                  <h4 className="latestheading">latest articles</h4>
+                  <div className="latest">
+                    <div>
+                      <img src={latearticle} className="latearticleimage" />
+                    </div>
+                    <div className="articlewords text-start">
+                      <h5>Lorem ipsum dolor sit amet consectetur. Magna.</h5>
+                      <span>
+                        Lorem ipsum dolor sit amet consectetur. Etiam aliquet
+                        tristique turpis ultrices ac augue eu adipiscing turpis.
+                        Ultricies rhoncus semper in id nec faucibus non
+                        vulputate vestibulum. Pharetra a elementum in.
+                      </span>
+                    </div>
+                    <div className="readarticle">
+                      <Link to="/" className="Readlatest">
+                        <span className="Readlatestword">Read</span>
+                      </Link>
+                    </div>
                   </div>
-                  </div> 
-
+                </div>
+              </div>
             </div>
+            <div className="partVII"></div>
           </div>
         </div>
         Home

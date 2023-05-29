@@ -1,6 +1,6 @@
 @font-face {
- font-family: "Alice";
-    src: url(../fonts/Alice-Regular.ttf);
+  font-family: "Alice";
+  src: url(../fonts/Alice-Regular.ttf);
 }
 @font-face {
   font-family: "Gilroy";
@@ -17,216 +17,262 @@
 }
 
 body {
-font-size: 16px;
-margin: 0 auto;
+  font-size: 16px;
+  margin: 0 auto;
+}
+.homeStrategy {
+  max-width: 430px;
+  margin: 28px 85px 32px;
+  padding: 32px 25px 33px;
+  text-align: start;
+}
+.homemainTopic {
+  font-family: "Alice", sans-serif;
+  font-size: 2em;
+  line-height: 50px;
+}
+.homemainTopic span {
+  font-size: 1.25em;
+  color: #02979d;
+}
+.homesubTopic {
+  font-family: "Gilroy-Regular", sans-serif;
+  font-size: 1em;
+  line-height: 36px;
+  width: 100%;
+  margin-bottom: 30px;
+  text-transform: lowercase;
+}
+.band {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 224px;
+}
+.tab {
+  background-image: linear-gradient(to right, #02979d, #007378);
+  padding-inline: 30%;
+  padding-top: 15%;
+}
+.count {
+  font-family: "Gilroy-Bold", sans-serif;
+  font-size: 2.5em;
+  color: #ffffff;
+  padding-bottom: 3%;
+}
+.matter {
+  font-family: "Gilroy-Medium", sans-serif;
+  font-size: 1.125em;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
 }
 .subsume {
-    margin-inline: 85px;
+  margin-inline: 85px;
 }
 .ourServices {
-    font-family: "Alice", sans-serif;
-    font-size: 2em;
-    text-align: center;
-    margin-top: 10%;
-    margin-bottom: 3%;
+  font-family: "Alice", sans-serif;
+  font-size: 2em;
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: 3%;
 }
 .summarize {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .boxy {
-    max-width: 400px;
-    height: 164px;
-    border: 1px solid #02979d;
-    border-radius: 20px;
-    margin-inline: 5%;
+  max-width: 400px;
+  height: 164px;
+  border: 1px solid #02979d;
+  border-radius: 20px;
+  margin-inline: 5%;
 }
 .heading {
-    font-family: "Gilroy-Light", sans-serif;
-    font-size: 1.5em;
-    color: #02979d;
-    text-align: center;
-    text-transform:capitalize;
-    padding-top: 64px;
+  font-family: "Gilroy-Light", sans-serif;
+  font-size: 1.5em;
+  color: #02979d;
+  text-align: center;
+  text-transform: capitalize;
+  padding-top: 64px;
 }
 .activecase {
-    position: relative;
-    background-color: #02979d;
-    max-width: 400px;
-    height: 164px;
-    border: 1px solid #02979d;
-    border-radius: 20px;
-    margin-inline: 5%;
+  position: relative;
+  background-color: #02979d;
+  max-width: 400px;
+  height: 164px;
+  border: 1px solid #02979d;
+  border-radius: 20px;
+  margin-inline: 5%;
 }
 .activecase .heading {
-    font-family: "Gilroy-SemiBold", sans-serif;
-    color: #fafefe;
-    text-align: center;
-    text-transform:capitalize;
+  font-family: "Gilroy-SemiBold", sans-serif;
+  color: #fafefe;
+  text-align: center;
+  text-transform: capitalize;
 }
 .setup {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5%;
-    margin-top: 7%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5%;
+  margin-top: 7%;
 }
 .homepsy {
-    font-family: "Gilroy-Regular", sans-serif;
-    font-size: 1em;
-    line-height: 36px;
-    padding-inline-start: 5%;
+  font-family: "Gilroy-Regular", sans-serif;
+  font-size: 1em;
+  line-height: 36px;
+  padding-inline-start: 5%;
 }
 .words {
-    margin-bottom: 7%;
+  margin-bottom: 7%;
 }
 .homepsychology {
-    width: 100%;
-    height: 347px;
+  width: 100%;
+  height: 347px;
 }
 .introduction {
-    font-family: "Alice", sans-serif;
-    font-size: 2em;
-    text-align: center;
-    margin-top: 12%;
-    margin-bottom: 3%;
+  font-family: "Alice", sans-serif;
+  font-size: 2em;
+  text-align: center;
+  margin-top: 12%;
+  margin-bottom: 3%;
 }
 .introwords {
-   font-family: "Gilroy-Regular", sans-serif;
-    font-size: 1em;
-    line-height: 36px;
-    text-align: center;
-    margin-bottom: 5%;
+  font-family: "Gilroy-Regular", sans-serif;
+  font-size: 1em;
+  line-height: 36px;
+  text-align: center;
+  margin-bottom: 5%;
 }
 .circles {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-bottom: 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-bottom: 5%;
 }
 .circle {
-    width: 127.54px;
-    height: 127.54px;
-    background-color: #02979d;
-    border-radius: 50%;
-    display: inline-block;    
+  width: 127.54px;
+  height: 127.54px;
+  background-color: #02979d;
+  border-radius: 50%;
+  display: inline-block;
 }
 .bigcircle {
-    width: 142.54px;
-    height: 142.54px;
-    border: 1px solid #02979d;
-    border-radius: 50%;
-    padding-top: 2%;
-    margin-inline: 28%;
-    box-shadow: #02979d;  
+  width: 142.54px;
+  height: 142.54px;
+  border: 1px solid #02979d;
+  border-radius: 50%;
+  padding-top: 2%;
+  margin-inline: 28%;
+  box-shadow: #02979d;
 }
 .firstyear {
-border: 1px dashed #02979d;
+  border: 1px dashed #02979d;
 }
 .establishyear {
-    font-family: "Alice",sans-serif;
-    font-size: 1.5em;
-    line-height: 32px;
-    color: #fafefe;
-    margin-top: 30px;
+  font-family: "Alice", sans-serif;
+  font-size: 1.5em;
+  line-height: 32px;
+  color: #fafefe;
+  margin-top: 30px;
 }
 .circlecaption {
-    font-family: "Alice",sans-serif;
-    font-size: 1em;
-    margin-top: 3%;
-    text-align: center;
-    text-transform: uppercase;
+  font-family: "Alice", sans-serif;
+  font-size: 1em;
+  margin-top: 3%;
+  text-align: center;
+  text-transform: uppercase;
 }
 .vision {
   font-family: "Alice", sans-serif;
-    font-size: 2em;
-    text-align: start;
-    margin-top: 10%;
-    margin-bottom: 3%;   
+  font-size: 2em;
+  text-align: start;
+  margin-top: 10%;
+  margin-bottom: 3%;
 }
 .visionwords {
- font-family: "Gilroy-Regular", sans-serif;
-    font-size: 1em;
-    line-height: 36px;
-    text-align: start;
-    margin-bottom: 5%;   
+  font-family: "Gilroy-Regular", sans-serif;
+  font-size: 1em;
+  line-height: 36px;
+  text-align: start;
+  margin-bottom: 5%;
 }
 .partIII {
-    margin-bottom: 160px;
+  margin-bottom: 160px;
 }
 .mission {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 3%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 3%;
 }
 .VM {
-    padding-inline: 1%;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    border-radius: 20px;
-    padding-bottom: 5%;
-    border-bottom-width: 28px;
-    border-bottom-color: #02979d;
-    padding-inline: 25px;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.12);
+  padding-inline: 1%;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 20px;
+  padding-bottom: 5%;
+  border-bottom-width: 28px;
+  border-bottom-color: #02979d;
+  padding-inline: 25px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.12);
 }
 .VMheading {
-    font-family: "Gilroy-SemiBold", sans-serif;
-    font-size: 1.5em;
-    color: #02979d;
-    text-transform:uppercase;
-    margin-top: 3%;
-    margin-bottom: 2%;
+  font-family: "Gilroy-SemiBold", sans-serif;
+  font-size: 1.5em;
+  color: #02979d;
+  text-transform: uppercase;
+  margin-top: 3%;
+  margin-bottom: 2%;
 }
 .VMimage {
-    width: 84px;
-    height: auto;
-    margin-top: -30px;
+  width: 84px;
+  height: auto;
+  margin-top: -30px;
 }
 .VMtext {
-    font-family: "Gilroy-Regular", sans-serif;
-    font-size: 0.8em;
-    line-height: 20px;
-    margin-bottom: 5%; 
-    text-align: center;
+  font-family: "Gilroy-Regular", sans-serif;
+  font-size: 0.8em;
+  line-height: 20px;
+  margin-bottom: 5%;
+  text-align: center;
 }
 .partIV {
-    margin-inline: -85px;
-    margin-bottom: 150px;
+  margin-inline: -85px;
+  margin-bottom: 150px;
 }
 .mentallandonphone {
-display: grid;
-grid-template-columns: 9fr 13fr;
+  display: grid;
+  grid-template-columns: 9fr 13fr;
 }
 .MoPhheading {
- font-family: "Alice", sans-serif;
-    font-size: 2em;
-    text-align: start;
-    margin-top: 8%;
-    margin-bottom: 3%;   
+  font-family: "Alice", sans-serif;
+  font-size: 2em;
+  text-align: start;
+  margin-top: 8%;
+  margin-bottom: 3%;
 }
 .MoPhtext {
-font-family: "Gilroy-Regular", sans-serif;
-    font-size: 1em;
-    line-height: 36px;
-    text-align: start;
-    margin-bottom: 5%; 
-    margin-inline-end: 85px;
+  font-family: "Gilroy-Regular", sans-serif;
+  font-size: 1em;
+  line-height: 36px;
+  text-align: start;
+  margin-bottom: 5%;
+  margin-inline-end: 85px;
 }
 .Monphonedl {
-margin-top: 8%;
+  margin-top: 8%;
 }
 .MoPhimage {
-    margin-inline-start: 85px;
-    margin-top: 8%;
-width: 426px;
+  margin-inline-start: 85px;
+  margin-top: 8%;
+  width: 426px;
 }
 .customersayH {
-    font-family: "Gilroy-SemiBold", sans-serif;
-    font-size: 1.6em; 
-    margin-bottom: 3%;
+  font-family: "Gilroy-SemiBold", sans-serif;
+  font-size: 1.6em;
+  margin-bottom: 3%;
 }
 .customersay {
-   font-family: "Gilroy-Regular", sans-serif;
-    font-size: 14px; 
-    margin-bottom: 5%;
+  font-family: "Gilroy-Regular", sans-serif;
+  font-size: 14px;
+  margin-bottom: 5%;
 }
 .cu {
   display: grid;
@@ -237,8 +283,9 @@ width: 426px;
   line-height: 32px;
   color: #02979d;
 }
-.swiper-navigation_cprev, .swiper-navigation_cnext {
-   position: relative;
+.swiper-navigation_cprev,
+.swiper-navigation_cnext {
+  position: relative;
   top: 0%;
   transform: translateY(120%);
   cursor: pointer;
@@ -255,18 +302,71 @@ width: 426px;
   font-weight: bold;
 }
 .swiper-navigation_cprev {
- left: 87%;
+  left: 87%;
   bottom: 546px;
 }
 .swiper-navigation_cnext {
-   right: -92%;
-  bottom: 582px; 
+  right: -92%;
+  bottom: 582px;
+}
+.partV {
+  margin-bottom: 100px;
 }
 .partVI {
-   margin-inline: -85px;  
-   margin-top: 100px;
+  margin-inline: -85px;
 }
 .latestArticles {
-   padding-inline: 85px;
-    text-align: center;
+  padding-inline: 85px;
+  text-align: center;
+}
+.latestheading {
+  font-family: "Gilroy-SemiBold", sans-serif;
+  font-size: 1.6em;
+  margin-bottom: 3%;
+  text-align: center;
+  padding-top: 4%;
+  text-transform: uppercase;
+}
+.latest {
+  display: grid;
+  grid-template-columns: 2fr 5fr 2fr;
+  padding: 16px;
+  border: 1px solid #fafefe;
+  background-color: #fafefe;
+  min-height: 150px;
+  margin-bottom: 2%;
+}
+.latearticleimage {
+  margin-inline-end: 15px;
+  height: 154px;
+}
+.articlewords h5 {
+  font-family: "Gilroy-SemiBold", sans-serif;
+  font-size: 1em;
+  line-height: 36px;
+  text-align: start;
+}
+.articlewords span {
+  font-family: "Gilroy-Regular", sans-serif;
+  font-size: 0.9em;
+  line-height: 36px;
+  max-width: 100%;
+  max-width: 300px;
+}
+.readarticle {
+  border-inline-start: 2px solid #02979d;
+  padding-top: 25%;
+}
+.Readlatest {
+  width: 180px;
+  background-color: #fafefe;
+  border-radius: 35px;
+  padding: 10px 60px;
+  text-decoration: none;
+  border: 1px solid #02979d;
+}
+.Readlatestword {
+  font-family: "Gilroy-Bold", sans-serif;
+  font-size: 16px;
+  color: #02979d;
 }
