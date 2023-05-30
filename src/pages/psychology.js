@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Header from "../header";
 import Navbar from "../Navbar";
 import Footer from "../footer";
@@ -23,11 +23,6 @@ import Mfaq from "./mfaq";
 
 
 export default function Psychology() {
-  useEffect(() => {
-  fetch("https://mentalland.com/api/V1/homepage/category_const_list")
-    .then((response) => response.json())
-    .then((data) => console.log(data));
-}, []); 
 return (
     <div>
     
