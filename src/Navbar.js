@@ -1,40 +1,45 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Hamburger from "./icons/hamburger.svg";
 
 export default function Navbar() {
   const { t } = useTranslation();
-   const [showNavbar, setShowNavbar] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(false);
 
-   const handleShowNavbar = () => {
-     setShowNavbar(!showNavbar);
-   };
+ const handleShowNavbar = () => {
+  setShowNavbar(!showNavbar);
+};
 
-     return (
+  return (
     <nav className="navbar nav">
-        <h1 className="logo">
-          MentalLand
-        </h1>
-        <div className="menu-icon" onClick={handleShowNavbar}>
-         <img src={Hamburger} alt="menu icon" />
-        </div>
-        <div className={`nav-elements nav-right  ${showNavbar && 'active'}`}>
-          <ul>
-            <li>
-              <NavLink to="/pages/Home">{t("Home")}</NavLink>
-            </li>
-            <li>
-              <NavLink to="/pages/depressionadults">{t("Our Services")}</NavLink>
-            </li>
-            <li>
+      <h1 className="logo">MentalLand</h1>
+      <div className="menu-icon" onClick={handleShowNavbar}>
+        <img src={Hamburger} alt="menu icon" />
+      </div>
+      <div className={`nav-elements nav-right  ${showNavbar && "active"}`}>
+        <ul>
+          <li>
+            <NavLink to="/pages/Home">{t("Home")}</NavLink>
+          </li>
+          <li>
+            <div className="dropdown">
+              Services
+            </div>
+            <div className="dropdown-content">
               <NavLink to="/pages/aboutus">{t("About")}</NavLink>
-            </li>
-            <li>
-              <NavLink to="/pages/contactus">{t("Contact")}</NavLink>
-            </li>
-          </ul>
-        </div>
+              <NavLink to="/pages/aboutus">{t("About")}</NavLink>
+              <NavLink to="/pages/aboutus">{t("About")}</NavLink>
+            </div>
+          </li>
+          <li>
+            <NavLink to="/pages/aboutus">{t("About")}</NavLink>
+          </li>
+          <li>
+            <NavLink to="/pages/contactus">{t("Contact")}</NavLink>
+          </li>
+        </ul>
+      </div>
     </nav>
-     );
+  );
 }

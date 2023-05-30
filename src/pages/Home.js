@@ -202,7 +202,7 @@ export default function Home() {
               </div>
               <div className="mission">
                 <div className="VM text-center">
-                  <img src={telescope} className="VMimage" />
+                  <img src={telescope} className="VMimage" alt="vision of MentalLand" />
                   <h4 className="VMheading">Vision</h4>
                   <span className="VMtext">
                     Lorem ipsum dolor sit amet consectetur. Pretium rutrum nisi
@@ -213,7 +213,7 @@ export default function Home() {
                   </span>
                 </div>
                 <div className="VM text-center">
-                  <img src={mission} className="VMimage" />
+                  <img src={mission} className="VMimage" alt="Mission of MentalLand" />
                   <h4 className="VMheading">Mission</h4>
                   <span className="VMtext">
                     Lorem ipsum dolor sit amet consectetur. Pretium rutrum nisi
@@ -224,7 +224,7 @@ export default function Home() {
                   </span>
                 </div>
                 <div className="VM text-center">
-                  <img src={value} className="VMimage" />
+                  <img src={value} className="VMimage" alt="value MentalLand" />
                   <h4 className="VMheading">Value</h4>
                   <span className="VMtext">
                     Lorem ipsum dolor sit amet consectetur. Pretium rutrum nisi
@@ -235,7 +235,7 @@ export default function Home() {
                   </span>
                 </div>
                 <div className="VM text-center">
-                  <img src={goal} className="VMimage" />
+                  <img src={goal} className="VMimage" alt="goal MentalLand" />
                   <h4 className="VMheading">Goal</h4>
                   <span className="VMtext">
                     Lorem ipsum dolor sit amet consectetur. Pretium rutrum nisi
@@ -257,7 +257,7 @@ export default function Home() {
                 >
                   <div className="mentallandonphone">
                     <div>
-                      <img src={mentalonphone} className="MoPhimage" />
+                      <img src={mentalonphone} className="MoPhimage" alt="MentalLand on phone" />
                     </div>
                     <div>
                       <h3 className="MoPhheading">Mentalland on your phone</h3>
@@ -309,7 +309,7 @@ export default function Home() {
                   <h4 className="latestheading">latest articles</h4>
                   <div className="latest">
                     <div>
-                      <img src={latearticle} className="latearticleimage" />
+                      <img src={latearticle} className="latearticleimage" alt="latest articles MentalLand" />
                     </div>
                     <div className="articlewords text-start">
                       <h5>Lorem ipsum dolor sit amet consectetur. Magna.</h5>

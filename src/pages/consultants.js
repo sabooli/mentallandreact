@@ -41,10 +41,10 @@ export default function Consultants({ heading, color }) {
           300: {
             slidesPerView: 1,
           },
-          400: {
+          550: {
             slidesPerView: 2,
           },
-          720: {
+          820: {
             slidesPerView: 3,
           },
           1056: {

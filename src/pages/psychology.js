@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../header";
 import Navbar from "../Navbar";
 import Footer from "../footer";
@@ -16,19 +16,29 @@ import adps from "../icons/Rectangle 67.svg";
 import chps from "../icons/Rectangle 67ch.svg";
 import semps from "../icons/Group 811.svg";
 import Upcoming from "./upcoming";
-import bgImage from "../icons/Rectangle.png";
+import bgImage from "../icons/Group 1246.png";
 import spzsem from "../icons/Group 1027.svg";
 import question from "../icons/Group 817.svg";
 import Mfaq from "./mfaq";
 
 
 export default function Psychology() {
-  return (
+  useEffect(() => {
+  fetch("https://mentalland.com/api/V1/homepage/category_const_list")
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+}, []); 
+return (
     <div>
+    
       <div
         style={{
-          backgroundImage: `url(${bgImage})`,
-          height: `653px`,
+          backgroundImage: `url("${bgImage}")`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed",
+          backgroundPosition: "center center",
+          height: "calc(130vh - 50px)",
         }}
       >
         <Header />

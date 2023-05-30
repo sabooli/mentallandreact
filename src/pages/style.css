@@ -37,24 +37,25 @@ body {
   overflow: hidden;
 }
 .about {
-  margin-top: 50px;
-  margin-inline-start: 100px;
-  margin-inline-end: 100px;
+  margin-top: 45px;
+  margin-inline-start: 85px;
+  margin-inline-end: 85px;
   text-align: justify;
 }
 .easy {
   font-family: "Alice", sans-serif;
   text-align: center;
-  font-size: 48px;
-  line-height: 55px;
+  font-size: 2em;
+  line-height: 40px;
   text-transform: uppercase;
 }
 .how {
   font-family: "Gilroy-Regular", sans-serif;
-  font-size: 1.5em;
+  font-size: 1em;
+  line-height: 36px;
   margin-top: 34px;
   text-align-last: center;
-  margin-bottom: 5%;
+  margin-bottom: 4%;
 }
 .group {
   width: 100%;
@@ -66,33 +67,33 @@ body {
 .story {
   display: grid;
   grid-template-columns: 3fr 2fr;
-  margin-inline-start: 100px;
-  margin-inline-end: 100px;
-  margin-top: 20%;
+  margin-inline-start: 85px;
+  margin-inline-end: 85px;
+  margin-top: 12%;
 }
 .hand {
-  width: 100%;
+  max-width: 100%;
   height: 415px;
   margin-inline-start: 26px;
 }
 .st {
   font-family: "Alice", sans-serif;
-  font-size: 40px;
-  line-height: 46px;
+  font-size: 2em;
+  line-height: 40px;
   text-transform: uppercase;
 }
 .handstory {
   font-family: "Gilroy-Regular", sans-serif;
   margin-top: 30px;
   text-align: justify;
-  line-height: 40px;
-  font-size: 1.5em;
+  line-height: 36px;
+  font-size: 1em;
 }
 .team {
-  margin-top: 20%;
+  margin-top: 12%;
   text-align: center;
-  margin-inline-start: 100px;
-  margin-inline-end: 100px;
+  margin-inline-start: 85px;
+  margin-inline-end: 85px;
   max-width: 1800px;
 }
 .ourteam {
@@ -100,45 +101,45 @@ body {
   margin-top: 30px;
   text-align: justify;
   text-align-last: center;
-  line-height: 40px;
-  font-size: 1.5em;
+  line-height: 36px;
+  font-size: 1em;
 }
 .Complementary {
   font-family: "Gilroy-Regular", sans-serif;
-  margin-top: 16px;
+  margin-top: 3%;
   text-align: justify;
   text-align-last: center;
-  line-height: 40px;
-  font-size: 1.5em;
+  line-height: 36px;
+  font-size: 1em;
   margin-bottom: 27px;
 }
 .position {
   font-family: "Gilroy-Regular", sans-serif;
   text-align: start;
-  line-height: 40px;
-  font-size: 1.5em;
+  line-height: 36px;
+  font-size: 1em;
 }
 .join {
 margin-inline-end: 43px;
 }
 .jot {
 font-family: "Alice",sans-serif;
-font-size: 40px;
-line-height: 46px;
+font-size: 2em;
+line-height: 40px;
 color: #000b0c;
-margin-bottom: 21px;
+margin-bottom: 4%;
 }
 .openPosition {
-  margin-top: 50px;
-  padding: 17.48px 25.5px 17.48px;
-  max-width: 257px;
+  margin-top: 5%;
+  padding: 11.48px 22.5px 11.48px;
+  max-width: 212px;
   background-color: #02979d;
   border-radius: 35px;
 }
 .op {
   font-family: "Gilroy-Regular", sans-serif;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 1em;
   text-align: center;
 }
 .to {
@@ -146,11 +147,12 @@ margin-bottom: 21px;
 }
 
 .callIcon {
-  margin-inline: 23px;
+  margin-inline: 21px;
+  width: 25px;
 }
 .final {
-  margin-top: 202.33px;
-  margin-bottom: 20%;
+  margin-top: 12%;
+  margin-bottom: 15%;
   display: grid;
   grid-template-columns: 3fr 7fr;
 }
@@ -190,7 +192,7 @@ margin-bottom: 21px;
     margin-inline-start: 4px;
 }
 .teamphoto {
-  margin-top: 150%;
+  margin-top: 110%;
 }
 .swiper-button-next, .swiper-button-prev {
   width: 12px;

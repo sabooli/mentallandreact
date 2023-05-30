@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../header";
 import Navbar from "../Navbar";
-import union from "../icons/Union.png";
+import union from "../icons/Group 1249Ch.png";
 import Consultants from "./consultants";
 import Patientcomments from "./patientcomments";
 import Footer from "../footer";
@@ -24,18 +24,16 @@ export default function Psychildren() {
       <div>
         <div
           style={{
-            backgroundImage: `url(${union})`,
-            height: `670px`,
+            backgroundImage: `url("${union}")`,
+            backgroundSize: "cover",
+            backgroundPosition: "top center",
+            backgroundRepeat: "no-repeat",
+            height: "calc(130vh - 50px)",
           }}
-          className=""
         >
-            <Header />
-            <Navbar />
-         
-        </div>
-        <div className="kids">
-          <div className="childpsy">
-            <div className=" text-center">
+          <Header />
+          <Navbar />
+        <div className="chenjoy text-center">
               <h1 className="lets">Let's Enjoy!</h1>
               <h2 className="enjoy">
                 Lorem ipsum dolor sit amet consectetur. Viverra pellentesque
@@ -43,7 +41,9 @@ export default function Psychildren() {
                 ut vitae felis convallis. Egestas enim diam ac nisi orci id
                 tellus lobortis. Lacus in etiam rhoncus.
               </h2>
-            </div>
+            </div></div>
+        <div className="kids">
+          <div className="childpsy"> 
             <div className="parta">
               <h1 className="psychservices text-center">
                 Children / Teenagers Psychology Services

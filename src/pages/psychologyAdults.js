@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../header";
 import Navbar from "../Navbar";
-import back from "../icons/Rectangle 45ad.png";
+import back from "../icons/Group 1247.png";
 import depression from "../icons/Group 806.svg";
 import anxiety from "../icons/Group 807.svg";
 import unhealthyEat from "../icons/Group 808.svg";
@@ -22,8 +22,12 @@ export default function Psyadults() {
       <div>
         <div
           style={{
-            backgroundImage: `url(${back})`,
-            height: `653px`,
+            backgroundImage: `url("${back}")`,
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundAttachment: "fixed",
+            backgroundPosition: "center center",
+            height: "calc(130vh - 50px)",
           }}
         >
           <Header />
