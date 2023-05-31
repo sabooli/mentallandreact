@@ -3,12 +3,15 @@ import Header from "../header";
 import Navbar from "../Navbar";
 import Footer from "../footer";
 import photo from "../icons/Rectangle 8.svg";
-import star from "../icons/Star 9.svg";
+import { AiFillStar } from "react-icons/ai";
 import Explain from "./explain";
 import { Link } from "react-router-dom";
+ import { useParams } from "react-router-dom";
 
 
 export default function Counsel() {
+ 
+ 
   let doctors = [
     {
       name: "Dr. Smith",
@@ -53,6 +56,7 @@ export default function Counsel() {
       ],
     },
   ];
+  
     return (
       <div>
         <Header />
@@ -68,7 +72,7 @@ export default function Counsel() {
                   <h2 className="drname">Dr. Mary Green</h2>
                   <h3 className="dreducation">Ph.D in Psychology</h3>
                   <div className="level">
-                    <img src={star} className="star" alt="rate" />
+                    <AiFillStar className="star" />
                     <span className="rate">4.9</span>
                     <span className="experience">+1000 Consultations</span>
                   </div>
