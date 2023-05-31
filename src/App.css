@@ -22,7 +22,6 @@
 }
 
 body {
-  background: transparent;
   margin: 0 auto;
 }
 .iconmenu {
@@ -329,18 +328,23 @@ body {
     display: inline-block; 
     position: relative; 
     cursor: pointer;
+     font-size: 16px;
+  font-weight: 400;
+  color: #000b0c;
 } 
 .dropdown-content {
-   display:none;
+    display: none;
     position: absolute;
     width: 100%;
     overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    background-color: #ecf7f7;
 }
-.dropdown:hover .dropdown-content::after {
+.submenu:hover .dropdown-content {
     display: block;
     z-index: 100;
 }
+
 .dropdown-content a {
     display: block;
     color: #000000;
@@ -388,7 +392,7 @@ body {
   left: 0;
   width: 100%;
   height: 2px;
-  color: #02979d;
+  color: red;
 }
 
 @media screen and (max-width: 1200px) {
@@ -499,12 +503,12 @@ body {
   .nav-elements {
     position: absolute;
     right: 0;
-    -webkit-transform: translateY(55%);
-			transform: translateY(55%);
+    -webkit-transform: translateY(53%);
+			transform: translateY(53%);
     background-color: #ecf7f7;
     width: 0px;
     z-index: 10;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 630px);
     transition: all 0.3s ease-in;
     overflow: hidden;
   }

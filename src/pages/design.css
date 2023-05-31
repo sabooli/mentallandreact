@@ -94,13 +94,13 @@ h1, h2, h3 {
 .flow {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin-top: 80px;
-  margin-bottom: 150px;
+  margin-top: 8%;
+  margin-bottom: 13%;
   gap: 8%;
 }
 .fl {
-width: 142px;
-height: 155px;
+max-width: 142px;
+min-height: 155px;
 }
 .statics {
   font-family: "Gilroy-SemiBold", sans-serif;
@@ -108,7 +108,7 @@ height: 155px;
   line-height: 60px;
   color: #000b0c;
   position: absolute;
-  transform: translate(-110%, 45%);
+  transform: translate(-120%, 45%);
 }
 .stat {
   position: absolute;
@@ -132,7 +132,7 @@ height: 155px;
   font-size: 1.15em;
   line-height: 25px;
   color: #000b0c;
-  transform: translate(-95%,128%);
+  transform: translate(-120%, 100%);
 }
 .department {
   width: 100%;
@@ -184,20 +184,20 @@ figure {
   line-height: 21px;
 }
 .learnMore {
-  width: 120px;
+  max-width: 160px;
   background-color: #02979d;
-  border-radius: 35px;
+  border-radius: 30px;
   color: #fafefe;
-  padding: 12px 45px;
+  padding: 3% 7%;
   text-decoration: none;
-  margin-top: 72.5px;
+  margin-top: 7%;
 }
 .learnMore:hover {
   color: #fafefe;
 }
 .ximg {
-  width: 631px;
-  height: 580px;
+  max-width: 631px;
+  min-height: 580px;
 }
 .adpsy {
   padding-inline-start: 50px;
@@ -233,12 +233,12 @@ figure {
   margin-top: 150px;
 }
 .public {
-  width: 365.5px;
+  max-width: 365.5px;
   height: 459px;
   margin-bottom: 5%;
 }
 .sempsy {
-  margin-inline-start: -70px;
+  margin-inline-start: -4%;
 }
 .pubsem {
   font-family: "Gilroy-SemiBold", sans-serif;
@@ -280,7 +280,7 @@ figure {
 .click {
   background-color: #02979d;
   border-radius: 50px;
-  width: 65px;
+  max-width: 65px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -291,7 +291,7 @@ figure {
 }
 .specialized {
   margin-inline-start: 155px;
-  width: 365px;
+  max-width: 365px;
   height: 459px;
 }
 .spzpsy {
@@ -306,7 +306,7 @@ figure {
 .seeAll {
   background-color: #02979d;
   border-radius: 30px;
-  width: 160px;
+  max-width: 160px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -363,7 +363,7 @@ figure {
 .question {
   padding-inline-start: 25px;
   margin-bottom: 150px;
-  width: 318px;
+  max-width: 318px;
   height: 565px;
   margin-top: -25px;
 }
@@ -405,6 +405,9 @@ top: 36px;
 .swiper-navigation__next {
   right: -90%;
 }
+.sempsy {
+  margin-inline-start: 2%;
+}
 }
 @media screen and (max-width: 900px) {
   .adps, .chps, .pusem, .chpsy, .spzsem, .freq, .choose {
@@ -413,15 +416,15 @@ top: 36px;
    flex-direction: column;
    text-align: center;
 }
+.adps, .chps, .pusem, .chpsy, .spzsem, .freq, .choose {
+    margin-bottom: 10%;
+   }
 image {
   display: block;
   margin: 0 auto;
 }
 .selecting {
   margin-bottom: 5%;
-}
-.learnMore {
-  margin-bottom: 10%;
 }
 h2 {
   margin-top: 5%;
@@ -458,10 +461,16 @@ h2 {
     flex-direction: column;
     row-gap: 30%;
   }
-  
+  .flow {
+    margin-inline-start: -40%;
+  }
+  .stat, .statb, .statl {
+    transform: translateY(70%);
+  }
   .separate {
     padding-inline: 20%;
   }
+   
 }
 @media screen and (max-width: 500px) {
 .psycho {

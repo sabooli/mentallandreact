@@ -5,12 +5,12 @@ import Footer from "../footer";
 import group from "../icons/Group 1077.svg";
 import story from "../icons/Group 1102.svg";
 import "swiper/swiper-bundle.css";
-import whatsapp from "../icons/whatsapp.svg";
-import linkedin from "../icons/iconoir_linkedin.svg";
-import instagram from "../icons/instagram.svg";
 import join from "../icons/Group 1090.svg";
 import { Link } from "react-router-dom";
-import arrowLeft from "../icons/arrow-left.svg";
+import { AiOutlineWhatsApp } from "react-icons/ai"
+import { AiOutlineLinkedin } from "react-icons/ai";
+import { AiOutlineInstagram } from "react-icons/ai";
+import { FaLongArrowAltRight } from "react-icons/fa";
 import Teamslider from "./teamslider";
 
 export default function About() {
@@ -65,24 +65,33 @@ export default function About() {
             arcu arcu eget. Nunc a quis enim nibh posuere cras aenean purus.
             Nulla sagittis semper cum rhoncus varius quis vitae venenatis nibh.
             <br />
-            <img src={whatsapp} className="callIcon" alt="call Icon" />
-            <img src={linkedin} className="callIcon" alt="call Icon" />
-            <img src={instagram} className="callIcon" alt="call Icon" />
+            <AiOutlineWhatsApp className="callIcon" />
+            <AiOutlineLinkedin className="callIcon" />
+            <AiOutlineInstagram className="callIcon" />
           </div>
-       
-        <div className="final">
-          <div className="join">
-            <h1 className="jot">Join Our Team</h1>
-            <img src={join} className="joinot" alt="join team" />
+
+          <div className="final">
+            <div className="join">
+              <h1 className="jot">Join Our Team</h1>
+              <img src={join} className="joinot" alt="join team" />
+            </div>
+            <div className="position">
+              Lorem ipsum dolor sit amet consectetur. Nunc pharetra massa velit
+              consectetur lectus erat. Tincidunt dis egestas aliquet adipiscing
+              donec. Sed cras vulputate amet scelerisque.
+              <br />
+              <div className="openPosition">
+                <Link to="/" className="to">
+                  <span className="op">
+                    see open positions
+                    <FaLongArrowAltRight />
+                  </span>
+                </Link>
+              </div>
+            </div>
           </div>
-          <div className="position">
-            Lorem ipsum dolor sit amet consectetur. Nunc pharetra massa velit
-            consectetur lectus erat. Tincidunt dis egestas aliquet adipiscing
-            donec. Sed cras vulputate amet scelerisque.<br />
-            <div className="openPosition"><Link to="/" className="to"><span className="op">see open positions<img src={arrowLeft} alt="arrow" /></span></Link></div>
-          </div>
-        </div>
-      </div> </div>
+        </div>{" "}
+      </div>
       <Footer />
     </div>
   );

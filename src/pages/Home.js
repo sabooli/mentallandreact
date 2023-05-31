@@ -331,15 +331,7 @@ export default function Home() {
             </div>
             <div className="partVII"></div>
           </div>
-        </div>
-        Home
-        <Link to="/pages/psychology">Psychology</Link>
-        <br />
-        <Link to="/pages/psychologyAdults">Psychology-adults</Link>
-        <br />
-        <Link to="/pages/psychologyChildren">Psychology-children</Link>
-        <br />
-        <Link to="/pages/seminars">Seminars</Link>
+        </div>       
       </div>
       <Footer />
     </div>

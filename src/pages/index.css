@@ -125,12 +125,11 @@ body {
   border: 0.5px solid #02979d;
 }
 .Trated {
-  max-width: 88.83px;
-  width: 100%;
+  max-width: 100%;
   height: 40px;
   font-family: "Gilroy-Regular", sans-serif;
   font-size: 18px;
-  line-height: 36px;
+  line-height: 30px;
   display: inline-block;
   align-items: center;
   color: #000b0c;
@@ -205,11 +204,13 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 2fr 1fr;
   grid-template-rows: auto;
+  gap: 2%;
 }
 .workFieldBigbar {
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 2fr 1fr;
   grid-template-rows: auto;
+  gap: 2%;
 }
 .justnow {
   font-family: "Gilroy-Bold", sans-serif;
@@ -262,6 +263,7 @@ body {
   height: 14px;
   margin-inline-end: 5px;
   margin-top: -4px;
+  color: #EDA12F;
 }
 .rate {
   margin-top: 1.5rem;

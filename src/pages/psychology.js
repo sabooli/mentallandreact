@@ -21,11 +21,20 @@ import spzsem from "../icons/Group 1027.svg";
 import question from "../icons/Group 817.svg";
 import Mfaq from "./mfaq";
 
-
 export default function Psychology() {
-return (
+  const url = "https://mentalland.com/api/V1/homepage/top_rated_const";
+
+  fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((error) => console.error(error));
+  return (
     <div>
-    
       <div
         style={{
           backgroundImage: `url("${bgImage}")`,
@@ -191,6 +200,7 @@ return (
               </div>
             </div>
           </div>
+          <div className="">
           <div className="chps">
             <div className="chpsy">
               <h3 className="subtitle">Children / Teenagers Psychology</h3>
@@ -214,7 +224,7 @@ return (
               className="ximg img-fluid"
               alt="children psychology"
             />
-          </div>
+          </div></div>
           <div className="sems">
             <div className="pusem">
               <img
