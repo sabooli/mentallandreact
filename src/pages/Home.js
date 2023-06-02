@@ -14,6 +14,8 @@ import mentalonphone from "../icons/Group 779.svg";
 import Customercomments from "./customercomments";
 import Peace from "../icons/Rectangle 44-min.png";
 import latearticle from "../icons/Rectangle 31a.svg";
+import HMfaq from "./homemfaq";
+import group731 from "../icons/Group 731.svg";
 
 export default function Home() {
   const [activeButton, setActiveButton] = useState(0);
@@ -36,16 +38,17 @@ export default function Home() {
         <Navbar />
         <div className="homeStrategy text-start">
           <h1 className="homemainTopic">
-            <span>mentalland</span> where you can learn, improve, get calm & Be happy
+            <span>mentalland</span> where you can learn, improve, get calm & Be
+            happy
           </h1>
           <h2 className="homesubTopic">
             Lorem ipsum dolor sit amet consectetur. Amet velit convallis amet mi
             leo aliquet in vestibulum consectetur. Lectus magna eleifend{" "}
           </h2>
           <div>
-          <Link to="/" className="learnMore">
-            <span className="more">Learn more</span>
-          </Link>
+            <Link to="/" className="learnMore">
+              <span className="more">Learn more</span>
+            </Link>
           </div>
         </div>
       </div>
@@ -86,10 +89,7 @@ export default function Home() {
                   onClick={() => handleButtonClick(1)}
                 >
                   <div className="boxy">
-                    <h3 className="heading">
-                      <br />
-                      Business
-                    </h3>
+                    <h3 className="heading">Business</h3>
                   </div>
                 </span>
                 <span
@@ -141,43 +141,38 @@ export default function Home() {
               </div>
               <div className="circles">
                 <figure>
-                  <div className="bigcircle firstyear">
                     <div className="circle">
                       <span className="establishyear">2019</span>
                     </div>
-                  </div>
                   <figcaption className="circlecaption">
                     Created with Love
                   </figcaption>
                 </figure>
                 <figure>
-                  <div className="bigcircle shadow">
-                    {" "}
                     <div className="circle">
                       <span className="establishyear">2020</span>
-                    </div>
-                  </div>
+                    </div>         
                   <figcaption className="circlecaption">
                     Art Academy Added
                   </figcaption>
                 </figure>{" "}
                 <figure>
-                  <div className="bigcircle shadow">
+               
                     {" "}
                     <div className="circle">
                       <span className="establishyear">2021</span>
                     </div>
-                  </div>
+                 
                   <figcaption className="circlecaption">
                     BEing the first mental website in Iran
                   </figcaption>
                 </figure>{" "}
                 <figure>
-                  <div className="bigcircle shadow">
+                
                     {" "}
                     <div className="circle">
                       <span className="establishyear">2023</span>
-                    </div>
+                   
                   </div>
                   <figcaption className="circlecaption">
                     redesigned, improved and expanded{" "}
@@ -201,8 +196,12 @@ export default function Home() {
                 ornare amet. In pellentesque volutpat urna ultrices vitae.
               </div>
               <div className="mission">
-                <div className="VM text-center">
-                  <img src={telescope} className="VMimage" alt="vision of MentalLand" />
+                <figure className="VM text-center">
+                  <img
+                    src={telescope}
+                    className="VMimage"
+                    alt="vision of MentalLand"
+                  />
                   <h4 className="VMheading">Vision</h4>
                   <span className="VMtext">
                     Lorem ipsum dolor sit amet consectetur. Pretium rutrum nisi
@@ -211,9 +210,13 @@ export default function Home() {
                     vehicula donec amet a dolor sollicitudin ut. Lectus
                     cvolutpat urna ultrices vitae.
                   </span>
-                </div>
-                <div className="VM text-center">
-                  <img src={mission} className="VMimage" alt="Mission of MentalLand" />
+                </figure>
+                <figure className="VM text-center">
+                  <img
+                    src={mission}
+                    className="VMimage"
+                    alt="Mission of MentalLand"
+                  />
                   <h4 className="VMheading">Mission</h4>
                   <span className="VMtext">
                     Lorem ipsum dolor sit amet consectetur. Pretium rutrum nisi
@@ -222,8 +225,8 @@ export default function Home() {
                     vehicula donec amet a dolor sollicitudin ut. Lectus
                     cvolutpat urna ultrices vitae.
                   </span>
-                </div>
-                <div className="VM text-center">
+                </figure>
+                <figure className="VM text-center">
                   <img src={value} className="VMimage" alt="value MentalLand" />
                   <h4 className="VMheading">Value</h4>
                   <span className="VMtext">
@@ -233,8 +236,8 @@ export default function Home() {
                     vehicula donec amet a dolor sollicitudin ut. Lectus
                     cvolutpat urna ultrices vitae.
                   </span>
-                </div>
-                <div className="VM text-center">
+                </figure>
+                <figure className="VM text-center">
                   <img src={goal} className="VMimage" alt="goal MentalLand" />
                   <h4 className="VMheading">Goal</h4>
                   <span className="VMtext">
@@ -244,20 +247,18 @@ export default function Home() {
                     vehicula donec amet a dolor sollicitudin ut. Lectus
                     cvolutpat urna ultrices vitae.
                   </span>
-                </div>
+                </figure>
               </div>
             </div>
             <div className="partIV">
               <div>
-                <div
-                  style={{
-                    backgroundImage: `url(${mentalonphoneback})`,
-                    height: `563px`,
-                  }}
-                >
                   <div className="mentallandonphone">
                     <div>
-                      <img src={mentalonphone} className="MoPhimage" alt="MentalLand on phone" />
+                      <img
+                        src={mentalonphone}
+                        className="MoPhimage img-fluid"
+                        alt="MentalLand on phone"
+                      />
                     </div>
                     <div>
                       <h3 className="MoPhheading">Mentalland on your phone</h3>
@@ -291,7 +292,6 @@ export default function Home() {
                         </div>
                       </div>
                     </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -299,17 +299,15 @@ export default function Home() {
               <Customercomments heading="What Our Patients Say" />
             </div>
             <div className="partVI">
-              <div
-                style={{
-                  backgroundImage: `url(${mentalonphoneback})`,
-                  height: `563px`,
-                }}
-              >
                 <div className="latestArticles">
                   <h4 className="latestheading">latest articles</h4>
                   <div className="latest">
                     <div>
-                      <img src={latearticle} className="latearticleimage" alt="latest articles MentalLand" />
+                      <img
+                        src={latearticle}
+                        className="latearticleimage"
+                        alt="latest articles MentalLand"
+                      />
                     </div>
                     <div className="articlewords text-start">
                       <h5>Lorem ipsum dolor sit amet consectetur. Magna.</h5>
@@ -327,11 +325,42 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+            </div>
+            <div className="partVII">
+              <h2 className="hfrequent">Most Frequently Asked Questions</h2>
+              <div className="hfreq">
+                <div>
+                  <HMfaq
+                    index={0}
+                    question="Lorem ipsum dolor sit amet consectetur. Est ut vulputate scelerisque nibh?"
+                    answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
+                  />
+                  <HMfaq
+                    index={1}
+                    question="Lorem ipsum dolor sit amet consectetur. Donec at ut diam sit vitae gravida nisi ?"
+                    answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
+                  />
+                  <HMfaq
+                    index={2}
+                    question="Lorem ipsum dolor sit amet consectetur. Nibh nisi nec velit arcu tristique. Justo nulla?"
+                    answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
+                  />
+                  <HMfaq
+                    index={3}
+                    question="Lorem ipsum dolor sit amet consectetur. Ut neque pellentesque felis orci.?"
+                    answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
+                  />
+                  <HMfaq
+                    index={4}
+                    question="Lorem ipsum dolor sit amet consectetur. Amet mi viverra praesent imperdiet proin ne?"
+                    answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
+                  />
+                </div>
+                <img src={group731} alt="faq" className="group731" />
               </div>
             </div>
-            <div className="partVII"></div>
           </div>
-        </div>       
+        </div>
       </div>
       <Footer />
     </div>
