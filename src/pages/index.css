@@ -47,7 +47,7 @@ body {
 }
 .content {
   text-align: justify;
-  height: 160px;
+  min-height: 160px;
   font-family: "Gilroy-Regular";
   font-size: 1.125em;
   line-height: 36px;
@@ -63,6 +63,7 @@ body {
 }
 .labell {
   margin-inline-start: 20px;
+  max-width: 400px;
   width: 100%;
   font-family: "Gilroy-Regular";
   font-size: 16px;
@@ -71,7 +72,7 @@ body {
   color: #000b0c;
 }
 .title {
-  width: 88px;
+  max-width: 88px;
   height: 40px;
   margin-inline-start: 20px;
   top: 15px;
@@ -94,7 +95,7 @@ body {
   box-shadow: 0px 1px 25px rgba(2, 151, 157, 0.1);
 }
 .filter {
-  width: 65px;
+  max-width: 65px;
   height: 40px;
   margin-inline-start: 26px;
   margin-bottom: 26px;
@@ -374,19 +375,11 @@ nav a.active {
   line-height: 36px;
 }
 
-@media screen and (max-width: 1200px) {
-  .phname, .number {
-    margin-top: 5%;
-  }
-}
 @media screen and (max-width: 1000px) {
   .main {
     grid-template-columns: 1fr;
     display: flex;
     flex-direction: column;
-  }
-  .box {
-    margin-top: 20%;
   }
  .phname, .number {
     margin-top: 0;
@@ -401,12 +394,6 @@ nav a.active {
     display: flex;
     flex-direction: column;
   }
-  .phname, .number, .top {
-    margin-top: 5%;
-  }
-  .check {
-    margin-top: 20%;
-  }
   .threeitems {
     gap: 5%;
   }
@@ -414,20 +401,25 @@ nav a.active {
     margin-bottom: 5%;
   }
 }
-@media screen and (max-width: 670px) {
-.check {
-  margin-top: 50%;
-}
-}
+
 @media screen and (max-width: 505px) {
+  .maincontent {
+  margin-inline-start: 45px;
+  margin-inline-end: 45px;
+} 
   .photo {
     width: 100%;
   }
   .phname {
-    width: 100%;
+  width:259px;
   }
   .find {
-    display: none;
+    width: 79px;
+      margin-inline-start: -79px;
+  }
+  .fitext {
+    font-size: 14px;
+    padding-inline-start: 10%;
   }
   .connect {
     margin-inline: 50px;
@@ -442,17 +434,22 @@ nav a.active {
   }
   .threeitems {
     margin-bottom: 10%;
-    gap: 5%;
   }
-  .phname {
-    width: 100%;
+   .phname {
+  width:179px;
+  }
+  .find {
+    display: none;
+  }
+  .labell {
+    max-width: 170px;
   }
   .drname {
     margin-bottom: 20%;
   }
   .containerFluid {
-    margin-inline-start: 50px;
-    margin-inline-end: 50px;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
   }
   .knowing {
     margin-inline: -80px;

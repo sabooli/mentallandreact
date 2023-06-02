@@ -91,20 +91,20 @@ export default function Psychology() {
             </div>
           </div>
           <div className="flow text-center">
-            <div className="">
+            <div className="thumbnail">
               <img src={exp} className="img-fluid fl" alt="experience" />
               <span className="statics">+10</span>
               <span className="stat text-center">Years of Experience</span>
             </div>
-            <div className="">
+            <div className="thumbnail">
               <img src={help} className="img-fluid fl" alt="patients" />
               <span className="statics">+1300</span>
-              <span className="statb text-center">
+              <span className="stat text-center">
                 Patients Received Help
                 <br /> This Year
               </span>
             </div>
-            <div className="">
+            <div className="thumbnail">
               <img
                 src={prof}
                 className="img-fluid fl"
@@ -115,10 +115,10 @@ export default function Psychology() {
                 Professional Psychologists
               </span>
             </div>
-            <div className="">
+            <div className="thumbnail">
               <img src={imp} className="img-fluid fl" alt="result" />
               <span className="statics">98%</span>
-              <span className="statl text-center">
+              <span className="stat text-center">
                 Clients improved
                 <br />
                 their condition
@@ -201,30 +201,31 @@ export default function Psychology() {
             </div>
           </div>
           <div className="">
-          <div className="chps">
-            <div className="chpsy">
-              <h3 className="subtitle">Children / Teenagers Psychology</h3>
-              <div className="summary">
-                Lorem ipsum dolor sit amet consectetur. Mi pellentesque quis eu
-                vestibulum lectus. Porttitor integer consectetur mattis
-                elementum malesuada. Egestas ac dignissim amet pretium
-                ultricies. Molestie integer ornare nisl et nunc quisque non
-                sollicitudin. Aliquam fringilla rutrum morbi pellentesque id
-                orci commodo libero phasellus. Duis urna vel amet cras non sem
-                vitae sapien. Maecenas eget consequat euismod fusce vehicula
-                purus sed lorem. Adipiscing nulla amet morbi ipsum nec lobortis
-                egestas nec.
+            <div className="chps">
+              <div className="chpsy">
+                <h3 className="subtitle">Children / Teenagers Psychology</h3>
+                <div className="summary">
+                  Lorem ipsum dolor sit amet consectetur. Mi pellentesque quis
+                  eu vestibulum lectus. Porttitor integer consectetur mattis
+                  elementum malesuada. Egestas ac dignissim amet pretium
+                  ultricies. Molestie integer ornare nisl et nunc quisque non
+                  sollicitudin. Aliquam fringilla rutrum morbi pellentesque id
+                  orci commodo libero phasellus. Duis urna vel amet cras non sem
+                  vitae sapien. Maecenas eget consequat euismod fusce vehicula
+                  purus sed lorem. Adipiscing nulla amet morbi ipsum nec
+                  lobortis egestas nec.
+                </div>
+                <Link to="/" className="learnMore">
+                  <span className="more">Learn more</span>
+                </Link>
               </div>
-              <Link to="/" className="learnMore">
-                <span className="more">Learn more</span>
-              </Link>
+              <img
+                src={chps}
+                className="ximg img-fluid"
+                alt="children psychology"
+              />
             </div>
-            <img
-              src={chps}
-              className="ximg img-fluid"
-              alt="children psychology"
-            />
-          </div></div>
+          </div>
           <div className="sems">
             <div className="pusem">
               <img
