@@ -10,6 +10,7 @@ import { CgSortAz } from "react-icons/cg";
 export default function Services() {
   const { t } = useTranslation();
   const [drInfo, setDrInfo] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
     
 useEffect(() => {
    const url = "https://mentalland.com/api/V1/homepage/consts_list_homepage";
@@ -39,6 +40,10 @@ useEffect(() => {
       })
      .catch((error) => console.error(error));
   }, []);
+
+const handleSearch = (event) => {
+  setSearchQuery(event.target.value);
+};
   return (
     <div className="full">
       <Header />
@@ -72,12 +77,13 @@ useEffect(() => {
                   
                   <div className="flexContainer hope">
                     <input
+                    onSubmit={handleSearch}
                       type="search"
                       placeholder="Name..."
                       className="phname"
                     />
-                    <button type="submit" className="find">
-                      <div className="fitext">Search</div>
+                    <button type="submit" className="find"  onClick={handleSearch} >
+                      <span className="fitext">Search</span>
                     </button>
                   </div>
                   <div className="number hope">740 Psychologists</div>

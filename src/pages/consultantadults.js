@@ -6,12 +6,10 @@ import photo from "../icons/Rectangle 8.svg";
 import { AiFillStar } from "react-icons/ai";
 import Explain from "./explain";
 import { Link } from "react-router-dom";
- import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 
-export default function Counsel() {
- 
- 
+export default function Counsel(props) {
   let doctors = [
     {
       name: "Dr. Smith",
@@ -39,20 +37,6 @@ export default function Counsel() {
         "Tuesday: 10am - 12pm: Office hours",
         "Thursday: 2pm - 5pm: Home visits",
         "Friday: 9am - 12pm: Holistic medicine clinic",
-      ],
-    },
-    {
-      name: "Dr. Chang",
-      about:
-        "Dr. Chang is a renowned neurosurgeon who has pioneered new techniques in brain surgery.",
-      comments: [
-        "I am so grateful to Dr. Chang for saving my life",
-        "Dr. Chang made me feel at ease during a very stressful time",
-      ],
-      weeklyPlan: [
-        "Monday: 1pm - 5pm: Office hours",
-        "Wednesday: 9am - 12pm: Surgery consultations",
-        "Thursday: 9am - 2pm: Hospital surgeries",
       ],
     },
   ];

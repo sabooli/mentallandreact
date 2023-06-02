@@ -75,7 +75,7 @@ body {
   background-color: #fafefe;
 }
 .request {
-  height: 38px;
+  min-height: 38px;
   background-color: #02979d;
   border-radius: 15px;
   padding-top: 2%;
@@ -101,39 +101,31 @@ h1, h2, h3 {
 .fl {
 max-width: 142px;
 min-height: 155px;
+display: block;
+text-align: center;
 }
 .statics {
   font-family: "Gilroy-SemiBold", sans-serif;
   font-size: 3em;
   line-height: 60px;
   color: #000b0c;
-  position: absolute;
-  transform: translate(-120%, 45%);
+   position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate( -70%, -50% );
+    text-align: center;
 }
 .stat {
-  position: absolute;
   font-family: "Gilroy-Regular", sans-serif;
   font-size: 1.15em;
   line-height: 25px;
   color: #000b0c;
-  transform: translate(-85%, 400%);
-}
-.statb {
-  position: absolute;
-  font-family: "Gilroy-Regular", sans-serif;
-  font-size: 1.15em;
-  line-height: 25px;
-  color: #000b0c;
-  transform: translate(-90%,180%);
-}
-.statl {
-  position: absolute;
-  font-family: "Gilroy-Regular", sans-serif;
-  font-size: 1.15em;
-  line-height: 25px;
-  color: #000b0c;
-  transform: translate(-120%, 100%);
-}
+position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate( -70%, -50% );
+    text-align: center;
+  }
 .department {
   width: 100%;
 }
@@ -181,16 +173,15 @@ figure {
 }
 .more {
   font-size: 1em;
-  line-height: 21px;
 }
 .learnMore {
   max-width: 160px;
   background-color: #02979d;
+  background-size: cover;
   border-radius: 30px;
+  padding: 12px 40px;
   color: #fafefe;
-  padding: 3% 7%;
   text-decoration: none;
-  margin-top: 7%;
 }
 .learnMore:hover {
   color: #fafefe;
@@ -395,7 +386,7 @@ top: 36px;
 }
 
 @media screen and (max-width: 1200px) {
-  .flow, .figures {
+  .figures {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
   }
@@ -410,6 +401,10 @@ top: 36px;
 }
 }
 @media screen and (max-width: 900px) {
+  .flow {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
   .adps, .chps, .pusem, .chpsy, .spzsem, .freq, .choose {
     grid-template-columns: 1fr;
    display: flex;
@@ -436,7 +431,7 @@ h2 {
   margin-bottom: 15%;
 }
 .question {
-  margin-top: 5%;
+ display: none;
 }
 }
 
@@ -454,33 +449,47 @@ h2 {
   padding-inline: 20%;
 }
 }
-@media screen and (max-width: 700px) {
-  .flow,.figures {
+@media screen and (max-width: 770px) {
+  .figures {
     grid-template-columns: 1fr;
     display: flex;
     flex-direction: column;
     row-gap: 30%;
   }
-  .flow {
-    margin-inline-start: -40%;
-  }
-  .stat, .statb, .statl {
-    transform: translateY(70%);
-  }
   .separate {
     padding-inline: 20%;
   }
-   
+  .psycho {
+    margin-inline: 50px;
+  }
 }
+@media screen and (max-width: 600px) {
+.strategy {
+  max-width: 320px;
+  margin: 42px auto 62px;
+  padding: 12px 8px 13px;
+  text-align: center;
+  border: 1px solid #eda12f;
+}
+.specialized {
+  margin-inline-start: 20px;
+}
+}
+
 @media screen and (max-width: 500px) {
-.psycho {
- margin-inline: 40px;
-}
 swiper {
   padding-inline: 20px;
+}
+.subtitle {
+  margin-top: 5%;
 }
 .pubsem {
   text-align: center;
   padding-inline: 40px;
 }
+.flow {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+  }
 }
