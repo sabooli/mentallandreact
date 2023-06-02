@@ -31,7 +31,7 @@ export default function Doctors(props) {
           </div>
         </div>
         <div className="hhh">
-          <Link to="/pages/consultantadults" className="counsel">
+          <Link to={`/pages/consultantadults/${props.info.id}`} className="counsel">
             <div className="justnow">Start Counseling</div>
           </Link>
         </div>
