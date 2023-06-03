@@ -16,7 +16,11 @@ import admusic from "../icons/Rectangle 87.svg";
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import musician from "../icons/Rectangle 92.svg";
-
+import adact from "../icons/Group 1068.svg";
+import adwrite from "../icons/Rectangle 129.svg";
+import addance from "../icons/Group 938.svg";
+import Patientcomments from "./patientcomments";
+import Coach from "./coach";
 
 export default function Artadults() {
   return (
@@ -124,19 +128,112 @@ export default function Artadults() {
               <span className="more">Learn more</span>
             </Link>
           </div>
-          <LazyLoadImage
+          <LazyLoadImage height={460}
             src={admusic}
-            height={460}
             className="admusicimg"
             alt="Mentalland music course"
           />
         </div>
         <div className="musiccourse">
-<LazyLoadImage src={musician} height={420} className="musician" alt="learn music with mentalland Camero Smith" />
-       <div className="muciclearn">Join us to learn music with <div className="cameron">CAMERON SMITH</div> April 2023 <Link to="/" className="learnMore ">
+          <LazyLoadImage
+            src={musician}
+            height={380}
+            className="musician"
+            alt="learn music with mentalland Camero Smith"
+          />
+          <div className="musiclearn">
+            Join us to learn music with{" "}
+            <div className="cameron">CAMERON SMITH</div> April 2023
+            <br />{" "}
+            <Link to="/" className="learnMore ">
               <span className="more">Register Now</span>
-            </Link></div>
-       
+            </Link>
+          </div>
+        </div>
+        <div className="adact">
+          <div>
+            <h2 className="adactheading">
+              Be an actor/actress in mentalland art department
+            </h2>
+            <div className="adactwords">
+              Lorem ipsum dolor sit amet consectetur. Gravida purus nunc amet
+              sit bibendum habitant integer a commodo. Malesuada bibendum libero
+              sodales vitae interdum leo posuere. Rhoncus tincidunt sociis proin
+              proin sit in tortor tincidunt. Sed semper malesuada eget faucibus
+              suspendisse diam quam eleifend. Vestibulum egestas ultrices leo
+              ut. <br /> Fusce porttitor pellentesque at consectetur bibendum
+              turpis. Eu condimentum aliquam auctor duis accumsan cursus
+              tristique pellentesque lorem. Eget cras proin.
+            </div>
+            <Link to="/" className="learnMore ">
+              <span className="more">Learn more</span>
+            </Link>
+          </div>
+          <LazyLoadImage
+            src={adact}
+            height={480}
+            className="adactimg"
+            alt="Mentalland act course"
+          />
+        </div>
+        <div className="adwrite">
+          <LazyLoadImage
+            src={adwrite}
+            height={460}
+            className="adwritingimg"
+            alt="Mentalland writing course"
+          />
+          <div>
+            <h2 className="adwritingheading">
+              best writing courses in mentalland
+            </h2>
+            <div className="adwritingwords">
+              Lorem ipsum dolor sit amet consectetur. Gravida purus nunc amet
+              sit bibendum habitant integer a commodo. Malesuada bibendum libero
+              sodales vitae interdum leo posuere. Rhoncus tincidunt sociis proin
+              proin sit in tortor tincidunt. Sed semper malesuada eget faucibus
+              suspendisse diam quam eleifend. Vestibulum egestas ultrices leo
+              ut. <br /> Fusce porttitor pellentesque at consectetur bibendum
+              turpis. Eu condimentum aliquam auctor duis accumsan cursus
+              tristique pellentesque lorem. Eget cras proin.
+            </div>
+            <Link to="/" className="learnMore ">
+              <span className="more">Learn more</span>
+            </Link>
+          </div>
+        </div>
+        <div className="addance">
+          <div>
+            <h2 className="addanceheading">enjoy Dancing </h2>
+            <div className="addancewords">
+              Lorem ipsum dolor sit amet consectetur. Gravida purus nunc amet
+              sit bibendum habitant integer a commodo. Malesuada bibendum libero
+              sodales vitae interdum leo posuere. Rhoncus tincidunt sociis proin
+              proin sit in tortor tincidunt. Sed semper malesuada eget faucibus
+              suspendisse diam quam eleifend. Vestibulum egestas ultrices leo
+              ut. <br /> Fusce porttitor pellentesque at consectetur bibendum
+              turpis. Eu condimentum aliquam auctor duis accumsan cursus
+              tristique pellentesque lorem. Eget cras proin.
+            </div>
+            <Link to="/" className="learnMore ">
+              <span className="more">Learn more</span>
+            </Link>
+          </div>
+          <LazyLoadImage
+            src={addance}
+            height={450}
+            className="addanceimg"
+            alt="Mentalland dance course"
+          />
+        </div>
+        <div className="instructors">
+         
+          <div className="instructorlist">
+         <Coach   />
+         </div>
+        </div>
+        <div className="studentcomments">
+          <Patientcomments heading="What Our Students Say About US" />
         </div>
       </div>
       <Footer />

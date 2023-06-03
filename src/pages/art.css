@@ -279,53 +279,96 @@ float: right;
 .here {
 color: #D74E7F;
 }
-.adpainting, .admusic {
+.adpainting, .admusic, .adact, .adwrite, .addance {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 .admusic {
-  margin-top: 120px;
-  margin-bottom: 120px;
+  margin-top: 130px;
+  margin-bottom: 130px;
 }
-.adpaintingheading, .admusicheading {
+.adact, .adwrite, .addance {
+  margin-bottom: 130px;
+}
+.adpaintingheading, .admusicheading, .adactheading, .adwritingheading, .addanceheading {
   font-family: "Alice", sans-serif;
   font-size: 2em;
   line-height: 36px;
   color: #000b0c;
   margin-bottom: 16px;
 }
-.adpaintingwords, .admusicwords {
+.adpaintingwords, .admusicwords, .adactwords, .adwritingwords, .addancewords {
   font-family: "Gilroy-Regular",sans-serif;
  font-size: 1em;
  line-height: 40px;
   color: #000b0c;
   margin-bottom: 6%;
 }
-.admusicimg, .adpaintingimg {
+.admusicimg, .adpaintingimg, .adactimg, .adwritingimg, .addanceimg {
   width: 100%;
+}
+.adactimg {
+  margin-inline-start: 40px;
+}
+.adwritingimg {
+  margin-block-end: 20px;
 }
 .musiccourse {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   background-color: #EAF6F6;
   background-size: cover;
   margin-inline: -85px;
-  height: 384px;
+  height: 324px;
   margin-bottom: 120px;
 }
 .musiclearn {
   font-family: "Gilroy-Regular",sans-serif;
  font-size: 1em;
- line-height: 40px;
+ line-height: 65px;
   color: #000b0c;
-  float: right;
+  text-align: center;
+  margin-top: 8%;
+  text-transform: capitalize;
+}
+.musician {
+  display: inline-block;
+  margin-top: -60px;
+  margin-inline-start: 85px;
 }
 .cameron {
-   font-family: "Alice", sans-serif;
+  font-family: "Alice", sans-serif;
   font-size: 1.5em;
   line-height: 36px;
   color: #000b0c;
 }
+.instructors {
+  background-color: #FAE8EF;
+  height: 374px;
+  margin-inline: -85px;
+  margin-top: 20px; 
+  margin-bottom: 150px;
+}
+.needinstructor {
+  margin-top: -8%;
+}
+.needinstructor h3 {
+font-family: "Alice", sans-serif;
+font-size: 1.5em;
+margin-top: 10%;
+}
+.needinstructor div {
+  font-family: "Gilroy-Regular", sans-serif;
+  font-size: 14px;
+line-height: 36px;
+}
+.instructorlist {
+  margin-inline-start: 15px;
+}
+.studentcomments {
+  margin-bottom: 150px;
+}
+
 
 
 
@@ -341,17 +384,32 @@ margin-inline-start: 0px;
 .writingimage {
   margin-inline-start: 0;
 }
+.adactimg {
+  margin-inline-start: 0;
+}
 .precendent {
     grid-template-columns: 1fr;
     display: flex;
     flex-direction: column;
     text-align: center;
 }
-.adpainting, .admusic, .adultartdep {
+.adpainting, .admusic, .adultartdep, .adact, .adwrite, .addance {
   grid-template-columns: 1fr;
   display: flex;
   flex-direction:column-reverse;
   row-gap: 15px;
+}
+}
+@media screen and (max-width: 800px) {
+  .musiccourse {
+  display: flex;
+  grid-template-columns: 1fr;
+  flex-direction: column-reverse;
+  height: 430px;
+  row-gap: 15px;
+  }
+.musician {
+  height: 240px;
 }
 }
 @media screen and (max-width: 700px) {
