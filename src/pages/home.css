@@ -434,7 +434,7 @@ margin-bottom: 150px;
   padding-inline: 10%;
   padding-top: 5%;
   padding-bottom: 5%;
-    background-image: linear-gradient(to bottom, #02979d, #007378);
+  background-image: linear-gradient(to bottom, #02979d, #007378);
   }
   .count {
     font-size: 2em;

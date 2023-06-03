@@ -349,6 +349,13 @@ color: #D74E7F;
   margin-top: 20px; 
   margin-bottom: 150px;
 }
+.chinstructors {
+  background-color: #EAF6F6;
+  height: 374px;
+  margin-inline: -85px;
+  margin-top: 20px; 
+  margin-bottom: 150px;
+}
 .needinstructor {
   margin-top: -8%;
 }
@@ -368,7 +375,27 @@ line-height: 36px;
 .studentcomments {
   margin-bottom: 150px;
 }
-
+.colorfulch {
+  max-width: 604px;
+  margin: 62px auto 82px;
+  padding: 32px 25px 33px;
+  text-align: center;
+}
+.colorfulchheading {
+font-family: "Alice", sans-serif;
+  font-size: 2.5em;
+  line-height: 50px;
+  color: #000b0c;
+  margin-bottom: 6%;
+  width: 100%;
+}
+.colorfulchwords {
+font-family: "Gilroy-Medium", sans-serif;
+  font-size: 1.2em;
+  line-height: 36px;
+  color: #000b0c;
+  width: 100%;
+}
 
 
 

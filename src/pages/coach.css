@@ -90,3 +90,12 @@ font-family: "Gilroy-Regular", sans-serif;
   font-family: "Alice", sans-serif;
   font-size: 2em;
 }
+.choosecoach-child {
+  margin-inline: 85px;
+  margin-top: 80px;
+  margin-bottom: 100px;
+
+}
+.backcolor {
+  background-image: repeating-linear-gradient(to bottom right,#FDF4F7, #ffffff);
+}

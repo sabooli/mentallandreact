@@ -18,6 +18,8 @@ import Artadults from "./pages/artadults";
 import Art from "./pages/art";
 import Coaches from "./pages/coaches";
 import Adultcoaches from "./pages/adultcoaches";
+import Childrencoaches from "./pages/childrencoaches";
+import Artchildren from "./pages/artchildren";
 import Header from "./header";
 import Navbar from "./Navbar";
 import Footer from "./footer";
@@ -48,7 +50,8 @@ export default function Main() {
           <Route path="artadults" element={<Artadults />} />;
           <Route path="coaches" element={<Coaches />} />
           <Route path="adultcoaches" element={<Adultcoaches />} />
-
+          <Route path="artchildren" element={<Artchildren />} />;
+          <Route path="childrencoaches" element={<Childrencoaches />} />
         </Route>
       </Routes>
     </BrowserRouter>
