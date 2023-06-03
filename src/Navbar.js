@@ -40,6 +40,7 @@ export default function Navbar() {
               <NavLink to="/pages/depressionadults">{t("Depression")}</NavLink>
               <NavLink to="/pages/art">{t("Art")}</NavLink>
               <NavLink to="/pages/artadults">{t("Art-adults")}</NavLink>
+              <NavLink to="/pages/adultcoaches">{t("Coaches-adults")}</NavLink>
             </div>
           </li>
           <li>

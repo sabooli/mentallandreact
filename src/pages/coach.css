@@ -34,9 +34,7 @@
   position: relative;
   padding-top: 3%;
   padding-inline: 7.5%;
-
 }
-
 .card {
   border: 0.13px solid #02979d;
   width: 100%;
@@ -58,7 +56,7 @@ font-family: "Gilroy-Regular", sans-serif;
   text-align: center;
 }
 .swiper-navigationprev, .swiper-navigationnext {
-    position: relative;
+  position: relative;
   top: 0%;
   transform: translateY(0%);
   cursor: pointer;
@@ -75,11 +73,20 @@ font-family: "Gilroy-Regular", sans-serif;
   font-weight: bold;
 }
 .swiper-navigationprev {
-  left: 85%;
-  bottom: 328px;
+  left: 88%;
+  bottom: 323px;
 }
 
 .swiper-navigationnext {
-  right: -93%;
-  bottom: 360px;
+  right: -95%;
+  bottom: 355px;
+}
+.choosecoach {
+  margin-inline: 85px;
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+.coa {
+  font-family: "Alice", sans-serif;
+  font-size: 2em;
 }

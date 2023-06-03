@@ -16,6 +16,8 @@ import Consultants from "./pages/consultants";
 import Teamslider from "./pages/teamslider";
 import Artadults from "./pages/artadults";
 import Art from "./pages/art";
+import Coaches from "./pages/coaches";
+import Adultcoaches from "./pages/adultcoaches";
 import Header from "./header";
 import Navbar from "./Navbar";
 import Footer from "./footer";
@@ -42,8 +44,11 @@ export default function Main() {
           <Route path="patientcomments" element={<Patientcomments />} />
           <Route path="consultants" element={<Consultants />} />
           <Route path="teamslider" element={<Teamslider />} />
-          <Route path="art" element={<Art /> } />
+          <Route path="art" element={<Art />} />
           <Route path="artadults" element={<Artadults />} />;
+          <Route path="coaches" element={<Coaches />} />
+          <Route path="adultcoaches" element={<Adultcoaches />} />
+
         </Route>
       </Routes>
     </BrowserRouter>
