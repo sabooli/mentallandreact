@@ -99,3 +99,26 @@ font-family: "Gilroy-Regular", sans-serif;
 .backcolor {
   background-image: repeating-linear-gradient(to bottom right,#FDF4F7, #ffffff);
 }
+
+@media screen and (max-width: 1200px) {
+  .swiper-navigationprev {
+bottom: 290px;
+  }
+  .swiper-navigationnext {
+bottom: 322px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+.swiper-navigationprev {
+  left: 82%;
+}
+.coaches {
+  padding-inline: 4%;
+}
+}
+@media screen and (max-width: 430px) {
+  .swiper-navigationprev, .swiper-navigationnext {
+    display: none;
+  }
+}

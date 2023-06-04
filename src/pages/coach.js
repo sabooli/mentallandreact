@@ -1,11 +1,7 @@
 import React, { useRef, useCallback } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
-import { Link } from "react-router-dom";
-import R8a from "../icons/Rectangle 8a.svg";
-import R8b from "../icons/Rectangle 8b.svg";
 import R8c from "../icons/Rectangle 8c.svg";
-import R8d from "../icons/Rectangle 8d.svg";
 import rvector from "../icons/RVector.svg";
 import lvector from "../icons/LVector.svg";
 
