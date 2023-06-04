@@ -1,46 +1,36 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import Header from "../header";
 import Navbar from "../Navbar";
 import Footer from "../footer";
-import photo from "../icons/Rectangle 8.svg";
 import { AiFillStar } from "react-icons/ai";
 import Explain from "./explain";
 import { Link } from "react-router-dom";
-import { useParams } from "react-router-dom";
 
+export default function Counsel() {
+const {id} = useParams();
+const [item, setItem] = useState({
+  Fname: "",
+  Lname: "",
+  avatar: "",
+  university: "",
+  type_madrak: "",
+  Specialties: "",
+  stars: "",
+});
 
-export default function Counsel(props) {
-  let doctors = [
-    {
-      name: "Dr. Smith",
-      about:
-        "Dr. Smith is an experienced cardiologist with a focus on prevention and lifestyle modification.",
-      comments: [
-        "I felt very reassured after my appointment with Dr. Smith",
-        "Highly recommend Dr. Smith for heart health concerns",
-      ],
-      weeklyPlan: [
-        "Monday: 9am - 12pm: Office hours",
-        "Wednesday: 1pm - 5pm: Hospital rounds",
-        "Saturday: 10am - 2pm: Cardiology clinic",
-      ],
-    },
-    {
-      name: "Dr. Lee",
-      about:
-        "Dr. Lee is a general practitioner with a passion for holistic health and wellness.",
-      comments: [
-        "Dr. Lee really takes the time to listen to me and my concerns",
-        "I appreciate how Dr. Lee looks at the whole picture, not just individual symptoms",
-      ],
-      weeklyPlan: [
-        "Tuesday: 10am - 12pm: Office hours",
-        "Thursday: 2pm - 5pm: Home visits",
-        "Friday: 9am - 12pm: Holistic medicine clinic",
-      ],
-    },
-  ];
-  
+useEffect(() => {
+  fetch("https://mentalland.com/api/V1/homepage/consts_list_homepage")
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      const selectedItem = data.data[id - 1];
+      console.log(selectedItem);
+      setItem(selectedItem);
+    })
+    .catch((error) => console.log(error));
+}, []);
+
     return (
       <div>
         <Header />
@@ -49,28 +39,40 @@ export default function Counsel(props) {
           <div className="connect">
             <div className="bigbar">
               <div className="part">
-                <img src={photo} className="photo" alt="personal" />
+                <img
+                  src={`https://mentalland.com/image/users/cons/degree/${item.avatar}`}
+                  className="photo"
+                  alt="personal"
+                />
               </div>
               <div className="part container-fluid">
                 <div className="sub who">
-                  <h2 className="drname">Dr. Mary Green</h2>
-                  <h3 className="dreducation">Ph.D in Psychology</h3>
+                  <h2 className="drname">
+                    {item ? `${item.Fname} ${item.Lname}` : "Loading..."}
+                  </h2>
+                  <h3 className="dreducation">
+                    {" "}
+                    {item ? `${item.type_madrak}` : "Loading..."}
+                  </h3>
                   <div className="level">
                     <AiFillStar className="star" />
-                    <span className="rate">4.9</span>
+                    <span className="rate">
+                      {" "}
+                      {item ? `${item.stars}` : "Loading..."}
+                    </span>
                     <span className="experience">+1000 Consultations</span>
                   </div>
                 </div>
-                <div className="workFieldBigbar">
-                  <div className="bgfield1">
-                    <span className="field">Depression</span>
-                  </div>
-                  <div className="bgfield2">
-                    <span className="field">Anxiety</span>
-                  </div>
-                  <div className="bgfield3">
-                    <span className="field">Adjustment Issues</span>
-                  </div>
+                <div className="workField">
+                    <span>
+                      {item.Specialties &&
+                        JSON.parse(item.Specialties).map((specialty, index) => (
+                          <>
+                            {index > 0 ? " " : ""}
+                            <span className="field">{specialty}</span>
+                          </>
+                        ))}
+                    </span>
                 </div>
                 <div className="hhh">
                   <Link to="/pages/consultantadults" className="counsel">
@@ -80,7 +82,7 @@ export default function Counsel(props) {
               </div>
             </div>
           </div>
-          <Explain data={doctors} />
+          <Explain />
         </div>
         <Footer />
       </div>

@@ -10,7 +10,7 @@ import { CgSortAz } from "react-icons/cg";
 export default function Services() {
   const { t } = useTranslation();
   const [drInfo, setDrInfo] = useState([]);
-  const [searchQuery, setSearchQuery] = useState("");
+   const [query, setQuery] = useState("");
     
 useEffect(() => {
    const url = "https://mentalland.com/api/V1/homepage/consts_list_homepage";
@@ -40,10 +40,28 @@ useEffect(() => {
       })
      .catch((error) => console.error(error));
   }, []);
+  
+function searchDoctors(query) {
+  fetch("https://mentalland.com/api/V1/homepage/consts_list_homepage")
+    .then((response) => response.json())
+    .then((doctors) => {
+      const results = doctors.filter((doctor) => {
+        const name = doctor.Fname + " " + doctor.Lname;
+        return (
+          name.toLowerCase().includes(query.toLowerCase()) ||
+          doctor.university.toLowerCase().includes(query.toLowerCase())
+        );
+      });
+      console.log(results);
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+}
 
-const handleSearch = (event) => {
-  setSearchQuery(event.target.value);
-};
+function handleSearch() {
+  searchDoctors(query);
+}
   return (
     <div className="full">
       <Header />
@@ -67,28 +85,39 @@ const handleSearch = (event) => {
             <section className="psychologist">
               <div className="threeitems">
                 <div className="normal">
-                  
-                    <button className="top">
-                      <div className="Trated">
-                        <CgSortAz className="Trated" />
-                        Top rated
-                      </div>
-                    </button>
-                  
+                  <button className="top">
+                    <div className="Trated">
+                      <CgSortAz className="Trated" />
+                      Top rated
+                    </div>
+                  </button>
+
                   <div className="flexContainer hope">
                     <input
-                    onSubmit={handleSearch}
-                      type="search"
                       placeholder="Name..."
                       className="phname"
+                      type="text"
+                      value={query}
+                      onChange={(e) => setQuery(e.target.value)}
                     />
-                    <button type="submit" className="find"  onClick={handleSearch} >
+                    <button
+                      type="submit"
+                      onClick={handleSearch}
+                      className="find"
+                    >
                       <span className="fitext">Search</span>
                     </button>
                   </div>
                   <div className="number hope">740 Psychologists</div>
-                </div> </div>
-               {drInfo.map((item) => { return ( <div key={item.id} ><Doctors info={item} /></div> )})}  
+                </div>{" "}
+              </div>
+              {drInfo.map((item) => {
+                return (
+                  <div key={item.id}>
+                    <Doctors info={item} />
+                  </div>
+                );
+              })}
             </section>
           </div>
         </div>

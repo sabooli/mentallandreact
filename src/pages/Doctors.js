@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { AiFillStar } from "react-icons/ai";
 
@@ -20,15 +20,12 @@ export default function Doctors(props) {
           </div>
         </div>
         <div className="workField">
-          <div className="bgfield1">
             <span className="field">{props.info.expertisez}</span>
-          </div>
-          <div className="bgfield2">
+          
             <span className="field">{props.info.expertiseo}</span>
-          </div>
-          <div className="bgfield3">
+         
             <span className="field">{props.info.expertiset}</span>
-          </div>
+          
         </div>
         <div className="hhh">
           <Link to={`/pages/consultantadults/${props.info.id}`} className="counsel">
