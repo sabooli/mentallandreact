@@ -397,8 +397,6 @@ font-family: "Gilroy-Medium", sans-serif;
   width: 100%;
 }
 
-
-
 @media screen and (max-width: 900px) {
 .MADimages, .arttherapy {
     grid-template-columns: 1fr;
@@ -433,7 +431,7 @@ margin-inline-start: 0px;
   grid-template-columns: 1fr;
   flex-direction: column-reverse;
   height: 430px;
-  row-gap: 15px;
+  row-gap: 30px;
   }
 .musician {
   height: 240px;

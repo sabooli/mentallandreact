@@ -227,9 +227,8 @@ export default function Artadults() {
           />
         </div>
         <div className="instructors">
-         
           <div className="instructorlist">
-         <Coach   />
+         <Coach />
          </div>
         </div>
         <div className="studentcomments">
