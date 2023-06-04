@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes, Outlet } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Outlet } from "react-router-dom"
 import About from "./pages/aboutus";
 import Contact from "./pages/contactus";
 import Services from "./pages/depressionadults";
@@ -20,6 +20,7 @@ import Coaches from "./pages/coaches";
 import Adultcoaches from "./pages/adultcoaches";
 import Childrencoaches from "./pages/childrencoaches";
 import Artchildren from "./pages/artchildren";
+import Musicadults from "./pages/musicadults";
 import Header from "./header";
 import Navbar from "./Navbar";
 import Footer from "./footer";
@@ -36,7 +37,7 @@ export default function Main() {
           <Route path="depressionadults" element={<Services />} />
           <Route path="aboutus" element={<About />} />
           <Route path="contactus" element={<Contact />} />
-          <Route path="consultantadults" element={<Counsel />} />
+          <Route path="consultantadults/:id" element={<Counsel />} />
           <Route path="psychology" element={<Psychology />} />
           <Route path="seminar" element={<Seminar />} />
           <Route path="psychologyAdults" element={<Psyadults />} />
@@ -52,6 +53,7 @@ export default function Main() {
           <Route path="adultcoaches" element={<Adultcoaches />} />
           <Route path="artchildren" element={<Artchildren />} />;
           <Route path="childrencoaches" element={<Childrencoaches />} />
+          <Route path="musicadults" element={<Musicadults />} />
         </Route>
       </Routes>
     </BrowserRouter>

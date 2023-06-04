@@ -9,6 +9,7 @@ import "./pages/style.css";
 import "./pages/home.css";
 import "./pages/art.css";
 import "./pages/coach.css";
+import "./pages/music.css";
 import "./App.css";
 import "swiper/swiper.min.css";
 import "swiper/swiper-bundle.css";

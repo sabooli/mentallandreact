@@ -1,0 +1,87 @@
+
+@font-face {
+  font-family: "Alice";
+  src: url(../fonts/Alice-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-Regular.ttf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: url(../fonts/Gilroy-Bold.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Gilroy-Black";
+  src: url(../fonts/Gilroy-Black.ttf);
+}
+@font-face {
+    font-family: "Gilroy-ExtraBold";
+    src: url(../fonts/Gilroy-ExtraBold.ttf);
+}
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: url(../fonts/Gilroy-Medium.ttf);
+}
+@font-face {
+  font-family: "Gilroy-SemiBold";
+  src: url(../fonts/Gilroy-SemiBold.ttf);
+}
+
+body {
+  font-size: 16px;
+  margin: 0 auto;
+  max-width: 1800px;
+}
+
+.wholecontent {
+  margin-top: 44px;
+  margin-inline: 85px;
+}
+.musicHall {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  width: 100%;
+  margin-bottom: 120px;
+}
+.musicforadults {
+  max-width: 604px;
+  margin: 62px auto 82px;
+  padding: 32px 25px 33px;
+  text-align: center;
+}
+.musicforadultsheading {
+font-family: "Alice", sans-serif;
+  font-size: 2.5em;
+  line-height: 50px;
+  color: #000b0c;
+  margin-bottom: 6%;
+  width: 100%;
+}
+.musicforadultswords {
+font-family: "Gilroy-Medium", sans-serif;
+  font-size: 1.2em;
+  line-height: 36px;
+  color: #000b0c;
+  width: 100%;
+}
+.instrument {
+  width: 150px;
+  height: 151.5px;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 900px) {
+.musicHall {
+    grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+row-gap: 15px;
+display: inline-block;
+margin: 0 auto;
+margin-bottom: 100px;
+}
+}
