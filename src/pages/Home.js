@@ -9,7 +9,6 @@ import telescope from "../icons/Group 768.svg";
 import mission from "../icons/Group 768m.svg";
 import value from "../icons/Group 768v.svg";
 import goal from "../icons/Group 768g.svg";
-import mentalonphoneback from "../icons/Rectangle 12.png";
 import mentalonphone from "../icons/Group 779.svg";
 import Customercomments from "./customercomments";
 import Peace from "../icons/Rectangle 44-min.png";
@@ -23,6 +22,7 @@ export default function Home() {
   const handleButtonClick = (index) => {
     setActiveButton(index);
   };
+  
   return (
     <div>
       <div
