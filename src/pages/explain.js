@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function Explain(props) {
+export default function Explain() {
   const [activeButton, setActiveButton] = useState(0);
 
   const handleButtonClick = (index) => {
@@ -32,31 +32,7 @@ export default function Explain(props) {
           </span>
         </div>
         <div className="explain">
-          {props.data.map((doctor) => (
-            <tr key={doctor.name} className="exp">
-              {activeButton === 0 && (
-                <>
-                  <td>{doctor.about}</td>
-                  <td></td>
-                  <td></td>
-                </>
-              )}
-              {activeButton === 1 && (
-                <>
-                  <td></td>
-                  <td>{doctor.comments}</td>
-                  <td></td>
-                </>
-              )}
-              {activeButton === 2 && (
-                <>
-                  <td></td>
-                  <td></td>
-                  <td>{doctor.weeklyPlan}</td>
-                </>
-              )}
-            </tr>
-          ))}
+       
         </div>
       </section>
     </div>
