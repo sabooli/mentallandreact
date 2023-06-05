@@ -21,6 +21,8 @@ import Adultcoaches from "./pages/adultcoaches";
 import Childrencoaches from "./pages/childrencoaches";
 import Artchildren from "./pages/artchildren";
 import Musicadults from "./pages/musicadults";
+import Musicchildren from "./pages/musicchildren";
+import Servicesforchildren from "./pages/depresseionchildren";
 import Header from "./header";
 import Navbar from "./Navbar";
 import Footer from "./footer";
@@ -35,6 +37,7 @@ export default function Main() {
         <Route path="footer" element={<Footer />} />
         <Route path="/pages" element={<Outlet />}>
           <Route path="depressionadults" element={<Services />} />
+          <Route path="depressionchildren" element={<Servicesforchildren />} />
           <Route path="aboutus" element={<About />} />
           <Route path="contactus" element={<Contact />} />
           <Route path="consultantadults/:id" element={<Counsel />} />
@@ -54,6 +57,7 @@ export default function Main() {
           <Route path="artchildren" element={<Artchildren />} />;
           <Route path="childrencoaches" element={<Childrencoaches />} />
           <Route path="musicadults" element={<Musicadults />} />
+          <Route path="musicchildren" element={<Musicchildren />} />
         </Route>
       </Routes>
     </BrowserRouter>

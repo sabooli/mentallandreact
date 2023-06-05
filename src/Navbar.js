@@ -30,25 +30,31 @@ export default function Navbar() {
             </div>
             <div className="dropdown-content">
               <NavLink to="/pages/psychology">{t("Psychology")}</NavLink>
-              <NavLink to="/pages/psychologyAdults">
-                {t("Psychology-Adults")}
-              </NavLink>
-              <NavLink to="/pages/psychologyChildren">
-                {t("Psychology-Children")}
-              </NavLink>
-              <NavLink to="/pages/seminars">{t("Seminars")}</NavLink>
-              <NavLink to="/pages/depressionadults">{t("Depression")}</NavLink>
+              <ul className="branch">
+               <li> <NavLink to="/pages/psychologyAdults">
+                  {t("Psychology-Adults")}
+                </NavLink></li>
+               <li> <NavLink to="/pages/psychologyChildren">
+                  {t("Psychology-Children")}
+                </NavLink></li>
+                <li><NavLink to="/pages/seminars">{t("Seminars")}</NavLink></li>
+                <li><NavLink to="/pages/depressionadults">
+                  {t("List of Psychologists - Adults")}
+                </NavLink></li>
+                <li><NavLink to="/pages/depressionchildren">
+                  {t("List of Psychologists - Children")}
+                </NavLink></li>
+              </ul>
               <NavLink to="/pages/art">{t("Art")}</NavLink>
-              <NavLink to="/pages/artadults">{t("Art-adults")}</NavLink>
-             <NavLink to="/pages/musicadults">
-                {t("Music-adults")}
-              </NavLink> 
-              <NavLink to="/pages/adultcoaches">{t("Coaches-adults")}</NavLink>
-              <NavLink to="/pages/artchildren">{t("Art-children")}</NavLink>
-              <NavLink to="/pages/childrencoaches">
+               <ul className="branch">
+              <li><NavLink to="/pages/artadults">{t("Art-adults")}</NavLink></li>
+              <li><NavLink to="/pages/musicadults">{t("Music-adults")}</NavLink></li>
+              <li><NavLink to="/pages/adultcoaches">{t("Coaches-adults")}</NavLink></li>
+              <li><NavLink to="/pages/artchildren">{t("Art-children")}</NavLink></li>
+              <li><NavLink to="/pages/musicchildren">{t("Music-children")}</NavLink></li>
+              <li><NavLink to="/pages/childrencoaches">
                 {t("Coaches-children")}
-              </NavLink>
-              
+              </NavLink></li></ul>
             </div>
           </li>
           <li>

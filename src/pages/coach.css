@@ -97,7 +97,7 @@ font-family: "Gilroy-Regular", sans-serif;
 
 }
 .backcolor {
-  background-image: repeating-linear-gradient(to bottom right,#FDF4F7, #ffffff);
+  background-image: linear-gradient(to bottom right,#FDF4F7, #FEF8FA, #ffffff);
 }
 
 @media screen and (max-width: 1200px) {
