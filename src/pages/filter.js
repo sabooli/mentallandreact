@@ -15,7 +15,7 @@ const options = [
 ];
 
 const Filter = () => {
-  const [checkedValues, setCheckedValues] = useState([]);
+  const [checkedValues, setCheckedValues] = useState([]);  
 
   const handleCheckboxChange = (event) => {
     const value = event.target.value;

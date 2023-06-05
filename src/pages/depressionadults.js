@@ -10,7 +10,7 @@ import { CgSortAz } from "react-icons/cg";
 export default function Services() {
   const { t } = useTranslation();
   const [drInfo, setDrInfo] = useState([]);
-   const [query, setQuery] = useState("");
+  const [searchValue, setSearchValue] = useState("");
     
 useEffect(() => {
    const url = "https://mentalland.com/api/V1/homepage/consts_list_homepage";
@@ -41,27 +41,16 @@ useEffect(() => {
      .catch((error) => console.error(error));
   }, []);
   
-function searchDoctors(query) {
-  fetch("https://mentalland.com/api/V1/homepage/consts_list_homepage")
-    .then((response) => response.json())
-    .then((doctors) => {
-      const results = doctors.filter((doctor) => {
-        const name = doctor.Fname + " " + doctor.Lname;
-        return (
-          name.toLowerCase().includes(query.toLowerCase()) ||
-          doctor.university.toLowerCase().includes(query.toLowerCase())
-        );
-      });
-      console.log(results);
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-}
+ useEffect(() => {
+    const newDrInfo = drInfo.filter(
+      (value) =>
+        value.name.toLowerCase().includes(searchValue.toLowerCase()) ||
+        value.lname.toLowerCase().includes(searchValue.toLowerCase()) ||
+        value.madrak.toLowerCase().includes(searchValue.toLowerCase())
+    );
+    setDrInfo(newDrInfo)
+  }, [searchValue])   
 
-function handleSearch() {
-  searchDoctors(query);
-}
   return (
     <div className="full">
       <Header />
@@ -80,7 +69,7 @@ function handleSearch() {
           </div>
           <div className="main">
             <section className="check">
-              <Filter />
+              <Filter info={drInfo} />
             </section>
             <section className="psychologist">
               <div className="threeitems">
@@ -97,12 +86,11 @@ function handleSearch() {
                       placeholder="Name..."
                       className="phname"
                       type="text"
-                      value={query}
-                      onChange={(e) => setQuery(e.target.value)}
+                     onChange={(e) => setSearchValue(e.target.value)} 
+                     value={searchValue}                      
                     />
                     <button
                       type="submit"
-                      onClick={handleSearch}
                       className="find"
                     >
                       <span className="fitext">Search</span>
