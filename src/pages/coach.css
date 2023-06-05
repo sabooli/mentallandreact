@@ -32,8 +32,9 @@
 
 .coaches {
   position: relative;
-  padding-top: 3%;
+  padding-top: 1%;
   padding-inline: 7.5%;
+  padding-bottom: 1%;
 }
 .card {
   border: 0.13px solid #02979d;
@@ -55,31 +56,10 @@ font-family: "Gilroy-Regular", sans-serif;
   color: #D74E7F;
   text-align: center;
 }
-.swiper-navigationprev, .swiper-navigationnext {
-  position: relative;
-  top: 0%;
-  transform: translateY(0%);
-  cursor: pointer;
-  z-index: 10;
-  width: 32px;
-  height: 32px;
-  background-color: #02979d;
-  color: #fafefe;
-  border-radius: 50%;
+.buttonpose {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 12px;
-  font-weight: bold;
-}
-.swiper-navigationprev {
-  left: 88%;
-  bottom: 323px;
-}
-
-.swiper-navigationnext {
-  right: -95%;
-  bottom: 355px;
+justify-content: flex-end;
+margin-inline-end: 20px;
 }
 .choosecoach {
   margin-inline: 85px;
@@ -100,25 +80,10 @@ font-family: "Gilroy-Regular", sans-serif;
   background-image: linear-gradient(to bottom right,#FDF4F7, #FEF8FA, #ffffff);
 }
 
-@media screen and (max-width: 1200px) {
-  .swiper-navigationprev {
-bottom: 290px;
-  }
-  .swiper-navigationnext {
-bottom: 322px;
-  }
-}
+
 
 @media screen and (max-width: 630px) {
-.swiper-navigationprev {
-  left: 82%;
-}
 .coaches {
   padding-inline: 4%;
 }
-}
-@media screen and (max-width: 430px) {
-  .swiper-navigationprev, .swiper-navigationnext {
-    display: none;
-  }
 }

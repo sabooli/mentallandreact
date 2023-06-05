@@ -1,0 +1,150 @@
+
+@font-face {
+  font-family: "Alice";
+  src: url(../fonts/Alice-Regular.ttf);
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-Regular.ttf);
+}
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: url(../fonts/Gilroy-Medium.ttf);
+}
+@font-face {
+  font-family: "Gilroy-SemiBold";
+  src: url(../fonts/Gilroy-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Gilroy-SemiBold";
+  src: url(../fonts/Gilroy-Light.ttf);
+}
+
+body {
+  font-size: 16px;
+  margin: 0 auto;
+}
+
+.master {
+margin-inline: 85px;
+}
+.regbar {
+    max-width: 1240px;
+    min-height: 260px;
+    border: 1px solid #02979D;
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+.seminarimg {
+    height: 260px;
+    padding: 20px;
+}
+.seminarexp {
+    padding: 20px;
+}
+.seminarheading {
+    font-family: "Gilroy-Medium", sans-serif;
+    font-size: 18px;
+    line-height: 40px;
+    color: #02979D;
+    text-transform: capitalize;
+}
+.seminardateprice {
+font-family: "Gilroy-Regular", sans-serif;
+font-size: 16px;
+line-height: 40px;
+display: grid;
+grid-template-columns: 1fr 1fr;
+}
+.seminarwords {
+ font-family: "Gilroy-Regular", sans-serif;
+    font-size: 16px;
+    text-transform: capitalize;
+    line-height: 40px;
+}
+.seminarguest {
+font-family: "Gilroy-Regular", sans-serif;
+font-size: 16px;
+line-height: 40px;
+display: grid;
+grid-template-columns: 1fr 1fr;
+}
+.guestimg {
+width: 35px;
+height: 35px;
+border-radius: 50px;
+margin-inline-end: 5px;
+}
+.seminartags span {
+font-family: "Gilroy-Regular", sans-serif;
+font-size: 16px;
+line-height: 60px;
+margin-inline-end: 5px;
+background-color: #ecf7f7;
+padding: 10px;
+text-transform: capitalize;
+}
+.seminarInfo {
+    max-width: 1240px;
+    min-height: 860px;
+    border: 0.2px solid #02979D;
+border-image: linear-gradient(to bottom, #02979D 0%, #00888D 100%);
+border-image-slice: 1;
+    margin-bottom: 35px;
+    padding: 20px;
+}
+.btn-card {
+font-family: "Gilroy-Regular", sans-serif;
+  padding: 12px;
+  padding-inline: 2rem;
+  max-width: 200px;
+  height: 48px;
+  background: #02979d;
+  border: 1px solid #02979d;
+  border-radius: 28px;
+  text-decoration: none;
+  margin-bottom: 110px;
+font-family: "Gilroy-Regular", sans-serif;
+  display: flex;
+justify-content: center;
+margin-left: auto;
+width: 100%;
+}
+.guestIntro {
+     font-family: "Gilroy-Medium", sans-serif;
+    font-size: 18px;
+    line-height: 40px;
+    color: #02979D;
+    text-transform: uppercase;
+}
+.guestIntrowords {
+    font-family: "Gilroy-Regular", sans-serif;
+font-size: 16px;
+line-height: 40px;
+}
+.seminarheadingw {
+    font-family: "Gilroy-Medium", sans-serif;
+    font-size: 18px;
+    line-height: 40px;
+    text-transform: capitalize;
+}
+
+@media screen and (max-width: 800px) {
+.regbar {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+}
+}
+@media screen and (max-width: 500px) {
+.master {
+    margin-inline: 40px;
+}
+.seminardateprice, .seminarguest {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+}
+}
+

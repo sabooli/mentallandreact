@@ -6,8 +6,10 @@ import "swiper/modules/pagination/pagination";
 import patienta from "../icons/Ellipse 5.svg";
 import patientb from "../icons/patientb.svg";
 import patientc from "../icons/Ellipse 5c.svg";
-import rvector from "../icons/RVector.svg";
-import lvector from "../icons/LVector.svg";
+import {
+  IoIosArrowDroprightCircle,
+  IoIosArrowDropleftCircle,
+} from "react-icons/io";
 
 SwiperCore.use([Zoom, Navigation, Pagination]);
 
@@ -24,7 +26,20 @@ export default function Customercomments({ heading }) {
   }, []);
   return (
     <div>
-      <h1 className="customersayH text-start">{heading}</h1>
+      
+      <div className="yyy">
+       <h1 className="customersayH text-start">{heading}</h1>
+        <div>
+          <IoIosArrowDropleftCircle
+            className="swiper-navigation__prev"
+            onClick={handlePrev}
+          />
+          <IoIosArrowDroprightCircle
+            className="swiper-navigation__next"
+            onClick={handleNext}
+          />
+        </div>
+      </div>
       <div className="customersay">
         Lorem ipsum dolor sit amet consectetur. Ut turpis nunc ac felis sapien
         diam. Sed velit dignissim viverra natoque. Ut mattis egestas{" "}
@@ -157,14 +172,7 @@ export default function Customercomments({ heading }) {
           </div>
         </SwiperSlide>
       </Swiper>{" "}
-      <div className="swiper-navigation_cprev" onClick={handlePrev}>
-        {" "}
-        <img src={lvector} alt="left vector" />
-      </div>
-      <div className="swiper-navigation_cnext" onClick={handleNext}>
-        {" "}
-        <img src={rvector} alt="right vector" />
-      </div>
+     
     </div>
   );
 }

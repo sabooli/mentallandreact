@@ -6,8 +6,10 @@ import "swiper/modules/pagination/pagination";
 import patienta from "../icons/Ellipse 5.svg";
 import patientb from "../icons/patientb.svg";
 import patientc from "../icons/Ellipse 5c.svg";
-import rvector from "../icons/RVector.svg";
-import lvector from "../icons/LVector.svg";
+import {
+  IoIosArrowDroprightCircle,
+  IoIosArrowDropleftCircle,
+} from "react-icons/io";
 
 SwiperCore.use([Zoom, Navigation, Pagination]);
 
@@ -152,15 +154,16 @@ export default function Patientcomments({heading}) {
             </div>
           </div>
         </SwiperSlide>
-      </Swiper>{" "}
-      <div className="swiper-navigation___prev" onClick={handlePrev}>
-        {" "}
-        <img src={lvector} alt="left vector" />
-      </div>
-      <div className="swiper-navigation___next" onClick={handleNext}>
-        {" "}
-        <img src={rvector} alt="right vector" />
-      </div>
+      </Swiper>
+      <div className="text-center mt-5">
+      <IoIosArrowDropleftCircle
+        className="swiper-navigation___prev"
+        onClick={handlePrev}
+      />
+      <IoIosArrowDroprightCircle
+        className="swiper-navigation___next"
+        onClick={handleNext}
+      /></div>
     </div>
   );
 }

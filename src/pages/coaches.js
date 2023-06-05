@@ -2,8 +2,10 @@ import React, { useRef, useCallback } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
 import R8c from "../icons/Rectangle 8c.svg";
-import rvector from "../icons/RVector.svg";
-import lvector from "../icons/LVector.svg";
+import {
+  IoIosArrowDroprightCircle,
+  IoIosArrowDropleftCircle,
+} from "react-icons/io";
 
 export default function Coaches({ heading, color, major }) {
  const sliderRef = useRef(null);
@@ -17,8 +19,20 @@ export default function Coaches({ heading, color, major }) {
    sliderRef.current.swiper.slideNext();
  }, []);
   return (
-    <div className="coachback" style={{ backgroundColor: color }}>
-      <h1 className="coa text-start">{heading}</h1>
+    <div className="coachback mb-5" style={{ backgroundColor: color }}>
+      <div className="yyy">
+        <h1 className="coa text-start">{heading}</h1>
+        <div>
+          <IoIosArrowDropleftCircle
+            className="swiper-navigation__prev"
+            onClick={handlePrev}
+          />
+          <IoIosArrowDroprightCircle
+            className="swiper-navigation__next"
+            onClick={handleNext}
+          />
+        </div>
+      </div>
       <Swiper
         modules={[Navigation, Pagination]}
         ref={sliderRef}
@@ -150,15 +164,6 @@ export default function Coaches({ heading, color, major }) {
           </div>
         </SwiperSlide>
       </Swiper>
-     
-      <div className="swiper-navigationprev" onClick={handlePrev}>
-        {" "}
-        <img src={lvector} alt="left vector" />
-      </div>
-      <div className="swiper-navigationnext" onClick={handleNext}>
-        {" "}
-        <img src={rvector} alt="right vector" />
-      </div>
     </div>
   );
 }

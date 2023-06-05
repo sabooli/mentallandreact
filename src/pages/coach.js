@@ -2,8 +2,10 @@ import React, { useRef, useCallback } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
 import R8c from "../icons/Rectangle 8c.svg";
-import rvector from "../icons/RVector.svg";
-import lvector from "../icons/LVector.svg";
+import {
+  IoIosArrowDroprightCircle,
+  IoIosArrowDropleftCircle,
+} from "react-icons/io";
 
 export default function Coach() {
   const sliderRef = useRef(null);
@@ -18,6 +20,18 @@ export default function Coach() {
   }, []);
   return (
     <div className="coaches">
+      <div className="buttonpose">
+        <div >
+          <IoIosArrowDropleftCircle
+            className="swiper-navigation__prev"
+            onClick={handlePrev}
+          />
+          <IoIosArrowDroprightCircle
+            className="swiper-navigation__next"
+            onClick={handleNext}
+          />
+        </div>
+      </div>
       <Swiper
         modules={[Navigation, Pagination]}
         ref={sliderRef}
@@ -56,7 +70,7 @@ export default function Coach() {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide >
+        <SwiperSlide>
           <div className="card coachsl swiper-slide mt-4">
             <div className="image-content">
               <div className="card-image-coach">
@@ -109,14 +123,6 @@ export default function Coach() {
           </div>
         </SwiperSlide>
       </Swiper>
-      <div className="swiper-navigationprev" onClick={handlePrev}>
-        {" "}
-        <img src={lvector} alt="left vector" />
-      </div>
-      <div className="swiper-navigationnext" onClick={handleNext}>
-        {" "}
-        <img src={rvector} alt="right vector" />
-      </div>
     </div>
   );
 }

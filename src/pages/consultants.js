@@ -6,8 +6,10 @@ import R8a from "../icons/Rectangle 8a.svg";
 import R8b from "../icons/Rectangle 8b.svg";
 import R8c from "../icons/Rectangle 8c.svg";
 import R8d from "../icons/Rectangle 8d.svg";
-import rvector from "../icons/RVector.svg";
-import lvector from "../icons/LVector.svg";
+import {
+  IoIosArrowDroprightCircle,
+  IoIosArrowDropleftCircle,
+} from "react-icons/io";
 
 
 export default function Consultants({ heading, color }) {
@@ -28,6 +30,16 @@ export default function Consultants({ heading, color }) {
         Lorem ipsum dolor sit amet consectetur. Pretium rutrum nisi mollis sit
         tortor proin proin sagittis. Id nec suspendisse lacus erat. Vivamus orci
         bibendum at purus elit. Vel vehicula donec amet a dolor sollicitudin ut.
+      </div>
+      <div className="mb-3 fff">
+        <IoIosArrowDropleftCircle
+          className="swiper-navigation_prev"
+          onClick={handlePrev}
+        />
+        <IoIosArrowDroprightCircle
+          className="swiper-navigation_next"
+          onClick={handleNext}
+        />
       </div>
       <Swiper
         modules={[Navigation, Pagination]}
@@ -104,15 +116,7 @@ export default function Consultants({ heading, color }) {
           </div>
         </SwiperSlide>
       </Swiper>
-      <div className="swiper-navigation_prev" onClick={handlePrev}>
-        {" "}
-        <img src={lvector} alt="left vector" />
-      </div>
-      <div className="swiper-navigation_next" onClick={handleNext}>
-        {" "}
-        <img src={rvector} alt="right vector" />
-      </div>
-      <Link to="/" className="seeAll">
+      <Link to="/" className="seeAll mt-5 mb-3">
         <span className="see">see all</span>
       </Link>
     </div>

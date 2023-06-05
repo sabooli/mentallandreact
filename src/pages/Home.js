@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./home.css";
 import Header from "../header";
 import Navbar from "../Navbar";
@@ -18,11 +18,22 @@ import group731 from "../icons/Group 731.svg";
 
 export default function Home() {
   const [activeButton, setActiveButton] = useState(0);
+  const [faqData, setFaqData] = useState([]);
+
 
   const handleButtonClick = (index) => {
     setActiveButton(index);
   };
   
+ 
+useEffect(() => {
+  fetch("http://www.mentalland.com/api/V1/homepage/faqs_english")
+    .then((response) => response.json())
+    .then((data) => setFaqData(data.data[index]));
+}, []);
+
+  const index = 0;
+
   return (
     <div>
       <div
@@ -141,38 +152,34 @@ export default function Home() {
               </div>
               <div className="circles">
                 <figure>
-                    <div className="circle">
-                      <span className="establishyear">2019</span>
-                    </div>
+                  <div className="circle">
+                    <span className="establishyear">2019</span>
+                  </div>
                   <figcaption className="circlecaption">
                     Created with Love
                   </figcaption>
                 </figure>
                 <figure>
-                    <div className="circle">
-                      <span className="establishyear">2020</span>
-                    </div>         
+                  <div className="circle">
+                    <span className="establishyear">2020</span>
+                  </div>
                   <figcaption className="circlecaption">
                     Art Academy Added
                   </figcaption>
                 </figure>{" "}
                 <figure>
-               
-                    {" "}
-                    <div className="circle">
-                      <span className="establishyear">2021</span>
-                    </div>
-                 
+                  {" "}
+                  <div className="circle">
+                    <span className="establishyear">2021</span>
+                  </div>
                   <figcaption className="circlecaption">
                     BEing the first mental website in Iran
                   </figcaption>
                 </figure>{" "}
                 <figure>
-                
-                    {" "}
-                    <div className="circle">
-                      <span className="establishyear">2023</span>
-                   
+                  {" "}
+                  <div className="circle">
+                    <span className="establishyear">2023</span>
                   </div>
                   <figcaption className="circlecaption">
                     redesigned, improved and expanded{" "}
@@ -252,46 +259,44 @@ export default function Home() {
             </div>
             <div className="partIV">
               <div>
-                  <div className="mentallandonphone">
-                    <div>
-                      <img
-                        src={mentalonphone}
-                        className="MoPhimage img-fluid"
-                        alt="MentalLand on phone"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="MoPhheading">Mentalland on your phone</h3>
-                      <div className="MoPhtext">
-                        Lorem ipsum dolor sit amet consectetur. Pretium rutrum
-                        nisi mollis sit tortor proin proin sagittis. Id nec
-                        suspendisse lacus erat. Vivamus orci bibendum at purus
-                        elit. Vel vehicula donec amet a dolor sollicitudin ut.
-                        Lectus cursus ipsum mi feugiat nulla enim. Nisl
-                        phasellus viverra quisque egestas in nec luctus ornare
-                        amet.
-                        <ul>
-                          <li>
-                            Lorem ipsum dolor sit amet consectetur. Pretium
-                            rutrum{" "}
-                          </li>
-                          <li>
-                            Lorem ipsum dolor sit amet consectetur. Pretium
-                            rutrum nisi
-                          </li>
-                          <li>Lorem ipsum dolor sit amet consectetur </li>
-                          <li>
-                            Lorem ipsum dolor sit amet consectetur. Pretium
-                            rutrum nisi{" "}
-                          </li>
-                        </ul>
-                        <div className="Monphonedl">
-                          <Link to="/" className="learnMore">
-                            <span className="more">Download</span>
-                          </Link>
-                        </div>
+                <div className="mentallandonphone">
+                  <div>
+                    <img
+                      src={mentalonphone}
+                      className="MoPhimage img-fluid"
+                      alt="MentalLand on phone"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="MoPhheading">Mentalland on your phone</h3>
+                    <div className="MoPhtext">
+                      Lorem ipsum dolor sit amet consectetur. Pretium rutrum
+                      nisi mollis sit tortor proin proin sagittis. Id nec
+                      suspendisse lacus erat. Vivamus orci bibendum at purus
+                      elit. Vel vehicula donec amet a dolor sollicitudin ut.
+                      Lectus cursus ipsum mi feugiat nulla enim. Nisl phasellus
+                      viverra quisque egestas in nec luctus ornare amet.
+                      <ul>
+                        <li>
+                          Lorem ipsum dolor sit amet consectetur. Pretium rutrum{" "}
+                        </li>
+                        <li>
+                          Lorem ipsum dolor sit amet consectetur. Pretium rutrum
+                          nisi
+                        </li>
+                        <li>Lorem ipsum dolor sit amet consectetur </li>
+                        <li>
+                          Lorem ipsum dolor sit amet consectetur. Pretium rutrum
+                          nisi{" "}
+                        </li>
+                      </ul>
+                      <div className="Monphonedl">
+                        <Link to="/" className="learnMore">
+                          <span className="more">Download</span>
+                        </Link>
                       </div>
                     </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -299,41 +304,41 @@ export default function Home() {
               <Customercomments heading="What Our Patients Say" />
             </div>
             <div className="partVI">
-                <div className="latestArticles">
-                  <h4 className="latestheading">latest articles</h4>
-                  <div className="latest">
-                    <div>
-                      <img
-                        src={latearticle}
-                        className="latearticleimage"
-                        alt="latest articles MentalLand"
-                      />
-                    </div>
-                    <div className="articlewords text-start">
-                      <h5>Lorem ipsum dolor sit amet consectetur. Magna.</h5>
-                      <span>
-                        Lorem ipsum dolor sit amet consectetur. Etiam aliquet
-                        tristique turpis ultrices ac augue eu adipiscing turpis.
-                        Ultricies rhoncus semper in id nec faucibus non
-                        vulputate vestibulum. Pharetra a elementum in.
-                      </span>
-                    </div>
-                    <div className="readarticle">
-                      <Link to="/" className="Readlatest">
-                        <span className="Readlatestword">Read</span>
-                      </Link>
-                    </div>
+              <div className="latestArticles">
+                <h4 className="latestheading">latest articles</h4>
+                <div className="latest">
+                  <div>
+                    <img
+                      src={latearticle}
+                      className="latearticleimage"
+                      alt="latest articles MentalLand"
+                    />
+                  </div>
+                  <div className="articlewords text-start">
+                    <h5>Lorem ipsum dolor sit amet consectetur. Magna.</h5>
+                    <span>
+                      Lorem ipsum dolor sit amet consectetur. Etiam aliquet
+                      tristique turpis ultrices ac augue eu adipiscing turpis.
+                      Ultricies rhoncus semper in id nec faucibus non vulputate
+                      vestibulum. Pharetra a elementum in.
+                    </span>
+                  </div>
+                  <div className="readarticle">
+                    <Link to="/" className="Readlatest">
+                      <span className="Readlatestword">Read</span>
+                    </Link>
                   </div>
                 </div>
+              </div>
             </div>
             <div className="partVII">
               <h2 className="hfrequent">Most Frequently Asked Questions</h2>
               <div className="hfreq">
                 <div>
                   <HMfaq
-                    index={0}
-                    question="Lorem ipsum dolor sit amet consectetur. Est ut vulputate scelerisque nibh?"
-                    answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
+                    index={index}
+                    question={faqData.title_faqs}
+                    answer={faqData.content_faqs}
                   />
                   <HMfaq
                     index={1}

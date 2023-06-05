@@ -12,8 +12,10 @@ import calendar from "../icons/calendar.svg";
 import clock from "../icons/clock.svg";
 import arrowRight from "../icons/arrow-right.svg";
 import { Link } from "react-router-dom";
-import rvector from "../icons/RVector.svg";
-import lvector from "../icons/LVector.svg";
+import {
+  IoIosArrowDroprightCircle,
+  IoIosArrowDropleftCircle,
+} from "react-icons/io";
 
 SwiperCore.use([Navigation, Pagination]);
 
@@ -32,7 +34,18 @@ export default function Upcoming({ heading, color }) {
   return (
     <div className="separate pb-5" style={{ backgroundColor: color }}>
       <div className="sepa">
+        <div className="yyy">
         <h1 className="pubsem">{heading}</h1>
+        <div>
+          <IoIosArrowDropleftCircle
+            className="swiper-navigation__prev"
+            onClick={handlePrev}
+          />
+          <IoIosArrowDroprightCircle
+            className="swiper-navigation__next"
+            onClick={handleNext}
+          />
+        </div></div>
         <Swiper
           ref={sliderRef}
           pagination={{
@@ -248,21 +261,13 @@ export default function Upcoming({ heading, color }) {
                   </div>
                 </div>
               </div>
-              <Link to="/" className="click text-center">
+              <Link to="../seminarreg" className="click text-center">
                 <img src={arrowRight} alt="public seminar" className="arrow" />
               </Link>
             </div>
           </SwiperSlide>
         </Swiper>{" "}
-        <div className="swiper-navigation__prev" onClick={handlePrev}>
-          {" "}
-          <img src={lvector} alt="left vector" />
-        </div>
-        <div className="swiper-navigation__next" onClick={handleNext}>
-          {" "}
-          <img src={rvector} alt="right vector" />
-        </div>
-        <Link to="/" className="seeAll">
+        <Link to="/" className="seeAll mt-5">
           <span className="see">see all</span>
         </Link>
       </div>
