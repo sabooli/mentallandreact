@@ -7,15 +7,16 @@ import "swiper/modules/pagination/pagination";
 import slide1 from "../icons/Rectangle 24.svg";
 import slide2 from "../icons/Rectangle 242.svg";
 import slide3 from "../icons/Rectangle 243.svg";
-import profile from "../icons/profile.svg";
-import calendar from "../icons/calendar.svg";
-import clock from "../icons/clock.svg";
 import arrowRight from "../icons/arrow-right.svg";
 import { Link } from "react-router-dom";
+import { CgProfile } from "react-icons/cg";
+import { MdOutlineCalendarMonth } from "react-icons/md";
+import { AiOutlineClockCircle } from "react-icons/ai";
 import {
   IoIosArrowDroprightCircle,
   IoIosArrowDropleftCircle,
 } from "react-icons/io";
+import { HiArrowLongRight } from "react-icons/hi";
 
 SwiperCore.use([Navigation, Pagination]);
 
@@ -35,17 +36,18 @@ export default function Upcoming({ heading, color }) {
     <div className="separate pb-5" style={{ backgroundColor: color }}>
       <div className="sepa">
         <div className="yyy">
-        <h1 className="pubsem">{heading}</h1>
-        <div>
-          <IoIosArrowDropleftCircle
-            className="swiper-navigation__prev"
-            onClick={handlePrev}
-          />
-          <IoIosArrowDroprightCircle
-            className="swiper-navigation__next"
-            onClick={handleNext}
-          />
-        </div></div>
+          <h1 className="pubsem">{heading}</h1>
+          <div>
+            <IoIosArrowDropleftCircle
+              className="swiper-navigation__prev"
+              onClick={handlePrev}
+            />
+            <IoIosArrowDroprightCircle
+              className="swiper-navigation__next"
+              onClick={handleNext}
+            />
+          </div>
+        </div>
         <Swiper
           ref={sliderRef}
           pagination={{
@@ -82,17 +84,15 @@ export default function Upcoming({ heading, color }) {
                 </p>
                 <div className="properties">
                   <div className="colu pb-3">
-                    <img src={profile} alt="public seminar" className="" />{" "}
-                    Lorem Ipsum Dolor
+                    <CgProfile className="svg" /> Lorem Ipsum Dolor
                   </div>
                   <div>Lorem Ipsum Dolor</div>
                   <div>
-                    <img src={calendar} alt="public seminar" className="" />{" "}
-                    Sunday,January 20,2023{" "}
+                    <MdOutlineCalendarMonth className="svg" /> Sunday,January
+                    20,2023{" "}
                   </div>
                   <div>
-                    <img src={clock} alt="public seminar" className="" /> 3:00
-                    PM{" "}
+                    <AiOutlineClockCircle className="svg" /> 3:00 PM{" "}
                   </div>
                 </div>
               </div>
@@ -115,17 +115,15 @@ export default function Upcoming({ heading, color }) {
                 </p>
                 <div className="properties">
                   <div className="colu pb-3">
-                    <img src={profile} alt="public seminar" className="" />{" "}
-                    Lorem Ipsum Dolor
+                    <CgProfile className="svg" /> Lorem Ipsum Dolor
                   </div>
                   <div>Lorem Ipsum Dolor</div>
                   <div>
-                    <img src={calendar} alt="public seminar" className="" />{" "}
-                    Sunday,January 20,2023{" "}
+                    <MdOutlineCalendarMonth className="svg" /> Sunday,January
+                    20,2023{" "}
                   </div>
                   <div>
-                    <img src={clock} alt="public seminar" className="" /> 3:00
-                    PM{" "}
+                    <AiOutlineClockCircle className="svg" /> 3:00 PM
                   </div>
                 </div>
               </div>
@@ -148,17 +146,15 @@ export default function Upcoming({ heading, color }) {
                 </p>
                 <div className="properties">
                   <div className="colu pb-3">
-                    <img src={profile} alt="public seminar" className="" />{" "}
-                    Lorem Ipsum Dolor
+                    <CgProfile className="svg" /> Lorem Ipsum Dolor
                   </div>
                   <div>Lorem Ipsum Dolor</div>
                   <div>
-                    <img src={calendar} alt="public seminar" className="" />{" "}
-                    Sunday,January 20,2023{" "}
+                    <MdOutlineCalendarMonth className="svg" /> Sunday,January
+                    20,2023{" "}
                   </div>
                   <div>
-                    <img src={clock} alt="public seminar" className="" /> 3:00
-                    PM{" "}
+                    <AiOutlineClockCircle className="svg" /> 3:00 PM{" "}
                   </div>
                 </div>
               </div>
@@ -181,17 +177,15 @@ export default function Upcoming({ heading, color }) {
                 </p>
                 <div className="properties">
                   <div className="colu pb-3">
-                    <img src={profile} alt="public seminar" className="" />{" "}
-                    Lorem Ipsum Dolor
+                    <CgProfile className="svg" /> Lorem Ipsum Dolor
                   </div>
                   <div>Lorem Ipsum Dolor</div>
                   <div>
-                    <img src={calendar} alt="public seminar" className="" />{" "}
-                    Sunday,January 20,2023{" "}
+                    <MdOutlineCalendarMonth className="svg" /> Sunday,January
+                    20,2023{" "}
                   </div>
                   <div>
-                    <img src={clock} alt="public seminar" className="" /> 3:00
-                    PM{" "}
+                    <AiOutlineClockCircle className="svg" /> 3:00 PM{" "}
                   </div>
                 </div>
               </div>
@@ -214,17 +208,15 @@ export default function Upcoming({ heading, color }) {
                 </p>
                 <div className="properties">
                   <div className="colu pb-3">
-                    <img src={profile} alt="public seminar" className="" />{" "}
-                    Lorem Ipsum Dolor
+                    <CgProfile className="svg" /> Lorem Ipsum Dolor
                   </div>
                   <div>Lorem Ipsum Dolor</div>
                   <div>
-                    <img src={calendar} alt="public seminar" className="" />{" "}
-                    Sunday,January 20,2023{" "}
+                    <MdOutlineCalendarMonth className="svg" /> Sunday,January
+                    20,2023{" "}
                   </div>
                   <div>
-                    <img src={clock} alt="public seminar" className="" /> 3:00
-                    PM{" "}
+                    <AiOutlineClockCircle className="svg" /> 3:00 PM{" "}
                   </div>
                 </div>
               </div>
@@ -247,22 +239,20 @@ export default function Upcoming({ heading, color }) {
                 </p>
                 <div className="properties">
                   <div className="colu pb-3">
-                    <img src={profile} alt="public seminar" className="" />{" "}
-                    Lorem Ipsum Dolor
+                    <CgProfile className="svg" /> Lorem Ipsum Dolor
                   </div>
                   <div>Lorem Ipsum Dolor</div>
                   <div>
-                    <img src={calendar} alt="public seminar" className="" />{" "}
-                    Sunday,January 20,2023{" "}
+                    <MdOutlineCalendarMonth className="svg" /> Sunday,January
+                    20,2023{" "}
                   </div>
                   <div>
-                    <img src={clock} alt="public seminar" className="" /> 3:00
-                    PM{" "}
+                    <AiOutlineClockCircle className="svg" /> 3:00 PM{" "}
                   </div>
                 </div>
               </div>
               <Link to="../seminarreg" className="click text-center">
-                <img src={arrowRight} alt="public seminar" className="arrow" />
+                <HiArrowLongRight />
               </Link>
             </div>
           </SwiperSlide>
