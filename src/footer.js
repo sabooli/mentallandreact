@@ -1,10 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import wphone from "./icons/Component 6w.svg";
-import wlinkedin from "./icons/Component 3w.svg";
-import winstagram from "./icons/Component 4w.svg";
-import wfacebook from "./icons/Component 5w.svg";
-import wtwitter from "./icons/mainw.svg";
+import { MdOutlineWhatsapp } from "react-icons/md";
+import { CiLinkedin } from "react-icons/ci";
+import { IoLogoInstagram } from "react-icons/io";
+import { TiSocialFacebook, TiSocialTwitter } from "react-icons/ti";
 
 export default function Footer() {
   return (
@@ -19,11 +18,11 @@ export default function Footer() {
             aliquip ex ea commodo consequat.
           </div>
           <div className="fcalls">
-            <img src={wphone} className="fcall" alt="phone key" />
-            <img src={wlinkedin} className="fcall" alt="linkedin key" />
-            <img src={winstagram} className="fcall" alt="instagram key" />
-            <img src={wfacebook} className="fcall" alt="facebook key" />
-            <img src={wtwitter} className="fcall" alt="twitter key" />
+            <MdOutlineWhatsapp className="facebook" />
+            <CiLinkedin className="facebook" />
+            <IoLogoInstagram className="facebook" />
+            <TiSocialFacebook className="facebook" />
+            <TiSocialTwitter className="facebook" />
           </div>
         </div>
         <div className="column first">
