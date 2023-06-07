@@ -30,7 +30,7 @@ export default function Musicchildren() {
           height: "calc(130vh - 50px)",
         }}
       >
-        <Header />
+        <Header className="instagram" />
         <Navbar />
         <div className="musicforchildren">
           <h1 className="musicforchildrenheading">

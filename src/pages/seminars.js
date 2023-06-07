@@ -8,7 +8,7 @@ import Footer from "../footer";
 export default function Seminars() {
     return (
       <div>
-        <Header />
+        <Header className="whatsapp" />
         <Navbar />
         <div className="seminars">
           <div className="sliders">

@@ -7,7 +7,7 @@ import Footer from "../footer";
 export default function Adultcoaches() {
 return (
   <div>
-    <Header />
+    <Header className="instagram" />
     <Navbar />
     <div className="choosecoach">
       <Coaches heading="Paint Coach" major="Painting" />

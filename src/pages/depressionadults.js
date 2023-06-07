@@ -53,7 +53,7 @@ useEffect(() => {
 
   return (
     <div className="full">
-      <Header />
+      <Header className="whatsapp" />
       <Navbar />
       <div className="containerFluid">
         <div className="maincontent">

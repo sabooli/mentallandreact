@@ -1,6 +1,7 @@
 import React, { useRef, useCallback } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
+import { Link } from "react-router-dom";
 import R8c from "../icons/Rectangle 8c.svg";
 import {
   IoIosArrowDroprightCircle,
@@ -68,7 +69,7 @@ export default function Coaches({ heading, color, major }) {
             </div>
             <div className="card-content-coach">
               <p className="coachname">Dr. Mary Green</p>
-              <p className="major">{major}</p>
+             <Link to="../courseinfo" className="ci"> <p className="major">{major}</p></Link>
             </div>
           </div>
         </SwiperSlide>

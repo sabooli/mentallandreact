@@ -45,7 +45,7 @@ useEffect(() => {
           height: "calc(130vh - 50px)",
         }}
       >
-        <Header />
+        <Header className="whatsapp" />
         <Navbar />
         <div className="homeStrategy text-start">
           <h1 className="homemainTopic">

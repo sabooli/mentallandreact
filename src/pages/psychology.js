@@ -45,7 +45,7 @@ export default function Psychology() {
           height: "calc(130vh - 50px)",
         }}
       >
-        <Header />
+        <Header className="whatsapp" />
         <Navbar />
         <div className="strategy">
           <h1 className="mainTopic">

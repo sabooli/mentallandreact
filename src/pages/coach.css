@@ -79,7 +79,9 @@ margin-inline-end: 20px;
 .backcolor {
   background-image: linear-gradient(to bottom right,#FDF4F7, #FEF8FA, #ffffff);
 }
-
+.ci {
+  text-decoration: none;
+}
 
 
 @media screen and (max-width: 630px) {

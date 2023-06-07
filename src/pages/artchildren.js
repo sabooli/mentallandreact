@@ -35,7 +35,7 @@ export default function Artchildren() {
           height: "calc(130vh - 50px)",
         }}
       >
-        <Header />
+        <Header className="instagram" />
         <Navbar />
         <div className="colorfulch">
           <div className="thumbnail">

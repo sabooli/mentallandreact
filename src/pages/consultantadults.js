@@ -33,7 +33,7 @@ useEffect(() => {
 
     return (
       <div>
-        <Header />
+        <Header className="whatsapp" />
         <Navbar />
         <div className="contain">
           <div className="connect">
@@ -64,15 +64,15 @@ useEffect(() => {
                   </div>
                 </div>
                 <div className="workField">
-                    <span>
-                      {item.Specialties &&
-                        JSON.parse(item.Specialties).map((specialty, index) => (
-                          <>
-                            {index > 0 ? " " : ""}
-                            <span className="field">{specialty}</span>
-                          </>
-                        ))}
-                    </span>
+                  <span>
+                    {item.Specialties &&
+                      JSON.parse(item.Specialties).map((specialty, index) => (
+                        <>
+                          {index > 0 ? " " : ""}
+                          <span className="field">{specialty}</span>
+                        </>
+                      ))}
+                  </span>
                 </div>
                 <div className="hhh">
                   <Link to="/pages/consultantadults" className="counsel">

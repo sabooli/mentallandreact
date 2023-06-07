@@ -52,7 +52,7 @@ export default function Servicesforchildren() {
 
   return (
     <div className="full listofchpsy">
-      <Header />
+      <Header className="whatsapp" />
       <Navbar />
       <div className="containerFluid">
         <div className="maincontent">

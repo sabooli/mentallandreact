@@ -31,7 +31,7 @@ export default function Art() {
             height: "720px",
           }}
         >
-          <Header />
+          <Header className="instagram" />
           <Navbar />
           <div className="AH">
             <h1 className="AHheading text-center">arts & health</h1>

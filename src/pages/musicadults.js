@@ -29,7 +29,7 @@ export default function Musicadults() {
             height: "calc(130vh - 50px)",
           }}
         >
-          <Header />
+          <Header className="instagram" />
           <Navbar />
           <div className="musicforadults">
             <h1 className="musicforadultsheading text-center">

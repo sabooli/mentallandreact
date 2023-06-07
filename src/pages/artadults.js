@@ -35,7 +35,7 @@ export default function Artadults() {
           height: "calc(130vh - 50px)",
         }}
       >
-        <Header />
+        <Header className="instagram" />
         <Navbar />
         <div className="colorful">
           <h1 className="colorfulheading text-center">
@@ -128,7 +128,8 @@ export default function Artadults() {
               <span className="more">Learn more</span>
             </Link>
           </div>
-          <LazyLoadImage height={460}
+          <LazyLoadImage
+            height={460}
             src={admusic}
             className="admusicimg"
             alt="Mentalland music course"
@@ -228,8 +229,8 @@ export default function Artadults() {
         </div>
         <div className="instructors">
           <div className="instructorlist">
-         <Coach />
-         </div>
+            <Coach />
+          </div>
         </div>
         <div className="studentcomments">
           <Patientcomments heading="What Our Students Say About US" />

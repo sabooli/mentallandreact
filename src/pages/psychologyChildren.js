@@ -31,19 +31,20 @@ export default function Psychildren() {
             height: "calc(130vh - 50px)",
           }}
         >
-          <Header />
+          <Header className="whatsapp" />
           <Navbar />
-        <div className="chenjoy text-center">
-              <h1 className="lets">Let's Enjoy!</h1>
-              <h2 className="enjoy">
-                Lorem ipsum dolor sit amet consectetur. Viverra pellentesque
-                volutpat quis in erat. Sit aenean eget nascetur mus non. Enim a
-                ut vitae felis convallis. Egestas enim diam ac nisi orci id
-                tellus lobortis. Lacus in etiam rhoncus.
-              </h2>
-            </div></div>
+          <div className="chenjoy text-center">
+            <h1 className="lets">Let's Enjoy!</h1>
+            <h2 className="enjoy">
+              Lorem ipsum dolor sit amet consectetur. Viverra pellentesque
+              volutpat quis in erat. Sit aenean eget nascetur mus non. Enim a ut
+              vitae felis convallis. Egestas enim diam ac nisi orci id tellus
+              lobortis. Lacus in etiam rhoncus.
+            </h2>
+          </div>
+        </div>
         <div className="kids">
-          <div className="childpsy"> 
+          <div className="childpsy">
             <div className="parta">
               <h1 className="psychservices text-center">
                 Children / Teenagers Psychology Services

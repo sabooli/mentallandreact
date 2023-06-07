@@ -30,7 +30,7 @@ export default function Psyadults() {
             height: "calc(130vh - 50px)",
           }}
         >
-          <Header />
+          <Header className="whatsapp" />
           <Navbar />
           <div className="happy">
             <h1 className="beHappy text-center">
