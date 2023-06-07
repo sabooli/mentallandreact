@@ -13,7 +13,7 @@ export default function Seminarreg() {
         <Navbar />
         <div className="master">
           <div className="regbar">
-            <img src={seminar} className="seminarimg" />
+            <img src={seminar} className="seminarimg" alt="seminar" />
             <div className="seminarexp">
               <h5 className="seminarheading">
                 international conference on mental health & therapy

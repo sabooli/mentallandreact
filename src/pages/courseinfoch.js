@@ -6,7 +6,7 @@ import seminar from "../icons/seminar.svg";
 import { BiShoppingBag } from "react-icons/bi";
 import { Link } from "react-router-dom";
 
-export default function Courseinfo() {
+export default function Courseinfoch() {
   return (
     <div>
       <Header className="instagram" />
