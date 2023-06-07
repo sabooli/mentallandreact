@@ -129,6 +129,68 @@ line-height: 40px;
     line-height: 40px;
     text-transform: capitalize;
 }
+.courseinfo {
+  font-family: "Gilroy-Regular", sans-serif;
+font-size: 16px;
+line-height: 40px;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+margin-bottom: 20px;
+}
+.coachintro {
+  font-family: "Gilroy-Regular", sans-serif;
+font-size: 16px;
+line-height: 40px;
+}
+.coursewords {
+  font-family: "Gilroy-Regular", sans-serif;
+    font-size: 16px;
+    text-transform: capitalize;
+    line-height: 40px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.btn-addcard {
+  font-family: "Gilroy-Regular", sans-serif;
+  padding: 12px;
+  padding-inline: 2rem;
+  max-width: 200px;
+  height: 48px;
+  background: #02979d;
+  border: 1px solid #02979d;
+  border-radius: 28px;
+  text-decoration: none;
+font-family: "Gilroy-Regular", sans-serif;
+  display: flex;
+justify-content: center;
+width: 100%;
+}
+.courseInfo {
+    max-width: 1240px;
+    min-height: 560px;
+    border: 0.2px solid #02979D;
+border-image: linear-gradient(to bottom, #02979D 0%, #00888D 100%);
+border-image-slice: 1;
+    margin-bottom: 35px;
+    padding: 20px; 
+}
+.coachcomment {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.coachcomment span {
+  font-family: "Gilroy-Regular", sans-serif;
+  color: #02979D;
+}
+
+.commentbar {
+ max-width: 1240px;
+  min-height: 260px;
+  border: 1px solid #02979D;
+}
 
 @media screen and (max-width: 800px) {
 .regbar {

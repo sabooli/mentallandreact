@@ -16,6 +16,8 @@ import "swiper/swiper.min.css";
 import "swiper/swiper-bundle.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
+import "bootstrap-icons/font/bootstrap-icons.css";
+
 
 
 createRoot(document.getElementById("root")).render(<Main />);

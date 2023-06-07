@@ -24,6 +24,7 @@ import Musicadults from "./pages/musicadults";
 import Musicchildren from "./pages/musicchildren";
 import Servicesforchildren from "./pages/depresseionchildren";
 import Seminarreg from "./pages/seminarreg";
+import Courseinfo from "./pages/courseinfo";
 import Header from "./header";
 import Navbar from "./Navbar";
 import Footer from "./footer";
@@ -60,6 +61,7 @@ export default function Main() {
           <Route path="musicadults" element={<Musicadults />} />
           <Route path="musicchildren" element={<Musicchildren />} />
           <Route path="seminarreg" element={<Seminarreg />} />
+          <Route path="courseinfo" element={<Courseinfo />} />
         </Route>
       </Routes>
     </BrowserRouter>
