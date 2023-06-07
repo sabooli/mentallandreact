@@ -1,15 +1,14 @@
 import React from "react";
-import phone from "./icons/Component 6.svg";
-import linkedin from "./icons/Component 3.svg";
-import instagram from "./icons/Component 4.svg";
-import facebook from "./icons/Component 5.svg";
-import twitter from "./icons/psychology.svg";
 import Flag from "./Flag";
 import { Link } from "react-router-dom";
 import { BiLogIn } from "react-icons/bi";
 import { BiShoppingBag } from "react-icons/bi";
+import { MdOutlineWhatsapp } from "react-icons/md";
+import { CiLinkedin } from "react-icons/ci";
+import { IoLogoInstagram } from "react-icons/io";
+import { TiSocialFacebook, TiSocialTwitter } from "react-icons/ti";
 
-export default function Header() {
+export default function Header(props) {
   return (
     <nav className="header">
       <div className="buttons">
@@ -34,11 +33,11 @@ export default function Header() {
         <input type="search" placeholder="Search" className="search" />
       </div>
       <div className="calls">
-        <img src={phone} className="call" alt="phone key" />
-        <img src={linkedin} className="call" alt="linkedin key" />
-        <img src={instagram} className="call" alt="instagram key" />
-        <img src={facebook} className="call" alt="facebook key" />
-        <img src={twitter} className="call" alt="twitter key" />
+        <MdOutlineWhatsapp className={props.className} />
+        <CiLinkedin className={props.className} />
+        <IoLogoInstagram className={props.className} />
+        <TiSocialFacebook className={props.className} />
+        <TiSocialTwitter className={props.className} />
       </div>
     </nav>
   );
