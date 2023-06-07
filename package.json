@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "ansi-html": "^0.0.9",
     "bootstrap": "^5.2.3",
+    "bootstrap-icons": "^1.10.5",
     "glob-parent": "^6.0.2",
     "i18next": "^22.4.15",
     "immer": "^10.0.1",
