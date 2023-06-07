@@ -27,7 +27,6 @@ body {
 .iconmenu {
   cursor: pointer;
 }
-
 .header {
   display: grid;
   grid-template-columns: 5fr 3fr 6fr 7fr;
@@ -56,8 +55,6 @@ body {
   font-size: 18px;
   line-height: 32px;
 }
-
-
 .link {
   color: #000b0c;
   text-decoration: none;
@@ -134,13 +131,39 @@ body {
   margin-inline-end: auto;
   width: fit-content;
 }
+.whatsapp {
+border-radius: 8px;
+border: 1px solid #eda12f;
+font-size: 45px;
+padding: 8px;
+fill: #fafefe;
+background-color: #eda12f;
+margin-right: 0.6rem;
+}
+.facebook {
+border-radius: 8px;
+border: 1px solid white;
+font-size: 45px;
+padding: 8px;
+fill: #02979d;
+background-color: white;
+margin-right: 0.6rem;
+}
+.instagram {
+border-radius: 8px;
+border: 1px solid #D74E7F;
+font-size: 45px;
+padding: 8px;
+fill: #fafefe;
+background-color: #D74E7F;
+margin-right: 0.6rem;
+}
 .call {
   margin-bottom: 0.5rem;
   justify-content: center;
   margin-right: 0.6rem;
   width: 45px;
   height: 45px;
-  fill: #eda12f !important;
   border-radius: 8px;
 }
 .language {
@@ -215,12 +238,6 @@ body {
 .fcalls {
   display: flex;
   width: 100%;
-  gap: 4px;
-}
-.fcall {
-  width: 100%;
-  height: 45px;
-  border-radius: 8px;
 }
 .fh2 {
   height: 28px;
@@ -398,7 +415,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-
 @media screen and (max-width: 1200px) {
   .main-container {
     display: grid;
