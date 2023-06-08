@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Header from "../header";
 import Navbar from "../Navbar";
 import Footer from "../footer";
+import Form from "react-bootstrap/Form";
 import { AiFillStar } from "react-icons/ai";
 import Explain from "./explain";
 import { Link } from "react-router-dom";
@@ -37,7 +38,7 @@ useEffect(() => {
         <Navbar />
         <div className="contain">
           <div className="connect">
-            <div className="bigbar">
+            <div className="gbar">
               <div className="part">
                 <img
                   src={`https://mentalland.com/image/users/cons/degree/${item.avatar}`}
@@ -73,8 +74,13 @@ useEffect(() => {
                         </>
                       ))}
                   </span>
-                </div>
-                <div className="hhh">
+                </div>                
+              </div>
+              <div className="part mt-4 container-fluid">
+              <Form.Select aria-label="period">
+                <option>Select the time period</option>
+              </Form.Select>
+                <div className="hhh mt-4">
                   <Link to="/pages/consultantadults" className="counsel">
                     <div className="justnow">Start Counseling</div>
                   </Link>

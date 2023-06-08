@@ -4,21 +4,22 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   en: {
     translation: {
+      apiUrl: "http://www.mentalland.com/api/V1/homepage/faqs_english",
       DEPRESSION: "DEPRESSION",
       Home: "Home",
       About: "About",
-      "Our Services": "Our Services",
-      "Contact Us": "Contact Us",
+      OurServices: "Our Services",
+      Contact: "Contact Us",
     },
   },
   fa: {
     translation: {
+      apiUrl: "http://www.mentalland.com/api/V1/homepage/faqs_persian",
       DEPRESSION: "افسردگی",
       Home: "خانه",
       About: "درباره ما",
-      "Our Services": "خدمات ما",
-      "Contact": "تماس با ما",
-      
+      OurServices: "خدمات ما",
+      Contact: "تماس با ما",
     },
   },
 };

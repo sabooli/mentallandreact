@@ -44,6 +44,12 @@ export default function Coaches({ heading, color, major }) {
         slidesPerView={4}
         breakpoints={{
           300: {
+            slidesPerView: 1,
+          },
+          400: {
+            slidesPerView: 2,
+          },
+          450: {
             slidesPerView: 3,
           },
           550: {
@@ -69,7 +75,10 @@ export default function Coaches({ heading, color, major }) {
             </div>
             <div className="card-content-coach">
               <p className="coachname">Dr. Mary Green</p>
-             <Link to="../courseinfo" className="ci"> <p className="major">{major}</p></Link>
+              <Link to="../courseinfo" className="ci">
+                {" "}
+                <p className="major">{major}</p>
+              </Link>
             </div>
           </div>
         </SwiperSlide>

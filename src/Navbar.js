@@ -11,13 +11,15 @@ export default function Navbar() {
 
  const handleShowNavbar = () => {
   setShowNavbar(!showNavbar);
+   console.log("Clicked");
+   console.log(showNavbar);
 };
 
   return (
     <nav className="navbar nav">
       <h1 className="logo">MentalLand</h1>
-      <div className="menu-icon" onClick={handleShowNavbar}>
-        <RxHamburgerMenu />
+      <div className="menu-icon">
+        <RxHamburgerMenu className="hamburger" onClick={handleShowNavbar} />
       </div>
       <div className={`nav-elements nav-right  ${showNavbar && "active"}`}>
         <ul>
@@ -31,30 +33,59 @@ export default function Navbar() {
             <div className="dropdown-content">
               <NavLink to="/pages/psychology">{t("Psychology")}</NavLink>
               <ul className="branch">
-               <li> <NavLink to="/pages/psychologyAdults">
-                  {t("Psychology-Adults")}
-                </NavLink></li>
-               <li> <NavLink to="/pages/psychologyChildren">
-                  {t("Psychology-Children")}
-                </NavLink></li>
-                <li><NavLink to="/pages/seminars">{t("Seminars")}</NavLink></li>
-                <li><NavLink to="/pages/depressionadults">
-                  {t("List of Psychologists - Adults")}
-                </NavLink></li>
-                <li><NavLink to="/pages/depressionchildren">
-                  {t("List of Psychologists - Children")}
-                </NavLink></li>
+                <li>
+                  {" "}
+                  <NavLink to="/pages/psychologyAdults">
+                    {t("Psychology-Adults")}
+                  </NavLink>
+                </li>
+                <li>
+                  {" "}
+                  <NavLink to="/pages/psychologyChildren">
+                    {t("Psychology-Children")}
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/pages/seminars">{t("Seminars")}</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/pages/depressionadults">
+                    {t("List of Psychologists - Adults")}
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/pages/depressionchildren">
+                    {t("List of Psychologists - Children")}
+                  </NavLink>
+                </li>
               </ul>
               <NavLink to="/pages/art">{t("Art")}</NavLink>
-               <ul className="branch">
-              <li><NavLink to="/pages/artadults">{t("Art-adults")}</NavLink></li>
-              <li><NavLink to="/pages/musicadults">{t("Music-adults")}</NavLink></li>
-              <li><NavLink to="/pages/adultcoaches">{t("Coaches-adults")}</NavLink></li>
-              <li><NavLink to="/pages/artchildren">{t("Art-children")}</NavLink></li>
-              <li><NavLink to="/pages/musicchildren">{t("Music-children")}</NavLink></li>
-              <li><NavLink to="/pages/childrencoaches">
-                {t("Coaches-children")}
-              </NavLink></li></ul>
+              <ul className="branch">
+                <li>
+                  <NavLink to="/pages/artadults">{t("Art-adults")}</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/pages/musicadults">{t("Music-adults")}</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/pages/adultcoaches">
+                    {t("Coaches-adults")}
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/pages/artchildren">{t("Art-children")}</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/pages/musicchildren">
+                    {t("Music-children")}
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/pages/childrencoaches">
+                    {t("Coaches-children")}
+                  </NavLink>
+                </li>
+              </ul>
             </div>
           </li>
           <li>

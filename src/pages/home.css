@@ -19,7 +19,7 @@
 
 body {
   font-size: 16px;
-  margin: 0 auto;
+  margin: 0 auto !important;
 }
 .homeStrategy {
   max-width: 430px;
@@ -258,15 +258,14 @@ body {
   line-height: 36px;
   text-align: start;
   margin-bottom: 5%;
-  margin-inline-end: 6%;
 }
 .Monphonedl {
   margin-top: 8%;
 }
 .MoPhimage {
-  margin-inline-start: 85px;
-  margin-top: 8%;
-  width: 426px;
+  margin-top: 4%;
+  max-width: 356px;
+width: 100%;
 }
 .customersayH {
   font-family: "Gilroy-SemiBold", sans-serif;
@@ -446,12 +445,6 @@ margin-bottom: 150px;
   .circle {
     text-align: center;
   }
-  .mentallandonphone {
-    grid-template-columns: 1fr;
-    display: flex;
-    flex-direction: column;
-    padding: 6%;
-  }
   .latest {
     grid-template-columns: 1fr;  
   }  
@@ -464,12 +457,58 @@ margin-bottom: 150px;
 }
 }
 
+@media screen and (max-width: 800px) {
+  .mentallandonphone {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    padding: 6%;
+  }
+  .MoPhimage {
+  width: 376px;
+  margin-top: 0;
+}
+
+}
+
+@media screen and (max-width: 702px) {
+.homesubTopic, .homelink {
+  display: none;
+}
+  .group731 {
+    display: none;
+  }
+  .setup {
+  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: 20%;
+}
+}
 @media screen and (max-width: 600px) {
-  .band {
+ .band {
    grid-template-columns: 1fr;
    text-align: center;
-margin-bottom: 90%;
+   margin-bottom: 85%;
   }
+.ourServices {
+  font-family: "Alice", sans-serif;
+  font-size: 1.5em;
+  margin-bottom: 5%;
+}
+.subsume {
+  margin-inline: 35px;
+}
+.homemainTopic {
+    font-size: 1.5em;
+}
+.homeStrategy {
+width: 90%;
+  margin: 18px 25px 22px;
+  padding: 32px 5px 33px;
+  text-align: start;
+}
+ 
   .tab {
   padding-inline: 10%;
   padding-top: 4%;
@@ -492,21 +531,21 @@ margin-bottom: 90%;
   .mentallandonphone {
     grid-template-columns: 1fr;
     display: flex;
-    flex-direction: column;
-    padding: 6%;
-  }
-  .group731 {
-    display: none;
+    flex-direction: column-reverse;
   }
   .hfreq {
     grid-template-columns: 1fr;
   }
 .articlewords h5 {
- font-size: 1.5em;
+ font-size: 1.2em;
 }
 .articlewords span {
-  font-size: 1.3em;
+  font-size: 1em;
   line-height: 36px;
+}
+.partIV, .partVI {
+  margin-inline: 0;
+  margin-bottom: 100px;
 }
 .Readlatestword {
   font-family: "Gilroy-Bold", sans-serif;
@@ -517,12 +556,14 @@ margin-bottom: 90%;
   grid-template-columns: 1fr;
   gap: 3%;
 }
-.setup {
-  grid-template-columns: 1fr;
-  margin-top: 20%;
+
+.VMtext {
+  font-size: 1em;
 }
-.subsume, .MoPhtext, .MoPhimage, .latestArticles, .PartVI, .homeStrategy, .MoPhheading {
-  margin-inline: 45px;
+.latestArticles {
+  padding-inline: 25px;
+  text-align: center;
+  display: inline-block;
 }
 }
 

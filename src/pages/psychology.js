@@ -22,19 +22,8 @@ import question from "../icons/Group 817.svg";
 import Mfaq from "./mfaq";
 
 export default function Psychology() {
-  const url = "https://mentalland.com/api/V1/homepage/top_rated_const";
-
-  fetch(url, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  })
-    .then((response) => response.json())
-    .then((data) => console.log(data))
-    .catch((error) => console.error(error));
   return (
-    <div>
+    <div className="psychopages">
       <div
         style={{
           backgroundImage: `url("${bgImage}")`,

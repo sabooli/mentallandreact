@@ -29,7 +29,10 @@
   font-family: "Gilroy-SemiBold";
   src: url(../fonts/Gilroy-SemiBold.ttf);
 }
-
+body {
+  font-size: 16px;
+  margin: 0 auto;
+}
 .coaches {
   position: relative;
   padding-top: 1%;
@@ -87,5 +90,10 @@ margin-inline-end: 20px;
 @media screen and (max-width: 630px) {
 .coaches {
   padding-inline: 4%;
+}
+.choosecoach {
+  margin-inline: 45px;
+  margin-top: 50px;
+  margin-bottom: 60px;
 }
 }

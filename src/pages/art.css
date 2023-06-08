@@ -141,11 +141,15 @@ font-family: "Alice", sans-serif;
     margin-bottom: 150px;
 }
 .madults, .mchildren {
-    width: 580px;
-    min-height: 296px;
+display: inline-block;
+width: 100%;
+text-align: center;
+min-height: 296px;
 }
 .madwords, .mchwords {
-font-family: "Alice", sans-serif;
+  display: block;
+  width: 100%;
+  font-family: "Alice", sans-serif;
   font-size: 1.5em;
   line-height: 36px;
   color: #000b0c;
@@ -194,7 +198,7 @@ margin-top: 42px;
 display: flex;
 flex-wrap: wrap;
 margin-bottom: 10%;
-gap: 5%;
+gap: 5px;
 }
 .musicrelaximage {
 margin-inline-start: 110px;
@@ -397,6 +401,19 @@ font-family: "Gilroy-Medium", sans-serif;
   width: 100%;
 }
 
+@media screen and (max-width: 1200px) {
+.MADimages, .arttherapy {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+}
+}
+@media screen and (max-width: 1100px) {
+.ring {
+  display: none;
+}
+}
+
 @media screen and (max-width: 900px) {
 .MADimages, .arttherapy {
     grid-template-columns: 1fr;
@@ -444,6 +461,16 @@ margin-inline-start: 0px;
     .ring {
         margin-inline: 35%;
     }
+}
+@media screen and (max-width: 500px) {
+.MADheading, .therapyheading, .adpaintingheading, .admusicheading, .adactheading, .adwritingheading, .addanceheading {
+  font-family: "Alice", sans-serif;
+  font-size: 1.5em;
+}
+.madwords, .mchwords {
+   font-family: "Alice", sans-serif;
+  font-size: 1.3em;
+}
 }
 @media screen and (max-width: 450px) {
  .mastdiv {

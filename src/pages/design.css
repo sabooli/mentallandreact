@@ -29,13 +29,11 @@
 
 body {
   font-size: 16px;
-  margin: 0 auto;
-}
-.fullcontent {
-  max-width: 1800px;
+  margin: 0 auto !important;
 }
 .psycho {
-  margin-inline: 85px;
+  margin-inline-start: 85px;
+  margin-inline-end: 85px;
 }
 .strategy {
   max-width: 470px;
@@ -202,7 +200,7 @@ figure {
 }
 .subtitle {
   font-family: "Alice", sans-serif;
-  font-size: 32px;
+  font-size: 2em;
   line-height: 36px;
   color: #000b0c;
   padding-inline-end: 50px;
@@ -287,7 +285,7 @@ figure {
 .specialized {
   margin-inline-start: 155px;
   max-width: 365px;
-  height: 459px;
+  min-height: 459px;
 }
 .spzpsy {
   margin-inline-end: -70px;
@@ -309,6 +307,9 @@ figure {
   margin-inline: 40%;
   text-decoration: none;
 }
+.hfq {
+  display: flex;
+}
 .qa {
   border: 1px solid #eda12f;
   padding: 14px 15px 18px;
@@ -322,6 +323,7 @@ figure {
   margin-bottom: 30px;
 }
 .fq {
+  display: flex;
   font-family: "Gilroy-SemiBold", sans-serif;
   color: #000b0c;
   font-size: 18px;
@@ -336,9 +338,8 @@ figure {
   vertical-align: top;
 }
 .minus {
-  text-align: end;
-  margin-inline-end: 0;
-  }
+margin-inline-start: auto;
+}
 .freq {
   display: grid;
   grid-template-columns: 7fr 3fr;
@@ -392,15 +393,34 @@ display: flex;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
   }
-  .adps, .chps, .pusem, .chpsy, .spzsem, .freq, .choose {
-    grid-template-columns: 1fr;
+  .adps, .pusem, .chpsy, .spzsem, .freq, .choose {
+  grid-template-columns: 1fr;
    display: flex;
    flex-direction: column;
    text-align: center;
 }
-.adps, .chps, .pusem, .chpsy, .spzsem, .freq, .choose {
+.adpsy {
+  padding-inline-start: 0;
+}
+.chps {
+grid-template-columns: 1fr;
+   display: flex;
+   flex-direction: column-reverse;
+   margin-bottom: 0;
+}
+.chpsy {
+  padding-inline-end: 0;
+  margin-top: 0;
+}
+.adps, .pusem, .chpsy, .spzsem, .freq, .choose {
     margin-bottom: 10%;
    }
+  .adps {
+    margin-inline-start: 0;
+   }
+.spzpsy, .chps {
+  margin-inline-end: 0;
+}
 image {
   display: block;
   margin: 0 auto;
@@ -443,9 +463,6 @@ h2 {
   .separate {
     padding-inline: 20%;
   }
-  .psycho {
-    margin-inline: 50px;
-  }
 }
 @media screen and (max-width: 600px) {
 .strategy {
@@ -464,8 +481,12 @@ h2 {
 swiper {
   padding-inline: 20px;
 }
-.subtitle {
+.subtitle, .forYou {
   margin-top: 5%;
+  font-size: 1.5em;
+}
+.caption {
+  font-size: 1.3em;
 }
 .pubsem {
   text-align: center;
@@ -475,5 +496,15 @@ swiper {
     grid-template-columns: 1fr;
     display: flex;
     flex-direction: column;
+    gap: 0;
   }
+.fl {
+width: 142px;
+min-height: 155px;
+display: inline-block;
+margin: 0 auto;
+}
+.psycho {
+  margin-inline: 50px;
+}
 }
