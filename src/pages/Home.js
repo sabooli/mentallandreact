@@ -156,7 +156,7 @@ useEffect(() => {
                 </div>
                 <div className="circles">
                   <figure>
-                    <div className="circle">
+                    <div className="circle circle2019">
                       <span className="establishyear">2019</span>
                     </div>
                     <figcaption className="circlecaption">
@@ -164,7 +164,7 @@ useEffect(() => {
                     </figcaption>
                   </figure>
                   <figure>
-                    <div className="circle">
+                    <div className="circle c2020">
                       <span className="establishyear">2020</span>
                     </div>
                     <figcaption className="circlecaption">
@@ -173,7 +173,7 @@ useEffect(() => {
                   </figure>{" "}
                   <figure>
                     {" "}
-                    <div className="circle">
+                    <div className="circle c2020">
                       <span className="establishyear">2021</span>
                     </div>
                     <figcaption className="circlecaption">
@@ -182,7 +182,7 @@ useEffect(() => {
                   </figure>{" "}
                   <figure>
                     {" "}
-                    <div className="circle">
+                    <div className="circle c2020">
                       <span className="establishyear">2023</span>
                     </div>
                     <figcaption className="circlecaption">
@@ -190,7 +190,7 @@ useEffect(() => {
                     </figcaption>
                   </figure>
                 </div>
-                <div className="text-center">
+                <div className="d-flex justify-content-center">
                   <Link to="/" className="learnMore">
                     <span className="more">Learn more</span>
                   </Link>
@@ -269,12 +269,12 @@ useEffect(() => {
               <div className="partIV">
                 <div>
                   <div className="mentallandonphone">
-                      <img
-                        src={mentalonphone}
-                        className="MoPhimage img-fluid"
-                        alt="MentalLand on phone"
-                      />
-                     <div>
+                    <img
+                      src={mentalonphone}
+                      className="MoPhimage img-fluid"
+                      alt="MentalLand on phone"
+                    />
+                    <div>
                       <h3 className="MoPhheading">Mentalland on your phone</h3>
                       <div className="MoPhtext">
                         Lorem ipsum dolor sit amet consectetur. Pretium rutrum

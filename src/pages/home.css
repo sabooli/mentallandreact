@@ -149,13 +149,22 @@ body {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-bottom: 5%;
 }
-
+.circle2019 {
+   position: relative;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%; 
+  display: inline-block;
+  border: 1px dashed #02979d;
+}
 .circle {
   position: relative;
   width: 140px;
   height: 140px;
   border-radius: 50%; 
   display: inline-block;
+}
+.c2020 {
   border: 1px solid #02979d;
 }
 .circle::before {
@@ -265,7 +274,7 @@ body {
 .MoPhimage {
   margin-top: 4%;
   max-width: 356px;
-width: 100%;
+  width: 100%;
 }
 .customersayH {
   font-family: "Gilroy-SemiBold", sans-serif;
@@ -344,7 +353,7 @@ margin-bottom: 150px;
   margin-bottom: 2%;
 }
 .latearticleimage {
-  margin-inline-end: 15px;
+  padding-inline-end: 10px;
   height: 154px;
 }
 .articlewords h5 {
