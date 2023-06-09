@@ -24,12 +24,24 @@ export default function Navbar() {
       <div className={`nav-elements nav-right  ${showNavbar && "active"}`}>
         <ul>
           <li>
-            <NavLink to="/">{t("Home")}</NavLink>
+            <NavLink
+              to="/"
+              style={({ isActive }) => ({
+                color: isActive ? "#02979d" : "#000b0c",
+                background: isActive ? "#ecf7f7" : "#ecf7f7",
+              })}
+            >
+              {t("Home")}
+            </NavLink>
           </li>
           <li className="submenu">
-            <div className="dropdown">
+            <NavLink
+              style={({ isActive }) => ({
+                color: isActive ? "#02979d" : "#000b0c",
+                background: isActive ? "#ecf7f7" : "#ecf7f7",
+              })} className="dropdown">
               {t("Our Services")} <MdKeyboardArrowDown />
-            </div>
+            </NavLink>
             <div className="dropdown-content">
               <NavLink to="/pages/psychology">{t("Psychology")}</NavLink>
               <ul className="branch">
@@ -89,12 +101,26 @@ export default function Navbar() {
             </div>
           </li>
           <li>
-            <NavLink to="/pages/aboutus">
+            <NavLink
+              to="/pages/aboutus"
+              style={({ isActive }) => ({
+                color: isActive ? "#02979d" : "#000b0c",
+                background: isActive ? "#ecf7f7" : "#ecf7f7",
+              })}
+            >
               {t("About")} <MdKeyboardArrowDown />
             </NavLink>
           </li>
           <li>
-            <NavLink to="/pages/contactus">{t("Contact")}</NavLink>
+            <NavLink
+              to="/pages/contactus"
+              style={({ isActive }) => ({
+                color: isActive ? "#02979d" : "#000b0c",
+                background: isActive ? "#ecf7f7" : "#ecf7f7",
+              })}
+            >
+              {t("Contact")}
+            </NavLink>
           </li>
         </ul>
       </div>

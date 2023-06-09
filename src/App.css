@@ -349,7 +349,7 @@ body {
     cursor: pointer;
      font-size: 16px;
   font-weight: 400;
-  color: #000b0c;
+  color: #000b0c !important;
 } 
 .dropdown-content {
     display: none;
