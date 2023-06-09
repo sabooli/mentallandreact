@@ -346,6 +346,22 @@ color: #D74E7F;
   line-height: 36px;
   color: #000b0c;
 }
+.moreR {
+  font-size: 1em;
+}
+.learnMoreR {
+  max-width: 170px;
+  background-color: #02979d;
+  background-size: cover;
+  border-radius: 30px;
+  padding: 12px 30px;
+  color: #fafefe;
+  text-decoration: none;
+  width: 100%;
+}
+.learnMoreR:hover {
+  color: #fafefe;
+}
 .instructors {
   background-color: #FAE8EF;
   height: 374px;
@@ -400,7 +416,6 @@ font-family: "Gilroy-Medium", sans-serif;
   color: #000b0c;
   width: 100%;
 }
-
 @media screen and (max-width: 1200px) {
 .MADimages, .arttherapy {
     grid-template-columns: 1fr;
@@ -413,7 +428,6 @@ font-family: "Gilroy-Medium", sans-serif;
   display: none;
 }
 }
-
 @media screen and (max-width: 900px) {
 .MADimages, .arttherapy {
     grid-template-columns: 1fr;

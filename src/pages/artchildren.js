@@ -145,8 +145,8 @@ export default function Artchildren() {
             Join us to learn music with{" "}
             <div className="cameron">CAMERON SMITH</div> April 2023
             <br />{" "}
-            <Link to="/" className="learnMore ">
-              <span className="more">Register Now</span>
+            <Link to="/" className="learnMoreR ">
+              <span className="moreR">Register Now</span>
             </Link>
           </div>
         </div>
