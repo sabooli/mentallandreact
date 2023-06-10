@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "Alice";
+  src: url(../fonts/Alice-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-Regular.ttf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: url(../fonts/Gilroy-Bold.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Gilroy-Black";
+  src: url(../fonts/Gilroy-Black.ttf);
+}
+@font-face {
+    font-family: "Gilroy-ExtraBold";
+    src: url(../fonts/Gilroy-ExtraBold.ttf);
+}
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: url(../fonts/Gilroy-Medium.ttf);
+}
+@font-face {
+  font-family: "Gilroy-SemiBold";
+  src: url(../fonts/Gilroy-SemiBold.ttf);
+}
+
+body {
+  font-size: 16px;
+  margin: 0 auto;
+}
+
+.business {
+    margin-inline: 85px;
+}
+.businessadone, .businessadtwo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 140px;
+}
+.Badoneheading, .Badtwoheading {
+    font-family: "Alice", sans-serif;
+    font-size: 2em;
+    line-height: 36px;
+}
+.Badonewords, .Badtwowords {
+    font-family: "Gilroy-Regular", sans-serif;
+    font-size: 1em;
+    line-height: 36px;
+}
+.businessadtwo {
+    margin-bottom: 140px;
+}
+.ljo {
+    font-family: "Alice", sans-serif;
+    font-size: 2em;
+    line-height: 36px;
+    text-align: center; 
+}
+.stussay {
+    margin-top: 140px;
+    margin-bottom: 150px;
+}

@@ -26,6 +26,8 @@ import Servicesforchildren from "./pages/depresseionchildren";
 import Seminarreg from "./pages/seminarreg";
 import Courseinfo from "./pages/courseinfo";
 import Courseinfoch from "./pages/courseinfoch";
+import Businessadults from "./pages/businessadults";
+import Map from "./pages/map";
 import Header from "./header";
 import Navbar from "./Navbar";
 import Footer from "./footer";
@@ -64,6 +66,8 @@ export default function Main() {
           <Route path="seminarreg" element={<Seminarreg />} />
           <Route path="courseinfo" element={<Courseinfo />} />
           <Route path="courseinfoch" element={<Courseinfoch />} />
+          <Route path="businessadults" element={<Businessadults />} />
+          <Route path="map" element={<Map />} />
         </Route>
       </Routes>
     </BrowserRouter>

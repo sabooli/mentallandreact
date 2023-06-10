@@ -98,6 +98,10 @@ export default function Navbar() {
                   </NavLink>
                 </li>
               </ul>
+               <NavLink to="/pages/psychology">{t("Business")}</NavLink>
+              <ul className="branch">
+                <li> <NavLink to="/pages/businessadults">{t("Business for adults")}</NavLink></li>
+                </ul>
             </div>
           </li>
           <li>

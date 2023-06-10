@@ -11,6 +11,8 @@ import "./pages/art.css";
 import "./pages/coach.css";
 import "./pages/music.css";
 import "./pages/model.css";
+import "./pages/contact.css";
+import "./pages/business.css";
 import "./App.css";
 import "swiper/swiper.min.css";
 import "swiper/swiper-bundle.css";
