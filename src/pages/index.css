@@ -142,9 +142,16 @@ body {
   height: 42px;
   width: 369px;
 }
-::placeholderr {
+.phname::placeholder {
+  background-image: url(../icons/search-normal.svg);
+  background-repeat: no-repeat;
+  background-position: flex-end;
   font-family: "Gilroy-Regular", sans-serif;
-  padding-inline-start: 5%;
+  font-size: 18px;
+  line-height: 21px;
+  position: relative;
+  padding-inline-start: 1.8rem;
+  padding-bottom: 1.15rem;
 }
 .find {
   width: 109px;
