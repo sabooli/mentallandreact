@@ -109,7 +109,7 @@ body {
   margin-block-start: 8%;
   margin-inline-end: 15%;
 }
-::placeholder {
+.search::placeholder {
   background-image: url(./icons/search-normal.svg);
   background-repeat: no-repeat;
   background-position: left;
