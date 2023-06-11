@@ -1,7 +1,6 @@
 import React, { useRef, useCallback } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
-import { Link } from "react-router-dom";
 import marketing from "../icons/marketing.svg";
 import {
   IoIosArrowDroprightCircle,

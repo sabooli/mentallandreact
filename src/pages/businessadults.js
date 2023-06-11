@@ -10,8 +10,6 @@ import Customercomments from "./customercomments";
 import Position from "./position";
 import Adultcourses from "./adultcourses";
 
-
-
 export default function Businessadults() {
     return (
       <div>
@@ -44,7 +42,12 @@ export default function Businessadults() {
         <div className="business">
           <Adultcourses heading="ADULT COURSES" />
           <div className="businessadone">
-            <img src={Badone} width="100%" height={480} />
+            <img
+              src={Badone}
+              width="100%"
+              height={480}
+              alt="digital marketing"
+            />
             <div className="Badone">
               <h2 className="Badoneheading">future of digital marketing</h2>
               <div className="Badonewords mb-5 mt-4">
@@ -80,7 +83,12 @@ export default function Businessadults() {
                 <span className="more">Learn more</span>
               </Link>
             </div>
-            <img src={Badtwo} width="100%" height={460} />
+            <img
+              src={Badtwo}
+              width="100%"
+              height={460}
+              alt="digital marketing"
+            />
           </div>
           <div>
             <h3 className="ljo mb-5">the latest job opportunities</h3>

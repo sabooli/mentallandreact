@@ -62,10 +62,10 @@ export default function Businessadults() {
               <span className="more">Learn more</span>
             </Link>
           </div>
-          <img src={Bchone} width="100%" height={460} />
+          <img src={Bchone} width="100%" height={460} alt="digital marketing for children" />
         </div>
         <div className="businessadone">
-          <img src={Bchtwo} width="100%" height={480} />
+          <img src={Bchtwo} width="100%" height={480} alt="IT for children" />
           <div className="Badone">
             <h2 className="Badoneheading">IT for children & TEENAGERS</h2>
             <div className="Badonewords mb-5 mt-4">
@@ -78,7 +78,7 @@ export default function Businessadults() {
               Eu condimentum aliquam auctor duis accumsan cursus tristique
               pellentesque lorem. Eget cras proin.
             </div>
-            <Link to="/" className="learnMore ">
+            <Link to="/" className="learnMore">
               <span className="more">Learn more</span>
             </Link>
           </div>
@@ -101,7 +101,7 @@ export default function Businessadults() {
               <span className="more">Learn more</span>
             </Link>
           </div>
-          <img src={Bchthree} width="100%" height={460} />
+          <img src={Bchthree} width="100%" height={460} alt="MBA for children" />
         </div>
         <div>
           <h3 className="ljo mb-5">the latest job opportunities</h3>

@@ -24,9 +24,7 @@ useEffect(() => {
   fetch("https://mentalland.com/api/V1/homepage/consts_list_homepage")
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       const selectedItem = data.data[id - 1];
-      console.log(selectedItem);
       setItem(selectedItem);
     })
     .catch((error) => console.log(error));

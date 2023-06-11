@@ -11,8 +11,6 @@ export default function Navbar() {
 
  const handleShowNavbar = () => {
   setShowNavbar(!showNavbar);
-   console.log("Clicked");
-   console.log(showNavbar);
 };
 
   return (

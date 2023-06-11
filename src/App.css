@@ -23,6 +23,7 @@
 
 body {
   margin: 0 auto;
+  font-size: 16px;
 }
 .iconmenu {
   cursor: pointer;
@@ -39,7 +40,7 @@ body {
   max-width: 1800px;
 }
 .hamburger {
-  font-size: 36px;
+  font-size: 2.25em;
 }
 .nav {
   background-color: #ecf7f7;
@@ -133,49 +134,30 @@ body {
   margin-inline-end: auto;
   width: fit-content;
 }
-.whatsapp {
+.whatsapp, .facebook, .instagram, .linkedin {
 border-radius: 8px;
-border: 1px solid #eda12f;
 font-size: 45px;
 padding: 8px;
+margin-right: 0.6rem;
+}
+.whatsapp {
+border: 1px solid #eda12f;
 fill: #fafefe;
 background-color: #eda12f;
-margin-right: 0.6rem;
 }
 .facebook {
-border-radius: 8px;
 border: 1px solid white;
-font-size: 45px;
-padding: 8px;
 fill: #02979d;
 background-color: white;
-margin-right: 0.6rem;
 }
 .instagram {
-border-radius: 8px;
 border: 1px solid #D74E7F;
-font-size: 45px;
-padding: 8px;
 fill: #fafefe;
 background-color: #D74E7F;
-margin-right: 0.6rem;
 }
-
 .linkedin {
-border-radius: 8px;
-font-size: 45px;
-padding: 8px;
 fill: #024A9D;
 background-color: #fafefe;
-margin-right: 0.6rem;
-}
-.call {
-  margin-bottom: 0.5rem;
-  justify-content: center;
-  margin-right: 0.6rem;
-  width: 45px;
-  height: 45px;
-  border-radius: 8px;
 }
 .language {
   background: transparent;
@@ -184,25 +166,12 @@ margin-right: 0.6rem;
 .Country {
   position: flex;
   align-items: center;
-  margin-top: 7px;
-  margin-inline-start: 35px;
-  bottom: 46.62px;
-  left: 31.25%;
-  right: 67.01%;
   font-family: "Gilroy-Regular", sans-serif;
   font-size: 18px;
-  line-height: 0px;
   text-transform: capitalize;
-  background-size: 0;
 }
 .toggle {
-  margin-top: 5px;
-}
-.flag {
-  left: 28.82%;
-  right: 69.24%;
-  top: 1.4%;
-  bottom: 98.02%;
+  margin-top: 4px;
 }
 body {
   font-size: 16px;
@@ -343,8 +312,8 @@ body {
   font-family: "Gilroy-Regular", sans-serif;
   font-size: 0.82em;
   width: 100%;
+  margin-top: 12px;
 }
-
 .container {
   display: flex;
   justify-content: space-between;
@@ -353,10 +322,10 @@ body {
 }
 
 .dropdown { 
-    display: inline-block; 
-    position: relative; 
-    cursor: pointer;
-     font-size: 16px;
+  display: inline-block; 
+  position: relative; 
+  cursor: pointer;
+  font-size: 16px;
   font-weight: 400;
   color: #000b0c !important;
 } 
@@ -527,7 +496,8 @@ margin: 0 auto;
   }
   .language {
     text-align: center;
-  }.nav-elements {
+  }
+  .nav-elements {
   position: absolute;
   right: 0;
   -webkit-transform: translateY(53%);
@@ -538,12 +508,10 @@ margin: 0 auto;
   transition: all 0.3s ease-in;
   overflow: hidden;
 }
-
 .nav-elements.active {
   width: 270px;
   overflow: visible;
 }
-
 .nav-elements > ul {
   background-color: #ecf7f7;
   width: 270px;
@@ -552,7 +520,6 @@ margin: 0 auto;
   display: flex; 
   flex-direction: column; 
 }
-
 .nav-elements > ul > li {
   margin: 10px 30px; 
   list-style-type: none; 
