@@ -160,6 +160,15 @@ fill: #fafefe;
 background-color: #D74E7F;
 margin-right: 0.6rem;
 }
+
+.linkedin {
+border-radius: 8px;
+font-size: 45px;
+padding: 8px;
+fill: #024A9D;
+background-color: #fafefe;
+margin-right: 0.6rem;
+}
 .call {
   margin-bottom: 0.5rem;
   justify-content: center;
