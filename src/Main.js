@@ -27,6 +27,8 @@ import Seminarreg from "./pages/seminarreg";
 import Courseinfo from "./pages/courseinfo";
 import Courseinfoch from "./pages/courseinfoch";
 import Businessadults from "./pages/businessadults";
+import Position from "./pages/position";
+import Businesschildren from "./pages/businesschildren";
 import Map from "./pages/map";
 import Header from "./header";
 import Navbar from "./Navbar";
@@ -67,7 +69,9 @@ export default function Main() {
           <Route path="courseinfo" element={<Courseinfo />} />
           <Route path="courseinfoch" element={<Courseinfoch />} />
           <Route path="businessadults" element={<Businessadults />} />
+          <Route path="businesschildren" element={<Businesschildren />} />
           <Route path="map" element={<Map />} />
+          <Route path="position" element={<Position />} />
         </Route>
       </Routes>
     </BrowserRouter>

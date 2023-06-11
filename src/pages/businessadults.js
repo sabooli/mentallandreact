@@ -7,6 +7,8 @@ import Badone from "../icons/GroupBad1.svg";
 import Badtwo from "../icons/GroupBad2.svg";
 import { Link } from "react-router-dom";
 import Customercomments from "./customercomments";
+import Position from "./position";
+import Adultcourses from "./adultcourses";
 
 
 
@@ -22,10 +24,25 @@ export default function Businessadults() {
             height: "calc(130vh - 50px)",
           }}
         >
-          <Header className="whatsapp" />
+          <Header className="linkedin" />
           <Navbar />
+          <div className="adbeexpert">
+            <h1 className="adbeexpertheading">
+              let's start something big together
+            </h1>
+            <div className="adbeexpertwords">
+              Lorem ipsum dolor sit amet consectetur. Viverra pellentesque
+              volutpat quis in erat. Sit aenean eget nascetur mus non. Enim a ut
+              vitae felis convallis. Egestas enim diam ac nisi orci id tellus
+              lobortis. Lacus in etiam rhoncus.
+            </div>
+            <Link className="adbeexpertReg">
+              <span>Resigter now</span>
+            </Link>
+          </div>
         </div>
         <div className="business">
+          <Adultcourses heading="ADULT COURSES" />
           <div className="businessadone">
             <img src={Badone} width="100%" height={480} />
             <div className="Badone">
@@ -67,6 +84,18 @@ export default function Businessadults() {
           </div>
           <div>
             <h3 className="ljo mb-5">the latest job opportunities</h3>
+            <div className="posdesign">
+              <Position /> <Position />
+            </div>
+            <div className="posdesign">
+              <Position /> <Position />
+            </div>
+            <div className="posdesign">
+              <Position /> <Position />
+            </div>
+            <Link to="/" className="seeAll mt-5 mb-3">
+              <span className="see">See all</span>
+            </Link>
             <div className="ljocases"> </div>
           </div>
           <div className="stussay">

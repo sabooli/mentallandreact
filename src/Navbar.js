@@ -39,7 +39,9 @@ export default function Navbar() {
               style={({ isActive }) => ({
                 color: isActive ? "#02979d" : "#000b0c",
                 background: isActive ? "#ecf7f7" : "#ecf7f7",
-              })} className="dropdown">
+              })}
+              className="dropdown"
+            >
               {t("Our Services")} <MdKeyboardArrowDown />
             </NavLink>
             <div className="dropdown-content">
@@ -98,10 +100,21 @@ export default function Navbar() {
                   </NavLink>
                 </li>
               </ul>
-               <NavLink to="/pages/psychology">{t("Business")}</NavLink>
+              <NavLink to="/pages/psychology">{t("Business")}</NavLink>
               <ul className="branch">
-                <li> <NavLink to="/pages/businessadults">{t("Business for adults")}</NavLink></li>
-                </ul>
+                <li>
+                  {" "}
+                  <NavLink to="/pages/businessadults">
+                    {t("Business for adults")}
+                  </NavLink>
+                </li>
+                <li>
+                  {" "}
+                  <NavLink to="/pages/businesschildren">
+                    {t("Business for children")}
+                  </NavLink>
+                </li>
+              </ul>
             </div>
           </li>
           <li>
