@@ -4,7 +4,7 @@ import Header from "../header";
 import Navbar from "../Navbar";
 import Footer from "../footer";
 import { useTranslation } from "react-i18next";
-import homepsychology from "../icons/Rectangle 11home.svg";
+import homepsychology from "../icons/Rectangle 11home.png";
 import { Link } from "react-router-dom";
 import telescope from "../icons/Group 768.svg";
 import mission from "../icons/Group 768m.svg";
