@@ -4,7 +4,7 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   en: {
     translation: {
-      apiUrl: "http://www.mentalland.com/api/V1/homepage/faqs_english",
+      apiUrl: "https://www.mentalland.com/api/V1/homepage/faqs_english",
       DEPRESSION: "DEPRESSION",
       Home: "Home",
       About: "About",
@@ -14,7 +14,7 @@ const resources = {
   },
   fa: {
     translation: {
-      apiUrl: "http://www.mentalland.com/api/V1/homepage/faqs_persian",
+      apiUrl: "https://www.mentalland.com/api/V1/homepage/faqs_persian",
       DEPRESSION: "افسردگی",
       Home: "خانه",
       About: "درباره ما",

@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 export default function Counsel() {
 const {id} = useParams();
 const [item, setItem] = useState({
+  index: "",
   Fname: "",
   Lname: "",
   avatar: "",
@@ -21,7 +22,12 @@ const [item, setItem] = useState({
 });
 
 useEffect(() => {
-  fetch("https://mentalland.com/api/V1/homepage/consts_list_homepage")
+   const url ="https://mentalland.com/api/V1/homepage/consts_list_homepage";
+    fetch(url, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
     .then((response) => response.json())
     .then((data) => {
       const selectedItem = data.data[id - 1];
@@ -72,12 +78,12 @@ useEffect(() => {
                         </>
                       ))}
                   </span>
-                </div>                
+                </div>
               </div>
               <div className="part mt-4 container-fluid">
-              <Form.Select aria-label="period">
-                <option>Select the time period</option>
-              </Form.Select>
+                <Form.Select aria-label="period">
+                  <option>Select the time period</option>
+                </Form.Select>
                 <div className="hhh mt-4">
                   <Link to="/pages/consultantadults" className="counsel">
                     <div className="justnow">Start Counseling</div>
