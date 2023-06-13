@@ -2,8 +2,8 @@ import React from "react";
 import Header from "../header";
 import Navbar from "../Navbar";
 import Footer from "../footer";
-import colorful from "../icons/Group 1250.png";
-import childartdep from "../icons/CH1.svg";
+import colorful from "../icons/Group 1250 (1).png";
+import childartdep from "../icons/Rectangle 83.png";
 import {
   GiMusicalNotes,
   GiPaintBrush,
@@ -11,14 +11,14 @@ import {
   GiBallerinaShoes,
 } from "react-icons/gi";
 import { BsPencilSquare, BsArrowUpRight } from "react-icons/bs";
-import chpainting from "../icons/CH2.svg";
-import chmusic from "../icons/CH3.svg";
+import chpainting from "../icons/Group 974.png";
+import chmusic from "../icons/Group 940.png";
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import musician from "../icons/Rectangle 92.svg";
-import chact from "../icons/CH4.svg";
-import chwrite from "../icons/CH5.svg";
-import chdance from "../icons/CH6.svg";
+import musician from "../icons/Rectangle 92.png";
+import chact from "../icons/Group 942.png";
+import chwrite from "../icons/Group 1069.png";
+import chdance from "../icons/Group 943.png";
 import Patientcomments from "./patientcomments";
 import Coach from "./coach";
 
@@ -80,19 +80,22 @@ export default function Artchildren() {
               <hr />
             </ul>
           </div>
-          <LazyLoadImage
-            src={childartdep}
-            className="adultartdepimg"
-            alt="adultartdep"
-          />
+          <div className="childartdepimg">
+            <LazyLoadImage
+              src={childartdep}
+              className="img-fluid childartdep"
+              alt="adultartdep"
+            />
+          </div>
         </div>
         <div className="adpainting">
-          <LazyLoadImage
-            src={chpainting}
-            height={460}
-            className="adpaintingimg"
-            alt="Mentalland painting course"
-          />
+          <div className="adpaintingimg">
+            <LazyLoadImage
+              src={chpainting}
+              className="img-fluid"
+              alt="Mentalland painting course"
+            />
+          </div>
           <div>
             <h2 className="adpaintingheading">mentalland painting course</h2>
             <div className="adpaintingwords">
@@ -110,7 +113,7 @@ export default function Artchildren() {
             </Link>
           </div>
         </div>
-        <div className="admusic">
+        <div className="chmusic">
           <div>
             <h2 className="admusicheading">our music courses</h2>
             <div className="admusicwords">
@@ -127,25 +130,26 @@ export default function Artchildren() {
               <span className="more">Learn more</span>
             </Link>
           </div>
-          <LazyLoadImage
-            height={460}
-            src={chmusic}
-            className="admusicimg"
-            alt="Mentalland music course"
-          />
+          <div className="chmusicimg">
+            <LazyLoadImage
+              src={chmusic}
+              className="img-fluid"
+              alt="Mentalland music course"
+            />
+          </div>
         </div>
         <div className="musiccourse">
-          <LazyLoadImage
-            src={musician}
-            height={380}
-            className="musician"
-            alt="learn music with mentalland Camero Smith"
-          />
+          <div className="musician">
+            <img
+              src={musician}
+              className="img-fluid"
+              alt="learn music with mentalland Camero Smith"
+            />
+          </div>
           <div className="musiclearn">
-            Join us to learn music with{" "}
-            <div className="cameron">CAMERON SMITH</div> April 2023
-            <br />{" "}
-            <Link to="/" className="learnMoreR ">
+            Let's Strat Playing Guitar
+            <div className="cameron mb-4 mt-4">This April</div>
+            <Link to="/" className="learnMoreR mt-3">
               <span className="moreR">Register Now</span>
             </Link>
           </div>
@@ -169,20 +173,22 @@ export default function Artchildren() {
               <span className="more">Learn more</span>
             </Link>
           </div>
-          <LazyLoadImage
-            src={chact}
-            height={480}
-            className="adactimg"
-            alt="Mentalland act course"
-          />
+          <div className="chactimg">
+            <LazyLoadImage
+              src={chact}
+              className="img-fluid"
+              alt="Mentalland act course"
+            />
+          </div>
         </div>
         <div className="adwrite">
-          <LazyLoadImage
-            src={chwrite}
-            height={460}
-            className="adwritingimg"
-            alt="Mentalland writing course"
-          />
+          <div className="adwritingimg">
+            <LazyLoadImage
+              src={chwrite}
+              className="img-fluid"
+              alt="Mentalland writing course"
+            />
+          </div>
           <div>
             <h2 className="adwritingheading">
               best writing courses in mentalland
@@ -202,7 +208,7 @@ export default function Artchildren() {
             </Link>
           </div>
         </div>
-        <div className="addance">
+        <div className="chdance">
           <div>
             <h2 className="addanceheading">enjoy Dancing </h2>
             <div className="addancewords">
@@ -219,12 +225,13 @@ export default function Artchildren() {
               <span className="more">Learn more</span>
             </Link>
           </div>
-          <LazyLoadImage
-            src={chdance}
-            height={450}
-            className="addanceimg"
-            alt="Mentalland dance course"
-          />
+          <div className="chdanceimg">
+            <LazyLoadImage
+              src={chdance}
+              className="img-fluid"
+              alt="Mentalland dance course"
+            />
+          </div>
         </div>
         <div className="chinstructors">
           <div className="instructorlist">

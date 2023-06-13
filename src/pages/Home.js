@@ -27,7 +27,7 @@ export default function Home() {
     setActiveButton(index);
   };
    
-const apiUrl = t("apiUrl");
+const apiUrl = t("");
 
 useEffect(() => {
   fetch(apiUrl)
@@ -116,7 +116,7 @@ useEffect(() => {
                     </div>
                   </span>
                 </div>
-                <div className="setup">
+                <div className="setup mt-5">
                   <div className="homepsy">
                     <div className="words">
                       Lorem ipsum dolor sit amet consectetur. Pretium rutrum
@@ -134,11 +134,12 @@ useEffect(() => {
                     </Link>
                   </div>
                   <div>
+                    <div className="homepsychology">
                     <img
                       src={homepsychology}
-                      className="homepsychology"
+                      className="img-fluid"
                       alt="psychology"
-                    />
+                    /></div>
                   </div>
                 </div>
               </div>

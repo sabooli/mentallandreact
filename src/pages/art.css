@@ -34,9 +34,8 @@
 body {
   font-size: 16px;
   margin: 0 auto;
-}
-.art {
-   max-width: 1800px;
+  max-width: 1800px !important;
+  width: 100% !important;
 }
 .AH {
 max-width: 1168px;
@@ -263,9 +262,9 @@ font-family: "Gilroy-Medium", sans-serif;
   padding: 0;
 }
  .artsdep ul li {
-  padding-top: 5%;
+  padding-top: 4%;
   font-family: "Gilroy-Regular", sans-serif;
-  font-size: 1.1em;
+  font-size: 1.05em;
 }
 .artsdepheading {
   font-family: "Alice", sans-serif;
@@ -283,11 +282,11 @@ float: right;
 .here {
 color: #D74E7F;
 }
-.adpainting, .admusic, .adact, .adwrite, .addance {
+.adpainting, .admusic, .adact, .adwrite, .addance, .chmusic, .chdance {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.admusic {
+.admusic, .chmusic {
   margin-top: 130px;
   margin-bottom: 130px;
 }
@@ -308,9 +307,28 @@ color: #D74E7F;
   color: #000b0c;
   margin-bottom: 6%;
 }
-.admusicimg, .adpaintingimg, .adactimg, .adwritingimg, .addanceimg {
+.admusicimg, .adactimg, .adwritingimg, .addanceimg {
   width: 100%;
 }
+.chdanceimg {
+  padding-inline: 18%;
+}
+.adpainting img {
+  display: inline-block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+.chmusicimg, .chactimg, .adwritingimg, .adpaintingimg, .childartdepimg  {
+    padding-inline: 12%;
+}
+.chmusic img, .chact img, .adwrite img, .chdance img, .childartdep {
+  display: inline-block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
 .adactimg {
   margin-inline-start: 40px;
 }
@@ -335,10 +353,16 @@ color: #D74E7F;
   margin-top: 8%;
   text-transform: capitalize;
 }
+.musician img {
+   display: inline-block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  margin-top: -65px;
+  margin-inline-start: 150px;
+}
 .musician {
-  display: inline-block;
-  margin-top: -60px;
-  margin-inline-start: 85px;
+max-width: 500px;
 }
 .cameron {
   font-family: "Alice", sans-serif;
@@ -373,7 +397,7 @@ color: #D74E7F;
   background-color: #EAF6F6;
   height: 374px;
   margin-inline: -85px;
-  margin-top: 20px; 
+  margin-top: 150px; 
   margin-bottom: 150px;
 }
 .needinstructor {
@@ -449,24 +473,26 @@ margin-inline-start: 0px;
     flex-direction: column;
     text-align: center;
 }
-.adpainting, .admusic, .adultartdep, .adact, .adwrite, .addance {
+.adpainting, .admusic, .adultartdep, .adact, .adwrite, .addance, .chmusic, .chdance {
   grid-template-columns: 1fr;
   display: flex;
   flex-direction:column-reverse;
   row-gap: 15px;
 }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
   .musiccourse {
   display: flex;
   grid-template-columns: 1fr;
   flex-direction: column-reverse;
   height: 430px;
-  row-gap: 30px;
+  row-gap: 80px;
   }
-.musician {
-  height: 240px;
+.musician img {
+  margin-inline-start: 45%;
+  max-width: 50%;
 }
+
 }
 @media screen and (max-width: 700px) {
     .AHwords {
@@ -475,6 +501,9 @@ margin-inline-start: 0px;
     .ring {
         margin-inline: 35%;
     }
+    .chmusicimg, .chactimg, .adwritingimg, .adpaintingimg, .childartdepimg  {
+    padding-inline: 0;
+}
 }
 @media screen and (max-width: 500px) {
 .MADheading, .therapyheading, .adpaintingheading, .admusicheading, .adactheading, .adwritingheading, .addanceheading {

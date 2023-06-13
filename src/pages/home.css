@@ -124,11 +124,13 @@ body {
   padding-inline-start: 5%;
 }
 .words {
-  margin-bottom: 7%;
+  margin-bottom: 10%;
 }
-.homepsychology {
-  width: 100%;
-  height: 347px;
+.homepsychology img {
+max-width: 95%; 
+height: auto;
+display: inline-block;
+margin: 0 auto;
 }
 .introduction {
   font-family: "Alice", sans-serif;
@@ -434,6 +436,12 @@ margin-bottom: 150px;
 }
 
 @media screen and (max-width: 900px) {
+  .setup {
+  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+}
   .band, .circles, .mission {
    grid-template-columns: 1fr 1fr;
    grid-template-rows: 1fr 1fr;
@@ -487,12 +495,6 @@ margin-bottom: 150px;
   .group731 {
     display: none;
   }
-  .setup {
-  grid-template-columns: 1fr;
-  display: flex;
-  flex-direction: column-reverse;
-  margin-top: 20%;
-}
 }
 @media screen and (max-width: 600px) {
  .band {
