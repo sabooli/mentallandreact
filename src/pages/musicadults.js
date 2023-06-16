@@ -24,7 +24,7 @@ export default function Musicadults() {
             backgroundImage: `url("${musicbg}")`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
-            backgroundPosition: "bottom center",
+            backgroundPosition: "right center",
             height: "calc(130vh - 50px)",
           }}
         >
