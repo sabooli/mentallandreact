@@ -41,7 +41,7 @@ export default function Art() {
           </div>
           <div className="thumbnailring">
             <div className="ring">
-              <span>dddddddddd</span>
+              <span></span>
             </div>
           </div>
         </div>
