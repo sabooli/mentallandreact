@@ -220,17 +220,17 @@ row-gap: 50px;
 flex-direction: column;
 }
 .adbeexpert, .chbeexpert {
-  margin: 40px 40px 20px;
+  margin: 20px 40px 20px;
 }
 .adbeexpertwords, .chbeexpertwords {
 display: none;
 }
 .adbeexpertheading, .chbeexpertheadig {
-  font-size: 2em;
+  font-size: 1.8em;
 }
 }
 @media screen and (max-width: 600px) {
-.posdesign, .businessadone, .businessadtwo, .ljo, .stussay {
+.posdesign, .businessadone, .businessadtwo, .ljo, .stussay, .courR  {
   margin-inline: -45px;
 }
 
@@ -245,6 +245,7 @@ display: none;
 }
 }
 @media screen and (max-width: 470px) {
+
 .coa {
   font-size: 1.6em;
 }
@@ -256,9 +257,6 @@ font-size: 1.8em;
 }
 }
 @media screen and (max-width: 430px) {
-.business {
-  margin-inline: 65px;
-}
 .coa {
   font-size: 1.5em;
 }

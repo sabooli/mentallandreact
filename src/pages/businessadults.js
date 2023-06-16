@@ -40,7 +40,8 @@ export default function Businessadults() {
           </div>
         </div>
         <div className="business">
-          <Adultcourses heading="ADULT COURSES" />
+          <div className="courR">
+          <Adultcourses heading="ADULT COURSES" /></div>
           <div className="businessadone">
             <div className="Badoneph">
             <img
