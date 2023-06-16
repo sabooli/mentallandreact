@@ -523,6 +523,15 @@ margin: 0 auto;
   margin: 10px 30px; 
   list-style-type: none; 
 }
+ .flag {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+.search {
+  display: flex;
+    justify-content: center;
+}
 }
 @media screen and (max-width: 600px) {
   .main-container {
@@ -545,7 +554,5 @@ margin: 0 auto;
   }
 }
 @media screen and (max-width: 450px) {
-  .flag {
-    margin-inline-end: 40%;
-  }
+ 
 }
