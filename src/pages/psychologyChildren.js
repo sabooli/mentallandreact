@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../header";
 import Navbar from "../Navbar";
-import union from "../icons/Group 1249Ch.png";
+import union from "../icons/Group 1249Ch (2).png";
 import Consultants from "./consultants";
 import Patientcomments from "./patientcomments";
 import Footer from "../footer";
@@ -14,9 +14,9 @@ import gsol from "../icons/Group-sol.svg";
 import grel from "../icons/Group-rel.svg";
 import gadhd from "../icons/Group-adhd.svg";
 import ok from "../icons/okVector.svg";
-import gchpsy from "../icons/Rectangle-chpsy.svg";
-import charticle from "../icons/charticle.svg";
-import charticle2 from "../icons/charticle2.svg";
+import gchpsy from "../icons/Rectangle 67ch.png";
+import charticle from "../icons/Group 928.png";
+import charticle2 from "../icons/Group 930.png";
 
 
 export default function Psychildren() {
@@ -26,7 +26,7 @@ export default function Psychildren() {
           style={{
             backgroundImage: `url("${union}")`,
             backgroundSize: "cover",
-            backgroundPosition: "top center",
+            backgroundPosition: "bottom center",
             backgroundRepeat: "no-repeat",
             height: "calc(130vh - 50px)",
           }}
@@ -129,11 +129,13 @@ export default function Psychildren() {
                     dolor sit amet consectetur.
                   </div>
                 </div>
-                <img
-                  src={gchpsy}
-                  className="meetchph img-fluid"
-                  alt="adults psychology"
-                />
+                <div className="meetchph">
+                  <img
+                    src={gchpsy}
+                    className="img-fluid"
+                    alt="adults psychology"
+                  />
+                </div>
               </div>
             </div>
             <div className="partc">
@@ -159,20 +161,24 @@ export default function Psychildren() {
                     Vitae dui convallis euismod malesuada praesent molestie.
                   </div>
                 </div>
-                <img
-                  src={charticle}
-                  className="articleph img-fluid"
-                  alt="adults psychology"
-                />
+                <div className="articleph">
+                  <img
+                    src={charticle}
+                    className="img-fluid"
+                    alt="adults psychology"
+                  />
+                </div>
               </div>
             </div>
             <div className="parte">
               <div className="article2child">
-                <img
-                  src={charticle2}
-                  className="article2ph"
-                  alt="adults psychology"
-                />
+                <div className="article2ph">
+                  <img
+                    src={charticle2}
+                    className="img-fluid"
+                    alt="adults psychology"
+                  />
+                </div>
                 <div className="article2ch">
                   <h2 className="article2title">Children Psychology Article</h2>
                   <div className="article2content">

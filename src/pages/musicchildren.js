@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../header";
 import Navbar from "../Navbar";
 import Footer from "../footer";
-import musicbg from "../icons/Group 1067--.png";
+import musicbg from "../icons/Group 1067 - .png";
 import Gui from "../icons/Group 1127.svg";
 import Pia from "../icons/Group 1128.svg";
 import Si from "../icons/Group 1129.svg";
@@ -10,11 +10,11 @@ import Tru from "../icons/Group 1130.svg";
 import Vio from "../icons/Group 1131.svg";
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import Guitarad from "../icons/Group 1141.svg";
-import Pianoad from "../icons/Group 1142.svg";
-import Singad from "../icons/Group 1144.svg";
-import Trumpetch from "../icons/Group 1145.svg";
-import Violinad from "../icons/Group 1145.svg";
+import Guitarad from "../icons/Group 1141.png";
+import Pianoad from "../icons/Group 1142.png";
+import Singad from "../icons/Group 1144.png";
+import Trumpetch from "../icons/Group 1145.png";
+import Violinad from "../icons/Rectangle 311.png";
 import Patientcomments from "./patientcomments";
 
 export default function Musicchildren() {
@@ -26,16 +26,14 @@ export default function Musicchildren() {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundAttachment: "fixed",
-          backgroundPosition: "center center",
+          backgroundPosition: "top center",
           height: "calc(130vh - 50px)",
         }}
       >
         <Header className="instagram" />
         <Navbar />
         <div className="musicforchildren">
-          <h1 className="musicforchildrenheading">
-            Enjoy the music
-          </h1>
+          <h1 className="musicforchildrenheading">Enjoy the music</h1>
           <div className="musicforchildrenwords ">
             Lorem ipsum dolor sit amet consectetur. Viverra pellentesque
             volutpat quis in erat. Sit aenean eget nascetur mus non.
@@ -52,12 +50,13 @@ export default function Musicchildren() {
         </div>
 
         <div className="adpainting">
-          <LazyLoadImage
-            src={Guitarad}
-            height={460}
-            className="adpaintingimg"
-            alt="Mentalland guitar course for adults"
-          />
+          <div className="adpaintingImg">
+            <LazyLoadImage
+              src={Guitarad}
+              className="img-fluid"
+              alt="Mentalland guitar course for adults"
+            />
+          </div>
           <div>
             <h2 className="adpaintingheading">Guitar course</h2>
             <div className="adpaintingwords">
@@ -92,20 +91,22 @@ export default function Musicchildren() {
               <span className="more">Register Now</span>
             </Link>
           </div>
-          <LazyLoadImage
-            height={460}
-            src={Pianoad}
-            className="admusicimg"
-            alt="Mentalland piano course for adults"
-          />
+          <div className="admusicImg">
+            <LazyLoadImage
+              src={Pianoad}
+              className="img-fluid"
+              alt="Mentalland piano course for adults"
+            />
+          </div>
         </div>
         <div className="adwrite">
-          <LazyLoadImage
-            src={Singad}
-            height={460}
-            className="adwritingimg"
-            alt="Mentalland singing course for adults"
-          />
+          <div className="adwritingImg">
+            <LazyLoadImage
+              src={Singad}
+              className="img-fluid"
+              alt="Mentalland singing course for adults"
+            />
+          </div>
           <div>
             <h2 className="adwritingheading">Singing course </h2>
             <div className="adwritingwords">
@@ -140,21 +141,23 @@ export default function Musicchildren() {
               <span className="more">Register Now</span>
             </Link>
           </div>
-          <LazyLoadImage
-            src={Trumpetch}
-            height={450}
-            className="addanceimg"
-            alt="Mentalland trumpet course for adults"
-          />
+          <div className="addanceImg">
+            <LazyLoadImage
+              src={Trumpetch}
+              className="img-fluid"
+              alt="Mentalland trumpet course for adults"
+            />
+          </div>
         </div>
 
         <div className="adwrite">
-          <LazyLoadImage
-            src={Violinad}
-            height={460}
-            className="adwritingimg"
-            alt="Mentalland violin course for adults"
-          />
+          <div className="adwritingImg">
+            <LazyLoadImage
+              src={Violinad}
+              className="img-fluid"
+              alt="Mentalland violin course for adults"
+            />
+          </div>
           <div>
             <h2 className="adwritingheading">Violin course </h2>
             <div className="adwritingwords">

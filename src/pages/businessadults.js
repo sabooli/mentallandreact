@@ -3,8 +3,8 @@ import Header from "../header";
 import Navbar from "../Navbar";
 import Footer from "../footer";
 import adbusiness from "../icons/Group 1252.png";
-import Badone from "../icons/GroupBad1.svg";
-import Badtwo from "../icons/GroupBad2.svg";
+import Badone from "../icons/Group 953.png";
+import Badtwo from "../icons/Group 953t.png";
 import { Link } from "react-router-dom";
 import Customercomments from "./customercomments";
 import Position from "./position";
@@ -42,12 +42,12 @@ export default function Businessadults() {
         <div className="business">
           <Adultcourses heading="ADULT COURSES" />
           <div className="businessadone">
+            <div className="Badoneph">
             <img
               src={Badone}
-              width="100%"
-              height={480}
+              className="img-fluid"
               alt="digital marketing"
-            />
+            /></div>
             <div className="Badone">
               <h2 className="Badoneheading">future of digital marketing</h2>
               <div className="Badonewords mb-5 mt-4">
@@ -83,12 +83,12 @@ export default function Businessadults() {
                 <span className="more">Learn more</span>
               </Link>
             </div>
+            <div className="Badtwoph">
             <img
               src={Badtwo}
-              width="100%"
-              height={460}
+              className="img-fluid"
               alt="digital marketing"
-            />
+            /></div>
           </div>
           <div>
             <h3 className="ljo mb-5">the latest job opportunities</h3>

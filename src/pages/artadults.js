@@ -3,7 +3,7 @@ import Header from "../header";
 import Navbar from "../Navbar";
 import Footer from "../footer";
 import colorful from "../icons/Group 1067.png";
-import adultartdep from "../icons/adultart.svg";
+import adultartdep from "../icons/Rectangle 83ad.png";
 import {
   GiMusicalNotes,
   GiPaintBrush,
@@ -11,14 +11,14 @@ import {
   GiBallerinaShoes,
 } from "react-icons/gi";
 import { BsPencilSquare, BsArrowUpRight } from "react-icons/bs";
-import adpainting from "../icons/Rectangle 79.svg";
-import admusic from "../icons/Rectangle 87.svg";
+import adpainting from "../icons/Mask group.png";
+import admusic from "../icons/Rectangle 87.png";
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import musician from "../icons/Rectangle 92.svg";
-import adact from "../icons/Group 1068.svg";
-import adwrite from "../icons/Rectangle 129.svg";
-import addance from "../icons/Group 938.svg";
+import musician from "../icons/Rectangle 92.png";
+import adact from "../icons/Group 1068.png";
+import adwrite from "../icons/Rectangle 129.png";
+import addance from "../icons/Group 938.png";
 import Patientcomments from "./patientcomments";
 import Coach from "./coach";
 
@@ -31,7 +31,7 @@ export default function Artadults() {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundAttachment: "fixed",
-          backgroundPosition: "center center",
+          backgroundPosition: "top center",
           height: "calc(130vh - 50px)",
         }}
       >
@@ -81,19 +81,22 @@ export default function Artadults() {
               <hr />
             </ul>
           </div>
-          <LazyLoadImage
-            src={adultartdep}
-            className="adultartdepimg"
-            alt="adultartdep"
-          />
+          <div className="adultartdepimg">
+            <LazyLoadImage
+              src={adultartdep}
+              className="img-fluid"
+              alt="adultartdep"
+            />
+          </div>
         </div>
         <div className="adpainting">
-          <LazyLoadImage
-            src={adpainting}
-            height={460}
-            className="adpaintingimg"
-            alt="Mentalland painting course"
-          />
+          <div className="adpaintingimg">
+            <LazyLoadImage
+              src={adpainting}
+              className="img-fluid"
+              alt="Mentalland painting course"
+            />
+          </div>
           <div>
             <h2 className="adpaintingheading">mentalland painting course</h2>
             <div className="adpaintingwords">
@@ -128,20 +131,22 @@ export default function Artadults() {
               <span className="more">Learn more</span>
             </Link>
           </div>
-          <LazyLoadImage
-            height={460}
-            src={admusic}
-            className="admusicimg"
-            alt="Mentalland music course"
-          />
+          <div className="admusicimg">
+            <LazyLoadImage
+              src={admusic}
+              className="img-fluid"
+              alt="Mentalland music course"
+            />
+          </div>
         </div>
         <div className="musiccourse">
-          <LazyLoadImage
-            src={musician}
-            height={380}
-            className="musician"
-            alt="learn music with mentalland Camero Smith"
-          />
+          <div className="musician">
+            <img
+              src={musician}
+              className="img-fluid"
+              alt="learn music with mentalland Camero Smith"
+            />
+          </div>
           <div className="musiclearn">
             Join us to learn music with{" "}
             <div className="cameron">CAMERON SMITH</div> April 2023
@@ -170,20 +175,22 @@ export default function Artadults() {
               <span className="more">Learn more</span>
             </Link>
           </div>
-          <LazyLoadImage
-            src={adact}
-            height={480}
-            className="adactimg"
-            alt="Mentalland act course"
-          />
+          <div className="adactimg">
+            <LazyLoadImage
+              src={adact}
+              className="img-fluid"
+              alt="Mentalland act course"
+            />
+          </div>
         </div>
         <div className="adwrite">
-          <LazyLoadImage
-            src={adwrite}
-            height={460}
-            className="adwritingimg"
-            alt="Mentalland writing course"
-          />
+          <div className="adwritingimg">
+            <LazyLoadImage
+              src={adwrite}
+              className="img-fluid"
+              alt="Mentalland writing course"
+            />
+          </div>
           <div>
             <h2 className="adwritingheading">
               best writing courses in mentalland
@@ -220,12 +227,13 @@ export default function Artadults() {
               <span className="more">Learn more</span>
             </Link>
           </div>
-          <LazyLoadImage
-            src={addance}
-            height={450}
-            className="addanceimg"
-            alt="Mentalland dance course"
-          />
+          <div className="addanceimg">
+            <LazyLoadImage
+              src={addance}
+              className="img-fluid"
+              alt="Mentalland dance course"
+            />
+          </div>
         </div>
         <div className="instructors">
           <div className="instructorlist">

@@ -3,9 +3,9 @@ import Header from "../header";
 import Navbar from "../Navbar";
 import Footer from "../footer";
 import chbusiness from "../icons/Group 1254.png";
-import Bchone from "../icons/Rectanglechbuone.svg";
-import Bchtwo from "../icons/Groupchbutwo.svg";
-import Bchthree from "../icons/Groupchbuthree.svg";
+import Bchone from "../icons/Rectangle 132.png";
+import Bchtwo from "../icons/Group 949.png";
+import Bchthree from "../icons/Group 952.png";
 import { Link } from "react-router-dom";
 import Customercomments from "./customercomments";
 import Position from "./position";
@@ -43,7 +43,7 @@ export default function Businessadults() {
       </div>
       <div className="business">
         <Adultcourses heading="CHILDREN & TEENAGERS COURSES" />
-        <div className="businessadtwo chbubg">
+        <div className="businesschtwo chbubg">
           <div className="Badtwo">
             <h2 className="Badtwoheading">
               about digital marketing for children & teenagers
@@ -62,10 +62,18 @@ export default function Businessadults() {
               <span className="more">Learn more</span>
             </Link>
           </div>
-          <img src={Bchone} width="100%" height={460} alt="digital marketing for children" />
+          <div className="Bchoneph">
+            <img
+              src={Bchone}
+              className="img-fluid"
+              alt="digital marketing for children"
+            />
+          </div>
         </div>
         <div className="businessadone">
-          <img src={Bchtwo} width="100%" height={480} alt="IT for children" />
+          <div className="Bchtwoph">
+            <img src={Bchtwo} className="img-fluid" alt="IT for children" />
+          </div>{" "}
           <div className="Badone">
             <h2 className="Badoneheading">IT for children & TEENAGERS</h2>
             <div className="Badonewords mb-5 mt-4">
@@ -101,7 +109,12 @@ export default function Businessadults() {
               <span className="more">Learn more</span>
             </Link>
           </div>
-          <img src={Bchthree} width="100%" height={460} alt="MBA for children" />
+          <div className="Bchthreeph">
+          <img
+            src={Bchthree}
+            className="img-fluid"
+            alt="MBA for children"
+          /></div>
         </div>
         <div>
           <h3 className="ljo mb-5">the latest job opportunities</h3>

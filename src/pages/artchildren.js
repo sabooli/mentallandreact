@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../header";
 import Navbar from "../Navbar";
 import Footer from "../footer";
-import colorful from "../icons/Group 1250 (1).png";
+import colorful from "../icons/Group 1250 (2).png";
 import childartdep from "../icons/Rectangle 83.png";
 import {
   GiMusicalNotes,
@@ -31,7 +31,7 @@ export default function Artchildren() {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundAttachment: "fixed",
-          backgroundPosition: "center center",
+          backgroundPosition: "bottom center",
           height: "calc(130vh - 50px)",
         }}
       >
@@ -181,8 +181,8 @@ export default function Artchildren() {
             />
           </div>
         </div>
-        <div className="adwrite">
-          <div className="adwritingimg">
+        <div className="chwrite">
+          <div className="chwritingimg">
             <LazyLoadImage
               src={chwrite}
               className="img-fluid"

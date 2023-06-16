@@ -1,15 +1,15 @@
 import React from "react";
 import Header from "../header";
 import Navbar from "../Navbar";
-import back from "../icons/Group 1247.png";
+import back from "../icons/Group 1247 (1).png";
 import depression from "../icons/Group 806.svg";
 import anxiety from "../icons/Group 807.svg";
 import unhealthyEat from "../icons/Group 808.svg";
 import lifeDiffs from "../icons/Group 809.svg";
 import issues from "../icons/Group 810.svg";
-import meet from "../icons/Rectangle 67ad.svg";
-import article from "../icons/Group 936.svg";
-import article2ph from "../icons/Group 934.svg";
+import meet from "../icons/Rectangle 67.png";
+import article from "../icons/Group 936.png";
+import article2ph from "../icons/Group 934.png";
 import ok from "../icons/okVector.svg";
 import Consultants from "./consultants";
 import Patientcomments from "./patientcomments";
@@ -26,7 +26,7 @@ export default function Psyadults() {
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundAttachment: "fixed",
-            backgroundPosition: "center center",
+            backgroundPosition: "top center",
             height: "calc(130vh - 50px)",
           }}
         >
@@ -83,11 +83,13 @@ export default function Psyadults() {
             </div>
             <div className="part2">
               <div className="meet">
-                <img
-                  src={meet}
-                  className="meetph img-fluid"
-                  alt="adults psychology"
-                />
+                <div className="meetph">
+                  <img
+                    src={meet}
+                    className="img-fluid"
+                    alt="adults psychology"
+                  />
+                </div>
                 <div className="meetad">
                   <h2 className="meettitle">Adults Psychology</h2>
                   <div className="meetcontent">
@@ -139,20 +141,24 @@ export default function Psyadults() {
                     elementum.
                   </div>
                 </div>
-                <img
-                  src={article}
-                  className="articleph img-fluid"
-                  alt="adults psychology"
-                />
+                <div className="articleph">
+                  <img
+                    src={article}
+                    className="img-fluid"
+                    alt="adults psychology"
+                  />
+                </div>
               </div>
             </div>
             <div className="part5">
               <div className="article2">
-                <img
-                  src={article2ph}
-                  className="article2ph"
-                  alt="adults psychology"
-                />
+                <div className="article2ph">
+                  <img
+                    src={article2ph}
+                    className="img-fluid"
+                    alt="adults psychology"
+                  />
+                </div>
                 <div className="article2ad">
                   <h2 className="article2title">Adults Psychology</h2>
                   <div className="article2content">

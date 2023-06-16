@@ -2,21 +2,18 @@ import React from "react";
 import Header from "../header";
 import Navbar from "../Navbar";
 import Footer from "../footer";
-import artback from "../icons/Rectangle 44-.png";
+import artback from "../icons/Rectangle 44- (1).png";
 import artstu from "../icons/Group 1031.svg";
 import artcou from "../icons/artcou.svg";
 import artinst from "../icons/Group 1033.svg";
-import madults from "../icons/Rectangle 83.svg";
-import mchildren from "../icons/Rectangle 84.svg";
-import arttherapy from "../icons/Group 1057.svg";
-import musicrelax from "../icons/Group 1058.svg";
-import dancing from "../icons/Group 909.svg";
-import writing from "../icons/Rectangle 85.svg";
+import madults from "../icons/Rectangle 83adult.png";
+import mchildren from "../icons/Rectangle 84teen.png";
+import arttherapy from "../icons/Group 1057.png";
+import musicrelax from "../icons/Group 1058.png";
+import dancing from "../icons/Group 909.png";
+import writing from "../icons/Rectangle 85.png";
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-
-
-
 
 export default function Art() {
     return (
@@ -27,7 +24,7 @@ export default function Art() {
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundAttachment: "fixed",
-            backgroundPosition: "center center",
+            backgroundPosition: "bottom center",
             height: "720px",
           }}
         >
@@ -90,19 +87,21 @@ export default function Art() {
             <h1 className="MADheading">Mental art department</h1>
             <div className="MADimages">
               <figure>
+                <div className="madults">
                 <LazyLoadImage
                   src={madults}
-                  className="madults img-fluid"
+                  className="img-fluid"
                   alt="Mental art department for adults"
-                />
+                /></div>
                 <figcaption className="madwords">ADULTS</figcaption>
               </figure>
               <figure>
+                <div className="mchildren">
                 <LazyLoadImage
                   src={mchildren}
-                  className="mchildren img-fluid"
+                  className="img-fluid"
                   alt="Mental art department for children & teenagers"
-                />
+                /></div>
                 <figcaption className="mchwords">
                   CHILDREN & TEENAGERS
                 </figcaption>
@@ -110,11 +109,12 @@ export default function Art() {
             </div>
           </div>
           <div className="arttherapy">
+            <div className="therapyimage">
             <LazyLoadImage
               src={arttherapy}
-              className="therapyimage img-fluid"
+              className="img-fluid"
               alt="art therapy"
-            />
+            /></div>
             <div className="therapypass">
               <h2 className="therapyheading">knowing more about art therapy</h2>
               <div className="therapywords">
@@ -163,18 +163,20 @@ export default function Art() {
                 </Link>
               </div>
             </div>
+            <div className="musicrelaximage">
             <LazyLoadImage
               src={musicrelax}
-              className="musicrelaximage img-fluid"
+              className="img-fluid"
               alt="music therapy"
-            />
+            /></div>
           </div>
           <div className="arttherapy">
+            <div className="dancingimage">
             <LazyLoadImage
               src={dancing}
-              className="dancingimage img-fluid"
+              className="img-fluid"
               alt="art therapy"
-            />
+            /></div>
             <div className="therapypass">
               <h2 className="therapyheading">health benefits of dancing</h2>
               <div className="therapywords">
@@ -221,12 +223,13 @@ export default function Art() {
                 </Link>
               </div>
             </div>
+            <div className="writingimage">
             <LazyLoadImage
               src={writing}
-              className="writingimage img-fluid"
+              className="img-fluid"
               alt="music therapy"
             />
-          </div>
+          </div></div>
         </div>
         <Footer />
       </div>

@@ -58,11 +58,18 @@ body {
   margin-bottom: 4%;
 }
 .group {
-  width: 100%;
-  min-height: 576px;
-}
-.about img .group {
   display: inline-block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+.hand {
+  display: inline-block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  padding-inline: 10%;
+  margin-top: 8px;
 }
 .story {
   display: grid;
@@ -71,11 +78,7 @@ body {
   margin-inline-end: 85px;
   margin-top: 12%;
 }
-.hand {
-  max-width: 100%;
-  height: 415px;
-  margin-inline-start: 26px;
-}
+
 .st {
   font-family: "Alice", sans-serif;
   font-size: 2em;
@@ -132,7 +135,7 @@ margin-bottom: 4%;
 .openPosition {
   margin-top: 5%;
   padding: 11.48px 29.5px 11.48px;
-  max-width: 210px;
+  max-width: 215px;
   background-color: #02979d;
   border-radius: 35px;
 }
@@ -169,7 +172,11 @@ font-size: 1.6em;
     margin-inline-start: 4px;
 }
 .teamphoto {
-  margin-top: 110%;
+ display: inline-block;
+ margin-top: 250px;
+ margin-inline: auto;
+ max-width: 100%;
+ height: auto;
 }
 .swiper-button-next, .swiper-button-prev {
   width: 12px;

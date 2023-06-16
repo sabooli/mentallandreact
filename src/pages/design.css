@@ -58,7 +58,7 @@ body {
   color: #fafefe;
 }
 .choose {
-  display: grid;
+  display: grid; 
   grid-template-columns: 1fr 1fr 1fr;
   border-width: 0.2px;
   box-shadow: 0px 1px 25px rgba(2, 151, 157, 0.1);
@@ -187,9 +187,11 @@ figure {
 .learnMore:hover {
   color: #fafefe;
 }
-.ximg {
-  max-width: 631px;
-  min-height: 580px;
+.ximg, .public, .specialized, .question {
+  display: inline-block; 
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
 }
 .adpsy {
   padding-inline-start: 50px;
@@ -223,11 +225,6 @@ figure {
   margin-inline: -85px;
   margin-bottom: 150px;
   margin-top: 150px;
-}
-.public {
-  max-width: 365.5px;
-  height: 459px;
-  margin-bottom: 5%;
 }
 .sempsy {
   margin-inline-start: -4%;
@@ -283,9 +280,7 @@ figure {
   margin-inline: 40%;
 }
 .specialized {
-  margin-inline-start: 155px;
-  max-width: 365px;
-  min-height: 459px;
+  margin-inline-start: 25%;
 }
 .spzpsy {
   margin-inline-end: -70px;
@@ -358,9 +353,6 @@ margin-inline-start: auto;
 .question {
   padding-inline-start: 25px;
   margin-bottom: 150px;
-  max-width: 318px;
-  height: 565px;
-  margin-top: -25px;
 }
 .yyy {
 display: flex;
@@ -391,6 +383,10 @@ display: flex;
   .flow {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+  }
+  .subtitle {
+    margin-top: 30px;
+    margin-inline-end: 0;
   }
   .adps, .pusem, .chpsy, .spzsem, .freq, .choose {
   grid-template-columns: 1fr;
@@ -449,7 +445,7 @@ h2 {
   font-size: 28px;
 }
 .separate {
-  padding-inline: 20%;
+  padding-inline: 18%;
 }
 }
 @media screen and (max-width: 770px) {
@@ -460,7 +456,7 @@ h2 {
     row-gap: 30%;
   }
   .separate {
-    padding-inline: 20%;
+    padding-inline: 12%;
   }
 }
 @media screen and (max-width: 600px) {
@@ -476,20 +472,23 @@ h2 {
 }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
 swiper {
   padding-inline: 20px;
 }
 .subtitle, .forYou {
   margin-top: 5%;
-  font-size: 1.5em;
+  font-size: 1.8em;
+}
+.frequent {
+  font-size: 1.6em;
 }
 .caption {
   font-size: 1.3em;
 }
 .pubsem {
   text-align: center;
-  padding-inline: 40px;
+  font-size: 1.5em;
 }
 .flow {
     grid-template-columns: 1fr;
@@ -503,7 +502,7 @@ min-height: 155px;
 display: inline-block;
 margin: 0 auto;
 }
-.psycho {
-  margin-inline: 50px;
+.adps, .chps, .sems, .spzsems, .faq, .flow, .forYou {
+  margin-inline: -45px;
 }
 }

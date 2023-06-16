@@ -73,14 +73,27 @@ font-family: "Gilroy-Medium", sans-serif;
   display: inline-block;
   margin: 0 auto;
 }
+.admusicImg, .adpaintingImg, .adwritingImg, .addanceImg {
+ display: inline-block; 
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  padding-inline: 10%;
+}
 
 @media screen and (max-width: 900px) {
 .musicHall {
-    grid-template-columns: 1fr 1fr 1fr;
+grid-template-columns: 1fr 1fr 1fr;
 grid-template-rows: 1fr 1fr;
 row-gap: 15px;
 display: inline-block;
 margin: 0 auto;
 margin-bottom: 100px;
 }
+}
+@media screen and (max-width: 680px) {
+  .adpainting, .admusic, .adwrite, .addance, .studentcomments, .adact, .chwrite, .chdance, .chmusic {
+    margin-inline: -45px;
+  }
+  
 }

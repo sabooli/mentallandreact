@@ -46,7 +46,7 @@ export default function Adultcourses({ heading }) {
                          300: {
                            slidesPerView: 1,
                          },
-                         500: {
+                         450: {
                            slidesPerView: 2,
                          },
                          820: {

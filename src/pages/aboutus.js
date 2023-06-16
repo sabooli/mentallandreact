@@ -2,8 +2,8 @@ import React from "react";
 import Header from "../header";
 import Navbar from "../Navbar";
 import Footer from "../footer";
-import group from "../icons/Group 1077.svg";
-import story from "../icons/Group 1102.svg";
+import group from "../icons/Group 1077.png";
+import story from "../icons/Group 1102.png";
 import "swiper/swiper-bundle.css";
 import join from "../icons/Group 1090.svg";
 import { Link } from "react-router-dom";
@@ -30,7 +30,9 @@ export default function About() {
             Senectus fames quisque porta vitae facilisis commodo consequat.
             Feugiat enim odio in sed condimentum. Id et purus est risus.
           </div>
-          <img src={group} className="group" alt="happy life" />
+          <div className="group">
+            <img src={group} className="img-fluid" alt="happy life" />
+          </div>
         </div>
         <div className="story">
           <div className="ours">
@@ -46,7 +48,8 @@ export default function About() {
               purus est risus.
             </div>
           </div>
-          <img src={story} className="img-fluid hand" alt="our story" />
+          <div className="hand">
+          <img src={story} className="img-fluid" alt="our story" /></div>
         </div>
         <div className="team">
           <h2 className="st">Our Team</h2>
@@ -83,7 +86,7 @@ export default function About() {
               <div className="openPosition">
                 <Link to="/" className="to">
                   <span className="op">
-                    see open positions
+                    See open positions
                     <FaLongArrowAltRight />
                   </span>
                 </Link>

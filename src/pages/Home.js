@@ -10,9 +10,9 @@ import telescope from "../icons/Group 768.svg";
 import mission from "../icons/Group 768m.svg";
 import value from "../icons/Group 768v.svg";
 import goal from "../icons/Group 768g.svg";
-import mentalonphone from "../icons/Group 779.svg";
+import mentalonphone from "../icons/Group 779.png";
 import Customercomments from "./customercomments";
-import Peace from "../icons/Rectangle 44-min.png";
+import Peace from "../icons/Rectangle 44.png";
 import latearticle from "../icons/Rectangle 31a.svg";
 import HMfaq from "./homemfaq";
 import group731 from "../icons/Group 731.svg";
@@ -270,11 +270,12 @@ useEffect(() => {
               <div className="partIV">
                 <div>
                   <div className="mentallandonphone">
+                    <div className="MoPhimage">
                     <img
                       src={mentalonphone}
-                      className="MoPhimage img-fluid"
+                      className="img-fluid"
                       alt="MentalLand on phone"
-                    />
+                    /></div>
                     <div>
                       <h3 className="MoPhheading">Mentalland on your phone</h3>
                       <div className="MoPhtext">

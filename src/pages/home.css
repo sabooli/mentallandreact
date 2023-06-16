@@ -274,9 +274,10 @@ margin: 0 auto;
   margin-top: 8%;
 }
 .MoPhimage {
-  margin-top: 4%;
-  max-width: 356px;
-  width: 100%;
+ display: inline-block;
+   margin: 0 auto;
+ max-width: 100%;
+ height: auto;
 }
 .customersayH {
   font-family: "Gilroy-SemiBold", sans-serif;

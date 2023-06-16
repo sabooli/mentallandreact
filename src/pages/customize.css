@@ -184,20 +184,29 @@ figure {
   width: 100%;
 }
 .meetchph {
+  display: inline-block; 
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
   margin-inline-end: -85px;
 }
 .meetph {
   margin-inline-end: -85px;
 }
 .article2ad {
-  padding-inline-start: 70px;
-  padding-top: 140.5px;
+  padding-top: 100px;
   width: 100%;
 }
 .article2ch {
   padding-inline-start: 70px;
   padding-top: 78px;
   width: 100%;
+}
+.meetph, .articleph, .article2ph {
+  display: inline-block; 
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
 }
 .meetph,
 .article2ph {
@@ -370,9 +379,6 @@ figure {
     flex-direction: column;
     width: 100%;
   }
-  .consultants {
-margin-inline: 45px;
-  }
   .captionl {
     margin-bottom: 20%;
   }
@@ -384,18 +390,26 @@ margin-inline: 45px;
     display: flex;
     flex-direction: column;
   }
-  .adultspsy,
-.childpsy,
-.sliders {
-  margin-inline: 40px;
-}
-  .meetph {
-    margin-inline-start: 50px;
-    margin-bottom: 8%;
+  .meetchph {
+    margin-inline-end: 0;
+    margin-top: 5%;
   }
+  .articleph {
+    margin-top: 5%;
+  }
+  .meetph, .article2ph {
+    margin-inline-start: 0;
+    margin-bottom: 3%;
+  }
+.article2ch {
+  padding-inline-start: 0;
+}
+.articlead, .meetch {
+  padding-inline-end: 0;
+}
 }
 @media screen and (max-width: 800px) {
-  .getHelp, .musicforchildrenwords {
+  .getHelp, .musicforchildrenwords, .enjoy {
     display: none;
   }
 
@@ -403,7 +417,24 @@ margin-inline: 45px;
     font-size: 28px;
   }
 }
+
 @media screen and (max-width: 680px) {
+  .part5, .part4, .part2, .part1, .part6, .partd, .parte, .partb, .parta, .partf {
+    margin-inline: -40px;
+    margin-top: 100px;
+  }
+.article2ad {
+  padding-inline-start: 0;
+  padding-top: 20px;
+}
+.cons {
+  font-size: 1.7em;
+  margin-bottom: 3%;
+  margin-top: 3%;
+}
+.patientSay {
+  font-size: 1.7em;
+}
   .subjects {
     grid-template-columns: 1fr;
     display: flex;
@@ -415,10 +446,6 @@ margin-inline: 45px;
   }
   .captionl {
     margin-bottom: 20%;
-  }
-  .article2ad {
-    margin-inline-start: -50px;
-    padding-top: -130px;
   }
   .seeAll {
     background-color: #02979d;
@@ -433,24 +460,5 @@ margin-inline: 45px;
     padding-top: 12px;
     margin-inline: 40%;
     text-decoration: none;
-  }
-}
-@media screen and (max-width: 440px) {
-  .adultspsy,
-  .childpsy {
-    margin-inline: 40px;
-  }
-  .consultants {
-    padding-inline: 60px;
-  }
-}
-@media screen and (max-width: 400px) {
-  .consultants {
-    padding-inline: 100px;
-  }
-}
-@media screen and (max-width: 390px) {
-  .happy {
-    display: none;
   }
 }

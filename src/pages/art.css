@@ -34,11 +34,11 @@
 body {
   font-size: 16px;
   margin: 0 auto;
-  max-width: 1800px !important;
   width: 100% !important;
+  max-width: 1800px !important;
 }
 .AH {
-max-width: 1168px;
+  max-width: 1168px;
   margin: 62px auto 82px;
   padding: 32px 25px 33px;
   text-align: center;
@@ -92,7 +92,7 @@ font-family: "Gilroy-Medium", sans-serif;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: 50px;
-    margin-bottom: 120px;
+    margin-bottom: 70px;
     gap: 10%;
     margin-inline: 3%;
 }
@@ -137,13 +137,13 @@ font-family: "Alice", sans-serif;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1%;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
 }
-.madults, .mchildren {
-display: inline-block;
-width: 100%;
-text-align: center;
-min-height: 296px;
+.madults, .mchildren, .therapyimage, .musicrelaximage, .dancingimage, .writingimage {
+  display: inline-block; 
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
 }
 .madwords, .mchwords {
   display: block;
@@ -155,7 +155,7 @@ min-height: 296px;
   text-align: center;
   padding-top: 12px;
   padding-bottom: 15px;
-  background-size: cover;
+  background-size: contain;
 }
 .madwords {
  background-color: #EAF6F6;
@@ -164,17 +164,15 @@ min-height: 296px;
  background-color: #FAE8EF;
 }
 .therapypass {
-    margin-top: 20%;
+  margin-top: 20%;
 }
 .arttherapy {
    display: grid;
     grid-template-columns: 1fr 1fr; 
-    margin-bottom: 170px;
+    margin-bottom: 120px;
 }
 .therapyimage {
     margin-inline-start: -85px;
-    width: 730px;
-
 }
 .therapyheading {
 font-family: "Alice", sans-serif;
@@ -199,20 +197,8 @@ flex-wrap: wrap;
 margin-bottom: 10%;
 gap: 5px;
 }
-.musicrelaximage {
-margin-inline-start: 110px;
-width:500px;
-min-height: 480px;
-}
-.dancingimage {
-width: 100%;
-width: 515px;
-}
-.writingimage {
-  width: 100%;
-  width: 430px;
-  min-height: 480px;
-  margin-inline-start: 120px;
+.musicrelaximage, .writingimage {
+margin-inline-start: 80px;
 }
 .colorful {
   max-width: 604px;
@@ -244,10 +230,6 @@ font-family: "Gilroy-Medium", sans-serif;
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-bottom: 150px;
-}
-.adultartdepimg {
-  height: 500px;
-  width: 100%;
 }
 .artsdep {
   padding-inline-start: 85px;
@@ -282,7 +264,7 @@ float: right;
 .here {
 color: #D74E7F;
 }
-.adpainting, .admusic, .adact, .adwrite, .addance, .chmusic, .chdance {
+.adpainting, .admusic, .adact, .adwrite, .addance, .chmusic, .chdance, .chwrite {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -290,7 +272,7 @@ color: #D74E7F;
   margin-top: 130px;
   margin-bottom: 130px;
 }
-.adact, .adwrite, .addance {
+.adact, .adwrite, .addance, .chwrite {
   margin-bottom: 130px;
 }
 .adpaintingheading, .admusicheading, .adactheading, .adwritingheading, .addanceheading {
@@ -307,11 +289,11 @@ color: #D74E7F;
   color: #000b0c;
   margin-bottom: 6%;
 }
-.admusicimg, .adactimg, .adwritingimg, .addanceimg {
-  width: 100%;
-}
-.chdanceimg {
+.chdanceimg, .admusicimg, .addanceimg {
   padding-inline: 18%;
+}
+.chwritingimg {
+padding-inline: 10%;
 }
 .adpainting img {
   display: inline-block;
@@ -319,21 +301,14 @@ color: #D74E7F;
   max-width: 100%;
   height: auto;
 }
-.chmusicimg, .chactimg, .adwritingimg, .adpaintingimg, .childartdepimg  {
-    padding-inline: 12%;
+.chmusicimg, .adactimg, .chactimg, .adwritingimg, .adpaintingimg, .childartdepimg, .adultartdepimg {
+padding-inline: 12%;
 }
-.chmusic img, .chact img, .adwrite img, .chdance img, .childartdep {
-  display: inline-block;
+.chmusic img, .chact img, .chwrite img, .chdance img, .childartdep, .adultartdep img, .admusic img, .adact img, .adwrite img, .addance img, .adpainting img {
+  display: inline-block; 
   margin: 0 auto;
   max-width: 100%;
   height: auto;
-}
-
-.adactimg {
-  margin-inline-start: 40px;
-}
-.adwritingimg {
-  margin-block-end: 20px;
 }
 .musiccourse {
   display: grid;
@@ -354,12 +329,12 @@ color: #D74E7F;
   text-transform: capitalize;
 }
 .musician img {
-   display: inline-block;
+  display: inline-block;
   margin: 0 auto;
   max-width: 100%;
   height: auto;
   margin-top: -65px;
-  margin-inline-start: 150px;
+  margin-inline-start: 130px;
 }
 .musician {
 max-width: 500px;
@@ -441,10 +416,9 @@ font-family: "Gilroy-Medium", sans-serif;
   width: 100%;
 }
 @media screen and (max-width: 1200px) {
-.MADimages, .arttherapy {
-    grid-template-columns: 1fr;
-    display: flex;
-    flex-direction: column;
+
+.precendent {
+  margin-bottom: 40px;
 }
 }
 @media screen and (max-width: 1100px) {
@@ -453,27 +427,8 @@ font-family: "Gilroy-Medium", sans-serif;
 }
 }
 @media screen and (max-width: 900px) {
-.MADimages, .arttherapy {
-    grid-template-columns: 1fr;
-    display: flex;
-    flex-direction: column;
-}
-.musicrelaximage {
-margin-inline-start: 0px;
-}
-.writingimage {
-  margin-inline-start: 0;
-}
-.adactimg {
-  margin-inline-start: 0;
-}
-.precendent {
-    grid-template-columns: 1fr;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-.adpainting, .admusic, .adultartdep, .adact, .adwrite, .addance, .chmusic, .chdance {
+
+.adpainting, .admusic, .adultartdep, .adact, .adwrite, .addance, .chmusic, .chdance, .chwrite {
   grid-template-columns: 1fr;
   display: flex;
   flex-direction:column-reverse;
@@ -481,21 +436,60 @@ margin-inline-start: 0px;
 }
 }
 @media screen and (max-width: 850px) {
+  .arttherapy {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+}
+.therapypass {
+    margin-top: 0;
+}
+.adactimg {
+  margin-inline-start: 0;
+}
+.writingimage {
+  margin-inline-start: 0;
+}
+.therapyimage {
+  max-width: 75%;
+}
   .musiccourse {
   display: flex;
   grid-template-columns: 1fr;
   flex-direction: column-reverse;
-  height: 430px;
-  row-gap: 80px;
+  row-gap: 30px;
+  height: 380px;
   }
 .musician img {
-  margin-inline-start: 45%;
   max-width: 50%;
 }
-
+.musicrelaximage {
+margin-inline-start: 0px;
 }
-@media screen and (max-width: 700px) {
-    .AHwords {
+}
+@media screen and (max-width: 800px) {
+.precendent {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+}
+@media screen and (max-width: 702px) {
+   .MADimages {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 75px;
+} 
+.colorfulwords, .colorfulchwords {
+display: none;
+}
+.colorfulheading {
+  font-size: 2em;
+}
+  .AHwords {
         display: none;
     }
     .ring {
@@ -503,6 +497,11 @@ margin-inline-start: 0px;
     }
     .chmusicimg, .chactimg, .adwritingimg, .adpaintingimg, .childartdepimg  {
     padding-inline: 0;
+}
+}
+@media screen and (max-width: 550px) {
+.artsdepheading {
+  font-size: 1.7em;
 }
 }
 @media screen and (max-width: 500px) {
@@ -514,9 +513,11 @@ margin-inline-start: 0px;
    font-family: "Alice", sans-serif;
   font-size: 1.3em;
 }
+.therapyimage {
+  max-width: 100%;
 }
-@media screen and (max-width: 450px) {
- .mastdiv {
-  margin-inline: 45px;
- }
+.artsdep {
+  padding-inline-start: 65px;
+  padding-inline-end: 15%;
+}
 }

@@ -345,7 +345,6 @@ body {
 .dropdown-content a {
     display: block;
     color: #000000;
-    padding: 3px;
     padding-inline: 9px;
     text-decoration: none;
 }

@@ -12,13 +12,13 @@ import cadult from "../icons/Rectangle 70.svg";
 import cchild from "../icons/Rectangle 70ch.svg";
 import csem from "../icons/Rectangle 70se.svg";
 import csp from "../icons/Rectangle 70sp.svg";
-import adps from "../icons/Rectangle 67.svg";
-import chps from "../icons/Rectangle 67ch.svg";
-import semps from "../icons/Group 811.svg";
+import adps from "../icons/Rectangle 67ps.png";
+import chps from "../icons/Rectangle 67psy.png";
+import semps from "../icons/Group 811.png";
 import Upcoming from "./upcoming";
-import bgImage from "../icons/Group 1246.png";
-import spzsem from "../icons/Group 1027.svg";
-import question from "../icons/Group 817.svg";
+import bgImage from "../icons/Group 1246 (1).png";
+import spzsem from "../icons/Group 1027.png";
+import question from "../icons/Group 817.png";
 import Mfaq from "./mfaq";
 
 export default function Psychology() {
@@ -30,7 +30,7 @@ export default function Psychology() {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundAttachment: "fixed",
-          backgroundPosition: "center center",
+          backgroundPosition: "top center",
           height: "calc(130vh - 50px)",
         }}
       >
@@ -165,11 +165,13 @@ export default function Psychology() {
           </div>
           <div className="detail">
             <div className="adps">
-              <img
-                src={adps}
-                className="ximg img-fluid"
-                alt="psychology services"
-              />
+              <div className="ximg">
+                <img
+                  src={adps}
+                  className="img-fluid"
+                  alt="psychology services"
+                />
+              </div>
               <div className="adpsy">
                 <h3 className="subtitle">Adults Psychology</h3>
                 <div className="summary">
@@ -183,7 +185,7 @@ export default function Psychology() {
                   purus sed lorem. Adipiscing nulla amet morbi ipsum nec
                   lobortis egestas nec.
                 </div>
-                <Link to="/" className="learnMore">
+                <Link to="/" className="learnMore mb-5">
                   <span className="more">Learn more</span>
                 </Link>
               </div>
@@ -208,20 +210,24 @@ export default function Psychology() {
                   <span className="more">Learn more</span>
                 </Link>
               </div>
-              <img
-                src={chps}
-                className="ximg img-fluid"
-                alt="children psychology"
-              />
+              <div className="ximg">
+                <img
+                  src={chps}
+                  className="img-fluid"
+                  alt="children psychology"
+                />
+              </div>
             </div>
           </div>
           <div className="sems">
             <div className="pusem">
-              <img
-                src={semps}
-                className="public img-fluid"
-                alt="psychology services"
-              />
+              <div className="public">
+                <img
+                  src={semps}
+                  className="img-fluid"
+                  alt="psychology services"
+                />
+              </div>
               <div className="sempsy">
                 <h3 className="subtitle">Adults Psychology</h3>
                 <div className="summary">
@@ -263,11 +269,13 @@ export default function Psychology() {
                   adipiscing nisl in vestibulum. Volutpat.
                 </div>
               </div>
-              <img
-                src={spzsem}
-                className="specialized img-fluid"
-                alt="psychology services"
-              />
+              <div className="specialized">
+                <img
+                  src={spzsem}
+                  className="img-fluid"
+                  alt="psychology services"
+                />
+              </div>
             </div>
           </div>
           <Upcoming
@@ -304,7 +312,9 @@ export default function Psychology() {
                   answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
                 />
               </div>
-              <img src={question} alt="faq" className="question" />
+              <div className="question">
+                <img src={question} alt="faq" className="img-fluid" />
+              </div>
             </div>
           </div>
         </div>
