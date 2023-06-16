@@ -18,7 +18,7 @@ export default function Businessadults() {
         style={{
           backgroundImage: `url("${chbusiness}")`,
           backgroundSize: "cover",
-          backgroundPosition: "center center",
+          backgroundPosition: "right center",
           backgroundRepeat: "no-repeat",
           height: "calc(130vh - 50px)",
         }}

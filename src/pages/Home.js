@@ -43,7 +43,7 @@ useEffect(() => {
         style={{
           backgroundImage: `url("${Peace}")`,
           backgroundSize: "cover",
-          backgroundPosition: "center center",
+          backgroundPosition: "right center",
           backgroundRepeat: "no-repeat",
           height: "calc(130vh - 50px)",
         }}

@@ -25,8 +25,7 @@ export default function Musicchildren() {
           backgroundImage: `url("${musicbg}")`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          backgroundAttachment: "fixed",
-          backgroundPosition: "top center",
+          backgroundPosition: "right center",
           height: "calc(130vh - 50px)",
         }}
       >
