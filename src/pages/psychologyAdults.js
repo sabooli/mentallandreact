@@ -25,8 +25,7 @@ export default function Psyadults() {
             backgroundImage: `url("${back}")`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
-            backgroundAttachment: "fixed",
-            backgroundPosition: "top center",
+            backgroundPosition: "center center",
             height: "calc(130vh - 50px)",
           }}
         >

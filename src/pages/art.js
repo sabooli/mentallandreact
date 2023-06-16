@@ -23,7 +23,6 @@ export default function Art() {
             backgroundImage: `url("${artback}")`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
-            backgroundAttachment: "fixed",
             backgroundPosition: "bottom center",
             height: "720px",
           }}

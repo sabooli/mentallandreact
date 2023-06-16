@@ -29,7 +29,6 @@ export default function Psychology() {
           backgroundImage: `url("${bgImage}")`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          backgroundAttachment: "fixed",
           backgroundPosition: "top center",
           height: "calc(130vh - 50px)",
         }}

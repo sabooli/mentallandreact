@@ -30,7 +30,6 @@ export default function Artchildren() {
           backgroundImage: `url("${colorful}")`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          backgroundAttachment: "fixed",
           backgroundPosition: "bottom center",
           height: "calc(130vh - 50px)",
         }}

@@ -30,7 +30,6 @@ export default function Artadults() {
           backgroundImage: `url("${colorful}")`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          backgroundAttachment: "fixed",
           backgroundPosition: "top center",
           height: "calc(130vh - 50px)",
         }}
