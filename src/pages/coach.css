@@ -91,7 +91,7 @@ margin-inline-end: 20px;
 .coaches {
   padding-inline: 4%;
 }
-.choosecoach {
+.choosecoach, .choosecoach-child {
   margin-inline: 45px;
   margin-top: 50px;
   margin-bottom: 60px;
