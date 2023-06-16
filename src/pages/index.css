@@ -407,10 +407,6 @@ nav a.active {
 }
 
 @media screen and (max-width: 505px) {
-  .maincontent {
-  margin-inline-start: 45px;
-  margin-inline-end: 45px;
-} 
   .photo {
     width: 100%;
   }
@@ -437,6 +433,8 @@ nav a.active {
   }
    .phname {
   width:179px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   }
   .find {
     display: none;
@@ -447,14 +445,13 @@ nav a.active {
   .drname {
     margin-bottom: 20%;
   }
-  .containerFluid {
-    margin-inline-start: 40px;
-    margin-inline-end: 40px;
-  }
   .knowme {
  grid-template-columns: 1fr;
     display: flex;
     flex-direction: column;
+  }
+  .Dep, .content, .check, .threeitems {
+    margin-inline: -45px;
   }
   
 .aboutme {
