@@ -134,7 +134,7 @@ body {
   margin-inline-end: auto;
   width: fit-content;
 }
-.whatsapp, .facebook, .instagram, .linkedin {
+.whatsapp, .facebook, .instagram, .linkedin, .twitter {
 border-radius: 8px;
 font-size: 45px;
 padding: 8px;
@@ -158,6 +158,10 @@ background-color: #D74E7F;
 .linkedin {
 fill: #024A9D;
 background-color: #fafefe;
+}
+.twitter {
+  fill: #fafefe;
+  background:  linear-gradient(100.35deg, #02979D 7.72%, #00888D 92.28%);
 }
 .language {
   background: transparent;
