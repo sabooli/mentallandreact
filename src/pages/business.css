@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: "Alice";
   src: url(../fonts/Alice-Regular.ttf);
@@ -200,7 +201,67 @@ margin-bottom: 40px;
   height: auto;
   padding-inline: 12%;
 }
-
+.ourService {
+  margin-top: 100px;
+  margin-bottom: 160px;
+  margin-inline: -85px;
+}
+.ourService h2 {
+  text-align: center;
+  font-family: "Alice", sans-serif;
+}
+.ourService div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 40px;
+}
+.ourService div .triplet {
+display: inline-block; 
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+.Bprog {
+  background-size: cover;
+  margin-inline: -85px;
+  padding-inline: 85px;
+  padding-top: 110px;
+  padding-bottom: 140px;
+  margin-bottom: 160px;
+  background-position: center center;
+  background-image: url(../icons/Rectangle 151.png);
+}
+.Bprog h2 {
+   text-align: center;
+  font-family: "Alice", sans-serif;
+  margin-bottom: 30px;
+}
+.Bprog div {
+  font-family: "Gilroy-Regular", sans-serif;
+  font-size: 18px;
+  line-height: 42px;
+}
+.certificate {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 150px;
+}
+.cerimg {
+  display: inline-block; 
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  padding-inline: 10%;
+}
+.cerexp h3 {
+font-family: "Alice", sans-serif;
+  margin-bottom: 30px;
+}
+.cerexp div {
+font-family: "Gilroy-Regular", sans-serif;
+  font-size: 16px;
+  line-height: 42px;
+}
 @media screen and (max-width: 900px) {
 .businessadone, .businessadtwo, .businesschtwo {
     grid-template-columns: 1fr;
@@ -209,6 +270,15 @@ flex-direction: column;
 row-gap: 50px;
 }
 
+.adbeexpertwords, .chbeexpertwords {
+display: none;
+}
+.certificate {
+    grid-template-columns: 1fr;
+    display: flex;
+flex-direction: column;
+row-gap: 20px;
+}
 .chbubg {
   padding-inline: 85px;
 }
@@ -219,21 +289,18 @@ row-gap: 50px;
     display: flex;
 flex-direction: column;
 }
-.adbeexpert, .chbeexpert {
-  margin: 20px 40px 20px;
-}
-.adbeexpertwords, .chbeexpertwords {
-display: none;
-}
 .adbeexpertheading, .chbeexpertheadig {
   font-size: 1.8em;
 }
+
+.adbeexpert, .chbeexpert {
+  margin: 20px 40px 20px;
+}
 }
 @media screen and (max-width: 600px) {
-.posdesign, .businessadone, .businessadtwo, .ljo, .stussay, .courR  {
+.posdesign, .businessadone, .businessadtwo, .ljo, .stussay, .courR, .Bprog h2, .Bprog div, .certificate {
   margin-inline: -45px;
 }
-
 .chbubg {
   padding-inline: 40px;
 }
@@ -243,9 +310,13 @@ display: none;
 .swiper-navigation__prev, .swiper-navigation__next {
   font-size: 36px;
 }
+.ourService div {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 5px;
+}
 }
 @media screen and (max-width: 470px) {
-
 .coa {
   font-size: 1.6em;
 }

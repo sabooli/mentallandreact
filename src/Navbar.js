@@ -98,7 +98,7 @@ export default function Navbar() {
                   </NavLink>
                 </li>
               </ul>
-              <NavLink to="/pages/psychology">{t("Business")}</NavLink>
+              <NavLink to="/pages/business">{t("Business")}</NavLink>
               <ul className="branch">
                 <li>
                   {" "}

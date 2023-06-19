@@ -81,7 +81,7 @@ useEffect(() => {
                     </div>
                   </button>
 
-                  <div className="flexContainer hope">
+                  <div className="flexContainer">
                     <input
                       placeholder="Name..."
                       className="phname"
@@ -96,7 +96,7 @@ useEffect(() => {
                       <span className="fitext">Search</span>
                     </button>
                   </div>
-                  <div className="number hope">740 Psychologists</div>
+                  <div className="number">740 Psychologists</div>
                 </div>{" "}
               </div>
               {drInfo.map((item) => {

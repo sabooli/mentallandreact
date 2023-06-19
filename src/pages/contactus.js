@@ -20,12 +20,12 @@ export default function Contact() {
         style={{
           backgroundImage: `url("${cube}")`,
           backgroundSize: "cover",
-          backgroundPosition: "center center",
+          backgroundPosition: "center top",
           backgroundRepeat: "no-repeat",
           height: "calc(130vh - 50px)",
         }}
       >
-        <Header className="whatsapp" />
+        <Header className="twitter" />
         <Navbar />
         <div className="text-center">
           <h1 className="contactus">Contact us</h1>

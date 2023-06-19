@@ -29,6 +29,7 @@ import Courseinfoch from "./pages/courseinfoch";
 import Businessadults from "./pages/businessadults";
 import Position from "./pages/position";
 import Businesschildren from "./pages/businesschildren";
+import Business from "./pages/business";
 import Map from "./pages/map";
 import Header from "./header";
 import Navbar from "./Navbar";
@@ -72,6 +73,7 @@ export default function Main() {
           <Route path="businesschildren" element={<Businesschildren />} />
           <Route path="map" element={<Map />} />
           <Route path="position" element={<Position />} />
+          <Route path="business" element={<Business />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -384,7 +384,7 @@ nav a.active {
     margin-top: 0;
   }
   .threeitems {
-    margin-top: 10%;
+    margin-top: 5%;
   }
   .gbar {
     grid-template-columns: 1fr 1fr;
@@ -415,7 +415,7 @@ nav a.active {
   }
   .find {
     width: 79px;
-      margin-inline-start: -79px;
+    margin-inline-start: -79px;
   }
   .fitext {
     font-size: 14px;
@@ -433,8 +433,6 @@ nav a.active {
   }
    .phname {
   width:179px;
-  margin-top: 5px;
-  margin-bottom: 5px;
   }
   .find {
     display: none;
