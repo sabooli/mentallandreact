@@ -131,7 +131,7 @@ export default function Navbar() {
                 
                   <NavLink to="/pages/positions">{t("Positions")}</NavLink>
                 
-                  <NavLink to="/pages/psychology">{t("JoinUs")}</NavLink>
+                  <NavLink to="/pages/joinus">{t("JoinUs")}</NavLink>
                
             </div>
           </li>
