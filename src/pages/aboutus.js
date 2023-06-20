@@ -16,7 +16,7 @@ import Teamslider from "./teamslider";
 export default function About() {
   return (
     <div>
-      <Header className="whatsapp" />
+      <Header className="twitter" />
       <Navbar />
       <div className="main-contain">
         <div className="about">

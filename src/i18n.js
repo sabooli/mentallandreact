@@ -10,6 +10,9 @@ const resources = {
       About: "About",
       OurServices: "Our Services",
       Contact: "Contact Us",
+      Positions: "Positions",
+      AboutUs: "About Us",
+      JoinUs: "Join Us",
     },
   },
   fa: {
@@ -20,6 +23,9 @@ const resources = {
       About: "درباره ما",
       OurServices: "خدمات ما",
       Contact: "تماس با ما",
+      Positions: "فرصتهای شغلی",
+      AboutUs: "دربارۀ ما",
+      JoinUs: "عضویت",
     },
   },
 };

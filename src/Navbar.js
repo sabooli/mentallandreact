@@ -40,7 +40,7 @@ export default function Navbar() {
               })}
               className="dropdown"
             >
-              {t("Our Services")} <MdKeyboardArrowDown />
+              {t("OurServices")} <MdKeyboardArrowDown />
             </NavLink>
             <div className="dropdown-content">
               <NavLink to="/pages/psychology">{t("Psychology")}</NavLink>
@@ -115,16 +115,25 @@ export default function Navbar() {
               </ul>
             </div>
           </li>
-          <li>
+          <li className="submenu">
             <NavLink
-              to="/pages/aboutus"
               style={({ isActive }) => ({
                 color: isActive ? "#02979d" : "#000b0c",
                 background: isActive ? "#ecf7f7" : "#ecf7f7",
               })}
+              className="dropdown"
             >
               {t("About")} <MdKeyboardArrowDown />
             </NavLink>
+            <div className="dropdown-content">
+              
+                  <NavLink to="/pages/aboutus">{t("AboutUs")}</NavLink>
+                
+                  <NavLink to="/pages/positions">{t("Positions")}</NavLink>
+                
+                  <NavLink to="/pages/psychology">{t("JoinUs")}</NavLink>
+               
+            </div>
           </li>
           <li>
             <NavLink

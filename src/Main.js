@@ -30,6 +30,8 @@ import Businessadults from "./pages/businessadults";
 import Position from "./pages/position";
 import Businesschildren from "./pages/businesschildren";
 import Business from "./pages/business";
+import Positions from "./pages/positions";
+import Openrole from "./pages/openRole";
 import Map from "./pages/map";
 import Header from "./header";
 import Navbar from "./Navbar";
@@ -74,6 +76,8 @@ export default function Main() {
           <Route path="map" element={<Map />} />
           <Route path="position" element={<Position />} />
           <Route path="business" element={<Business />} />
+          <Route path="positions" element={<Positions />} />
+          <Route path="openRole" element={<Openrole />} />
         </Route>
       </Routes>
     </BrowserRouter>

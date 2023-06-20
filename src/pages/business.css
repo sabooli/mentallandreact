@@ -67,6 +67,71 @@ margin-bottom: 100px;
     margin-inline: 85px;
     margin-top: 110px;
 }
+.hiringpage {
+   margin-inline: 85px;
+   margin-top: 50px;
+}
+.hiring {
+   display: grid;
+    grid-template-columns: 3fr 2fr;
+    margin-bottom: 110px;
+}
+.hiring h1 {
+font-family: "Alice", sans-serif;
+font-size: 2.5em;
+line-height: 54px;
+}
+.hiringtext {
+font-family: "Gilroy-Regular", sans-serif;
+  font-size: 18px;
+  line-height: 36px;
+  padding-inline-end: 10%;
+}
+.hiringimg {
+  display: inline-block; 
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  padding-inline: 5%;
+}
+.openRoles {
+  margin-bottom: 150px;
+}
+.openRoles h2 {
+  font-family: "Alice", sans-serif;
+    font-size: 2em;
+    line-height: 36px;
+    margin-bottom: 20px;
+}
+.openRolebar {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap: 1%;
+}
+.rolebar {
+  border: 0.2px solid #02979D;
+max-width: 400px;
+}
+.rolebarcontext {
+   font-size: 14px;
+  font-family: "Gilroy-Regular", sans-serif;
+  line-height: 32px;
+  text-align: flex-start;
+  padding-top: 15px;
+padding-inline: 15px;
+padding-bottom: 15px;
+  color: #000b0c;
+}
+.roletitle {
+  font-family: "Gilroy-Medium", sans-serif;
+color: #02979d;
+}
+.roleimg {
+  display: inline-block; 
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
 .businessadone, .businessadtwo, .businesschtwo {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -111,7 +176,18 @@ max-width: 610px;
 font-family: "Gilroy-Medium", sans-serif;
 color: rgba(2, 74, 157, 1);
 }
-
+.gotorole {
+  background-color: #02979d;
+  border-radius: 50px;
+  max-width: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-inline: 40%;
+  margin-top: 10px;
+}
 .postime span {
   color: #000b0c;
   margin-inline: 5px;
@@ -120,12 +196,25 @@ color: rgba(2, 74, 157, 1);
   max-width: 100px; 
   text-align: center;
 }
-.posfrom {
+.roletime span {
+  color: #000b0c;
+  margin-inline: 5px;
+  background-color: #EAF6F6;
+  padding: 8px;
+  max-width: 100px; 
+  text-align: center;
+}
+.posfrom, .roleform {
   display: flex;
 }
 .posfrom span {
 font-size: 12px;
 color: #024A9D;
+}
+.originRole {
+font-size: 12px;
+color: #02979D;
+margin-left: auto;
 }
 .origin {
 margin-left: auto;
@@ -263,7 +352,7 @@ font-family: "Gilroy-Regular", sans-serif;
   line-height: 42px;
 }
 @media screen and (max-width: 900px) {
-.businessadone, .businessadtwo, .businesschtwo {
+.businessadone, .businessadtwo, .businesschtwo,.hiring {
     grid-template-columns: 1fr;
     display: flex;
 flex-direction: column;
@@ -289,6 +378,10 @@ row-gap: 20px;
     display: flex;
 flex-direction: column;
 }
+.openRolebar {
+  display: grid;
+grid-template-columns: 1fr 1fr;
+}
 .adbeexpertheading, .chbeexpertheadig {
   font-size: 1.8em;
 }
@@ -297,8 +390,8 @@ flex-direction: column;
   margin: 20px 40px 20px;
 }
 }
-@media screen and (max-width: 600px) {
-.posdesign, .businessadone, .businessadtwo, .ljo, .stussay, .courR, .Bprog h2, .Bprog div, .certificate {
+@media screen and (max-width: 625px) {
+.posdesign, .businessadone, .businessadtwo, .ljo, .stussay, .courR, .Bprog h2, .Bprog div, .certificate, .hiring, .openRoles {
   margin-inline: -45px;
 }
 .chbubg {
@@ -314,6 +407,15 @@ flex-direction: column;
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 5px;
+}
+}
+@media screen and (max-width: 530px) {
+.openRolebar {
+  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  margin-inline: 5%;
 }
 }
 @media screen and (max-width: 470px) {
