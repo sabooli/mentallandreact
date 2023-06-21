@@ -351,14 +351,236 @@ font-family: "Gilroy-Regular", sans-serif;
   font-size: 16px;
   line-height: 42px;
 }
+.customerservice {
+  max-width: 964px;
+  margin: 155px auto 20px;
+  padding: 38px 25px 40px;
+  backdrop-filter: blur(4px) brightness(80%);
+  color: #fafefe;
+  text-align: center;
+}
+.customerserviceH {
+ font-family: "Alice", sans-serif;
+  font-size: 3em;
+  margin-bottom: 46px;
+}
+.customerserviceT {
+font-family: "Gilroy-Medium", sans-serif;
+  font-size: 1.1em;
+  line-height: 40px;
+}
+.customerS {
+  margin-inline: 85px;
+  padding-top: 40px;
+}
+.customerS h1 {
+  font-family: "Alice", sans-serif;
+  font-size: 2em;
+}
+.customerS div {
+  font-family: "Gilroy-Medium", sans-serif;
+  font-size: 1em;
+  line-height: 36px;
+}
+.BR {
+display: grid;
+grid-template-columns: 1fr 1fr;
+margin-top: 100px;
+margin-bottom: 110px;
+}
+.BR h2 {
+  font-family: "Alice", sans-serif;
+  font-size: 2em;
+}
+.BR div {
+  max-width: 550px;
+   font-family: "Gilroy-Medium", sans-serif;
+  font-size: 1em;
+  line-height: 36px;
+}
+.oneofus {
+  background-color:  #EBF7F7;
+  background-size: cover;
+  margin-inline: -85px;
+  padding-inline: 85px;
+  padding-top: 20px;
+  padding-bottom: 100px;
+   margin-bottom: 100px;
+}
+.oneofus h3 {
+   font-family: "Alice", sans-serif;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+.oneofusT {
+  font-family: "Gilroy-Medium", sans-serif;
+  font-size: 1em;
+  line-height: 36px;
+  margin-bottom: 50px;
+}
+.jobM {
+  max-width: 608px;
+  margin: 50px 85px 20px;
+  color: #fafefe;
+  text-align: start;
+}
+.jobH {
+font-family: "Alice", sans-serif;
+  font-size: 3em;
+  margin-bottom: 42px;
+}
+.jobT {
+font-family: "Gilroy-Medium", sans-serif;
+  font-size: 1.1em;
+  line-height: 40px;
+}
+.jobL {
+  font-family: "Gilroy-Bold", sans-serif;
+  font-size: 1em;
+  line-height: 40px;
+}
+.jobBR {
+  max-width: 170px;
+  background-size: cover;
+  border: 1px solid #EAF6F6;
+  border-radius: 30px;
+  padding: 8px 30px;
+  color: #fafefe;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 30px;
+}
+.jobchoose {
+  display: grid; 
+  grid-template-columns: 2fr 1fr;
+  border-width: 0.2px;
+  box-shadow: 0px 1px 25px rgba(2, 151, 157, 0.1);
+  max-width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  margin-top: -68px;
+  margin-bottom: 40px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-inline: 5%;
+  margin-inline: 85px;
+  gap: 5%;
+  background-color: #fafefe;
+}
+.jobsearch {
+  min-height: 50px;
+  background-color: #02979d;
+  border-radius: 16px;
+  grid-column: span 2;
+  width: 400px;
+  text-align: center;
+  align-items: center;
+  padding-top: 1%;
+  margin: 20px auto 20px;
+}
+.jobsearchT {
+  font-family: "Gilroy-Bold", sans-serif;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1em;
+}
+.NLD {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5%;
+}
+.NLD input {
+box-sizing: border-box;
+max-width: 360px;
+width: 100%;
+height: 40px;
+background: #FAFEFE;
+border: 0.2px solid #02979D;
+border-radius: 5px;
+}
+.sex, .year {
+box-sizing: border-box;
+max-width: 360px;
+width: 100%;
+height: 40px;
+background: #FAFEFE;
+border: 0.2px solid #02979D;
+border-radius: 5px;
+}
+.adrsinput {
+box-sizing: border-box;
+max-width: 360px;
+width: 100%;
+height: 180px !important;
+background: #FAFEFE;
+border: 0.2px solid #02979D;
+border-radius: 5px; 
+}
+.cvbutton {
+width: 140px;
+height: 40px;
+background-color: #02979d;
+border: 0.5px solid #02979d;
+border-radius: 5px;
+margin-inline-start: -140px;
+color: #EBF7F7;
+font-family: "Gilroy-Bold", sans-serif;
+font-size: 1em;
+}
+.cvtext {
+color: #858585;
+font-size: 14px;
+}
+.Datesplit {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 5%;
+}
+.propscom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.sendprops {
+border: 1px solid #02979D;
+text-decoration: none;
+border-radius: 25px;
+background-color: #02979D;
+color: #FAFEFE;
+max-width: 180px;
+margin-inline-start: -20%;
+margin-inline-end: 5%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.cancelprops {
+border: 1px solid #02979D;
+text-decoration: none;
+border-radius: 25px;
+color: #02979D;
+background-color: #EBF7F7;
+max-width: 180px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+@media screen and (max-width: 1200px) {
+.customerserviceT {
+  display: none;
+}
+.customerservice {
+   margin: 35px auto 20px;
+}
+}
 @media screen and (max-width: 900px) {
-.businessadone, .businessadtwo, .businesschtwo,.hiring {
+.businessadone, .businessadtwo, .businesschtwo,.hiring, .BR {
     grid-template-columns: 1fr;
     display: flex;
 flex-direction: column;
 row-gap: 50px;
 }
-
 .adbeexpertwords, .chbeexpertwords {
 display: none;
 }
@@ -370,6 +592,11 @@ row-gap: 20px;
 }
 .chbubg {
   padding-inline: 85px;
+}
+.NLD {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 0;
 }
 }
 @media screen and (max-width: 780px) {
@@ -391,11 +618,23 @@ grid-template-columns: 1fr 1fr;
 }
 }
 @media screen and (max-width: 625px) {
-.posdesign, .businessadone, .businessadtwo, .ljo, .stussay, .courR, .Bprog h2, .Bprog div, .certificate, .hiring, .openRoles {
+.posdesign, .businessadone, .businessadtwo, .ljo, .stussay, .courR, .Bprog h2, .Bprog div, .certificate, .hiring, .openRoles, .BR, .moreabout {
   margin-inline: -45px;
 }
-.chbubg {
-  padding-inline: 40px;
+.chbubg, .oneofus {
+  padding-inline: 50px;
+}
+.Datesplit {
+  max-width: 360px;
+}
+.propscom {
+  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.sendprops {
+  margin-inline-start: 0;
 }
 .coa {
   font-size: 1.8em;
@@ -408,6 +647,11 @@ grid-template-columns: 1fr 1fr;
   grid-template-columns: 1fr;
   row-gap: 5px;
 }
+.NLD {
+  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+}
 }
 @media screen and (max-width: 530px) {
 .openRolebar {
@@ -416,6 +660,9 @@ grid-template-columns: 1fr 1fr;
   flex-direction: column;
   row-gap: 8px;
   margin-inline: 5%;
+}
+.customerserviceH {
+  font-size: 2em;
 }
 }
 @media screen and (max-width: 470px) {

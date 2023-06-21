@@ -7,7 +7,7 @@ export default function Openrole() {
   return (
     <div className="rolebar">
       <div className="roleimg">
-        <img src={openRoleImg} className="img-fluid" />
+        <img src={openRoleImg} className="img-fluid" alt="open positions in mentalland" />
       </div>
       <div className="rolebarcontext">
         <div className="roleform">

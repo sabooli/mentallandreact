@@ -112,6 +112,12 @@ export default function Navbar() {
                     {t("Business for children")}
                   </NavLink>
                 </li>
+                <li>
+                  {" "}
+                  <NavLink to="/pages/jobopportunities">
+                    {t("Job Opportunities")}
+                  </NavLink>
+                </li>
               </ul>
             </div>
           </li>
@@ -126,13 +132,11 @@ export default function Navbar() {
               {t("About")} <MdKeyboardArrowDown />
             </NavLink>
             <div className="dropdown-content">
-              
-                  <NavLink to="/pages/aboutus">{t("AboutUs")}</NavLink>
-                
-                  <NavLink to="/pages/positions">{t("Positions")}</NavLink>
-                
-                  <NavLink to="/pages/joinus">{t("JoinUs")}</NavLink>
-               
+              <NavLink to="/pages/aboutus">{t("AboutUs")}</NavLink>
+
+              <NavLink to="/pages/positions">{t("Positions")}</NavLink>
+
+              <NavLink to="/pages/joinus">{t("JoinUs")}</NavLink>
             </div>
           </li>
           <li>
