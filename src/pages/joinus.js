@@ -47,7 +47,7 @@ export default function Joinus() {
              height: "calc(130vh - 50px)",
            }}
          >
-           <Header className="whatsapp" />
+           <Header className="twitter" />
            <Navbar />
            <div className="customerservice">
              <h1 className="customerserviceH">customer service</h1>
