@@ -237,7 +237,7 @@ function handleFileSelect(event) {
                <div>
                  <div>CV</div>
                  <input
-                   placeholder="No file chosen"
+                   placeholder=" No file chosen"
                    onChange={handleFileSelect}
                    ref={inputRef}
                    className="file-input"
