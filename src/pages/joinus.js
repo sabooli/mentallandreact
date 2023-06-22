@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import joinus from "../icons/Rectangle 45 (1).png";
 import Header from "../header";
 import Navbar from "../Navbar";
@@ -9,6 +9,13 @@ export default function Joinus() {
   const [countries, setCountries] = useState([]);
    const [cities, setCities] = useState([]);
    const [selectedCountry, setSelectedCountry] = useState("");
+const inputRef = useRef(null);
+
+// Function to handle file selection
+function handleFileSelect(event) {
+  const file = event.target.files[0];
+  console.log(file);
+}
 
   useEffect(() => {
     fetch("https://restcountries.com/v2/all")
@@ -229,14 +236,25 @@ export default function Joinus() {
                </div>
                <div>
                  <div>CV</div>
-                 <input placeholder="No file chosen" />
-                 <button className="cvbutton">Choose File</button>
+                 <input
+                   placeholder="No file chosen"
+                   onChange={handleFileSelect}
+                   ref={inputRef}
+                   className="file-input"
+                   type="file"
+                 />
+                 <button className="cvbutton" onClick={() => inputRef.current.click()}>Choose File</button>
                  <div className="cvtext mb-5">
                    Please upload your file in PDF format.
                  </div>
                  <div className="propscom">
-                 <Link to="/" className="sendprops">Send</Link>
-                 <Link to="/" className="cancelprops">Cancel</Link></div>
+                   <Link to="/" className="sendprops">
+                     Send
+                   </Link>
+                   <Link to="/" className="cancelprops">
+                     Cancel
+                   </Link>
+                 </div>
                </div>
              </div>
            </div>

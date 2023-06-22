@@ -518,11 +518,14 @@ background: #FAFEFE;
 border: 0.2px solid #02979D;
 border-radius: 5px; 
 }
+input[type='file']::-webkit-file-upload-button {
+    display: none;
+}
 .cvbutton {
 width: 140px;
 height: 40px;
 background-color: #02979d;
-border: 0.5px solid #02979d;
+border: 1px solid #02979d;
 border-radius: 5px;
 margin-inline-start: -140px;
 color: #EBF7F7;
