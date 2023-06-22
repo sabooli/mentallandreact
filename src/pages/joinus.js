@@ -3,7 +3,6 @@ import joinus from "../icons/Rectangle 45 (1).png";
 import Header from "../header";
 import Navbar from "../Navbar";
 import Footer from "../footer";
-import { Link } from "react-router-dom";
 
 export default function Joinus() {
   const [countries, setCountries] = useState([]);
@@ -11,7 +10,6 @@ export default function Joinus() {
    const [selectedCountry, setSelectedCountry] = useState("");
 const inputRef = useRef(null);
 
-// Function to handle file selection
 function handleFileSelect(event) {
   const file = event.target.files[0];
   console.log(file);
@@ -197,8 +195,9 @@ function handleFileSelect(event) {
                  <input />
                </div>
                <div className="">
-                 <div>Email Address</div>
-                 <input type="email" />
+                <form>
+                 <label htmlFor="email">Email Address</label>
+                 <input type="email" id="email" required/></form>
                </div>
                <div>
                  <div>Country</div>
@@ -248,12 +247,12 @@ function handleFileSelect(event) {
                    Please upload your file in PDF format.
                  </div>
                  <div className="propscom">
-                   <Link to="/" className="sendprops">
+                   <button type="submit" className="sendprops">
                      Send
-                   </Link>
-                   <Link to="/" className="cancelprops">
+                   </button>
+                   <button type="submit" className="cancelprops">
                      Cancel
-                   </Link>
+                   </button>
                  </div>
                </div>
              </div>
