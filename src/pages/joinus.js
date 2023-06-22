@@ -179,14 +179,14 @@ function handleFileSelect(event) {
                  </div>
                </div>
                <div className="">
-                 <label>
+                
                    <div>Sex</div>
                    <select className="sex">
-                     <option value="" selected></option>
+                     <option value=""></option>
                      <option value="male">Male</option>
                      <option value="female">Female</option>
                    </select>
-                 </label>
+                
                </div>
                <div>
                  <div>Phone Number</div>

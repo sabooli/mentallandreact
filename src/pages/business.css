@@ -493,7 +493,6 @@ font-family: "Gilroy-Medium", sans-serif;
 }
 .NLD input {
 box-sizing: border-box;
-max-width: 360px;
 width: 100%;
 height: 40px;
 background: #FAFEFE;
@@ -502,7 +501,6 @@ border-radius: 5px;
 }
 .sex, .year {
 box-sizing: border-box;
-max-width: 360px;
 width: 100%;
 height: 40px;
 background: #FAFEFE;
@@ -511,7 +509,6 @@ border-radius: 5px;
 }
 .adrsinput {
 box-sizing: border-box;
-max-width: 360px;
 width: 100%;
 height: 180px !important;
 background: #FAFEFE;
@@ -638,6 +635,12 @@ grid-template-columns: 1fr 1fr;
 }
 .sendprops {
   margin-inline-start: 0;
+  margin-inline: auto;
+width: 180px;
+}
+.cancelprops {
+  margin-inline: auto;
+width: 180px;
 }
 .coa {
   font-size: 1.8em;
