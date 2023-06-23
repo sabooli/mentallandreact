@@ -34,10 +34,12 @@ import Positions from "./pages/positions";
 import Openrole from "./pages/openRole";
 import Joinus from "./pages/joinus";
 import Jobopp from "./pages/jobopportunities";
+import Positioninfo from "./pages/PositionInfo";
 import Map from "./pages/map";
 import Header from "./header";
 import Navbar from "./Navbar";
 import Footer from "./footer";
+
 
 export default function Main() {
   return (
@@ -82,6 +84,7 @@ export default function Main() {
           <Route path="openRole" element={<Openrole />} />
           <Route path="joinus" element={<Joinus />} />
           <Route path="jobopportunities" element={<Jobopp />} />
+          <Route path="positionInfo" element={<Positioninfo />} />
         </Route>
       </Routes>
     </BrowserRouter>

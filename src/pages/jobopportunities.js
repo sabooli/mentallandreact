@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import job from "../icons/Group 1255 (1).png"
 import Header from "../header";
 import Navbar from "../Navbar";
 import { Link } from "react-router-dom";
 import Footer from "../footer";
 import Form from "react-bootstrap/Form";
+import { MdKeyboardArrowDown } from "react-icons/md";
+import { CgSortAz } from "react-icons/cg";
+import Position from "./position";
+import Positioninfo from "./PositionInfo";
 
 
 export default function Jobopp() {
+  const [positionInfo, setPositionInfo] = useState(null);
+
+    const handleBoxClick = (info) => {
+      setPositionInfo(info);
+    };
+
     return (
       <div>
         <div
@@ -38,29 +48,81 @@ export default function Jobopp() {
             </div>
           </div>
         </div>
-        <div className="jobchoose">  
-          <div className="selecting"> <div>What</div>
-          <Form>
-            <Form.Select aria-label="wid">
-              <option>Select the Field...</option>
-              <option value="1">Depression</option>
-              <option value="2">Anxiety</option>
-              <option value="3">Unhealthy Eating</option>
-              <option value="4">
-                Life Transitions, Relationship Difficulties
-              </option>
-              <option value="5">Adjustment Issues</option>
-            </Form.Select></Form>
+        <div className="jobchoose">
+          <div className="selecting">
+            {" "}
+            <div>What</div>
+            <Form>
+              <Form.Select aria-label="wid">
+                <option>Select the Field...</option>
+                <option value="1">Depression</option>
+                <option value="2">Anxiety</option>
+                <option value="3">Unhealthy Eating</option>
+                <option value="4">
+                  Life Transitions, Relationship Difficulties
+                </option>
+                <option value="5">Adjustment Issues</option>
+              </Form.Select>
+            </Form>
           </div>
-          
-          <div className="selecting"><div>Where</div>
+
+          <div className="selecting">
+            <div>Where</div>
             <Form.Select aria-label="wid">
               <option>City, State, Zip code or Remote... </option>
             </Form.Select>
           </div>
           <div className="jobsearch">
             <Link to="#" className="jobsearchT">
-Search jobs  </Link>
+              Search jobs{" "}
+            </Link>
+          </div>
+        </div>
+        <div className="jobopportunitieslist">
+          <div className="jobfilters">
+            <button className="dropdown">
+              Remote
+              <MdKeyboardArrowDown />
+            </button>
+            <button className="dropdown">Intership</button>
+            <button className="dropdown">
+              Job Type
+              <MdKeyboardArrowDown />
+            </button>
+            <button className="dropdown">
+              Education
+              <MdKeyboardArrowDown />
+            </button>
+            <button className="dropdown">
+              Salary
+              <MdKeyboardArrowDown />
+            </button>
+            <button className="dropdown">
+              Experience
+              <MdKeyboardArrowDown />
+            </button>
+            <button className="dropdown">
+              Facilities
+              <MdKeyboardArrowDown />
+            </button>
+            <button className="dropdown">
+              Date Posted
+              <MdKeyboardArrowDown />
+            </button>
+          </div>{" "}
+          <button className="top mb-4">
+            <CgSortAz style={{ fontSize: 24, marginInlineEnd: 5 }} />
+            Latest
+          </button>
+          <div className="Positionslistanddetail">
+            <div>
+              <Position onClick={handleBoxClick} />
+              <Position onClick={handleBoxClick} />
+              <Position onClick={handleBoxClick} />
+            </div>
+            <div className="posinfodisplay">
+              <Positioninfo info={positionInfo} />
+            </div>
           </div>
         </div>
         <Footer />
