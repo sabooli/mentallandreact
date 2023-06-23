@@ -110,7 +110,7 @@ export default function Jobopp() {
               <MdKeyboardArrowDown />
             </button>
           </div>{" "}
-          <button className="top mb-4">
+          <button className="topjob mb-4">
             <CgSortAz style={{ fontSize: 24, marginInlineEnd: 5 }} />
             Latest
           </button>
