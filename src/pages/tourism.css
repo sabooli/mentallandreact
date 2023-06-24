@@ -136,8 +136,8 @@ margin-bottom: 140px;
   background-image: linear-gradient(to right, rgba(2, 151, 157, 1), rgba(0, 136, 141, 1));
   background-size: cover;
   height: 310px;
-    padding: 35px;
-    text-align: center;
+  padding: 35px;
+  text-align: center;
 }
 .packH {
  font-family: "Alice", sans-serif;

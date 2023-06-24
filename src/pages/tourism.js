@@ -14,23 +14,7 @@ import Navbar from "../Navbar";
 import { Link } from "react-router-dom";
 
 export default function Tourism() {
-  const chartConfig = {
-    // Configure your diagram here, including nodes and links.
-    // Example:
-    nodes: [
-      { id: "node1", label: "Start", type: "circle" },
-      { id: "node2", label: "End", type: "circle" },
-      { id: "node3", label: "Step 1", type: "square" },
-      { id: "node4", label: "Step 2", type: "square" },
-    ],
-    links: [
-      { from: "node1", to: "node3" },
-      { from: "node3", to: "node4" },
-      { from: "node4", to: "node2" },
-    ],
-  };
-
-    return (
+      return (
       <div>
         <div
           style={{
