@@ -206,7 +206,10 @@ color: rgba(2, 74, 157, 1);
   float: right;
   padding-bottom: 3px;
  white-space: normal;
-  display: inline-block;
+}
+.error {
+  color: red;
+  font-size: 14px;
 }
 .postime span {
   color: #000b0c;

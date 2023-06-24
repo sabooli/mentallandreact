@@ -35,6 +35,7 @@ import Openrole from "./pages/openRole";
 import Joinus from "./pages/joinus";
 import Jobopp from "./pages/jobopportunities";
 import Positioninfo from "./pages/PositionInfo";
+import Tourism from "./pages/tourism";
 import Map from "./pages/map";
 import Header from "./header";
 import Navbar from "./Navbar";
@@ -85,6 +86,7 @@ export default function Main() {
           <Route path="joinus" element={<Joinus />} />
           <Route path="jobopportunities" element={<Jobopp />} />
           <Route path="positionInfo" element={<Positioninfo />} />
+          <Route path="tourism" element={<Tourism />} />
         </Route>
       </Routes>
     </BrowserRouter>

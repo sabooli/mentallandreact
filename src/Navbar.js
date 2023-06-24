@@ -119,6 +119,7 @@ export default function Navbar() {
                   </NavLink>
                 </li>
               </ul>
+              <NavLink to="/pages/tourism">{t("Tourism")}</NavLink>
             </div>
           </li>
           <li className="submenu">

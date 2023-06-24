@@ -13,6 +13,7 @@ import "./pages/music.css";
 import "./pages/model.css";
 import "./pages/contact.css";
 import "./pages/business.css";
+import "./pages/tourism.css";
 import "./App.css";
 import "swiper/swiper.min.css";
 import "swiper/swiper-bundle.css";

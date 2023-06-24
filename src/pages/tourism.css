@@ -1,0 +1,185 @@
+@font-face {
+  font-family: "Alice";
+  src: url(../fonts/Alice-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-Regular.ttf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: url(../fonts/Gilroy-Bold.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Gilroy-Black";
+  src: url(../fonts/Gilroy-Black.ttf);
+}
+@font-face {
+  font-family: "Gilroy-ExtraBold";
+  src: url(../fonts/Gilroy-ExtraBold.ttf);
+}
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: url(../fonts/Gilroy-Medium.ttf);
+}
+@font-face {
+  font-family: "Gilroy-SemiBold";
+  src: url(../fonts/Gilroy-SemiBold.ttf);
+}
+
+body {
+  font-size: 16px;
+  margin: 0 auto;
+}
+.tour {
+  text-align: center;
+  color: #fafefe;
+  margin-top: 38px;
+}
+.tour h1 {
+  font-family: "Alice", sans-serif;
+  font-size: 3em;
+}
+.tour h2 {
+  font-family: "Alice", sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 60px;
+}
+.tourlink {
+  border: 1px solid #02979d;
+  background-color: #02979d;
+  color: #fafefe;
+  text-decoration: none;
+  border-radius: 30px;
+  padding: 12px;
+  font-family: "Gilroy-Regular", sans-serif;
+}
+.tourlink:hover {
+  color: #fafefe;
+}
+.tourism {
+  margin-inline: 85px;
+  padding-top: 50px;
+}
+.tour-pack {
+text-align: center;
+margin-bottom: 140px;
+}
+.tourism h2 {
+  font-family: "Alice", sans-serif;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+.packages {
+  margin-inline: -85px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 45px;
+  gap: 0.1%;
+}
+.Rhino {
+  display: inline-block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+.Rhino figcaption {
+  background-color: rgba(143, 77, 174, 1);
+  background-size: cover;
+  font-family: "Gilroy-Bold", sans-serif;
+  font-size: 1.125em;
+  color: rgba(250, 254, 254, 1);
+  padding: 10px;
+}
+.tourbeauty {
+  background-color: rgba(250, 254, 254, 1);
+  color: rgba(143, 77, 174, 1);
+  text-decoration: none;
+  border-radius: 20px;
+  padding-inline: 12px;
+  padding-bottom: 3px;
+  margin-inline-start: -36px;
+  font-family: "Gilroy-Regular", sans-serif;
+  float: right;
+}
+.tourbeauty:hover {
+  color: rgba(143, 77, 174, 1);
+}
+
+.packagelink {
+  background-color: #02979d;
+  color: #fafefe;
+  text-decoration: none;
+  border-radius: 30px;
+  padding: 18px;
+  font-family: "Gilroy-Regular", sans-serif;
+  display: inline-block;
+  margin: 0 auto;
+}
+.packagelink:hover {
+  color: #fafefe;
+}
+.tour-all-pack {
+  text-align: center;
+  margin-inline: -85px;
+}
+.all-inclusive-pack {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin-bottom: 100px;
+}
+.inclusive-pack {
+  background-image: linear-gradient(to right, rgba(2, 151, 157, 1), rgba(0, 136, 141, 1));
+  background-size: cover;
+  height: 310px;
+    padding: 35px;
+    text-align: center;
+}
+.packH {
+ font-family: "Alice", sans-serif;
+  font-size: 1.5em;
+  color: #fafefe;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+.packT {
+font-family: "Gilroy-Medium", sans-serif;
+  font-size: 1em;
+  color: #fafefe;
+  max-width: 270px;
+  text-align: center;
+  margin: 5px auto;
+}
+.step-by-step {
+  text-align: center;
+}
+@media screen and (max-width: 700px) {
+  .tour h1 {
+    font-size: 2.2em;
+  }
+  .tour h2 {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+  }
+  .tourlink {
+    font-size: 0.75em;
+  }
+  .packages {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 600px) {
+
+.all-inclusive-pack {
+  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+}
+.inclusive-pack {
+  background-image: linear-gradient(to bottom, rgba(2, 151, 157, 1), rgba(0, 136, 141, 1));
+}
+}
