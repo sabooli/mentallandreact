@@ -8,6 +8,56 @@ export default function Joinus() {
   const [countries, setCountries] = useState([]);
    const [cities, setCities] = useState([]);
    const [selectedCountry, setSelectedCountry] = useState("");
+const [email, setEmail] = useState("");
+const [invalidEmail, setInvalidEmail] = useState(false);
+const [phone, setPhone] = useState("");
+const [invalidPhone, setInvalidPhone] = useState(false);
+ const [mobile, setMobile] = useState("");
+ const [invalidMobile, setInvalidMobile] = useState(false);
+  const [address, setAddress] = useState("");
+  const [invalidAddress, setInvalidAddress] = useState(false);
+  
+
+  function checkAddress() {
+    const addressPattern = /^[A-Za-z0-9\s,'-]*$/;
+    setInvalidAddress(!address.match(addressPattern));
+  }
+
+  function handleAddressChange(event) {
+    setAddress(event.target.value);
+    checkAddress();
+  }
+
+ function checkMobile() {
+   const mobilePattern = /^[+]?\d{10,13}$/;
+   setInvalidMobile(!mobile.match(mobilePattern));
+ }
+
+ function handleMobileChange(event) {
+   setMobile(event.target.value);
+   checkMobile();
+ }
+
+function checkPhone() {
+  const phonePattern = /^[0-9]{9}$/;
+  setInvalidPhone(!phone.match(phonePattern));
+}
+
+function handlePhoneChange(event) {
+  setPhone(event.target.value);
+  checkPhone();
+}
+
+function checkEmail() {
+  const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+  setInvalidEmail(!email.match(emailPattern));
+}
+
+function handleEmailChange(event) {
+  setEmail(event.target.value);
+  checkEmail();
+}
+
 const inputRef = useRef(null);
 
 function handleFileSelect(event) {
@@ -21,7 +71,6 @@ function handleFileSelect(event) {
       .then((data) => setCountries(data));
   }, []);
 
-  
   useEffect(() => {
     if (selectedCountry) {
       fetch(`https://countriesnow.space/api/v0.1/countries/cities`,
@@ -177,27 +226,60 @@ function handleFileSelect(event) {
                  </div>
                </div>
                <div className="">
-                
-                   <div>Sex</div>
-                   <select className="sex">
-                     <option value=""></option>
-                     <option value="male">Male</option>
-                     <option value="female">Female</option>
-                   </select>
-                
+                 <div>Sex</div>
+                 <select className="sex">
+                   <option value=""></option>
+                   <option value="male">Male</option>
+                   <option value="female">Female</option>
+                 </select>
                </div>
+               <form>
+                 <div>
+                   <lable htmlFor="phone">Phone Number</lable>
+                   <input
+                     type="tel"
+                     value={phone}
+                     onChange={handlePhoneChange}
+                   />
+                 </div>
+                 {invalidPhone && (
+                   <p className="error">
+                     Invalid phone number format (9 digits required)
+                   </p>
+                 )}
+               </form>
                <div>
-                 <div>Phone Number</div>
-                 <input />
-               </div>
-               <div>
-                 <div>Mobile Number</div>
-                 <input />
+                 <form>
+                   <div>
+                     <lable htmlFor="mobile">Mobile Number</lable>
+                     <input
+                       type="tel"
+                       value={mobile}
+                       onChange={handleMobileChange}
+                     />
+                   </div>
+                   {invalidMobile && (
+                     <p className="error">
+                       Invalid mobile number format (10 to 13 digits required
+                       with optional country code prefix '+')
+                     </p>
+                   )}
+                 </form>
                </div>
                <div className="">
-                <form>
-                 <label htmlFor="email">Email Address</label>
-                 <input type="email" id="email" required/></form>
+                 <form>
+                   <div>
+                     <label htmlFor="email">Email Address</label>
+                     <input
+                       type="email"
+                       value={email}
+                       onChange={handleEmailChange}
+                     />
+                   </div>
+                   {invalidEmail && (
+                     <p className="error">Invalid email format</p>
+                   )}
+                 </form>
                </div>
                <div>
                  <div>Country</div>
@@ -226,12 +308,35 @@ function handleFileSelect(event) {
                  </select>
                </div>
                <div>
-                 <div>Address</div>
-                 <input className="adrsinput" />
-               </div>
+                 <form>
+                   <div>
+                     <lable>
+                       Address
+                       <textarea
+                         value={address}
+                         onChange={handleAddressChange}
+                         className="adrsinput"
+                       />
+                     </lable> </div>
+                     {invalidAddress && (
+                       <p className="error">
+                         Invalid address format (only letters, numbers, spaces,
+                         commas, apostrophes, and dashes are allowed)
+                       </p>
+                     )}
+                  
+                 </form>
+               </div>{" "}
                <div>
-                 <div>Postal Code</div>
-                 <input />
+                 {" "}
+                 <form>
+                   <div>
+                     <lable>
+                       Postal Code
+                       <input />
+                     </lable>
+                   </div>
+                 </form>
                </div>
                <div>
                  <div>CV</div>
@@ -242,7 +347,12 @@ function handleFileSelect(event) {
                    className="file-input"
                    type="file"
                  />
-                 <button className="cvbutton" onClick={() => inputRef.current.click()}>Choose File</button>
+                 <button
+                   className="cvbutton"
+                   onClick={() => inputRef.current.click()}
+                 >
+                   Choose File
+                 </button>
                  <div className="cvtext mb-5">
                    Please upload your file in PDF format.
                  </div>
