@@ -235,7 +235,7 @@ function handleFileSelect(event) {
                </div>
                <form>
                  <div>
-                   <lable htmlFor="phone">Phone Number</lable>
+                   <label htmlFor="phone">Phone Number</label>
                    <input
                      type="tel"
                      value={phone}
@@ -251,7 +251,7 @@ function handleFileSelect(event) {
                <div>
                  <form>
                    <div>
-                     <lable htmlFor="mobile">Mobile Number</lable>
+                     <label htmlFor="mobile">Mobile Number</label>
                      <input
                        type="tel"
                        value={mobile}
@@ -310,14 +310,14 @@ function handleFileSelect(event) {
                <div>
                  <form>
                    <div>
-                     <lable>
+                     <label>
                        Address
                        <textarea
                          value={address}
                          onChange={handleAddressChange}
                          className="adrsinput"
                        />
-                     </lable> </div>
+                     </label> </div>
                      {invalidAddress && (
                        <p className="error">
                          Invalid address format (only letters, numbers, spaces,
@@ -331,10 +331,10 @@ function handleFileSelect(event) {
                  {" "}
                  <form>
                    <div>
-                     <lable>
+                     <label>
                        Postal Code
                        <input />
-                     </lable>
+                     </label>
                    </div>
                  </form>
                </div>
