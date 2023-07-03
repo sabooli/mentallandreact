@@ -229,6 +229,11 @@ figure {
 .sempsy {
   margin-inline-start: -4%;
 }
+.displayAll {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5%;
+}
 .pubsem {
   font-family: "Gilroy-SemiBold", sans-serif;
   font-size: 2em;
@@ -242,6 +247,7 @@ figure {
   flex-direction: column;
   align-items: center;
   align-content: center;
+  text-transform: capitalize;
 }
 .description {
   font-family: "Gilroy-Regular", sans-serif;
@@ -300,6 +306,16 @@ figure {
   align-items: center;
   padding-bottom: 12px;
   text-decoration: none;
+}
+.goBack {
+font-family: "Gilroy-Bold", sans-serif;
+  font-size: 1.125em;
+  line-height: 21px;
+  color: #02979d;
+}
+.goBackLink {
+  background-color: #fafafa !important;
+  border: 1px solid #02979d !important;
 }
 .hfq {
   display: flex;

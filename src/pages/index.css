@@ -307,9 +307,9 @@ margin: 0 auto;
   font-size: 14px;
   line-height: 60px;
   color: #000b0c;
-  margin-inline: 5px;
   background-color: #ecf7f7;
-  padding: 10px;
+  padding: 10px; 
+  margin-inline: 5px;
   max-width: 100px; 
   text-align: center;
 }

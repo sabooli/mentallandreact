@@ -173,7 +173,7 @@ padding-top: 15px;
 padding-inline: 15px;
 padding-bottom: 45px;
   color: #000b0c;
-max-width: 610px;
+max-width: 100%;
 }
 .postitle {
 font-family: "Gilroy-Medium", sans-serif;
@@ -667,6 +667,16 @@ color: #02979D;
   grid-template-columns: 1fr 1fr;
   gap: 3%;
 }
+.positionnotdetail {
+   display: grid;
+  grid-template-columns: 1fr;
+}
+.backpls {
+  font-family: "Gilroy-Medium", sans-serif;
+  font-size: 18px;
+  color: #02979D;
+  display: none;
+}
 
 @media screen and (max-width: 1200px) {
 .customerserviceT, .jobT {
@@ -689,7 +699,7 @@ row-gap: 50px;
 flex-direction: column;
 margin-inline: 40px;
  }
- .jobfilters, .Positionslistanddetail, .topjob {
+ .jobfilters, .Positionslistanddetail, .positionnotdetail, .topjob {
   margin-inline: -45px;
  }
 .adbeexpertwords, .chbeexpertwords {
@@ -719,10 +729,15 @@ grid-template-columns: 1fr;
 display: flex;
 flex-direction: column;
 }
-.posinfodisplay {
+.positiondisplay {
   display: none;
 }
-
+.backpls {
+  display: block;
+text-align: center;
+text-decoration: none;
+margin-top: 30px;
+}
 }
 @media screen and (max-width: 780px) {
 .posdesign {
