@@ -18,24 +18,36 @@ import HMfaq from "./homemfaq";
 import group731 from "../icons/Group 731.svg";
 
 export default function Home() {
-  const { t } = useTranslation();
   const [activeButton, setActiveButton] = useState(0);
   const [faqData, setFaqData] = useState([]);
+  const [articleData, setArticleData] = useState([]);
+  const { t, i18n } = useTranslation();
 
 
   const handleButtonClick = (index) => {
     setActiveButton(index);
   };
    
-const apiUrl = t("");
+const apiUrl = t("apiUrl");
 
 useEffect(() => {
   fetch(apiUrl)
     .then((response) => response.json())
-    .then((data) => setFaqData(data.data[index]));
-}, []);
+    .then((data) => setFaqData(data.data));
+}, [apiUrl]);
 
-  const index = 0;
+useEffect(() => {
+  setFaqData([]);
+  fetch(apiUrl)
+    .then((response) => response.json())
+    .then((data) => setFaqData(data.data));
+}, [i18n.language]);
+
+useEffect(() => {
+  fetch("https://www.mentalland.com/api/V1/homepage/blogs_en_list")
+    .then((response) => response.json())
+    .then((data) => setArticleData(data.data));
+}, []);
 
   return (
     <div>
@@ -135,11 +147,12 @@ useEffect(() => {
                   </div>
                   <div>
                     <div className="homepsychology">
-                    <img
-                      src={homepsychology}
-                      className="img-fluid"
-                      alt="psychology"
-                    /></div>
+                      <img
+                        src={homepsychology}
+                        className="img-fluid"
+                        alt="psychology"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -271,11 +284,12 @@ useEffect(() => {
                 <div>
                   <div className="mentallandonphone">
                     <div className="MoPhimage">
-                    <img
-                      src={mentalonphone}
-                      className="img-fluid"
-                      alt="MentalLand on phone"
-                    /></div>
+                      <img
+                        src={mentalonphone}
+                        className="img-fluid"
+                        alt="MentalLand on phone"
+                      />
+                    </div>
                     <div>
                       <h3 className="MoPhheading">Mentalland on your phone</h3>
                       <div className="MoPhtext">
@@ -317,28 +331,30 @@ useEffect(() => {
               <div className="partVI">
                 <div className="latestArticles">
                   <h4 className="latestheading">latest articles</h4>
-                  <div className="latest">
-                    <div>
-                      <img
-                        src={latearticle}
-                        className="latearticleimage img-fluid"
-                        alt="latest articles MentalLand"
-                      />
-                    </div>
-                    <div className="articlewords text-start">
-                      <h5>Lorem ipsum dolor sit amet consectetur. Magna.</h5>
-                      <span>
-                        Lorem ipsum dolor sit amet consectetur. Etiam aliquet
-                        tristique turpis ultrices ac augue eu adipiscing turpis.
-                        Ultricies rhoncus semper in id nec faucibus non
-                        vulputate vestibulum. Pharetra a elementum in.
-                      </span>
-                    </div>
-                    <div className="readarticle">
-                      <Link to="/" className="Readlatest">
-                        <span className="Readlatestword">Read</span>
-                      </Link>
-                    </div>
+                  <div className="latestWrapper">
+                    {articleData.map((article, index) => (
+                      <>
+                        <div className="latest pb-3">
+                          {" "}
+                          <div>
+                            <img
+                              src={`https://www.mentalland.com/image/blog/${article.thumbnail_blog}`}
+                              className="latearticleimage img-fluid"
+                              alt="latest articles MentalLand"
+                            />
+                          </div>
+                          <div className="articlewords text-start">
+                            <h5>{article.title_blog}</h5>
+                            <span>{article.content_blog}</span>
+                          </div>
+                          <div className="readarticle">
+                            <Link to="/" className="Readlatest">
+                              <span className="Readlatestword">Read</span>
+                            </Link>
+                          </div>
+                        </div>{" "}
+                      </>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -346,31 +362,14 @@ useEffect(() => {
                 <h2 className="hfrequent">Most Frequently Asked Questions</h2>
                 <div className="hfreq">
                   <div>
-                    <HMfaq
-                      index={index}
-                      question={faqData.title_faqs}
-                      answer={faqData.content_faqs}
-                    />
-                    <HMfaq
-                      index={1}
-                      question="Lorem ipsum dolor sit amet consectetur. Donec at ut diam sit vitae gravida nisi ?"
-                      answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
-                    />
-                    <HMfaq
-                      index={2}
-                      question="Lorem ipsum dolor sit amet consectetur. Nibh nisi nec velit arcu tristique. Justo nulla?"
-                      answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
-                    />
-                    <HMfaq
-                      index={3}
-                      question="Lorem ipsum dolor sit amet consectetur. Ut neque pellentesque felis orci.?"
-                      answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
-                    />
-                    <HMfaq
-                      index={4}
-                      question="Lorem ipsum dolor sit amet consectetur. Amet mi viverra praesent imperdiet proin ne?"
-                      answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
-                    />
+                    {faqData.map((faq, index) => (
+                      <HMfaq
+                        key={index}
+                        index={index}
+                        question={faq.title_faqs}
+                        answer={faq.content_faqs}
+                      />
+                    ))}
                   </div>
                   <img src={group731} alt="faq" className="group731" />
                 </div>
