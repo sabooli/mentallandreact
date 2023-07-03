@@ -14,10 +14,10 @@ export default function Header(props) {
       <div className="buttons">
         <Link to="/" className="btn-head">
           <span className="login">
-            <BiLogIn className="svg" /> {""} Login
+            <BiLogIn className="svg" /> Login
           </span>
         </Link>
-        <Link to="/" className="btn-head">
+        <Link to="../cart" className="btn-head">
           <span className="login">
             <BiShoppingBag className="svg" />
             {""}Cart
