@@ -1,8 +1,9 @@
-import React, { useState} from "react";
+import React, { useState, useEffect } from "react";
 import { Dropdown } from "react-bootstrap";
 import flag from "./icons/En.svg";
 import flagIR from "./icons/iranflag.png";
 import { useTranslation } from "react-i18next";
+import Cookies from "js-cookie";
 
 
 export default function Flag() {
@@ -10,17 +11,35 @@ export default function Flag() {
     const { t, i18n } = useTranslation();
 
 
-    function handleLanguageChange(newLanguage) {
-    setLanguage(newLanguage);
-     i18n.changeLanguage(newLanguage);
+useEffect(() => {
+  // Check if a language cookie exists
+  const storedLanguage = Cookies.get("language");
 
-     if (newLanguage === "fa") {
+  if (storedLanguage) {
+    setLanguage(storedLanguage);
+    i18n.changeLanguage(storedLanguage);
+
+    if (storedLanguage === "fa") {
       document.documentElement.setAttribute("dir", "rtl");
     } else {
       document.documentElement.setAttribute("dir", "ltr");
-    } 
-    
     }
+  }
+}, []);
+
+function handleLanguageChange(newLanguage) {
+    setLanguage(newLanguage);
+    i18n.changeLanguage(newLanguage);
+
+    if (newLanguage === "fa") {
+      document.documentElement.setAttribute("dir", "rtl");
+    } else {
+      document.documentElement.setAttribute("dir", "ltr");
+    }
+
+    // Store the selected language in a cookie
+    Cookies.set("language", newLanguage);
+  }
 
 return (
   <Dropdown className="language">
