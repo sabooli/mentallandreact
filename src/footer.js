@@ -27,14 +27,14 @@ export default function Footer() {
         </div>
         <div className="column first">
           <div className="fh2">WRITE US</div>
-          <lable className="fname">Name
-          <input type="full name" className="formn" autoComplete="off" /></lable>
+          <div className="fname">Name
+          <input type="full name" className="formn" autoComplete="off" /></div>
 
-          <lable className="femail">Email
-          <input type="full name" className="forme" autoComplete="off" /></lable>
+          <div className="femail">Email
+          <input type="full name" className="forme" autoComplete="off" /></div>
 
-          <lable className="fmessage">Message
-          <textarea type="full name" className="formm" autoComplete="off" /></lable>
+          <div className="fmessage">Message
+          <textarea type="full name" className="formm" autoComplete="off" /></div>
 
           <button className="fsmessage">
             <div className="fbt">Send Message</div>
