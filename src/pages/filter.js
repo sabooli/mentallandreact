@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 
 
 const options = [
   { value: "option1", label: "Depression", category: "Category" },
-  { value: "option2", label: "Anxiety", category: "Category" },
+  { value: "option2", label: "mental", category: "Category" },
   { value: "option3", label: "Unhealthy Eating", category: "Category" },
   {
     value: "option4",
@@ -14,20 +14,7 @@ const options = [
   { value: "option8", label: "Online Only", category: "Status" },
 ];
 
-const Filter = () => {
-  const [checkedValues, setCheckedValues] = useState([]);  
-
-  const handleCheckboxChange = (event) => {
-    const value = event.target.value;
-    const isChecked = event.target.checked;
-
-    if (isChecked) {
-      setCheckedValues([...checkedValues, value]);
-    } else {
-      setCheckedValues(checkedValues.filter((v) => v !== value));
-    }
-  };
-
+const Filter = (props) => {
    const groups = options.reduce((accumulator, option) => {
      if (accumulator[option.category]) {
        accumulator[option.category].push(option);
@@ -48,8 +35,8 @@ const Filter = () => {
               <input
                 type="checkbox"
                 value={option.value}
-                checked={checkedValues.includes(option.value)}
-                onChange={handleCheckboxChange}
+                checked={props.checkedValues.includes(option.value)}
+                onChange={props.handleCheckboxChange}
               />
               {option.label}
             </label>
