@@ -1,0 +1,43 @@
+import React, { useContext } from "react";
+import Header from "../header";
+import Navbar from "../Navbar";
+import Footer from "../footer";
+import CartContext from "./cartContext";
+import { RiDeleteBin6Line } from "react-icons/ri";
+
+export default function Cart() {
+ const { cartData } = useContext(CartContext);
+
+  return (
+    <div>
+      <Header className="twitter" />
+      <Navbar />
+      <div className="cart">
+        <div className="cartH">Cart({cartData.length})</div>
+        <div className="cartlist">
+          <div className="cartlisttitle">
+            <div>Date</div>
+            <div>Item</div>
+            <div>Description</div>
+            <div>Price</div>
+            <div>Delete</div>
+          </div>
+          <div>
+             {cartData.map((cart, index) => (
+            <div className="reservedlist" key={index} >
+              <div>{cart.dateEvent}</div>
+              <div>{cart.item}</div>
+              <div>{cart.titleEvent}</div>
+              <div>{cart.priceEvent}</div>
+              <div>
+                <RiDeleteBin6Line className="svg"  />
+              </div>
+            </div>
+           ))}
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </div>
+  );
+}
