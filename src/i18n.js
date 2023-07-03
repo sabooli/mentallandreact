@@ -5,6 +5,7 @@ const resources = {
   en: {
     translation: {
       apiUrl: "https://www.mentalland.com/api/V1/homepage/faqs_english",
+      eventUrl: "https://www.mentalland.com/api/V1/homepage/events_english",
       DEPRESSION: "DEPRESSION",
       Home: "Home",
       About: "About",
@@ -13,11 +14,17 @@ const resources = {
       Positions: "Positions",
       AboutUs: "About Us",
       JoinUs: "Join Us",
+      "GeneralEvents": "General Events",
+      "GeneralSeminars": "General Seminars",
+      "SpecializedEvents": "Specialized Events",
+      "SpecializedSeminars": "Specialized Seminars",
+      
     },
   },
   fa: {
     translation: {
       apiUrl: "https://www.mentalland.com/api/V1/homepage/faqs_persian",
+      eventUrl: "https://www.mentalland.com/api/V1/homepage/events_persian",
       DEPRESSION: "افسردگی",
       Home: "خانه",
       About: "درباره ما",
@@ -26,6 +33,10 @@ const resources = {
       Positions: "فرصتهای شغلی",
       AboutUs: "دربارۀ ما",
       JoinUs: "عضویت",
+      "GeneralEvents": "ایونتهای عمومی",
+      "GeneralSeminars": "سمینارهای عمومی",
+      "SpecializedEvents": "ایونتهای تخصصی",
+      "SpecializedSeminars": "سمینارهای تخصصی",
     },
   },
 };
