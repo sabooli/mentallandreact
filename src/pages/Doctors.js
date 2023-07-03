@@ -20,12 +20,7 @@ export default function Doctors(props) {
           </div>
         </div>
         <div className="workField">
-            <span className="field">{props.info.expertisez}</span>
-          
-            <span className="field">{props.info.expertiseo}</span>
-         
-            <span className="field">{props.info.expertiset}</span>
-          
+            {props.info.expertise}
         </div>
         <div className="hhh">
           <Link to={`/pages/consultantadults/${props.info.id}`} className="counsel">

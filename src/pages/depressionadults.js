@@ -11,7 +11,9 @@ export default function Services() {
   const { t } = useTranslation();
   const [drInfo, setDrInfo] = useState([]);
   const [searchValue, setSearchValue] = useState("");
-    
+   const [checkedValues, setCheckedValues] = useState([]);
+
+  
 useEffect(() => {
    const url = "https://mentalland.com/api/V1/homepage/consts_list_homepage";
 
@@ -29,9 +31,12 @@ useEffect(() => {
              lname: item.Lname,
              star: item.stars,
              madrak: item.type_madrak,
-             expertisez: JSON.parse(item.Specialties)[0],
-             expertiseo: JSON.parse(item.Specialties)[1],
-             expertiset: JSON.parse(item.Specialties)[2],
+             expertise: JSON.parse(item.Specialties).map((specialty, index) => (
+                        <>
+                          {index > 0 ? " " : ""}
+                          <span className="field">{specialty}</span>
+                        </>
+                      )),
              image:
                `https://mentalland.com/image/users/cons/degree/${item.avatar}`,
            };
@@ -41,6 +46,17 @@ useEffect(() => {
      .catch((error) => console.error(error));
   }, []);
   
+  const handleCheckboxChange = (event) => {
+   const value = event.target.value;
+   const isChecked = event.target.checked;
+
+   if (isChecked) {
+     setCheckedValues([...checkedValues, value]);
+   } else {
+     setCheckedValues(checkedValues.filter((v) => v !== value));
+   }
+ };
+
  useEffect(() => {
     const newDrInfo = drInfo.filter(
       (value) =>
@@ -69,7 +85,10 @@ useEffect(() => {
           </div>
           <div className="main">
             <section className="check">
-              <Filter info={drInfo} />
+              <Filter
+                checkedValues={checkedValues}
+                handleCheckboxChange={handleCheckboxChange}
+              />
             </section>
             <section className="psychologist">
               <div className="threeitems">
@@ -86,13 +105,10 @@ useEffect(() => {
                       placeholder="Name..."
                       className="phname"
                       type="text"
-                     onChange={(e) => setSearchValue(e.target.value)} 
-                     value={searchValue}                      
+                      onChange={(e) => setSearchValue(e.target.value)}
+                      value={searchValue}
                     />
-                    <button
-                      type="submit"
-                      className="find"
-                    >
+                    <button type="submit" className="find">
                       <span className="fitext">Search</span>
                     </button>
                   </div>
