@@ -1,5 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
+import { CartProvider } from "./pages/cartContext";
 import Main from "./Main";
 import "./i18n";
 import "./pages/customize.css";
@@ -24,4 +25,4 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 
 
 
-createRoot(document.getElementById("root")).render(<Main />);
+createRoot(document.getElementById("root")).render(<CartProvider><Main /></CartProvider>);

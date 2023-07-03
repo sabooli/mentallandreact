@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes, Outlet } from "react-router-dom"
+import { BrowserRouter, Route, Routes, Outlet } from "react-router-dom";
 import About from "./pages/aboutus";
 import Contact from "./pages/contactus";
 import Services from "./pages/depressionadults";
@@ -36,13 +36,14 @@ import Joinus from "./pages/joinus";
 import Jobopp from "./pages/jobopportunities";
 import Positioninfo from "./pages/PositionInfo";
 import Tourism from "./pages/tourism";
+import Cart from "./pages/cart";
 import Map from "./pages/map";
 import Header from "./header";
 import Navbar from "./Navbar";
 import Footer from "./footer";
 
-
 export default function Main() {
+ 
   return (
     <BrowserRouter>
       <Routes>
@@ -73,7 +74,6 @@ export default function Main() {
           <Route path="childrencoaches" element={<Childrencoaches />} />
           <Route path="musicadults" element={<Musicadults />} />
           <Route path="musicchildren" element={<Musicchildren />} />
-          <Route path="seminarreg" element={<Seminarreg />} />
           <Route path="courseinfo" element={<Courseinfo />} />
           <Route path="courseinfoch" element={<Courseinfoch />} />
           <Route path="businessadults" element={<Businessadults />} />
@@ -87,6 +87,8 @@ export default function Main() {
           <Route path="jobopportunities" element={<Jobopp />} />
           <Route path="positionInfo" element={<Positioninfo />} />
           <Route path="tourism" element={<Tourism />} />
+          <Route path="seminarreg/:id" element={<Seminarreg />} />
+          <Route path="cart" element={<Cart />} />
         </Route>
       </Routes>
     </BrowserRouter>
