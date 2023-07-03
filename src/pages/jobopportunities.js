@@ -12,12 +12,16 @@ import Positioninfo from "./PositionInfo";
 
 
 export default function Jobopp() {
-  const [positionInfo, setPositionInfo] = useState(null);
+  const [positionInfo, setPositionInfo] = useState(false);
 
-    const handleBoxClick = (info) => {
-      setPositionInfo(info);
+  const handleBackClick = () => {
+      setPositionInfo(false);
+    }
+
+ const handleBoxClick = () => {
+      setPositionInfo(true);
     };
-
+    
     return (
       <div>
         <div
@@ -114,16 +118,26 @@ export default function Jobopp() {
             <CgSortAz style={{ fontSize: 24, marginInlineEnd: 5 }} />
             Latest
           </button>
-          <div className="Positionslistanddetail">
+          {positionInfo ? (
             <div>
+            <div className="Positionslistanddetail">
+              <div className="positiondisplay">
+                <Position onClick={handleBoxClick} />
+                <Position onClick={handleBoxClick} />
+                <Position onClick={handleBoxClick} />
+              </div>
+              <div className="posinfodisplay">
+                <Positioninfo />
+              </div></div>
+              <Link onClick={handleBackClick} className="backpls">Back</Link>
+            </div>
+          ) : (
+            <div className="positionnotdetail">
               <Position onClick={handleBoxClick} />
               <Position onClick={handleBoxClick} />
               <Position onClick={handleBoxClick} />
             </div>
-            <div className="posinfodisplay">
-              <Positioninfo info={positionInfo} />
-            </div>
-          </div>
+          )}
         </div>
         <Footer />
       </div>

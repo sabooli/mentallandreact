@@ -29,7 +29,7 @@ export default function Position({ onClick }) {
                        <span>Graphic design</span> <span>Motion design</span>
                        <Link
                          onClick={() =>
-                           onClick({ title: "Box 1", content: "Box 1 content" })
+                           onClick()
                          }
                          className="gotopos text-center"
                        >
