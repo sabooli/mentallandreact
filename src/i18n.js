@@ -6,6 +6,7 @@ const resources = {
     translation: {
       apiUrl: "https://www.mentalland.com/api/V1/homepage/faqs_english",
       eventUrl: "https://www.mentalland.com/api/V1/homepage/events_english",
+      articleUrl : "https://www.mentalland.com/api/V1/homepage/blogs_en_list",
       DEPRESSION: "DEPRESSION",
       Home: "Home",
       About: "About",
@@ -25,6 +26,7 @@ const resources = {
     translation: {
       apiUrl: "https://www.mentalland.com/api/V1/homepage/faqs_persian",
       eventUrl: "https://www.mentalland.com/api/V1/homepage/events_persian",
+      articleUrl : "https://www.mentalland.com/api/V1/homepage/blogs_fa_list",
       DEPRESSION: "افسردگی",
       Home: "خانه",
       About: "درباره ما",

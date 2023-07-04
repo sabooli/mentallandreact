@@ -48,11 +48,20 @@ useEffect(() => {
     .then((data) => setFaqData(data.data));
 }, [i18n.language]);
 
+const articleUrl = t("articleUrl");
+
 useEffect(() => {
-  fetch("https://www.mentalland.com/api/V1/homepage/blogs_en_list")
+  fetch(articleUrl)
     .then((response) => response.json())
     .then((data) => setArticleData(data.data));
-}, []);
+}, [articleUrl]);
+
+useEffect(() => {
+  setArticleData([]);
+  fetch(articleUrl)
+    .then((response) => response.json())
+    .then((data) => setArticleData(data.data));
+}, [i18n.language]);
 
   return (
     <div>
