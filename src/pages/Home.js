@@ -13,7 +13,6 @@ import goal from "../icons/Group 768g.svg";
 import mentalonphone from "../icons/Group 779.png";
 import Customercomments from "./customercomments";
 import Peace from "../icons/Rectangle 44.png";
-import latearticle from "../icons/Rectangle 31a.svg";
 import HMfaq from "./homemfaq";
 import group731 from "../icons/Group 731.svg";
 
@@ -21,9 +20,15 @@ export default function Home() {
   const [activeButton, setActiveButton] = useState(0);
   const [faqData, setFaqData] = useState([]);
   const [articleData, setArticleData] = useState([]);
+  const [expandedIndex, setExpandedIndex] = useState(-1);
   const { t, i18n } = useTranslation();
 
-
+const handleClickRead = (index) => {
+  setExpandedIndex(index);
+}
+const handleClickBack = () => {
+    setExpandedIndex(-1);
+}
   const handleButtonClick = (index) => {
     setActiveButton(index);
   };
@@ -334,25 +339,40 @@ useEffect(() => {
                   <div className="latestWrapper">
                     {articleData.map((article, index) => (
                       <>
-                        <div className="latest pb-3">
-                          {" "}
-                          <div>
-                            <img
-                              src={`https://www.mentalland.com/image/blog/${article.thumbnail_blog}`}
-                              className="latearticleimage img-fluid"
-                              alt="latest articles MentalLand"
-                            />
-                          </div>
-                          <div className="articlewords text-start">
-                            <h5>{article.title_blog}</h5>
-                            <span>{article.content_blog}</span>
-                          </div>
-                          <div className="readarticle">
-                            <Link to="/" className="Readlatest">
-                              <span className="Readlatestword">Read</span>
-                            </Link>
-                          </div>
-                        </div>{" "}
+                        <div key={index}>
+                          {expandedIndex === index ? (
+                            <div className="articlewords bg-fafefe text-start">
+                              <h5>{article.title_blog}</h5>
+                              <span>{article.content_blog}</span>
+                              <div className="back-link">
+                              <Link className="readlessarticle" onClick={() => handleClickBack(index)}>
+                                  back
+                              </Link></div>
+                            </div>
+                          ) : (
+                            <div className="latest pb-3">
+                              <div>
+                                <img
+                                  src={`https://www.mentalland.com/image/blog/${article.thumbnail_blog}`}
+                                  className="latearticleimage img-fluid"
+                                  alt="latest articles MentalLand"
+                                />
+                              </div>
+                              <div className="articlewords text-start">
+                                <h5>{article.title_blog}</h5>
+                                <span></span>
+                              </div>
+                              <div className="readarticle">
+                                <Link
+                                  onClick={() => handleClickRead(index)}
+                                  className="Readlatest"
+                                >
+                                  <span className="Readlatestword">Read</span>
+                                </Link>
+                              </div>
+                            </div>
+                          )}
+                        </div>
                       </>
                     ))}
                   </div>

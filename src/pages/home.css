@@ -338,6 +338,10 @@ margin-bottom: 150px;
   padding-inline: 85px;
   text-align: center;
 }
+.back-link {
+  float: inline-end;
+  clear: both;
+}
 .latestheading {
   font-family: "Gilroy-SemiBold", sans-serif;
   font-size: 1.6em;
@@ -345,6 +349,23 @@ margin-bottom: 150px;
   text-align: center;
   padding-top: 4%;
   text-transform: uppercase;
+}
+.readlessarticle {
+  text-decoration: none;
+  background-color: #02979d;
+  color: #fafefe;
+  border: 1px solid #02979d;
+  border-radius: 20px;
+  padding-inline: 10px;
+  padding-bottom: 3px;
+  float: inline-end;
+}
+.readlessarticle:hover {
+    color: #fafefe;
+
+}
+.articlewords h5 {
+  text-transform: capitalize;
 }
 .latest {
   display: grid;
@@ -354,6 +375,9 @@ margin-bottom: 150px;
   background-color: #fafefe;
   min-height: 150px;
   margin-bottom: 2%;
+}
+.bg-fafefe {
+  background: #fafefe;
 }
 .latearticleimage {
   padding-inline-end: 10px;
