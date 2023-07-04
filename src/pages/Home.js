@@ -50,6 +50,7 @@ useEffect(() => {
 
 const articleUrl = t("articleUrl");
 
+
 useEffect(() => {
   fetch(articleUrl)
     .then((response) => response.json())
@@ -354,9 +355,13 @@ useEffect(() => {
                               <h5>{article.title_blog}</h5>
                               <span>{article.content_blog}</span>
                               <div className="back-link">
-                              <Link className="readlessarticle" onClick={() => handleClickBack(index)}>
+                                <Link
+                                  className="readlessarticle"
+                                  onClick={() => handleClickBack(index)}
+                                >
                                   back
-                              </Link></div>
+                                </Link>
+                              </div>
                             </div>
                           ) : (
                             <div className="latest pb-3">
@@ -369,7 +374,7 @@ useEffect(() => {
                               </div>
                               <div className="articlewords text-start">
                                 <h5>{article.title_blog}</h5>
-                                <span></span>
+                                <span className="truncate-text">{article.content_blog}</span>
                               </div>
                               <div className="readarticle">
                                 <Link

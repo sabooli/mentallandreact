@@ -171,8 +171,7 @@ export default function Customercomments({ heading }) {
             </div>
           </div>
         </SwiperSlide>
-      </Swiper>{" "}
-     
+      </Swiper>{" "}     
     </div>
   );
 }
