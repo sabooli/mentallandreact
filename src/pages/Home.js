@@ -6,6 +6,9 @@ import Footer from "../footer";
 import { useTranslation } from "react-i18next";
 import homepsychology from "../icons/Rectangle 11home.png";
 import { Link } from "react-router-dom";
+import { RiHeartPulseLine } from "react-icons/ri";
+import { FaTheaterMasks } from "react-icons/fa";
+import { SlBriefcase } from "react-icons/sl";
 import telescope from "../icons/Group 768.svg";
 import mission from "../icons/Group 768m.svg";
 import value from "../icons/Group 768v.svg";
@@ -123,6 +126,17 @@ useEffect(() => {
                     onClick={() => handleButtonClick(0)}
                   >
                     <div className="boxy">
+                      <div
+                        className={
+                          activeButton === 0 ? "smallcircleII" : "smallcircle"
+                        }
+                      >
+                        <RiHeartPulseLine
+                          className={
+                            activeButton === 0 ? "heartbreak" : "heart"
+                          }
+                        />{" "}
+                      </div>
                       <h3 className="heading">Psychology</h3>
                     </div>
                   </span>
@@ -131,6 +145,17 @@ useEffect(() => {
                     onClick={() => handleButtonClick(1)}
                   >
                     <div className="boxy">
+                      <div
+                        className={
+                          activeButton === 1 ? "smallcircleII" : "smallcircle"
+                        }
+                      >
+                        <SlBriefcase
+                          className={
+                            activeButton === 1 ? "heartbreak" : "heart"
+                          }
+                        />
+                      </div>
                       <h3 className="heading">Business</h3>
                     </div>
                   </span>
@@ -139,6 +164,17 @@ useEffect(() => {
                     onClick={() => handleButtonClick(2)}
                   >
                     <div className="boxy">
+                      <div
+                        className={
+                          activeButton === 2 ? "smallcircleII" : "smallcircle"
+                        }
+                      >
+                        <FaTheaterMasks
+                          className={
+                            activeButton === 2 ? "heartbreak" : "heart"
+                          }
+                        />
+                      </div>
                       <h3 className="heading">Art</h3>
                     </div>
                   </span>
@@ -359,7 +395,7 @@ useEffect(() => {
                                   className="readlessarticle"
                                   onClick={() => handleClickBack(index)}
                                 >
-                                  back
+                                  Back
                                 </Link>
                               </div>
                             </div>
@@ -374,7 +410,9 @@ useEffect(() => {
                               </div>
                               <div className="articlewords text-start">
                                 <h5>{article.title_blog}</h5>
-                                <span className="truncate-text">{article.content_blog}</span>
+                                <span className="truncate-text">
+                                  {article.content_blog}
+                                </span>
                               </div>
                               <div className="readarticle">
                                 <Link

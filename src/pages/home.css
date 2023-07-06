@@ -94,7 +94,7 @@ body {
   color: #02979d;
   text-align: center;
   text-transform: capitalize;
-  padding-top: 64px;
+  padding-top: 10px;
 }
 .activecase {
   position: relative;
@@ -165,6 +165,34 @@ margin: 0 auto;
   height: 140px;
   border-radius: 50%; 
   display: inline-block;
+}
+.smallcircle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 10px;
+  margin-inline-start: 180px;
+  background-color: rgba(2, 151, 157, 0.08);
+}
+.smallcircleII {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 10px;
+  margin-inline-start: 160px;
+  background-color: rgba(204, 225, 226, 0.08);
+}
+.heart {
+  color: #02979d;
+  font-size: 3.5em;
+  margin-top: 40%;
+  margin-inline: -40%;
+}
+.heartbreak {
+ color: #fafefe; 
+  font-size: 3.5em;
+  margin-top: 40%;
+  margin-inline: -40%;
 }
 .c2020 {
   border: 1px solid #02979d;
@@ -351,9 +379,10 @@ margin-bottom: 150px;
   text-transform: uppercase;
 }
 .readlessarticle {
+   font-family: "Gilroy-SemiBold", sans-serif;
+  font-size: 1em;
   text-decoration: none;
-  background-color: #02979d;
-  color: #fafefe;
+  color: #02979d;
   border: 1px solid #02979d;
   border-radius: 20px;
   padding-inline: 10px;
@@ -361,8 +390,7 @@ margin-bottom: 150px;
   float: inline-end;
 }
 .readlessarticle:hover {
-    color: #fafefe;
-
+    color: #02979d;
 }
 .articlewords h5 {
   text-transform: capitalize;
