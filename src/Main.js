@@ -41,11 +41,14 @@ import Map from "./pages/map";
 import Header from "./header";
 import Navbar from "./Navbar";
 import Footer from "./footer";
+import ScrollToTop from "./scrollToTop";
+
 
 export default function Main() {
  
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="header" element={<Header />} />
