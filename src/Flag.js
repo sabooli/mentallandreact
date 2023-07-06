@@ -12,7 +12,6 @@ export default function Flag() {
 
 
 useEffect(() => {
-  // Check if a language cookie exists
   const storedLanguage = Cookies.get("language");
 
   if (storedLanguage) {
@@ -25,7 +24,7 @@ useEffect(() => {
       document.documentElement.setAttribute("dir", "ltr");
     }
   }
-}, []);
+}, [i18n.language]);
 
 function handleLanguageChange(newLanguage) {
     setLanguage(newLanguage);
@@ -37,7 +36,6 @@ function handleLanguageChange(newLanguage) {
       document.documentElement.setAttribute("dir", "ltr");
     }
 
-    // Store the selected language in a cookie
     Cookies.set("language", newLanguage);
   }
 
