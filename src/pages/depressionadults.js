@@ -15,7 +15,47 @@ export default function Services() {
 
   
 useEffect(() => {
-   const url = "https://mentalland.com/api/V1/homepage/consts_list_homepage";
+  fetchTopRatedDoctors(); 
+}, []);
+
+const fetchTopRatedDoctors = () => {
+  const url = "https://mentalland.com/api/V1/homepage/top_rated_const";
+
+  fetch(url, {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const doctorsData = data.data.map((item, index) => {
+        return {
+          id: +index + 1,
+          name: item.Fname,
+          lname: item.Lname,
+          star: item.stars,
+          madrak: item.type_madrak,
+          expertise: JSON.parse(item.Specialties).map((specialty, index) => (
+            <>
+              {index > 0 ? " " : ""}
+              <span className="field">{specialty}</span>
+            </>
+          )),
+          image: `https://mentalland.com/image/users/cons/degree/${item.avatar}`,
+        };
+      });
+      setDrInfo(doctorsData);
+    })
+    .catch((error) => console.error(error));
+};
+  
+
+useEffect(() => {
+    fetchDoctors();
+  }, []);
+
+  const fetchDoctors = () => {
+    const url = "https://mentalland.com/api/V1/homepage/consts_list_homepage";   
 
    fetch(url, {
      headers: {
@@ -44,7 +84,8 @@ useEffect(() => {
         setDrInfo(doctorsData)
       })
      .catch((error) => console.error(error));
-  }, []);
+  };
+
   
   const handleCheckboxChange = (event) => {
    const value = event.target.value;
@@ -94,7 +135,7 @@ useEffect(() => {
               <div className="threeitems">
                 <div className="normal">
                   <button className="top">
-                    <div className="Trated">
+                    <div className="Trated" onClick={fetchTopRatedDoctors}>
                       <CgSortAz className="Trated" />
                       Top rated
                     </div>
@@ -112,7 +153,7 @@ useEffect(() => {
                       <span className="fitext">Search</span>
                     </button>
                   </div>
-                  <div className="number">740 Psychologists</div>
+                  <div className="number" onClick={fetchDoctors}>740 Psychologists</div>
                 </div>{" "}
               </div>
               {drInfo.map((item) => {

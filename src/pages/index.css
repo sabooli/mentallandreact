@@ -179,6 +179,7 @@ body {
   font-size: 18px;
   line-height: 36px;
   color: #02979d;
+  cursor: pointer;
 }
 .short {
   display: none;
@@ -188,7 +189,6 @@ body {
   grid-template-columns: 7fr 13fr;
   box-sizing: border-box;
   margin-top: 20px;
-  padding-bottom: 10px;
   margin-inline-start: 20px;
   max-width: 800px;
   width: 100%;
@@ -244,9 +244,14 @@ body {
 .counsel:hover {
   color: #ffffff;
 }
+.part {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 0;
+}
 .photo {
   max-width: 230px;
-  height:auto;
 }
 .period {
 width: 100%;
@@ -405,11 +410,20 @@ nav a.active {
     margin-bottom: 5%;
   }
 }
-
+@media screen and (max-width: 675px) {
+ .Dep, .content, .check, .threeitems, .bar {
+    margin-inline: -45px;
+  }
+  .bar {
+display:inline-block;
+margin: 0 auto;
+  }
+}
 @media screen and (max-width: 505px) {
   .photo {
     width: 100%;
   }
+ 
   .phname {
   width:259px;
   }
@@ -448,16 +462,11 @@ nav a.active {
     display: flex;
     flex-direction: column;
   }
-  .Dep, .content, .check, .threeitems {
-    margin-inline: -45px;
-  }
   
 .aboutme {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-
 }
-
 .weeklyplan {
   border-top-right-radius: 0px;
 }
