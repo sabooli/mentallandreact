@@ -11,7 +11,6 @@ export default function Services() {
   const { t } = useTranslation();
   const [drInfo, setDrInfo] = useState([]);
   const [searchValue, setSearchValue] = useState("");
-   const [checkedValues, setCheckedValues] = useState([]);
 
   
 useEffect(() => {
@@ -86,18 +85,6 @@ useEffect(() => {
      .catch((error) => console.error(error));
   };
 
-  
-  const handleCheckboxChange = (event) => {
-   const value = event.target.value;
-   const isChecked = event.target.checked;
-
-   if (isChecked) {
-     setCheckedValues([...checkedValues, value]);
-   } else {
-     setCheckedValues(checkedValues.filter((v) => v !== value));
-   }
- };
-
  useEffect(() => {
     const newDrInfo = drInfo.filter(
       (value) =>
@@ -126,10 +113,7 @@ useEffect(() => {
           </div>
           <div className="main">
             <section className="check">
-              <Filter
-                checkedValues={checkedValues}
-                handleCheckboxChange={handleCheckboxChange}
-              />
+              <Filter />
             </section>
             <section className="psychologist">
               <div className="threeitems">

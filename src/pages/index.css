@@ -55,7 +55,7 @@ body {
   line-height: 36px;
   color: #000b0c;
   margin-top: 3%;
-  margin-bottom: 10%;
+  margin-bottom: 7%;
 }
 .main {
   display: grid;
@@ -390,6 +390,10 @@ nav a.active {
   }
   .threeitems {
     margin-top: 5%;
+    margin-inline-start: 0;
+  }
+  .bar {
+    margin-inline-start: 0;
   }
   .gbar {
     grid-template-columns: 1fr 1fr;
@@ -411,12 +415,13 @@ nav a.active {
   }
 }
 @media screen and (max-width: 675px) {
- .Dep, .content, .check, .threeitems, .bar {
+ .Dep, .content, .check, .psychologist {
     margin-inline: -45px;
   }
   .bar {
-display:inline-block;
-margin: 0 auto;
+    display: inline-block;
+    margin: 0 0;
+    width: 100%;
   }
 }
 @media screen and (max-width: 505px) {
@@ -458,11 +463,10 @@ margin: 0 auto;
     margin-bottom: 20%;
   }
   .knowme {
- grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
     display: flex;
     flex-direction: column;
-  }
-  
+  }  
 .aboutme {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
