@@ -48,13 +48,13 @@ export default function Navbar() {
                 <li>
                   {" "}
                   <NavLink to="/pages/psychologyAdults">
-                    {t("Psychology-Adults")}
+                    {t("PsychologyAdults")}
                   </NavLink>
                 </li>
                 <li>
                   {" "}
                   <NavLink to="/pages/psychologyChildren">
-                    {t("Psychology-Children")}
+                    {t("PsychologyChildren")}
                   </NavLink>
                 </li>
                 <li>
@@ -62,39 +62,39 @@ export default function Navbar() {
                 </li>
                 <li>
                   <NavLink to="/pages/depressionadults">
-                    {t("List of Psychologists - Adults")}
+                    {t("PsychologistsAdults")}
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to="/pages/depressionchildren">
-                    {t("List of Psychologists - Children")}
+                    {t("PsychologistsChildren")}
                   </NavLink>
                 </li>
               </ul>
               <NavLink to="/pages/art">{t("Art")}</NavLink>
               <ul className="branch">
                 <li>
-                  <NavLink to="/pages/artadults">{t("Art-adults")}</NavLink>
+                  <NavLink to="/pages/artadults">{t("ArtAdults")}</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/pages/musicadults">{t("Music-adults")}</NavLink>
+                  <NavLink to="/pages/musicadults">{t("MusicAdults")}</NavLink>
                 </li>
                 <li>
                   <NavLink to="/pages/adultcoaches">
-                    {t("Coaches-adults")}
+                    {t("CoachesAdults")}
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/pages/artchildren">{t("Art-children")}</NavLink>
+                  <NavLink to="/pages/artchildren">{t("ArtChildren")}</NavLink>
                 </li>
                 <li>
                   <NavLink to="/pages/musicchildren">
-                    {t("Music-children")}
+                    {t("MusicChildren")}
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to="/pages/childrencoaches">
-                    {t("Coaches-children")}
+                    {t("CoachesChildren")}
                   </NavLink>
                 </li>
               </ul>
@@ -103,19 +103,19 @@ export default function Navbar() {
                 <li>
                   {" "}
                   <NavLink to="/pages/businessadults">
-                    {t("Business for adults")}
+                    {t("BusinessForAdults")}
                   </NavLink>
                 </li>
                 <li>
                   {" "}
                   <NavLink to="/pages/businesschildren">
-                    {t("Business for children")}
+                    {t("BusinessForChildren")}
                   </NavLink>
                 </li>
                 <li>
                   {" "}
                   <NavLink to="/pages/jobopportunities">
-                    {t("Job Opportunities")}
+                    {t("JobOpportunities")}
                   </NavLink>
                 </li>
               </ul>
