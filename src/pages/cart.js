@@ -6,8 +6,11 @@ import CartContext from "./cartContext";
 import { RiDeleteBin6Line } from "react-icons/ri";
 
 export default function Cart() {
- const { cartData } = useContext(CartContext);
+ const { cartData, dispatch } = useContext(CartContext);
 
+const handleDeleteReservedList = (index, dispatch) => {
+  dispatch({ type: "REMOVE_CART_DATA", index });
+};
   return (
     <div>
       <Header className="twitter" />
@@ -23,17 +26,20 @@ export default function Cart() {
             <div>Delete</div>
           </div>
           <div>
-             {cartData.map((cart, index) => (
-            <div className="reservedlist" key={index} >
-              <div>{cart.dateEvent}</div>
-              <div>{cart.item}</div>
-              <div>{cart.titleEvent}</div>
-              <div>{cart.priceEvent}</div>
-              <div>
-                <RiDeleteBin6Line className="svg"  />
+            {cartData.map((cart, index) => (
+              <div className="reservedlist" key={index}>
+                <div>{cart.dateEvent}</div>
+                <div>{cart.item}</div>
+                <div>{cart.titleEvent}</div>
+                <div>{cart.priceEvent}</div>
+                <div>
+                  <RiDeleteBin6Line
+                    className="svg deleteItem"
+                    onClick={() => handleDeleteReservedList(index, dispatch)}
+                  />
+                </div>
               </div>
-            </div>
-           ))}
+            ))}
           </div>
         </div>
       </div>
