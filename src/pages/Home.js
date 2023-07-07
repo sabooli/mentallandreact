@@ -69,13 +69,13 @@ useEffect(() => {
 
   return (
     <div>
-      <div
+      <div className="bg-home"
         style={{
           backgroundImage: `url("${Peace}")`,
-          backgroundSize: "cover",
-          backgroundPosition: "center top",
+          backgroundSize: "contain",
+          backgroundPosition: "center bottom",
           backgroundRepeat: "no-repeat",
-          height: "calc(130vh - 50px)",
+          height: "calc(139.4vh)",
         }}
       >
         <Header className="whatsapp" />
