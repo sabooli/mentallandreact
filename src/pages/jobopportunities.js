@@ -5,7 +5,6 @@ import Navbar from "../Navbar";
 import { Link } from "react-router-dom";
 import Footer from "../footer";
 import Form from "react-bootstrap/Form";
-import { MdKeyboardArrowDown } from "react-icons/md";
 import { CgSortAz } from "react-icons/cg";
 import Position from "./position";
 import Positioninfo from "./PositionInfo";
@@ -84,52 +83,84 @@ export default function Jobopp() {
         </div>
         <div className="jobopportunitieslist">
           <div className="jobfilters">
-            <button className="dropdown">
-              Remote
-              <MdKeyboardArrowDown />
-            </button>
+            <Form.Select
+              className="formselect"
+              aria-label="Disabled select example"
+            >
+              <option className="text-center d-none">Remote</option>
+              <option>From Asia</option>
+              <option>From Europe</option>
+            </Form.Select>
             <button className="dropdown">Intership</button>
-            <button className="dropdown">
-              Job Type
-              <MdKeyboardArrowDown />
-            </button>
-            <button className="dropdown">
-              Education
-              <MdKeyboardArrowDown />
-            </button>
-            <button className="dropdown">
-              Salary
-              <MdKeyboardArrowDown />
-            </button>
-            <button className="dropdown">
-              Experience
-              <MdKeyboardArrowDown />
-            </button>
-            <button className="dropdown">
-              Facilities
-              <MdKeyboardArrowDown />
-            </button>
-            <button className="dropdown">
-              Date Posted
-              <MdKeyboardArrowDown />
-            </button>
-          </div>{" "}
+
+            <Form.Select
+              className="formselect"
+              aria-label="Disabled select example"
+            >
+              <option className="text-center d-none">Job Type</option>
+              <option>Full-Time</option>
+              <option>Part-Time</option>
+            </Form.Select>
+            <Form.Select
+              className="formselect"
+              aria-label="Disabled select example"
+            >
+              <option className="text-center d-none">Education</option>
+              <option>Full-Time</option>
+              <option>Part-Time</option>
+            </Form.Select>
+            <Form.Select
+              className="formselect"
+              aria-label="Disabled select example"
+            >
+              <option className="text-center d-none">Salary</option>
+              <option>Full-Time</option>
+              <option>Part-Time</option>
+            </Form.Select>
+            <Form.Select
+              className="formselect"
+              aria-label="Disabled select example"
+            >
+              <option className="text-center d-none">Experience</option>
+              <option>Full-Time</option>
+              <option>Part-Time</option>
+            </Form.Select>
+            <Form.Select
+              className="formselect"
+              aria-label="Disabled select example"
+            >
+              <option className="text-center d-none">Facilities</option>
+              <option>Full-Time</option>
+              <option>Part-Time</option>
+            </Form.Select>
+            <Form.Select
+              className="formselect"
+              aria-label="Disabled select example"
+            >
+              <option className="text-center d-none">Date Posted</option>
+              <option>Full-Time</option>
+              <option>Part-Time</option>
+            </Form.Select>
+          </div>
           <button className="topjob mb-4">
             <CgSortAz style={{ fontSize: 24, marginInlineEnd: 5 }} />
             Latest
           </button>
           {positionInfo ? (
             <div>
-            <div className="Positionslistanddetail">
-              <div className="positiondisplay">
-                <Position onClick={handleBoxClick} />
-                <Position onClick={handleBoxClick} />
-                <Position onClick={handleBoxClick} />
+              <div className="Positionslistanddetail">
+                <div className="positiondisplay">
+                  <Position onClick={handleBoxClick} />
+                  <Position onClick={handleBoxClick} />
+                  <Position onClick={handleBoxClick} />
+                </div>
+                <div className="posinfodisplay">
+                  <Positioninfo />
+                </div>
               </div>
-              <div className="posinfodisplay">
-                <Positioninfo />
-              </div></div>
-              <Link onClick={handleBackClick} className="backpls">Back</Link>
+              <Link onClick={handleBackClick} className="backpls">
+                Back
+              </Link>
             </div>
           ) : (
             <div className="positionnotdetail">

@@ -245,7 +245,40 @@ padding-bottom: 12px;
 .deleteItem {
   cursor: pointer;
 }
-
+.totalprice, .coupon, .grandtotal {
+  border-radius: 30px;
+  border: 0.5px solid #02979D;
+  width: 424px;
+  height: 46px;
+  margin-bottom: 50px;
+}
+.addcoupon {
+  border: 0.5px solid #02979D;
+  color: #ecf7f7;
+  background-color: #02979D;
+  width: 117px;
+  height: 46px;
+  margin-inline-start: -117px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+   font-family: "Gilroy-Regular", sans-serif;
+  font-size: 15px;
+}
+.checkout {
+  border-radius: 30px;
+  border: 0.5px solid #02979D;
+  width: 424px;
+  height: 46px;
+  color: #ecf7f7;
+  background-color: #02979D;
+  margin-bottom: 150px;
+   font-family: "Gilroy-Regular", sans-serif;
+  font-size: 15px;
+}
+.makefinal label {
+  font-family: "Gilroy-Regular", sans-serif;
+  font-size: 15px;
+}
 
 @media screen and (max-width: 1100px) {
   .courseinfo {
@@ -286,11 +319,27 @@ margin-bottom: 20px;
     display: flex;
     flex-direction: column;
 }
+
+.totalprice, .coupon, .grandtotal, .checkout {
+  width: 304px;
+}
+
 }
 @media screen and (max-width: 450px) {
  .courseinfo {
 display: grid;
 grid-template-columns: 1fr;
 margin-bottom: 20px;
+}
+}
+@media screen and (max-width: 360px) {
+
+.totalprice, .coupon, .grandtotal, .checkout {
+  width: 244px;
+}
+.addcoupon {
+  width: 85px;
+  margin-inline-start: -85px;
+  font-size: 12px;
 }
 }
