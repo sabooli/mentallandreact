@@ -74,12 +74,11 @@ useEffect(() => {
         style={{
           backgroundImage: `url("${Peace}")`,
           backgroundSize: "cover",
-          backgroundPosition: "center center",
-          backgroundAttachment: "fixed",
+          backgroundPosition: "center top",
           backgroundRepeat: "no-repeat",
           backgroundColor: "#333",
           height: "calc(140vh)",
-          minHeight: "550px",
+          minHeight: "500px",
         }}
       >
         <Header className="whatsapp" />

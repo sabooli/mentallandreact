@@ -527,9 +527,6 @@ margin-bottom: 150px;
   .circle {
     text-align: center;
   }
-  .latest {
-    grid-template-columns: 1fr;  
-  }  
   .readarticle {
   border-inline-start: 0px solid #02979d;
 }
@@ -539,6 +536,15 @@ margin-bottom: 150px;
 }
 .homepsychology img {
 max-width: 100%; 
+}
+.truncate-text {
+  display: none;
+}
+.Readlatest {
+  padding: 10px 35px;
+}
+.readarticle {
+  padding-inline: 1%;
 }
 }
 
@@ -574,6 +580,18 @@ max-width: 100%;
   .group731 {
     display: none;
   }
+  .latest {
+    grid-template-columns: 1fr;  
+  }  
+.truncate-text {
+   display: -webkit-box;
+}
+.Readlatest {
+  padding: 10px 60px;
+}
+.readarticle {
+  padding-top: 8%;
+}
 }
 @media screen and (max-width: 600px) {
  .band {
