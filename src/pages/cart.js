@@ -43,6 +43,26 @@ const handleDeleteReservedList = (index, dispatch) => {
           </div>
         </div>
       </div>
+      <div className="makefinal text-center">
+        <label>
+          Sub Total <br />
+          <input type="number" className="totalprice" />
+        </label>
+        <div>
+          <label>
+            Coupon Code <br />
+            <input type="text" className="coupon" />
+          </label>
+          <button className="addcoupon">Add Coupon</button>
+        </div>
+        <label>
+          Grand Total <br />
+          <input type="number" className="grandtotal" />
+        </label>
+        <div>
+          <button className="checkout">Check out</button>
+        </div>
+      </div>
       <Footer />
     </div>
   );
