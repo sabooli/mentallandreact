@@ -46,13 +46,11 @@ export default function Navbar() {
               <NavLink to="/pages/psychology">{t("Psychology")}</NavLink>
               <ul className="branch">
                 <li>
-                  {" "}
                   <NavLink to="/pages/psychologyAdults">
                     {t("PsychologyAdults")}
                   </NavLink>
                 </li>
                 <li>
-                  {" "}
                   <NavLink to="/pages/psychologyChildren">
                     {t("PsychologyChildren")}
                   </NavLink>
