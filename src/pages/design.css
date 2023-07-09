@@ -232,7 +232,8 @@ figure {
 .displayAll {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 5%;
+  gap: 3%;
+  padding-bottom: 10px;
 }
 .pubsem {
   font-family: "Gilroy-SemiBold", sans-serif;
@@ -409,6 +410,12 @@ display: flex;
   margin-inline-start: 2%;
 }
 }
+
+@media screen and (max-width: 1024px) {
+.displayAll {
+  grid-template-columns: repeat(2, 1fr);
+}
+}
 @media screen and (max-width: 900px) {
   .flow {
     grid-template-columns: 1fr 1fr;
@@ -535,4 +542,9 @@ margin: 0 auto;
 .adps, .chps, .sems, .spzsems, .faq, .flow, .forYou {
   margin-inline: -45px;
 }
+
+  .displayAll {
+    grid-template-columns: 1fr;
+  }
+  
 }

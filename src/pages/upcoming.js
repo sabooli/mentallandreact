@@ -92,16 +92,15 @@ const handleClickGoBack = () => {
             {eventData.map((event) => (
               <div>
                 {" "}
-                <div key={event.id}>
+                <div className="allinone" key={event.id}>
                   <div className="card swiper-slide">
                     <div className="image-content">
                       <div className="card-image">
-                        <div className="regbar-img">
                         <img
                           src={`https://mentalland.com/image/events/${event.thumbnail_events}`}
                           alt="public seminar"
-                          className="card-img img-fluid"
-                        /></div>
+                          className="card-img"
+                        />
                       </div>
                     </div>
                     <div className="card-content">
@@ -149,10 +148,7 @@ const handleClickGoBack = () => {
                 300: {
                   slidesPerView: 1,
                 },
-                640: {
-                  slidesPerView: 1,
-                },
-                768: {
+                550: {
                   slidesPerView: 2,
                 },
                 1024: {
@@ -390,7 +386,7 @@ const handleClickGoBack = () => {
           </div>
         )}
         {displayAll ? (
-          <div>
+          <div className="text-center">
             <button
               onClick={handleClickGoBack}
               className="seeAll goBackLink mt-5"
