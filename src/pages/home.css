@@ -594,6 +594,9 @@ max-width: 100%;
 }
 }
 @media screen and (max-width: 600px) {
+   body {
+    background-attachment: scroll;
+  }
  .band {
    grid-template-columns: 1fr;
    text-align: center;

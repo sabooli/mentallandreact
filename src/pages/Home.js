@@ -76,6 +76,7 @@ useEffect(() => {
           backgroundSize: "cover",
           backgroundPosition: "center top",
           backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed",
           backgroundColor: "#333",
           height: "calc(140vh)",
           minHeight: "500px",
