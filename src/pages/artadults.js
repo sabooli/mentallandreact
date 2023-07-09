@@ -142,8 +142,8 @@ export default function Artadults() {
           <div className="musician">
             <img
               src={musician}
-              className="img-fluid"
-              alt="learn music with mentalland Camero Smith"
+              className="pt-3 img-fluid"
+              alt="learn music with mentalland Cameron Smith"
             />
           </div>
           <div className="musiclearn">

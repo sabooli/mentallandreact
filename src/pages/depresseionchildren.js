@@ -13,9 +13,49 @@ export default function Servicesforchildren() {
   const [searchValue, setSearchValue] = useState("");
   const [checkedValues, setCheckedValues] = useState([]);
 
+    
+useEffect(() => {
+  fetchTopRatedDoctors();
+}, []);
 
-  useEffect(() => {
-    const url = "https://mentalland.com/api/V1/homepage/consts_list_homepage";
+const fetchTopRatedDoctors = () => {
+  const url = "https://mentalland.com/api/V1/homepage/top_rated_const";
+
+  fetch(url, {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const doctorsData = data.data.map((item, index) => {
+        return {
+          id: +index + 1,
+          name: item.Fname,
+          lname: item.Lname,
+          star: item.stars,
+          madrak: item.type_madrak,
+          expertise: JSON.parse(item.Specialties).map((specialty, index) => (
+            <>
+              {index > 0 ? " " : ""}
+              <span className="field">{specialty}</span>
+            </>
+          )),
+          image: `https://mentalland.com/image/users/cons/degree/${item.avatar}`,
+        };
+      });
+      setDrInfo(doctorsData);
+    })
+    .catch((error) => console.error(error));
+};
+
+ 
+useEffect(() => {
+    fetchDoctors();
+  }, []);
+
+  const fetchDoctors = () => {
+    const url = "https://mentalland.com/api/V1/homepage/consts_list_homepage";   
 
     fetch(url, {
       headers: {
@@ -40,7 +80,7 @@ export default function Servicesforchildren() {
         setDrInfo(doctorsData);
       })
       .catch((error) => console.error(error));
-  }, []);
+  };
 
  const handleCheckboxChange = (event) => {
    const value = event.target.value;
@@ -90,7 +130,7 @@ export default function Servicesforchildren() {
               <div className="threeitems">
                 <div className="normal">
                   <button className="top">
-                    <div className="Trated">
+                    <div className="Trated" onClick={fetchTopRatedDoctors}>
                       <CgSortAz className="Trated" />
                       Top rated
                     </div>
@@ -108,7 +148,9 @@ export default function Servicesforchildren() {
                       <span className="fitext">Search</span>
                     </button>
                   </div>
-                  <div className="number hope">740 Psychologists</div>
+                  <div className="number hope" onClick={fetchDoctors}>
+                    740 Psychologists
+                  </div>
                 </div>{" "}
               </div>
               {drInfo.map((item) => {

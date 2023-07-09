@@ -44,7 +44,7 @@ export default function Coach() {
           300: {
             slidesPerView: 1,
           },
-          550: {
+          520: {
             slidesPerView: 2,
           },
           820: {

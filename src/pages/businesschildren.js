@@ -129,9 +129,10 @@ export default function Businessadults() {
           <div className="posdesign">
             <Position /> <Position />
           </div>
+          <div className="text-center">
           <Link to="/" className="seeAll mt-5 mb-3">
             <span className="see">See all</span>
-          </Link>
+          </Link></div>
           <div className="ljocases"> </div>
         </div>
         <div className="stussay">

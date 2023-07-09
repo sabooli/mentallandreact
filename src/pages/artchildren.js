@@ -141,7 +141,7 @@ export default function Artchildren() {
           <div className="musician">
             <img
               src={musician}
-              className="img-fluid"
+              className="pt-3 img-fluid"
               alt="learn music with mentalland Camero Smith"
             />
           </div>

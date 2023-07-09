@@ -116,9 +116,10 @@ export default function Consultants({ heading, color }) {
           </div>
         </SwiperSlide>
       </Swiper>
+      <div className="text-center">
       <Link to="/" className="seeAll mt-5 mb-3">
         <span className="see">see all</span>
-      </Link>
+      </Link></div>
     </div>
   );
 }

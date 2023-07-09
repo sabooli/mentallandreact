@@ -170,8 +170,14 @@ justify-content: center;
 width: 88px;
 margin-inline-start: -88px;
     }
+     .subscribe {
+    margin-inline: 60px;
+  }
 }
 @media screen and (max-width: 420px) {
+  .subscribe {
+    margin-inline: 40px;
+  }
      .emailplace {
      width: 90%;
     }

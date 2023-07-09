@@ -383,9 +383,10 @@ const handleClickGoBack = () => {
                 </div>
               </SwiperSlide>
             </Swiper>
+            <div className="text-center">
             <Link onClick={handleClickSeeAll} className="seeAll mt-5">
               <span className="see">See All</span>
-            </Link>{" "}
+            </Link></div>
           </div>
         )}
         {displayAll ? (

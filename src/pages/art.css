@@ -363,14 +363,18 @@ max-width: 500px;
 }
 .instructors {
   background-color: #FAE8EF;
-  height: 374px;
+  background-size: cover;
+  height: 404px;
+  padding-top: 15px;
   margin-inline: -85px;
-  margin-top: 20px; 
+  margin-top: 150px; 
   margin-bottom: 150px;
 }
 .chinstructors {
   background-color: #EAF6F6;
-  height: 374px;
+  background-size: cover;
+  height: 404px;
+  padding-top: 15px;
   margin-inline: -85px;
   margin-top: 150px; 
   margin-bottom: 150px;
@@ -458,7 +462,7 @@ font-family: "Gilroy-Medium", sans-serif;
   grid-template-columns: 1fr;
   flex-direction: column-reverse;
   row-gap: 30px;
-  height: 380px;
+  height: 400px;
   }
 .musician img {
   max-width: 50%;
@@ -520,4 +524,9 @@ display: none;
   padding-inline-start: 65px;
   padding-inline-end: 15%;
 }
+}
+@media screen and (max-width: 400px) {
+  .musiccourse {
+  height: 370px;
+  }
 }

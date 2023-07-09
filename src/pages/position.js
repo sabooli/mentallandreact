@@ -28,10 +28,8 @@ export default function Position({ onClick }) {
                      <div className="postime">
                        <span>Graphic design</span> <span>Motion design</span>
                        <Link
-                         onClick={() =>
-                           onClick()
-                         }
-                         className="gotopos text-center"
+                         onClick={() => onClick()}
+                         className="gotopos mt-sm-5 mt-md-0 text-center"
                        >
                          <HiArrowLongRight className="arrow" />
                        </Link>
