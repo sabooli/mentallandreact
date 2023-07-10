@@ -179,11 +179,11 @@ function handleFileSelect(event) {
              <div className="NLD">
                <div className="">
                  <div>Name</div>
-                 <input />
+                 <input type="text" />
                </div>
                <div>
                  <div>Last Name</div>
-                 <input />
+                 <input type="text" />
                </div>
                <div>
                  <label>Date of Birth</label>
@@ -310,14 +310,14 @@ function handleFileSelect(event) {
                <div>
                  <form>
                    <div>
-                     <label>
-                       Address
+                     <div>
+                       Address</div>
                        <textarea
                          value={address}
                          onChange={handleAddressChange}
                          className="adrsinput"
                        />
-                     </label> </div>
+                     </div>
                      {invalidAddress && (
                        <p className="error">
                          Invalid address format (only letters, numbers, spaces,
@@ -331,10 +331,9 @@ function handleFileSelect(event) {
                  {" "}
                  <form>
                    <div>
-                     <label>
-                       Postal Code
-                       <input />
-                     </label>
+                     <div>
+                       Postal Code</div>
+                       <input className="postalcodeinput" />
                    </div>
                  </form>
                </div>

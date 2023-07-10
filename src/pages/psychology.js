@@ -47,8 +47,8 @@ export default function Psychology() {
         </div>
       </div>
       <div className="fullcontent">
-        <div className="psycho">
-          <div className="choose">
+        <div className="">
+          <div className="jobchoose">
             <div className="selecting">
               <Form.Select aria-label="wid">
                 <option>Select the Field...</option>
@@ -78,241 +78,245 @@ export default function Psychology() {
               </Link>
             </div>
           </div>
-          <div className="flow text-center">
-            <div className="thumbnail">
-              <img src={exp} className="img-fluid fl" alt="experience" />
-              <span className="statics">+10</span>
-              <span className="stat text-center">Years of Experience</span>
+          <div className="psycho">
+            <div className="flow text-center">
+              <div className="thumbnail">
+                <img src={exp} className="img-fluid fl" alt="experience" />
+                <span className="statics">+10</span>
+                <span className="stat text-center">Years of Experience</span>
+              </div>
+              <div className="thumbnail">
+                <img src={help} className="img-fluid fl" alt="patients" />
+                <span className="statics">+1300</span>
+                <span className="stat text-center">
+                  Patients Received Help
+                  <br /> This Year
+                </span>
+              </div>
+              <div className="thumbnail">
+                <img
+                  src={prof}
+                  className="img-fluid fl"
+                  alt="professinal treatment"
+                />
+                <span className="statics">+100</span>
+                <span className="stat text-center">
+                  Professional Psychologists
+                </span>
+              </div>
+              <div className="thumbnail">
+                <img src={imp} className="img-fluid fl" alt="result" />
+                <span className="statics">98%</span>
+                <span className="stat text-center">
+                  Clients improved
+                  <br />
+                  their condition
+                </span>
+              </div>
             </div>
-            <div className="thumbnail">
-              <img src={help} className="img-fluid fl" alt="patients" />
-              <span className="statics">+1300</span>
-              <span className="stat text-center">
-                Patients Received Help
-                <br /> This Year
-              </span>
-            </div>
-            <div className="thumbnail">
-              <img
-                src={prof}
-                className="img-fluid fl"
-                alt="professinal treatment"
-              />
-              <span className="statics">+100</span>
-              <span className="stat text-center">
-                Professional Psychologists
-              </span>
-            </div>
-            <div className="thumbnail">
-              <img src={imp} className="img-fluid fl" alt="result" />
-              <span className="statics">98%</span>
-              <span className="stat text-center">
-                Clients improved
+            <div className="department">
+              <h2 className="forYou text-center">
+                <span>What can we do for you</span>
                 <br />
-                their condition
-              </span>
-            </div>
-          </div>
-          <div className="department">
-            <h2 className="forYou text-center">
-              <span>What can we do for you</span>
-              <br />
-              in psychology department
-            </h2>
-            <div className="figures">
-              <figure className="">
-                <img
-                  src={cadult}
-                  className="img-fluid"
-                  alt="psychology services"
-                />
-                <figcaption className="caption text-center">
-                  Adults Psychology
-                </figcaption>
-              </figure>
-              <figure className="">
-                <img
-                  src={cchild}
-                  className="img-fluid"
-                  alt="psychology services"
-                />
-                <figcaption className="caption text-center">
-                  Children / Teenagers Psychology
-                </figcaption>
-              </figure>
-              <figure className="">
-                <img
-                  src={csem}
-                  className="img-fluid"
-                  alt="psychology services"
-                />
-                <figcaption className="caption text-center">
-                  Public Seminars
-                </figcaption>
-              </figure>
-              <figure className="">
-                <img
-                  src={csp}
-                  className="img-fluid"
-                  alt="psychology services"
-                />
-                <figcaption className="caption text-center">
-                  Specialized Seminars
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-          <div className="detail">
-            <div className="adps">
-              <div className="ximg">
-                <img
-                  src={adps}
-                  className="img-fluid"
-                  alt="psychology services"
-                />
+                in psychology department
+              </h2>
+              <div className="figures">
+                <figure className="">
+                  <img
+                    src={cadult}
+                    className="img-fluid"
+                    alt="psychology services"
+                  />
+                  <figcaption className="caption text-center">
+                    Adults Psychology
+                  </figcaption>
+                </figure>
+                <figure className="">
+                  <img
+                    src={cchild}
+                    className="img-fluid"
+                    alt="psychology services"
+                  />
+                  <figcaption className="caption text-center">
+                    Children / Teenagers Psychology
+                  </figcaption>
+                </figure>
+                <figure className="">
+                  <img
+                    src={csem}
+                    className="img-fluid"
+                    alt="psychology services"
+                  />
+                  <figcaption className="caption text-center">
+                    Public Seminars
+                  </figcaption>
+                </figure>
+                <figure className="">
+                  <img
+                    src={csp}
+                    className="img-fluid"
+                    alt="psychology services"
+                  />
+                  <figcaption className="caption text-center">
+                    Specialized Seminars
+                  </figcaption>
+                </figure>
               </div>
-              <div className="adpsy">
-                <h3 className="subtitle">Adults Psychology</h3>
-                <div className="summary">
-                  Lorem ipsum dolor sit amet consectetur. Mi pellentesque quis
-                  eu vestibulum lectus. Porttitor integer consectetur mattis
-                  elementum malesuada. Egestas ac dignissim amet pretium
-                  ultricies. Molestie integer ornare nisl et nunc quisque non
-                  sollicitudin. Aliquam fringilla rutrum morbi pellentesque id
-                  orci commodo libero phasellus. Duis urna vel amet cras non sem
-                  vitae sapien. Maecenas eget consequat euismod fusce vehicula
-                  purus sed lorem. Adipiscing nulla amet morbi ipsum nec
-                  lobortis egestas nec.
+            </div>
+            <div className="detail">
+              <div className="adps">
+                <div className="ximg">
+                  <img
+                    src={adps}
+                    className="img-fluid"
+                    alt="psychology services"
+                  />
                 </div>
-                <Link to="/" className="learnMore mb-5">
-                  <span className="more">Learn more</span>
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="">
-            <div className="chps">
-              <div className="chpsy">
-                <h3 className="subtitle">Children / Teenagers Psychology</h3>
-                <div className="summary">
-                  Lorem ipsum dolor sit amet consectetur. Mi pellentesque quis
-                  eu vestibulum lectus. Porttitor integer consectetur mattis
-                  elementum malesuada. Egestas ac dignissim amet pretium
-                  ultricies. Molestie integer ornare nisl et nunc quisque non
-                  sollicitudin. Aliquam fringilla rutrum morbi pellentesque id
-                  orci commodo libero phasellus. Duis urna vel amet cras non sem
-                  vitae sapien. Maecenas eget consequat euismod fusce vehicula
-                  purus sed lorem. Adipiscing nulla amet morbi ipsum nec
-                  lobortis egestas nec.
-                </div>
-                <Link to="/" className="learnMore">
-                  <span className="more">Learn more</span>
-                </Link>
-              </div>
-              <div className="ximg">
-                <img
-                  src={chps}
-                  className="img-fluid"
-                  alt="children psychology"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="sems">
-            <div className="pusem">
-              <div className="public">
-                <img
-                  src={semps}
-                  className="img-fluid"
-                  alt="psychology services"
-                />
-              </div>
-              <div className="sempsy">
-                <h3 className="subtitle">Adults Psychology</h3>
-                <div className="summary">
-                  Lorem ipsum dolor sit amet consectetur. Pretium rutrum nisi
-                  mollis sit tortor proin proin sagittis. Id nec suspendisse
-                  lacus erat. Vivamus orci bibendum at purus elit. Vel vehicula
-                  donec amet a dolor sollicitudin ut. Lectus cursus ipsum mi
-                  feugiat nulla enim. Nisl phasellus viverra quisque egestas in
-                  nec luctus ornare amet. In pellentesque volutpat urna ultrices
-                  vitae. Sed magna vitae placerat eu leo potenti semper id. Sed
-                  elementum eget adipiscing nisl in vestibulum. Volutpat.
-                  <br />
-                  <br />
-                  In pellentesque volutpat urna ultrices vitae. Sed magna vitae
-                  placerat eu leo potenti semper id. Sed elementum eget
-                  adipiscing nisl in vestibulum. Volutpat.
+                <div className="adpsy">
+                  <h3 className="subtitle">Adults Psychology</h3>
+                  <div className="summary">
+                    Lorem ipsum dolor sit amet consectetur. Mi pellentesque quis
+                    eu vestibulum lectus. Porttitor integer consectetur mattis
+                    elementum malesuada. Egestas ac dignissim amet pretium
+                    ultricies. Molestie integer ornare nisl et nunc quisque non
+                    sollicitudin. Aliquam fringilla rutrum morbi pellentesque id
+                    orci commodo libero phasellus. Duis urna vel amet cras non
+                    sem vitae sapien. Maecenas eget consequat euismod fusce
+                    vehicula purus sed lorem. Adipiscing nulla amet morbi ipsum
+                    nec lobortis egestas nec.
+                  </div>
+                  <Link to="/" className="learnMore mb-5">
+                    <span className="more">Learn more</span>
+                  </Link>
                 </div>
               </div>
             </div>
-          </div>
-          <Upcoming heading="Upcoming Public Seminars & Events" />
-          <div className="spzsems">
-            <div className="spzsem">
-              <div className="spzpsy">
-                <h3 className="subtitle">Adults Psychology</h3>
-                <div className="summary">
-                  Lorem ipsum dolor sit amet consectetur. Pretium rutrum nisi
-                  mollis sit tortor proin proin sagittis. Id nec suspendisse
-                  lacus erat. Vivamus orci bibendum at purus elit. Vel vehicula
-                  donec amet a dolor sollicitudin ut. Lectus cursus ipsum mi
-                  feugiat nulla enim. Nisl phasellus viverra quisque egestas in
-                  nec luctus ornare amet. In pellentesque volutpat urna ultrices
-                  vitae. Sed magna vitae placerat eu leo potenti semper id. Sed
-                  elementum eget adipiscing nisl in vestibulum. Volutpat.
-                  <br />
-                  <br />
-                  In pellentesque volutpat urna ultrices vitae. Sed magna vitae
-                  placerat eu leo potenti semper id. Sed elementum eget
-                  adipiscing nisl in vestibulum. Volutpat.
+            <div className="">
+              <div className="chps">
+                <div className="chpsy">
+                  <h3 className="subtitle">Children / Teenagers Psychology</h3>
+                  <div className="summary">
+                    Lorem ipsum dolor sit amet consectetur. Mi pellentesque quis
+                    eu vestibulum lectus. Porttitor integer consectetur mattis
+                    elementum malesuada. Egestas ac dignissim amet pretium
+                    ultricies. Molestie integer ornare nisl et nunc quisque non
+                    sollicitudin. Aliquam fringilla rutrum morbi pellentesque id
+                    orci commodo libero phasellus. Duis urna vel amet cras non
+                    sem vitae sapien. Maecenas eget consequat euismod fusce
+                    vehicula purus sed lorem. Adipiscing nulla amet morbi ipsum
+                    nec lobortis egestas nec.
+                  </div>
+                  <Link to="/" className="learnMore">
+                    <span className="more">Learn more</span>
+                  </Link>
+                </div>
+                <div className="ximg">
+                  <img
+                    src={chps}
+                    className="img-fluid"
+                    alt="children psychology"
+                  />
                 </div>
               </div>
-              <div className="specialized">
-                <img
-                  src={spzsem}
-                  className="img-fluid"
-                  alt="psychology services"
-                />
+            </div>
+            <div className="sems">
+              <div className="pusem">
+                <div className="public">
+                  <img
+                    src={semps}
+                    className="img-fluid"
+                    alt="psychology services"
+                  />
+                </div>
+                <div className="sempsy">
+                  <h3 className="subtitle">Adults Psychology</h3>
+                  <div className="summary">
+                    Lorem ipsum dolor sit amet consectetur. Pretium rutrum nisi
+                    mollis sit tortor proin proin sagittis. Id nec suspendisse
+                    lacus erat. Vivamus orci bibendum at purus elit. Vel
+                    vehicula donec amet a dolor sollicitudin ut. Lectus cursus
+                    ipsum mi feugiat nulla enim. Nisl phasellus viverra quisque
+                    egestas in nec luctus ornare amet. In pellentesque volutpat
+                    urna ultrices vitae. Sed magna vitae placerat eu leo potenti
+                    semper id. Sed elementum eget adipiscing nisl in vestibulum.
+                    Volutpat.
+                    <br />
+                    <br />
+                    In pellentesque volutpat urna ultrices vitae. Sed magna
+                    vitae placerat eu leo potenti semper id. Sed elementum eget
+                    adipiscing nisl in vestibulum. Volutpat.
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <Upcoming
-            heading="Upcoming Specialized Seminars & Events"
-            color="#FBEAD1"
-          />
-          <div className="faq">
-            <h2 className="frequent">Most Frequently Asked Questions</h2>
-            <div className="freq">
-              <div>
-                <Mfaq
-                  index={0}
-                  question="Lorem ipsum dolor sit amet consectetur. Est ut vulputate scelerisque nibh?"
-                  answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
-                />
-                <Mfaq
-                  index={1}
-                  question="Lorem ipsum dolor sit amet consectetur. Donec at ut diam sit vitae gravida nisi ?"
-                  answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
-                />
-                <Mfaq
-                  index={2}
-                  question="Lorem ipsum dolor sit amet consectetur. Nibh nisi nec velit arcu tristique. Justo nulla?"
-                  answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
-                />
-                <Mfaq
-                  index={3}
-                  question="Lorem ipsum dolor sit amet consectetur. Ut neque pellentesque felis orci.?"
-                  answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
-                />
-                <Mfaq
-                  index={4}
-                  question="Lorem ipsum dolor sit amet consectetur. Amet mi viverra praesent imperdiet proin ne?"
-                  answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
-                />
+            <Upcoming heading="Upcoming Public Seminars & Events" />
+            <div className="spzsems">
+              <div className="spzsem">
+                <div className="spzpsy">
+                  <h3 className="subtitle">Adults Psychology</h3>
+                  <div className="summary">
+                    Lorem ipsum dolor sit amet consectetur. Pretium rutrum nisi
+                    mollis sit tortor proin proin sagittis. Id nec suspendisse
+                    lacus erat. Vivamus orci bibendum at purus elit. Vel
+                    vehicula donec amet a dolor sollicitudin ut. Lectus cursus
+                    ipsum mi feugiat nulla enim. Nisl phasellus viverra quisque
+                    egestas in nec luctus ornare amet. In pellentesque volutpat
+                    urna ultrices vitae. Sed magna vitae placerat eu leo potenti
+                    semper id. Sed elementum eget adipiscing nisl in vestibulum.
+                    Volutpat.
+                    <br />
+                    <br />
+                    In pellentesque volutpat urna ultrices vitae. Sed magna
+                    vitae placerat eu leo potenti semper id. Sed elementum eget
+                    adipiscing nisl in vestibulum. Volutpat.
+                  </div>
+                </div>
+                <div className="specialized">
+                  <img
+                    src={spzsem}
+                    className="img-fluid"
+                    alt="psychology services"
+                  />
+                </div>
               </div>
-              <div className="question">
-                <img src={question} alt="faq" className="img-fluid" />
+            </div>
+            <Upcoming
+              heading="Upcoming Specialized Seminars & Events"
+              color="#FBEAD1"
+            />
+            <div className="faq">
+              <h2 className="frequent">Most Frequently Asked Questions</h2>
+              <div className="freq">
+                <div>
+                  <Mfaq
+                    index={0}
+                    question="Lorem ipsum dolor sit amet consectetur. Est ut vulputate scelerisque nibh?"
+                    answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
+                  />
+                  <Mfaq
+                    index={1}
+                    question="Lorem ipsum dolor sit amet consectetur. Donec at ut diam sit vitae gravida nisi ?"
+                    answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
+                  />
+                  <Mfaq
+                    index={2}
+                    question="Lorem ipsum dolor sit amet consectetur. Nibh nisi nec velit arcu tristique. Justo nulla?"
+                    answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
+                  />
+                  <Mfaq
+                    index={3}
+                    question="Lorem ipsum dolor sit amet consectetur. Ut neque pellentesque felis orci.?"
+                    answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
+                  />
+                  <Mfaq
+                    index={4}
+                    question="Lorem ipsum dolor sit amet consectetur. Amet mi viverra praesent imperdiet proin ne?"
+                    answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
+                  />
+                </div>
+                <div className="question">
+                  <img src={question} alt="faq" className="img-fluid" />
+                </div>
               </div>
             </div>
           </div>

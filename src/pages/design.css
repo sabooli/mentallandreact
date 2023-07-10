@@ -32,8 +32,7 @@ body {
   margin: 0 auto !important;
 }
 .psycho {
-  margin-inline-start: 85px;
-  margin-inline-end: 85px;
+  margin-inline: 85px;
 }
 .strategy {
   max-width: 470px;
@@ -428,7 +427,6 @@ display: flex;
   grid-template-columns: 1fr;
    display: flex;
    flex-direction: column;
-   text-align: center;
 }
 .adpsy {
   padding-inline-start: 0;
