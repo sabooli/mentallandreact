@@ -1,6 +1,6 @@
 import React from "react";
 import Flag from "./Flag";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { BiLogIn } from "react-icons/bi";
 import { BiShoppingBag } from "react-icons/bi";
 import { MdOutlineWhatsapp } from "react-icons/md";
@@ -12,17 +12,17 @@ export default function Header(props) {
   return (
     <nav className="header">
       <div className="buttons">
-        <Link to="/" className="btn-head">
+        <NavLink to="/" className="btn-head">
           <span className="login">
             <BiLogIn className="svg" /> Login
           </span>
-        </Link>
-        <Link to="../cart" className="btn-head">
+        </NavLink>
+        <NavLink to="/pages/cart" className="btn-head">
           <span className="login">
             <BiShoppingBag className="svg" />
             {""}Cart
           </span>
-        </Link>
+        </NavLink>
       </div>
       <div>
         <span className="flag">
