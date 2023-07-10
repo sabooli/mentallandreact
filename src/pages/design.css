@@ -233,7 +233,6 @@ figure {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3%;
-  padding-bottom: 10px;
 }
 .pubsem {
   font-family: "Gilroy-SemiBold", sans-serif;

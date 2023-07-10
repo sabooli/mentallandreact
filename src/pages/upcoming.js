@@ -134,6 +134,14 @@ const handleClickGoBack = () => {
                 </div>
               </div>
             ))}
+          <div className="text-center">
+            <button
+              onClick={handleClickGoBack}
+              className="seeAll goBackLink"
+            >
+              <span className="goBack">Go Back</span>
+            </button>
+          </div>
           </div>
         ) : (
           <div>
@@ -384,18 +392,6 @@ const handleClickGoBack = () => {
               <span className="see">See All</span>
             </Link></div>
           </div>
-        )}
-        {displayAll ? (
-          <div className="text-center">
-            <button
-              onClick={handleClickGoBack}
-              className="seeAll goBackLink mt-5"
-            >
-              <span className="goBack">Go Back</span>
-            </button>
-          </div>
-        ) : (
-          <div></div>
         )}
       </div>
     </div>
