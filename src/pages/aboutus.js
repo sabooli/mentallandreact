@@ -84,7 +84,7 @@ export default function About() {
               donec. Sed cras vulputate amet scelerisque.
               <br />
               <div className="openPosition">
-                <Link to="/" className="to">
+                <Link to="/pages/positions" className="to">
                   <span className="op">
                     See open positions
                     <FaLongArrowAltRight />

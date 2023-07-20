@@ -129,10 +129,10 @@ export default function Art() {
                 penatibus.
               </div>
               <div className="link">
-                <Link to="/" className="learnMore ">
+                <Link to="/pages/artadults" className="learnMore ">
                   <span className="more">Adults</span>
                 </Link>
-                <Link to="/" className="learnMore linkto">
+                <Link to="/pages/artchildren" className="learnMore linkto">
                   <span className="more">Children & Teenagers</span>
                 </Link>
               </div>
@@ -154,10 +154,10 @@ export default function Art() {
                 penatibus.
               </div>
               <div className="link">
-                <Link to="/" className="learnMore ">
+                <Link to="/pages/musicadults" className="learnMore ">
                   <span className="more">Adults</span>
                 </Link>
-                <Link to="/" className="learnMore linkto">
+                <Link to="/pages/musicchildren" className="learnMore linkto">
                   <span className="more">Children & Teenagers</span>
                 </Link>
               </div>
