@@ -206,6 +206,7 @@ useEffect(() => {
                         src={homepsychology}
                         className="img-fluid"
                         alt="psychology"
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -282,6 +283,7 @@ useEffect(() => {
                       src={telescope}
                       className="VMimage"
                       alt="vision of MentalLand"
+                      loading="lazy"
                     />
                     <h4 className="VMheading">Vision</h4>
                     <span className="VMtext">
@@ -297,6 +299,7 @@ useEffect(() => {
                       src={mission}
                       className="VMimage"
                       alt="Mission of MentalLand"
+                      loading="lazy"
                     />
                     <h4 className="VMheading">Mission</h4>
                     <span className="VMtext">
@@ -312,6 +315,7 @@ useEffect(() => {
                       src={value}
                       className="VMimage"
                       alt="value MentalLand"
+                      loading="lazy"
                     />
                     <h4 className="VMheading">Value</h4>
                     <span className="VMtext">
@@ -323,7 +327,12 @@ useEffect(() => {
                     </span>
                   </figure>
                   <figure className="VM text-center">
-                    <img src={goal} className="VMimage" alt="goal MentalLand" />
+                    <img
+                      src={goal}
+                      className="VMimage"
+                      alt="goal MentalLand"
+                      loading="lazy"
+                    />
                     <h4 className="VMheading">Goal</h4>
                     <span className="VMtext">
                       Lorem ipsum dolor sit amet consectetur. Pretium rutrum
@@ -343,6 +352,7 @@ useEffect(() => {
                         src={mentalonphone}
                         className="img-fluid"
                         alt="MentalLand on phone"
+                        loading="lazy"
                       />
                     </div>
                     <div>

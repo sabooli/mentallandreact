@@ -56,6 +56,7 @@ export default function Patientcomments({heading}) {
                     src={patienta}
                     alt="patient comment"
                     className="card-img patient"
+                    loading="lazy"
                   />
                 </div>
                 <div className="patientName text-center">Benjamin Smith</div>
@@ -83,6 +84,7 @@ export default function Patientcomments({heading}) {
                     src={patientb}
                     alt="patient comment"
                     className="card-img patient"
+                    loading="lazy"
                   />
                 </div>
                 <div className="patientName text-center">Benjamin Smith</div>
@@ -109,6 +111,7 @@ export default function Patientcomments({heading}) {
                     src={patientc}
                     alt="patient comment"
                     className="card-img patient"
+                    loading="lazy"
                   />
                 </div>
                 <div className="patientName text-center">Benjamin Smith</div>
@@ -156,14 +159,15 @@ export default function Patientcomments({heading}) {
         </SwiperSlide>
       </Swiper>
       <div className="text-center mt-5">
-      <IoIosArrowDropleftCircle
-        className="swiper-navigation___prev"
-        onClick={handlePrev}
-      />
-      <IoIosArrowDroprightCircle
-        className="swiper-navigation___next"
-        onClick={handleNext}
-      /></div>
+        <IoIosArrowDropleftCircle
+          className="swiper-navigation___prev"
+          onClick={handlePrev}
+        />
+        <IoIosArrowDroprightCircle
+          className="swiper-navigation___next"
+          onClick={handleNext}
+        />
+      </div>
     </div>
   );
 }
