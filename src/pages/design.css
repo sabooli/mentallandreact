@@ -182,6 +182,9 @@ figure {
 }
 .more {
   font-size: 1em;
+   color: #fafefe;
+     background-color: #02979d;
+
 }
 .learnMore {
   max-width: 170px;

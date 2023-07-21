@@ -94,6 +94,7 @@ body {
   align-items: center;
   text-align: start;
   color: #ffffff;
+  background: #02979d;
 }
 .login:hover {
   color: #ffffff;
