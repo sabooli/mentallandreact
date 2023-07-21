@@ -3,11 +3,6 @@ import { createRoot } from "react-dom/client";
 import { CartProvider } from "./pages/cartContext";
 import Main from "./Main";
 import "./i18n";
-import "swiper/swiper.min.css";
-import "swiper/swiper-bundle.min.css";
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap/dist/js/bootstrap.js";
-import "bootstrap-icons/font/bootstrap-icons.css";
 import "./pages/customize.css";
 import "./pages/index.css";
 import "./pages/design.css";
@@ -21,6 +16,11 @@ import "./pages/contact.css";
 import "./pages/business.css";
 import "./pages/tourism.css";
 import "./App.css";
+import "swiper/swiper.min.css";
+import "swiper/swiper-bundle.min.css";
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/js/bootstrap.js";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 
 
