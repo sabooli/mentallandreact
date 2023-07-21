@@ -84,9 +84,9 @@ useEffect(() => {
       >
         <Header className="whatsapp" />
         <Navbar />
-        <div className="homeStrategy text-start">
-          <h1 className="homemainTopic">
-            <span>mentalland</span> where you can learn, improve, get calm & Be
+        <div className="homeStrategy text-start">          
+            <h1 className="mainname">mentalland</h1>
+            <h1 className="homemainTopic"> where you can learn, improve, get calm & Be
             happy
           </h1>
           <h2 className="homesubTopic">
