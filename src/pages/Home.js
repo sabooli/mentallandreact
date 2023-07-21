@@ -76,7 +76,6 @@ useEffect(() => {
           backgroundSize: "cover",
           backgroundPosition: "center top",
           backgroundRepeat: "no-repeat",
-          backgroundAttachment: "fixed",
           backgroundColor: "#333",
           height: "calc(140vh)",
           minHeight: "500px",
@@ -84,10 +83,11 @@ useEffect(() => {
       >
         <Header className="whatsapp" />
         <Navbar />
-        <div className="homeStrategy text-start">          
-            <h1 className="mainname">mentalland</h1>
-            <h1 className="homemainTopic"> where you can learn, improve, get calm & Be
-            happy
+        <div className="homeStrategy text-start">
+          <h1 className="mainname">mentalland</h1>
+          <h1 className="homemainTopic">
+            {" "}
+            where you can learn, improve, get calm & Be happy
           </h1>
           <h2 className="homesubTopic">
             Lorem ipsum dolor sit amet consectetur. Amet velit convallis amet mi
@@ -420,6 +420,7 @@ useEffect(() => {
                                   src={`https://www.mentalland.com/image/blog/${article.thumbnail_blog}`}
                                   className="latearticleimage img-fluid"
                                   alt="latest articles MentalLand"
+                                  loading="lazy"
                                 />
                               </div>
                               <div className="articlewords text-start">

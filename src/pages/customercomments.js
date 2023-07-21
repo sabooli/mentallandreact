@@ -26,9 +26,8 @@ export default function Customercomments({ heading }) {
   }, []);
   return (
     <div>
-      
       <div className="yyy">
-       <h1 className="customersayH text-start">{heading}</h1>
+        <h1 className="customersayH text-start">{heading}</h1>
         <div>
           <IoIosArrowDropleftCircle
             className="swiper-navigation__prev"
@@ -73,6 +72,7 @@ export default function Customercomments({ heading }) {
                     src={patienta}
                     alt="patient comment"
                     className="card-img patient"
+                    loading="lazy"
                   />
                 </div>
                 <div className="patientName text-center">Benjamin Smith</div>
@@ -100,6 +100,7 @@ export default function Customercomments({ heading }) {
                     src={patientb}
                     alt="patient comment"
                     className="card-img patient"
+                    loading="lazy"
                   />
                 </div>
                 <div className="patientName text-center">Benjamin Smith</div>
@@ -126,6 +127,7 @@ export default function Customercomments({ heading }) {
                     src={patientc}
                     alt="patient comment"
                     className="card-img patient"
+                    loading="lazy"
                   />
                 </div>
                 <div className="patientName text-center">Benjamin Smith</div>
@@ -153,6 +155,7 @@ export default function Customercomments({ heading }) {
                     src={patienta}
                     alt="patient comment"
                     className="card-img patient"
+                    loading="lazy"
                   />
                 </div>
                 <div className="patientName text-center">Benjamin Smith</div>
@@ -171,7 +174,7 @@ export default function Customercomments({ heading }) {
             </div>
           </div>
         </SwiperSlide>
-      </Swiper>{" "}     
+      </Swiper>{" "}
     </div>
   );
 }

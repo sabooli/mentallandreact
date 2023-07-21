@@ -139,6 +139,7 @@ export default function Patientcomments({heading}) {
                     src={patienta}
                     alt="patient comment"
                     className="card-img patient"
+                    loading="lazy"
                   />
                 </div>
                 <div className="patientName text-center">Benjamin Smith</div>
