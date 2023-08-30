@@ -1,11 +1,18 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
+
 
 export default function Explain() {
   const [activeButton, setActiveButton] = useState(0);
+  const { t, i18n } = useTranslation();
 
   const handleButtonClick = (index) => {
     setActiveButton(index);
   };
+  
+  const activeClass = activeButton === 0 ? "active" : "";
+  const activePlan = activeButton === 2 ? "active" : "";
+
 
   return (
     <div>
@@ -13,7 +20,11 @@ export default function Explain() {
         {" "}
         <div className="knowme">
           <span
-            className={activeButton === 0 ? "active aboutme" : "aboutme"}
+            className={
+              activeClass +
+              " " +
+              (i18n.language === "fa" ? "persianMode" : "aboutme")
+            }
             onClick={() => handleButtonClick(0)}
           >
             <span className="tx">About me</span>
@@ -25,15 +36,17 @@ export default function Explain() {
             <span className="tx">Comments</span>
           </span>
           <span
-            className={activeButton === 2 ? "active weeklyplan" : "weeklyplan"}
+            className={
+              activePlan +
+              " " +
+              (i18n.language === "fa" ? "rtlMode" : "weeklyplan")
+            }
             onClick={() => handleButtonClick(2)}
           >
             <span className="tx">Weekly Plan</span>
           </span>
         </div>
-        <div className="explain">
-       
-        </div>
+        <div className="explain"></div>
       </section>
     </div>
   );
