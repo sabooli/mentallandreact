@@ -63,7 +63,7 @@ export default function Seminarreg() {
         <div className="regbar">
           <div className="regbar-image">
           <img
-            src={`https://mentalland.com/image/events/${
+            src={`https://portals.mentalland.com/image/events/${
               isLoading
                 ? "Loading..."
                 : item
@@ -93,7 +93,7 @@ export default function Seminarreg() {
             <div className="seminarguest">
               <span>
                 <img
-                  src={`https://mentalland.com/image/events/teacher/${
+                  src={`https://portals.mentalland.com/image/events/teacher/${
                     isLoading
                       ? "Loading..."
                       : item
@@ -125,7 +125,7 @@ export default function Seminarreg() {
           <div className="guestIntrowords">
             <div className="guestIntroN">
               <img
-                src={`https://mentalland.com/image/events/teacher/${
+                src={`https://portals.mentalland.com/image/events/teacher/${
                   isLoading
                     ? "Loading..."
                     : item

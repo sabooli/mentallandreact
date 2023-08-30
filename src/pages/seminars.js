@@ -8,10 +8,40 @@ import Footer from "../footer";
 
 export default function Seminars() {
 const [eventData, setEventData] = useState([]);
+const [seminarData, setSeminarData] = useState([]);
+const [spseminarData, setSpSeminarData] = useState([]);
 const {t, i18n} = useTranslation()
 
-const eventUrl = t("eventUrl");;
+const eventUrl = t("eventUrl");
+const seminarUrl = t("seminarUrl");
+const spseminarUrl = t("spseminarUrl");
 
+useEffect(() => {
+  fetch(spseminarUrl)
+    .then((response) => response.json())
+    .then((data) => setSpSeminarData(data.data));
+}, [spseminarUrl]);
+
+useEffect(() => {
+  setSpSeminarData([]);
+  fetch(spseminarUrl)
+    .then((response) => response.json())
+    .then((data) => setSpSeminarData(data.data));
+}, [i18n.language]);
+
+
+useEffect(() => {
+  fetch(seminarUrl)
+    .then((response) => response.json())
+    .then((data) => setSeminarData(data.data));
+}, [seminarUrl]);
+
+useEffect(() => {
+  setSeminarData([]);
+  fetch(seminarUrl)
+    .then((response) => response.json())
+    .then((data) => setSeminarData(data.data));
+}, [i18n.language]);
 
 useEffect (() => {
   fetch(eventUrl)
@@ -37,7 +67,7 @@ console.log(eventData);
           <div className="sliders">
             <div className="spzseminars">
               <Upcoming
-                eventData={eventData}
+                eventData={spseminarData}
                 heading="SpecializedSeminars"
                 color="#fafefe"
               />
@@ -51,7 +81,7 @@ console.log(eventData);
             </div>
             <div className="genseminars">
               <Upcoming
-                eventData={eventData}
+                eventData={seminarData}
                 heading="GeneralSeminars"
                 color="#fafefe"
               />

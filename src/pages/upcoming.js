@@ -22,7 +22,7 @@ SwiperCore.use([Navigation, Pagination]);
 export default function Upcoming({ heading, color, eventData }) {
   const [displayAll, setDisplayAll] = useState(false);
   const {t, i18n} = useTranslation();
-const [key, setKey] = useState(0);
+  const [key, setKey] = useState(0);
 
 useEffect(() => {
     setKey((prevKey) => prevKey + 1);
@@ -41,6 +41,7 @@ const handleClickGoBack = () => {
 
 
   const sliderRef = useRef(null);
+  
   const handlePrev = useCallback(() => {
     if (!sliderRef.current) return;
     sliderRef.current.swiper.slidePrev();
@@ -62,7 +63,7 @@ const handleClickGoBack = () => {
           ) : (
             <div>
               {i18n.language === "fa" ? (
-                <div>
+                <div style={{ whiteSpace: "nowrap" }}>
                   <IoIosArrowDroprightCircle
                     className="swiper-navigation__prev"
                     onClick={handlePrev}
@@ -73,7 +74,7 @@ const handleClickGoBack = () => {
                   />
                 </div>
               ) : (
-                <div>
+                <div style={{ whiteSpace: "nowrap" }}>
                   <IoIosArrowDropleftCircle
                     className="swiper-navigation__prev"
                     onClick={handlePrev}
@@ -91,13 +92,12 @@ const handleClickGoBack = () => {
           <div className="displayAll">
             {eventData.map((event) => (
               <div>
-                {" "}
                 <div className="allinone" key={event.id}>
                   <div className="card swiper-slide">
                     <div className="image-content">
                       <div className="card-image">
                         <img
-                          src={`https://mentalland.com/image/events/${event.thumbnail_events}`}
+                          src={`https://portals.mentalland.com/image/events/${event.thumbnail_events}`}
                           alt="public seminar"
                           className="card-img"
                         />
@@ -134,14 +134,11 @@ const handleClickGoBack = () => {
                 </div>
               </div>
             ))}
-          <div className="text-center">
-            <button
-              onClick={handleClickGoBack}
-              className="seeAll goBackLink"
-            >
-              <span className="goBack">Go Back</span>
-            </button>
-          </div>
+            <div className="text-center">
+              <button onClick={handleClickGoBack} className="seeAll goBackLink">
+                <span className="goBack">Go Back</span>
+              </button>
+            </div>
           </div>
         ) : (
           <div>
@@ -170,7 +167,7 @@ const handleClickGoBack = () => {
                     <div className="image-content">
                       <div className="card-image">
                         <img
-                          src={`https://mentalland.com/image/events/${event.thumbnail_events}`}
+                          src={`https://portals.mentalland.com/image/events/${event.thumbnail_events}`}
                           alt="public seminar"
                           className="card-img"
                         />
@@ -388,9 +385,10 @@ const handleClickGoBack = () => {
               </SwiperSlide>
             </Swiper>
             <div className="text-center">
-            <Link onClick={handleClickSeeAll} className="seeAll mt-5">
-              <span className="see">See All</span>
-            </Link></div>
+              <Link onClick={handleClickSeeAll} className="seeAll mt-5">
+                <span className="see">See All</span>
+              </Link>
+            </div>
           </div>
         )}
       </div>
