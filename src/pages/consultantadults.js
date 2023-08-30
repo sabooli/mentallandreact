@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import Header from "../header";
 import Navbar from "../Navbar";
@@ -7,8 +7,11 @@ import Form from "react-bootstrap/Form";
 import { AiFillStar } from "react-icons/ai";
 import Explain from "./explain";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import CartContext from "./cartContext";
 
 export default function Counsel() {
+const { t, i18n } = useTranslation();
 const {id} = useParams();
 const [item, setItem] = useState({
   index: "",
@@ -20,9 +23,55 @@ const [item, setItem] = useState({
   Specialties: "",
   stars: "",
 });
+const [categories, setCategories] = useState([]);
+const [categoryId, setCategoryId] = useState();
+const [subcategoryId, setSubcategoryId] = useState();
+const [subcategories, setSubcategories] = useState([]);
+const { dispatch } = useContext(CartContext);
+const [selectedCategoryTitle, setSelectedCategoryTitle] = useState("");
+const [selectedSubcategoryTitle, setSelectedSubcategoryTitle] = useState("");
 
 useEffect(() => {
-   const url ="https://mentalland.com/api/V1/homepage/consts_list_homepage";
+  const selectedSubcategory = subcategories.find(
+    (subcategory) => subcategory.id === subcategoryId
+  );
+
+  if (selectedSubcategory) {
+    { i18n.language === "fa" ? (setSelectedSubcategoryTitle(selectedSubcategory.subcategory_title)) :
+    setSelectedSubcategoryTitle(selectedSubcategory.title_en);
+  }
+  } else {
+    setSelectedSubcategoryTitle("");
+  }
+}, [subcategoryId, subcategories]);
+
+useEffect(() => {
+  const selectedCategory = categories.find(
+    (category) => category.id === categoryId
+  );
+
+  if (selectedCategory) {
+     { i18n.language === "fa" ? (setSelectedCategoryTitle(selectedCategory.title_category)) :
+    setSelectedCategoryTitle(selectedCategory.title_category_en);
+  }
+  } else {
+    setSelectedCategoryTitle("");
+  }
+}, [categoryId, categories]);
+
+const handlePrice = () => { dispatch({
+                              type: "UPDATE_CART_DATA",
+                              payload: {
+                                titleEvent: selectedCategoryTitle + " " + selectedSubcategoryTitle,
+                                dateEvent: new Date().toISOString().split('T')[0],
+                                priceEvent: item ? item.price_event : null,
+                              },
+                            });}
+
+useEffect(() => {
+    const lang = i18n.language;
+    const url =
+      "https://portals.mentalland.com/api/V1/homepage/consts_list_homepage?lang=" + lang;
     fetch(url, {
       headers: {
         "Content-Type": "application/json",
@@ -36,6 +85,52 @@ useEffect(() => {
     .catch((error) => console.log(error));
 }, []);
 
+useEffect(() => {
+  fetch("https://portals.mentalland.com/api/V1/homepage/category_const_rezerv")
+    .then((response) => response.json())
+    .then((data) => {
+      setCategories(data.data);
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+}, []);
+
+useEffect(() => {
+  fetch(
+    `https://portals.mentalland.com/api/V1/homepage/subcategory_const_rezerv/${categoryId}`)
+    .then((response) => response.json())
+    .then((data) => {
+      setSubcategories(data.data);
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+}, [categoryId]);
+
+const priceUrl = `https://portals.mentalland.com/api/V1/get_const_price/${id}`;
+
+const requestBody = {
+  category_id: categoryId,
+  subcategory_id: subcategoryId,
+};
+
+fetch(priceUrl, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(requestBody),
+})
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+
     return (
       <div>
         <Header className="whatsapp" />
@@ -45,7 +140,7 @@ useEffect(() => {
             <div className="gbar">
               <div className="part">
                 <img
-                  src={`https://mentalland.com/image/users/cons/degree/${item.avatar}`}
+                  src={`https://portals.mentalland.com/image/users/cons/degree/${item.avatar}`}
                   className="photo"
                   alt="personal"
                 />
@@ -81,11 +176,67 @@ useEffect(() => {
                 </div>
               </div>
               <div className="part mt-4 container-fluid">
-                <Form.Select aria-label="period">
-                  <option>Select the time period</option>
-                </Form.Select>
-                <div className="hhh mt-4">
-                  <Link to="/pages/consultantadults" className="counsel">
+                {i18n.language === "fa" ? (
+                  <div>
+                    {" "}
+                    <Form.Select
+                      aria-label="category"
+                      onChange={(e) => setCategoryId(e.target.value)}
+                      className="mb-2"
+                    >
+                      <option value="">انتخاب دسته بندی</option>
+                      {categories &&
+                        categories.map((category) => (
+                          <option key={category.id} value={category.id}>
+                            {category.title_category}
+                          </option>
+                        ))}
+                    </Form.Select>
+                    <Form.Select
+                      aria-label="session"
+                      onChange={(e) => setSubcategoryId(e.target.value)}
+                    >
+                      <option value="">جلسات</option>
+                      {subcategories &&
+                        subcategories.map((subcategory) => (
+                          <option key={subcategory.id} value={subcategory.id}>
+                            {subcategory.subcategory_title}
+                          </option>
+                        ))}
+                    </Form.Select>{" "}
+                  </div>
+                ) : (
+                  <div>
+                    {" "}
+                    <Form.Select
+                      aria-label="category"
+                      onChange={(e) => setCategoryId(e.target.value)}
+                      className="mb-2"
+                    >
+                      <option value="">Select Category</option>
+                      {categories &&
+                        categories.map((category) => (
+                          <option key={category.id} value={category.id}>
+                            {category.title_category_en}
+                          </option>
+                        ))}
+                    </Form.Select>
+                    <Form.Select
+                      aria-label="session"
+                      onChange={(v) => setSubcategoryId(v.target.value)}
+                    >
+                      <option value="">Sessions</option>
+                      {subcategories &&
+                        subcategories.map((subcategory) => (
+                          <option key={subcategory.id} value={subcategory.id}>
+                            {subcategory.title_en}
+                          </option>
+                        ))}
+                    </Form.Select>
+                  </div>
+                )}
+                <div className="hhh mt-3">
+                  <Link onClick={handlePrice} className="counsel">
                     <div className="justnow">Start Counseling</div>
                   </Link>
                 </div>

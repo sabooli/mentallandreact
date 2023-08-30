@@ -2,28 +2,47 @@ import React, { useEffect, useState } from "react";
 import Header from "../header";
 import Navbar from "../Navbar";
 import Footer from "../footer";
-import Filter from "./filter";
+import Filters from "./Filters";
 import Doctors from "./Doctors";
 import { useTranslation } from "react-i18next";
 import { CgSortAz } from "react-icons/cg";
 
 export default function Servicesforchildren() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [drInfo, setDrInfo] = useState([]);
   const [searchValue, setSearchValue] = useState("");
-  const [checkedValues, setCheckedValues] = useState([]);
+ const [filters, setFilters] = useState([]);
+ const [numDoctors, setNumDoctors] = useState(6);
+ 
+    const filteredDoctors = drInfo
+      .filter((doctor) => {
+        const filteredItems = doctor.expertise.filter(
+          (specialty) =>
+            filters.length === 0 || filters.includes(specialty.toLowerCase())
+        );
+        return filteredItems.length > 0;
+      })
+      .slice(0, numDoctors);
 
-    
+    const clickFunction = (value) => {
+      const newArray = filters.includes(value)
+        ? filters.filter((filter) => filter !== value)
+        : [...filters, value];
+      setFilters(newArray);
+    };
+      
 useEffect(() => {
   fetchTopRatedDoctors();
 }, []);
 
 const fetchTopRatedDoctors = () => {
-  const url = "https://mentalland.com/api/V1/homepage/top_rated_const";
+  const lang = i18n.language;
+  const url = "https://portals.mentalland.com/api/V1/homepage/top_rated_const?lang="+ lang;
 
   fetch(url, {
     headers: {
       "Content-Type": "application/json",
+      "Accept-Language": lang,
     },
   })
     .then((response) => response.json())
@@ -35,13 +54,8 @@ const fetchTopRatedDoctors = () => {
           lname: item.Lname,
           star: item.stars,
           madrak: item.type_madrak,
-          expertise: JSON.parse(item.Specialties).map((specialty, index) => (
-            <>
-              {index > 0 ? " " : ""}
-              <span className="field">{specialty}</span>
-            </>
-          )),
-          image: `https://mentalland.com/image/users/cons/degree/${item.avatar}`,
+          expertise: JSON.parse(item.Specialties),
+          image: `https://portals.mentalland.com/image/users/cons/degree/${item.avatar}`,
         };
       });
       setDrInfo(doctorsData);
@@ -52,14 +66,16 @@ const fetchTopRatedDoctors = () => {
  
 useEffect(() => {
     fetchDoctors();
-  }, []);
+  }, [i18n.language]);
 
   const fetchDoctors = () => {
-    const url = "https://mentalland.com/api/V1/homepage/consts_list_homepage";   
+    const lang = i18n.language;
+    const url = "https://portals.mentalland.com/api/V1/homepage/consts_list_homepage?lang=" + lang;   
 
     fetch(url, {
       headers: {
         "Content-Type": "application/json",
+        "Accept-Language": lang,
       },
     })
       .then((response) => response.json())
@@ -71,10 +87,8 @@ useEffect(() => {
             lname: item.Lname,
             star: item.stars,
             madrak: item.type_madrak,
-            expertisez: JSON.parse(item.Specialties)[0],
-            expertiseo: JSON.parse(item.Specialties)[1],
-            expertiset: JSON.parse(item.Specialties)[2],
-            image: `https://mentalland.com/image/users/cons/degree/${item.avatar}`,
+            expertise: JSON.parse(item.Specialties),
+            image: `https://portals.mentalland.com/image/users/cons/degree/${item.avatar}`,
           };
         });
         setDrInfo(doctorsData);
@@ -82,18 +96,11 @@ useEffect(() => {
       .catch((error) => console.error(error));
   };
 
- const handleCheckboxChange = (event) => {
-   const value = event.target.value;
-   const isChecked = event.target.checked;
+   useEffect(() => {
+     fetchDoctors();
+   }, [i18n.language]); 
 
-   if (isChecked) {
-     setCheckedValues([...checkedValues, value]);
-   } else {
-     setCheckedValues(checkedValues.filter((v) => v !== value));
-   }
- };
-
-  useEffect(() => {
+   useEffect(() => {
     const newDrInfo = drInfo.filter(
       (value) =>
         value.name.toLowerCase().includes(searchValue.toLowerCase()) ||
@@ -121,10 +128,7 @@ useEffect(() => {
           </div>
           <div className="main">
             <section className="check">
-              <Filter
-                checkedValues={checkedValues}
-                handleCheckboxChange={handleCheckboxChange}
-              />
+              <Filters clickFunction={clickFunction} />
             </section>
             <section className="psychologist">
               <div className="threeitems">
@@ -148,18 +152,24 @@ useEffect(() => {
                       <span className="fitext">Search</span>
                     </button>
                   </div>
-                  <div className="number hope" onClick={fetchDoctors}>
+                  <div className="number" onClick={fetchDoctors}>
                     740 Psychologists
                   </div>
                 </div>{" "}
               </div>
-              {drInfo.map((item) => {
+              {filteredDoctors.map((item) => {
                 return (
                   <div key={item.id}>
                     <Doctors info={item} />
                   </div>
                 );
               })}
+              <button
+                className="moreDocs"
+                onClick={() => setNumDoctors(numDoctors + 6)}
+              >
+                Load more...
+              </button>
             </section>
           </div>
         </div>
