@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../header";
 import Navbar from "../Navbar";
 import Footer from "../footer";
@@ -15,6 +15,7 @@ import chpainting from "../icons/Group 974.png";
 import chmusic from "../icons/Group 940.png";
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { useTranslation } from "react-i18next";
 import musician from "../icons/Rectangle 92.png";
 import chact from "../icons/Group 942.png";
 import chwrite from "../icons/Group 1069.png";
@@ -23,6 +24,25 @@ import Patientcomments from "./patientcomments";
 import Coach from "./coach";
 
 export default function Artchildren() {
+   const { t, i18n } = useTranslation();
+   const [stuComments, setStuComments] = useState([]);
+
+   const patientUrl =
+     "https://portals.mentalland.com/api/V1/homepage/patient_comments_" +
+     i18n.language;
+
+   useEffect(() => {
+     fetch(patientUrl)
+       .then((response) => response.json())
+       .then((data) => setStuComments(data.data));
+   }, [patientUrl]);
+
+   useEffect(() => {
+     setStuComments([]);
+     fetch(patientUrl)
+       .then((response) => response.json())
+       .then((data) => setStuComments(data.data));
+   }, [i18n.language]);
   return (
     <div className="art">
       <div
@@ -107,7 +127,7 @@ export default function Artchildren() {
               turpis. Eu condimentum aliquam auctor duis accumsan cursus
               tristique pellentesque lorem. Eget cras proin.
             </div>
-            <Link to="/" className="learnMore ">
+            <Link to="#" className="learnMore ">
               <span className="more">Learn more</span>
             </Link>
           </div>
@@ -125,7 +145,7 @@ export default function Artchildren() {
               turpis. Eu condimentum aliquam auctor duis accumsan cursus
               tristique pellentesque lorem. Eget cras proin.
             </div>
-            <Link to="/" className="learnMore ">
+            <Link to="/pages/musicchildren" className="learnMore ">
               <span className="more">Learn more</span>
             </Link>
           </div>
@@ -148,7 +168,7 @@ export default function Artchildren() {
           <div className="musiclearn">
             Let's Strat Playing Guitar
             <div className="cameron mb-4 mt-4">This April</div>
-            <Link to="/" className="learnMoreR mt-3">
+            <Link to="#" className="learnMoreR mt-3">
               <span className="moreR">Register Now</span>
             </Link>
           </div>
@@ -168,7 +188,7 @@ export default function Artchildren() {
               turpis. Eu condimentum aliquam auctor duis accumsan cursus
               tristique pellentesque lorem. Eget cras proin.
             </div>
-            <Link to="/" className="learnMore ">
+            <Link to="#" className="learnMore ">
               <span className="more">Learn more</span>
             </Link>
           </div>
@@ -202,7 +222,7 @@ export default function Artchildren() {
               turpis. Eu condimentum aliquam auctor duis accumsan cursus
               tristique pellentesque lorem. Eget cras proin.
             </div>
-            <Link to="/" className="learnMore ">
+            <Link to="#" className="learnMore ">
               <span className="more">Learn more</span>
             </Link>
           </div>
@@ -220,7 +240,7 @@ export default function Artchildren() {
               turpis. Eu condimentum aliquam auctor duis accumsan cursus
               tristique pellentesque lorem. Eget cras proin.
             </div>
-            <Link to="/" className="learnMore ">
+            <Link to="#" className="learnMore ">
               <span className="more">Learn more</span>
             </Link>
           </div>
@@ -238,7 +258,7 @@ export default function Artchildren() {
           </div>
         </div>
         <div className="studentcomments">
-          <Patientcomments heading="What Our Students Say About US" />
+          <Patientcomments comments={stuComments} heading="What Our Students Say About US" />
         </div>
       </div>
       <Footer />
