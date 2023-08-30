@@ -46,7 +46,7 @@ export default function Jobopp() {
             </div>
             <div className="jobL">
               <Link to="/" className="jobBR">
-                <span className="more">Build Resume</span>
+                <span className="BResume">Build Resume</span>
               </Link>
             </div>
           </div>
