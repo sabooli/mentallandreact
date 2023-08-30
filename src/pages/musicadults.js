@@ -89,7 +89,7 @@ export default function Musicadults() {
                 consectetur bibendum turpis. Eu condimentum aliquam auctor duis
                 accumsan cursus tristique pellentesque lorem. Eget cras proin.
               </div>
-              <Link to="/" className="learnMore ">
+              <Link to="#" className="learnMore ">
                 <span className="more">Register Now</span>
               </Link>
             </div>
@@ -107,7 +107,7 @@ export default function Musicadults() {
                 consectetur bibendum turpis. Eu condimentum aliquam auctor duis
                 accumsan cursus tristique pellentesque lorem. Eget cras proin.
               </div>
-              <Link to="/" className="learnMore ">
+              <Link to="#" className="learnMore ">
                 <span className="more">Register Now</span>
               </Link>
             </div>
@@ -138,7 +138,7 @@ export default function Musicadults() {
                 consectetur bibendum turpis. Eu condimentum aliquam auctor duis
                 accumsan cursus tristique pellentesque lorem. Eget cras proin.
               </div>
-              <Link to="/" className="learnMore ">
+              <Link to="#" className="learnMore ">
                 <span className="more">Register Now</span>
               </Link>
             </div>
@@ -156,7 +156,7 @@ export default function Musicadults() {
                 consectetur bibendum turpis. Eu condimentum aliquam auctor duis
                 accumsan cursus tristique pellentesque lorem. Eget cras proin.
               </div>
-              <Link to="/" className="learnMore ">
+              <Link to="#" className="learnMore ">
                 <span className="more">Learn more</span>
               </Link>
             </div>
@@ -188,7 +188,7 @@ export default function Musicadults() {
                 consectetur bibendum turpis. Eu condimentum aliquam auctor duis
                 accumsan cursus tristique pellentesque lorem. Eget cras proin.
               </div>
-              <Link to="/" className="learnMore ">
+              <Link to="#" className="learnMore ">
                 <span className="more">Register Now</span>
               </Link>
             </div>
