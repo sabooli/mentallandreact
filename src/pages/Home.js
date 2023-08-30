@@ -5,6 +5,8 @@ import Navbar from "../Navbar";
 import Footer from "../footer";
 import { useTranslation } from "react-i18next";
 import homepsychology from "../icons/Rectangle 11home.png";
+import certificate from "../icons/Group 891.png";
+import cadult from "../icons/Rectangle 70.svg";
 import { Link } from "react-router-dom";
 import { RiHeartPulseLine } from "react-icons/ri";
 import { FaTheaterMasks } from "react-icons/fa";
@@ -21,10 +23,34 @@ import group731 from "../icons/Group 731.svg";
 
 export default function Home() {
   const [activeButton, setActiveButton] = useState(0);
+  const [text, setText] = useState("TextA");
+  const [image, setImage] = useState(homepsychology);
   const [faqData, setFaqData] = useState([]);
   const [articleData, setArticleData] = useState([]);
   const [expandedIndex, setExpandedIndex] = useState(-1);
+  const [paComments, setPaComments] = useState([]);
   const { t, i18n } = useTranslation();
+
+
+ 
+ const patientUrl =
+   "https://portals.mentalland.com/api/V1/homepage/patient_comments_" + i18n.language;
+
+  useEffect(() => {
+    fetch(patientUrl)
+      .then((response) => response.json())
+      .then((data) => setPaComments(data.data));
+  }, [patientUrl]);
+
+  
+useEffect(() => {
+  setPaComments([]);
+  fetch(patientUrl)
+    .then((response) => response.json())
+    .then((data) => setPaComments(data.data));
+}, [i18n.language]);
+  
+
 
 const handleClickRead = (index) => {
   setExpandedIndex(index);
@@ -34,7 +60,18 @@ const handleClickBack = () => {
 }
   const handleButtonClick = (index) => {
     setActiveButton(index);
-  };
+
+  if (index === 0) {
+    setText("TextA");
+    setImage(homepsychology);
+  } else if (index === 1) {
+    setText("TextB");
+    setImage(certificate);
+  } else if (index === 2) {
+    setText("TextC");
+    setImage(cadult);
+  }
+};
    
 const apiUrl = t("apiUrl");
 
@@ -52,7 +89,6 @@ useEffect(() => {
 }, [i18n.language]);
 
 const articleUrl = t("articleUrl");
-
 
 useEffect(() => {
   fetch(articleUrl)
@@ -82,8 +118,10 @@ useEffect(() => {
         }}
       >
         <Header className="whatsapp" />
-        <Navbar />
-        <div className="homeStrategy text-start">
+        <Navbar />   
+        {i18n.language === "fa" ? (     
+        <div className="homeStrategyfa">
+          <div className="textWrapper">
           <h1 className="mainname">mentalland</h1>
           <h1 className="homemainTopic">
             {" "}
@@ -94,12 +132,28 @@ useEffect(() => {
             leo aliquet in vestibulum consectetur. Lectus magna eleifend{" "}
           </h2>
           <div className="homelink">
-            <Link to="/" className="learnMore">
+            <Link to="#" className="learnMore">
+              <span className="more">Learn more</span>
+            </Link>
+          </div>
+          </div>
+        </div>):( <div className="homeStrategy">
+          <h1 className="mainname">mentalland</h1>
+          <h1 className="homemainTopic">
+            {" "}
+            where you can learn, improve, get calm & Be happy
+          </h1>
+          <h2 className="homesubTopic">
+            Lorem ipsum dolor sit amet consectetur. Amet velit convallis amet mi
+            leo aliquet in vestibulum consectetur. Lectus magna eleifend{" "}
+          </h2>
+          <div className="homelink">
+            <Link to="#" className="learnMore">
               <span className="more">Learn more</span>
             </Link>
           </div>
         </div>
-      </div>
+        )} </div>
       <div>
         <div className="homepage">
           <div className="band">
@@ -185,27 +239,17 @@ useEffect(() => {
                 </div>
                 <div className="setup mt-5">
                   <div className="homepsy">
-                    <div className="words">
-                      Lorem ipsum dolor sit amet consectetur. Pretium rutrum
-                      nisi mollis sit tortor proin proin sagittis. Id nec
-                      suspendisse lacus erat. Vivamus orci bibendum at purus
-                      elit. Vel vehicula donec amet a dolor sollicitudin ut.
-                      Lectus cursus ipsum mi feugiat nulla enim. Nisl phasellus
-                      viverra quisque egestas in nec luctus ornare amet. In
-                      pellentesque volutpat urna ultrices vitae. Sed magna vitae
-                      placerat eu leo potenti semper id. Sed elementum eget
-                      adipiscing nisl in vestibulum. Volutpat.
-                    </div>
-                    <Link to="/" className="learnMore">
+                    <div className="words">{t(text)}</div>
+                    <Link to="#" className="learnMore">
                       <span className="more">Learn more</span>
                     </Link>
                   </div>
                   <div>
                     <div className="homepsychology">
                       <img
-                        src={homepsychology}
+                        src={image}
                         className="img-fluid"
-                        alt="psychology"
+                        alt={t("Active Button")}
                         loading="lazy"
                       />
                     </div>
@@ -261,7 +305,7 @@ useEffect(() => {
                   </figure>
                 </div>
                 <div className="d-flex justify-content-center">
-                  <Link to="/" className="learnMore">
+                  <Link to="#" className="learnMore">
                     <span className="more">Learn more</span>
                   </Link>
                 </div>
@@ -381,7 +425,7 @@ useEffect(() => {
                           </li>
                         </ul>
                         <div className="Monphonedl">
-                          <Link to="/" className="learnMore">
+                          <Link to="#" className="learnMore">
                             <span className="more">Download</span>
                           </Link>
                         </div>
@@ -391,7 +435,7 @@ useEffect(() => {
                 </div>
               </div>
               <div className="partV">
-                <Customercomments heading="What Our Patients Say" />
+                <Customercomments comments={paComments} heading="What Our Patients Say" />
               </div>
               <div className="partVI">
                 <div className="latestArticles">
@@ -417,7 +461,7 @@ useEffect(() => {
                             <div className="latest pb-3">
                               <div>
                                 <img
-                                  src={`https://www.mentalland.com/image/blog/${article.thumbnail_blog}`}
+                                  src={`https://www.portals.mentalland.com/image/blog/${article.thumbnail_blog}`}
                                   className="latearticleimage img-fluid"
                                   alt="latest articles MentalLand"
                                   loading="lazy"

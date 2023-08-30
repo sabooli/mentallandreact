@@ -37,17 +37,24 @@
   src: url(../fonts/Gilroy-SemiBold.ttf);
   font-display: swap;
 }
-
-
 body {
   font-size: 16px;
   margin: 0 auto !important;
+}
+.patientName {
+  text-transform: capitalize;
 }
 .homeStrategy {
   max-width: 430px;
   margin: 28px 85px 32px;
   padding: 32px 25px 33px;
-  text-align: start;
+  text-align: start,
+}
+.homeStrategyfa {
+  max-width: 430px;
+  margin: 28px 85px 32px;
+  padding: 32px 25px 33px;
+  text-align: end !important;
 }
 .homemainTopic {
   font-family: "Alice", sans-serif;
@@ -715,6 +722,11 @@ width: 90%;
 }
 .heart, .heartbreak {
   font-size: 3.5em;
+}
+
+.customersayH {
+  font-size: 1.5em;
+  margin-bottom: 3%;
 }
 }
 
