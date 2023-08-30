@@ -38,11 +38,6 @@ export default function Art() {
               lobortis. Lacus in etiam rhoncus.
             </div>
           </div>
-          <div className="thumbnailring">
-            <div className="ring">
-              <span></span>
-            </div>
-          </div>
         </div>
         <div className="parental">
           <div className="precendent">
@@ -188,10 +183,10 @@ export default function Art() {
                 bibendum turpis. Eu condimentum aliquam auctor duis.
               </div>
               <div className="link">
-                <Link to="/" className="learnMore ">
+                <Link to="#" className="learnMore ">
                   <span className="more">Adults</span>
                 </Link>
-                <Link to="/" className="learnMore linkto">
+                <Link to="#" className="learnMore linkto">
                   <span className="more">Children & Teenagers</span>
                 </Link>
               </div>
@@ -214,10 +209,10 @@ export default function Art() {
                 condimentum aliquam auctor duis accumsan.
               </div>
               <div className="link">
-                <Link to="/" className="learnMore ">
+                <Link to="#" className="learnMore ">
                   <span className="more">Adults</span>
                 </Link>
-                <Link to="/" className="learnMore linkto">
+                <Link to="#" className="learnMore linkto">
                   <span className="more">Children & Teenagers</span>
                 </Link>
               </div>
