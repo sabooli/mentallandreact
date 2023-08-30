@@ -1,4 +1,5 @@
-import React, { useRef, useCallback } from "react";
+import React, { useRef, useCallback, useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
 import { Link } from "react-router-dom";
@@ -8,7 +9,19 @@ import {
   IoIosArrowDropleftCircle,
 } from "react-icons/io";
 
-export default function Coaches({ heading, color, major }) {
+
+export default function Coaches({ heading, color, major, coachData }) {
+  const { t, i18n } = useTranslation();
+  const [key, setKey] = useState(0);
+
+  useEffect(() => {
+    setKey((prevKey) => prevKey + 1);
+  }, [coachData]);
+
+  if (!coachData) {
+    return null;
+  }
+
  const sliderRef = useRef(null);
  const handlePrev = useCallback(() => {
    if (!sliderRef.current) return;
@@ -20,19 +33,37 @@ export default function Coaches({ heading, color, major }) {
    sliderRef.current.swiper.slideNext();
  }, []);
   return (
-    <div className="coachback mb-5" style={{ backgroundColor: color }}>
+    <div
+      className="coachback mb-5"
+      style={{ backgroundColor: color }}
+      key={key}
+    >
       <div className="yyy">
-        <h1 className="coa text-start">{heading}</h1>
-        <div>
-          <IoIosArrowDropleftCircle
-            className="swiper-navigation__prev"
-            onClick={handlePrev}
-          />
-          <IoIosArrowDroprightCircle
-            className="swiper-navigation__next"
-            onClick={handleNext}
-          />
-        </div>
+        <h1 className="coa text-start">{t(heading)}</h1>
+
+        {i18n.language === "fa" ? (
+          <div style={{ whiteSpace: "nowrap" }}>
+            <IoIosArrowDroprightCircle
+              className="swiper-navigation__prev"
+              onClick={handlePrev}
+            />
+            <IoIosArrowDropleftCircle
+              className="swiper-navigation__next"
+              onClick={handleNext}
+            />
+          </div>
+        ) : (
+          <div style={{ whiteSpace: "nowrap" }}>
+            <IoIosArrowDropleftCircle
+              className="swiper-navigation__prev"
+              onClick={handlePrev}
+            />
+            <IoIosArrowDroprightCircle
+              className="swiper-navigation__next"
+              onClick={handleNext}
+            />
+          </div>
+        )}
       </div>
       <Swiper
         modules={[Navigation, Pagination]}
@@ -66,22 +97,31 @@ export default function Coaches({ heading, color, major }) {
           },
         }}
       >
-        <SwiperSlide>
-          <div className="card coachsl swiper-slide mt-4">
-            <div className="image-content">
-              <div className="card-image-coach">
-                <img src={R8c} alt="consultant" className="dr" />
+        {coachData.map((coach) => (
+          <SwiperSlide key={coach.id}>
+            <div className="card coachsl swiper-slide mt-4">
+              <div className="image-content">
+                <div className="card-image-coach">
+                  <img
+                    src={`https://portals.mentalland.com/image/users/cons/degree/${coach.avatar}`}
+                    alt="consultant"
+                    className="dr"
+                  />
+                </div>
+              </div>
+              <div className="card-content-coach">
+                <p className="coachname">
+                  Dr. {coach.Fname}
+                  {coach.Lname}
+                </p>
+                <Link to="../courseinfo" className="ci">
+                  {" "}
+                  <p className="major">{major}</p>
+                </Link>
               </div>
             </div>
-            <div className="card-content-coach">
-              <p className="coachname">Dr. Mary Green</p>
-              <Link to="../courseinfo" className="ci">
-                {" "}
-                <p className="major">{major}</p>
-              </Link>
-            </div>
-          </div>
-        </SwiperSlide>
+          </SwiperSlide>
+        ))}
         <SwiperSlide>
           <div className="card coachsl swiper-slide mt-4">
             <div className="image-content">
