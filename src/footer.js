@@ -44,11 +44,11 @@ export default function Footer() {
         <div className="column web">
           <div className="inner-column">
             <div className="fh22">Quick Access</div>
-            <Link to="/pages/Home" className="fqaccess fhome">
+            <Link to="/" className="fqaccess fhome">
               Home
             </Link>
             <br />
-            <Link to="/pages/depressionadults" className="fqaccess">
+            <Link to="/pages/psychology" className="fqaccess">
               Our Services
             </Link>
             <br />
@@ -70,19 +70,19 @@ export default function Footer() {
               Link 1
             </Link>
             <br />
-            <Link to="/pages/aboutus" className="fqaccess">
+            <Link to="/pages/art" className="fqaccess">
               Link 2
             </Link>
             <br />
-            <Link to="/pages/aboutus" className="fqaccess">
+            <Link to="/pages/business" className="fqaccess">
               Link 3
             </Link>
             <br />
-            <Link to="/pages/aboutus" className="fqaccess">
+            <Link to="/pages/tourism" className="fqaccess">
               Link 4
             </Link>
             <br />
-            <Link to="/pages/aboutus" className="fqaccess">
+            <Link to="/pages/psychology" className="fqaccess">
               Link 5
             </Link>
           </div>

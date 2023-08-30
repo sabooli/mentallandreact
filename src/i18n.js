@@ -4,9 +4,27 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   en: {
     translation: {
-      apiUrl: "https://www.mentalland.com/api/V1/homepage/faqs_english",
-      eventUrl: "https://www.mentalland.com/api/V1/homepage/events_english",
-      articleUrl: "https://www.mentalland.com/api/V1/homepage/blogs_en_list",
+      apiUrl: "https://www.portals.mentalland.com/api/V1/homepage/faqs_english",
+      eventUrl:
+        "https://www.portals.mentalland.com/api/V1/homepage/events_english",
+      seminarUrl:
+        "https://www.portals.mentalland.com/api/V1/homepage/event_general_en",
+      spseminarUrl:
+        "https://www.portals.mentalland.com/api/V1/homepage/event_special_en",
+      articleUrl:
+        "https://www.portals.mentalland.com/api/V1/homepage/blogs_en_list",
+      paintUrl:
+        "https://www.portals.mentalland.com/api/V1/homepage/painting_const?lang=en",
+      musicUrl:
+        "https://www.portals.mentalland.com/api/V1/homepage/music_const?lang=en",
+      danceUrl:
+        "https://www.portals.mentalland.com/api/V1/homepage/dance_const?lang=en",
+      writeUrl:
+        "https://www.portals.mentalland.com/api/V1/homepage/writing_const?lang=en",
+      actUrl:
+        "https://www.portals.mentalland.com/api/V1/homepage/acting_const?lang=en",
+      artUrl:
+        "https://www.portals.mentalland.com/api/V1/homepage/art_const?lang=en",
       DEPRESSION: "DEPRESSION",
       Home: "Home",
       About: "About",
@@ -37,13 +55,37 @@ const resources = {
       GeneralSeminars: "General Seminars",
       SpecializedEvents: "Specialized Events",
       SpecializedSeminars: "Specialized Seminars",
+      TextA:
+        "Lorem ipsum dolor sit amet consectetur. Pretium rutrum nisi mollis sit tortor proin proin sagittis. Id nec suspendisse lacus erat. Vivamus orci bibendum at purus elit. Vel vehicula donec amet a dolor sollicitudin ut. Lectus cursus ipsum mi feugiat nulla enim. Nisl phasellus viverra quisque egestas in nec luctus ornare amet. In pellentesque volutpat urna ultrices vitae. Sed magna vitae placerat eu leo potenti semper id. Sedeget adipiscing nisl in vestibulum. Volutpat.",
+      TextB:
+        "Lorem ipsum dolor sit amet consectetur.orci bibendum at purus elit. Vel vehicula donec amet a dolor sollicitudin ut. Lectus cursus ipsum mi feugiat nulla enim. Nisl phasellus viverra quisque egestas in nec luctus ornare amet. In pellentesque volutpat urna ultrices vitae. Sed magna vitae placerat eu leo potenti semper id. Sedeget adipiscing nisl in vestibulum. Volutpat.",
+      TextC:
+        "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur. Pretium rutrum nisi mollis sit tortor proin proin sagittis. Id nec suspendisse lacus erat. Vivamus orci bibendum at purus elit. Vel vehicula donec amet a dolor sollicitudin ut. Lectus cursus ipsum mi feugiat nulla enim. Nisl phasellus viverra quisque egestas in nec luctus ornare amet. In pellentesque volutpat urna ultrices vitae. Sed magna vitae placerat eu leo potenti semper id. Sedeget adipiscing nisl in vestibulum. Volutpat.",
     },
   },
   fa: {
     translation: {
-      apiUrl: "https://www.mentalland.com/api/V1/homepage/faqs_persian",
-      eventUrl: "https://www.mentalland.com/api/V1/homepage/events_persian",
-      articleUrl: "https://www.mentalland.com/api/V1/homepage/blogs_fa_list",
+      apiUrl: "https://www.portals.mentalland.com/api/V1/homepage/faqs_persian",
+      eventUrl:
+        "https://www.portals.mentalland.com/api/V1/homepage/events_persian",
+      seminarUrl:
+        "https://www.portals.mentalland.com/api/V1/homepage/event_general_fa",
+      spseminarUrl:
+        "https://www.portals.mentalland.com/api/V1/homepage/event_special_fa",
+      articleUrl:
+        "https://www.portals.mentalland.com/api/V1/homepage/blogs_fa_list",
+      paintUrl:
+        "https://www.portals.mentalland.com/api/V1/homepage/painting_const?lang=fa",
+      musicUrl:
+        "https://www.portals.mentalland.com/api/V1/homepage/music_const?lang=fa",
+      danceUrl:
+        "https://www.portals.mentalland.com/api/V1/homepage/dance_const?lang=fa",
+      writeUrl:
+        "https://www.portals.mentalland.com/api/V1/homepage/writing_const?lang=fa",
+      actUrl:
+        "https://www.portals.mentalland.com/api/V1/homepage/acting_const?lang=fa",
+      artUrl:
+        "https://www.portals.mentalland.com/api/V1/homepage/art_const?lang=fa",
       DEPRESSION: "افسردگی",
       Home: "خانه",
       About: "درباره ما",
@@ -74,6 +116,12 @@ const resources = {
       GeneralSeminars: "سمینارهای عمومی",
       SpecializedEvents: "ایونتهای تخصصی",
       SpecializedSeminars: "سمینارهای تخصصی",
+      TextA:
+        " متن روانشناسی متن روانشناسی متن روانشناسی متن روانشناسی متن روانشماسی متن روانشناسی متن روانشناسی متن روانشناسی متن روانشماسیمتن روانشناسی متن روانشناسی متن روانشناسی متن روانشماسیمتن روانشناسی متن روانشناسی متن روانشناسی متن روانشماسیمتن روانشناسی متن روانشناسی متن روانشناسی متن روانشماسیمتن روانشناسی متن روانشناسی متن روانشناسی متن روانشماسیمتن روانشناسی متن روانشناسی متن روانشناسی متن روانشماسیمتن روانشناسی متن روانشناسی متن روانشناسی متن روانشماسی متن روانشناسی",
+      TextB:
+        "  متن کسب و کامتن کسب و کامتن کسب و کامتن کسب و کامتن کسب و کامتن کسب و کامتن کسب و کامتن کسب و کامتن کسب و کا متن کسب و کار متن کسب و کار",
+      TextC:
+        "  متن هنر متن هنرمتن هنرمتن هنرمتن هنرمتن هنرمتن هنرمتن هنرمتن هنرمتن هنرمتن هنرمتن هنرمتن هنرمتن هنرمتن هنرمتن هنرمتن هنرمتن هنرمتن هنر متن هنر",
     },
   },
 };

@@ -85,6 +85,17 @@ body {
   border-radius: 30px;
   text-decoration: none;
 }
+.profilePic {
+  background: #02979d;
+  border: 1px solid #02979d;
+  margin-inline-end: 0.8rem;
+  height: 44px;
+  width: 44px;
+  border-radius: 50px;
+  color: #ffffff;
+  padding: 8px;
+  padding-inline: 11px;
+}
 
 .login {
   font-family: "Gilroy-Bold", sans-serif;
@@ -305,7 +316,8 @@ body {
   line-height: 21.44px;
   color: #fafefe;
   text-decoration: none;
-  padding-top: 45px;
+  margin-top: 28px;
+  cursor: pointer;
 }
 
 .fqaccess:hover {
