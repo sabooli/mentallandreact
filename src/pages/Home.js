@@ -6,7 +6,7 @@ import Footer from "../footer";
 import { useTranslation } from "react-i18next";
 import homepsychology from "../icons/Rectangle 11home.png";
 import certificate from "../icons/Group 891.png";
-import cadult from "../icons/Rectangle 70.svg";
+import madults from "../icons/Rectangle 83adult.png";
 import { Link } from "react-router-dom";
 import { RiHeartPulseLine } from "react-icons/ri";
 import { FaTheaterMasks } from "react-icons/fa";
@@ -29,9 +29,12 @@ export default function Home() {
   const [articleData, setArticleData] = useState([]);
   const [expandedIndex, setExpandedIndex] = useState(-1);
   const [paComments, setPaComments] = useState([]);
+  const [showMoreText, setShowMoreText] = useState(true);
   const { t, i18n } = useTranslation();
 
-
+const handleClick = () => {
+  setShowMoreText(false);
+};
  
  const patientUrl =
    "https://portals.mentalland.com/api/V1/homepage/patient_comments_" + i18n.language;
@@ -69,7 +72,7 @@ const handleClickBack = () => {
     setImage(certificate);
   } else if (index === 2) {
     setText("TextC");
-    setImage(cadult);
+    setImage(madults);
   }
 };
    
@@ -118,42 +121,46 @@ useEffect(() => {
         }}
       >
         <Header className="whatsapp" />
-        <Navbar />   
-        {i18n.language === "fa" ? (     
-        <div className="homeStrategyfa">
-          <div className="textWrapper">
-          <h1 className="mainname">mentalland</h1>
-          <h1 className="homemainTopic">
-            {" "}
-            where you can learn, improve, get calm & Be happy
-          </h1>
-          <h2 className="homesubTopic">
-            Lorem ipsum dolor sit amet consectetur. Amet velit convallis amet mi
-            leo aliquet in vestibulum consectetur. Lectus magna eleifend{" "}
-          </h2>
-          <div className="homelink">
-            <Link to="#" className="learnMore">
-              <span className="more">Learn more</span>
-            </Link>
+        <Navbar />
+        {i18n.language === "fa" ? (
+          <div className="homeStrategyfa">
+            <div className="textWrapper">
+              <h1 className="mainname">mentalland</h1>
+              <h1 className="homemainTopic">
+                {" "}
+                where you can learn, improve, get calm & Be happy
+              </h1>
+              <h2 className="homesubTopic">
+                Lorem ipsum dolor sit amet consectetur. Amet velit convallis
+                amet mi leo aliquet in vestibulum consectetur. Lectus magna
+                eleifend{" "}
+              </h2>
+              <div className="homelink">
+                <a to="#PBA" className="learnMore">
+                  <span className="more">Learn more</span>
+                </a>
+              </div>
+            </div>
           </div>
+        ) : (
+          <div className="homeStrategy">
+            <h1 className="mainname">mentalland</h1>
+            <h1 className="homemainTopic">
+              {" "}
+              where you can learn, improve, get calm & Be happy
+            </h1>
+            <h2 className="homesubTopic">
+              Lorem ipsum dolor sit amet consectetur. Amet velit convallis amet
+              mi leo aliquet in vestibulum consectetur. Lectus magna eleifend{" "}
+            </h2>
+            <div className="homelink">
+              <Link to="#" className="learnMore">
+                <span className="more">Learn more</span>
+              </Link>
+            </div>
           </div>
-        </div>):( <div className="homeStrategy">
-          <h1 className="mainname">mentalland</h1>
-          <h1 className="homemainTopic">
-            {" "}
-            where you can learn, improve, get calm & Be happy
-          </h1>
-          <h2 className="homesubTopic">
-            Lorem ipsum dolor sit amet consectetur. Amet velit convallis amet mi
-            leo aliquet in vestibulum consectetur. Lectus magna eleifend{" "}
-          </h2>
-          <div className="homelink">
-            <Link to="#" className="learnMore">
-              <span className="more">Learn more</span>
-            </Link>
-          </div>
-        </div>
-        )} </div>
+        )}{" "}
+      </div>
       <div>
         <div className="homepage">
           <div className="band">
@@ -177,7 +184,7 @@ useEffect(() => {
           <div className="subsume">
             <div className="home">
               <div className="partI">
-                <h2 className="ourServices">Our Professional Services</h2>
+                <h2 className="ourServices" id="PBA">Our Professional Services</h2>
                 <div className="summarize">
                   <span
                     className={activeButton === 0 ? "activecase" : ""}
@@ -240,9 +247,19 @@ useEffect(() => {
                 <div className="setup mt-5">
                   <div className="homepsy">
                     <div className="words">{t(text)}</div>
-                    <Link to="#" className="learnMore">
-                      <span className="more">Learn more</span>
-                    </Link>
+                    {activeButton === 0 ? (
+                      <Link to="/pages/psychology" className="learnMore">
+                        <span className="more">Learn more</span>
+                      </Link>
+                    ) : activeButton === 1 ? (
+                      <Link to="/pages/business" className="learnMore">
+                        <span className="more">Learn more</span>
+                      </Link>
+                    ) : activeButton === 2 ? (
+                      <Link to="/pages/Art" className="learnMore">
+                        <span className="more">Learn more</span>
+                      </Link>
+                    ) : null}
                   </div>
                   <div>
                     <div className="homepsychology">
@@ -304,11 +321,22 @@ useEffect(() => {
                     </figcaption>
                   </figure>
                 </div>
-                <div className="d-flex justify-content-center">
-                  <Link to="#" className="learnMore">
-                    <span className="more">Learn more</span>
-                  </Link>
-                </div>
+                {showMoreText && (
+                  <div className="d-flex justify-content-center">
+                    {" "}
+                    <button className="learnMore" onClick={handleClick} style={{ border: 'none' }} >
+                      <span className="more">Learn more</span>
+                    </button>
+                  </div>
+                )}
+                {!showMoreText && (
+                  <p className="introwords">
+                    Lorem ipsum dolor sit amet consectetur. Pretium rutrum nisi
+                    mollis sit tortor proin proin sagittis. Id nec suspendisse
+                    lacus erat. Vivamus orci bibendum at purus elit. Vel
+                    vehicula donec amet a dolor sollicitudin ut.{" "}
+                  </p>
+                )}
               </div>
               <div className="partIII">
                 <h3 className="vision">Our vision & Mission</h3>
@@ -435,7 +463,10 @@ useEffect(() => {
                 </div>
               </div>
               <div className="partV">
-                <Customercomments comments={paComments} heading="What Our Patients Say" />
+                <Customercomments
+                  comments={paComments}
+                  heading="What Our Patients Say"
+                />
               </div>
               <div className="partVI">
                 <div className="latestArticles">
