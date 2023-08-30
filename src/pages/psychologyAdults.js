@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../header";
 import Navbar from "../Navbar";
 import back from "../icons/Group 1247 (1).png";
@@ -14,11 +14,31 @@ import ok from "../icons/okVector.svg";
 import Consultants from "./consultants";
 import Patientcomments from "./patientcomments";
 import Footer from "../footer";
+import { useTranslation } from "react-i18next";
 
 
 
 export default function Psyadults() {
-    return (
+  const [consultants, setConsultants] = useState([]);
+  const { t, i18n } = useTranslation();
+
+  const url =
+    "https://portals.mentalland.com/api/V1/homepage/consts_list_homepage?lang=" + i18n.language;
+
+  useEffect(() => {
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => setConsultants(data.data));
+  }, [url]);
+
+  useEffect(() => {
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => setConsultants(data.data));
+  }, [i18n.language]);
+ 
+    
+return (
       <div>
         <div
           style={{
@@ -118,6 +138,7 @@ export default function Psyadults() {
             </div>
             <div className="part3">
               <Consultants
+              data={consultants}
                 heading="Adults Psychology Consultants & Psychologists"
                 color="#eaf6f6"
               />

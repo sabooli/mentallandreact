@@ -1,18 +1,27 @@
-import React, { useRef, useCallback } from "react";
+import React, { useRef, useCallback, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
 import { Link } from "react-router-dom";
-import R8a from "../icons/Rectangle 8a.svg";
-import R8b from "../icons/Rectangle 8b.svg";
-import R8c from "../icons/Rectangle 8c.svg";
-import R8d from "../icons/Rectangle 8d.svg";
 import {
   IoIosArrowDroprightCircle,
   IoIosArrowDropleftCircle,
 } from "react-icons/io";
+import { useTranslation } from "react-i18next";
 
 
-export default function Consultants({ heading, color }) {
+export default function Consultants({ heading, color, data }) {
+  const [key, setKey] = useState(0);
+  const { t, i18n } = useTranslation();
+
+
+  useEffect(() => {
+    setKey((prevKey) => prevKey + 1);
+  }, [data]);
+
+  if (!data) {
+    return null;
+  }
+
  const sliderRef = useRef(null);
  const handlePrev = useCallback(() => {
    if (!sliderRef.current) return;
@@ -24,23 +33,36 @@ export default function Consultants({ heading, color }) {
    sliderRef.current.swiper.slideNext();
  }, []);
   return (
-    <div className="consultants" style={{ backgroundColor: color }}>
+    <div className="consultants" style={{ backgroundColor: color }} key={key}>
       <h1 className="cons text-center">{heading}</h1>
       <div className="constext text-center">
         Lorem ipsum dolor sit amet consectetur. Pretium rutrum nisi mollis sit
         tortor proin proin sagittis. Id nec suspendisse lacus erat. Vivamus orci
         bibendum at purus elit. Vel vehicula donec amet a dolor sollicitudin ut.
       </div>
-      <div className="mb-3 fff">
-        <IoIosArrowDropleftCircle
-          className="swiper-navigation_prev"
-          onClick={handlePrev}
-        />
-        <IoIosArrowDroprightCircle
-          className="swiper-navigation_next"
-          onClick={handleNext}
-        />
-      </div>
+      { i18n.language === "fa" ? (
+        <div className="mb-3 fff">
+          <IoIosArrowDroprightCircle
+            className="swiper-navigation_prev"
+            onClick={handlePrev}
+          />
+          <IoIosArrowDropleftCircle
+            className="swiper-navigation_next"
+            onClick={handleNext}
+          />
+        </div>
+      ) : (
+        <div className="mb-3 fff">
+          <IoIosArrowDropleftCircle
+            className="swiper-navigation_prev"
+            onClick={handlePrev}
+          />
+          <IoIosArrowDroprightCircle
+            className="swiper-navigation_next"
+            onClick={handleNext}
+          />
+        </div>
+      )}
       <Swiper
         modules={[Navigation, Pagination]}
         ref={sliderRef}
@@ -67,59 +89,33 @@ export default function Consultants({ heading, color }) {
           },
         }}
       >
-        <SwiperSlide>
-          <div className="card swiper-slide">
-            <div className="image-content">
-              <div className="card-image">
-                <img src={R8a} alt="consultant" className="dr img-fluid" />
+        {data.map((consultant) => (
+          <SwiperSlide key={consultant.id}>
+            <div className="card swiper-slide">
+              <div className="image-content">
+                <div className="card-image">
+                  <img
+                    src={`https://portals.mentalland.com/image/users/cons/degree/${consultant.avatar}`}
+                    alt="consultant"
+                    className="contsimg"
+                  />
+                </div>
+              </div>
+              <div className="card-content">
+                <p className="surname">
+                  Dr. {consultant.Fname}
+                  {consultant.Lname}
+                </p>
               </div>
             </div>
-            <div className="card-content">
-              <p className="surname">Dr. Mary Green</p>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="card swiper-slide">
-            <div className="image-content">
-              <div className="card-image">
-                <img src={R8b} alt="consultant" className="dr" />
-              </div>
-            </div>
-            <div className="card-content">
-              <p className="surname">Dr. Tom Smith</p>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="card swiper-slide">
-            <div className="image-content">
-              <div className="card-image">
-                <img src={R8c} alt="consultant" className="dr" />
-              </div>
-            </div>
-            <div className="card-content">
-              <p className="surname">Dr. Mary Green</p>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="card swiper-slide">
-            <div className="image-content">
-              <div className="card-image">
-                <img src={R8d} alt="consultant" className="dr" />
-              </div>
-            </div>
-            <div className="card-content">
-              <p className="surname">Dr. Tom Smith</p>
-            </div>
-          </div>
-        </SwiperSlide>
+          </SwiperSlide>
+        ))}
       </Swiper>
       <div className="text-center">
-      <Link to="/" className="seeAll mt-5 mb-3">
-        <span className="see">see all</span>
-      </Link></div>
+        <Link to="/pages/depressionadults" className="seeAll mt-5 mb-3">
+          <span className="see">see all</span>
+        </Link>
+      </div>
     </div>
   );
 }
