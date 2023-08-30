@@ -20,7 +20,12 @@ export default function Doctors(props) {
           </div>
         </div>
         <div className="workField">
-            {props.info.expertise}
+            {props.info.expertise.map((specialty, index) => (
+                        <>
+                          {index > 0 ? " " : ""}
+                          <span className="field">{specialty}</span>
+                        </>
+                      ))}
         </div>
         <div className="hhh">
           <Link to={`/pages/consultantadults/${props.info.id}`} className="counsel">
