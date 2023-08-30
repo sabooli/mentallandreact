@@ -34,7 +34,7 @@ export default function Business() {
               vitae felis convallis. Egestas enim diam ac nisi orci id tellus
               lobortis. Lacus in etiam rhoncus.
             </div>
-            <Link className="adbeexpertReg">
+            <Link to="#" className="adbeexpertReg">
               <span>Resigter now</span>
             </Link>
           </div>

@@ -34,7 +34,7 @@ export default function Businessadults() {
               vitae felis convallis. Egestas enim diam ac nisi orci id tellus
               lobortis. Lacus in etiam rhoncus.
             </div>
-            <Link className="adbeexpertReg">
+            <Link to="#" className="adbeexpertReg">
               <span>Resigter now</span>
             </Link>
           </div>
@@ -61,7 +61,7 @@ export default function Businessadults() {
                 bibendum turpis. Eu condimentum aliquam auctor duis accumsan
                 cursus tristique pellentesque lorem. Eget cras proin.
               </div>
-              <Link to="/" className="learnMore ">
+              <Link to="#" className="learnMore ">
                 <span className="more">Learn more</span>
               </Link>
             </div>
@@ -80,7 +80,7 @@ export default function Businessadults() {
                 bibendum turpis. Eu condimentum aliquam auctor duis accumsan
                 cursus tristique pellentesque lorem. Eget cras proin.
               </div>
-              <Link to="/" className="learnMore ">
+              <Link to="#" className="learnMore ">
                 <span className="more">Learn more</span>
               </Link>
             </div>

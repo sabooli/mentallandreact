@@ -340,6 +340,9 @@ display: inline-block;
   max-width: 100%;
   height: auto;
 }
+.BResume:hover {
+  color: #FAFEFE;
+}
 .Bprog {
   background-size: cover;
   margin-inline: -85px;
