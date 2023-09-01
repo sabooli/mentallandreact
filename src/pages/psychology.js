@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Grid, FormControl, Select, MenuItem } from "@mui/material";
+import { useTranslation } from "react-i18next";
 import Header from "../header";
 import Navbar from "../Navbar";
 import Footer from "../footer";
@@ -22,6 +24,25 @@ import question from "../icons/Group 817.png";
 import Mfaq from "./mfaq";
 
 export default function Psychology() {
+const { i18n } = useTranslation();
+const [psychologyFaqs, setPsychologyFaqs] = useState([]);
+
+const psyFaqsUrl =
+  "https://portals.mentalland.com/api/V1/homepage/faqs_Psychology_" + i18n.language;
+
+useEffect(() => {
+  fetch(psyFaqsUrl)
+    .then((response) => response.json())
+    .then((data) => setPsychologyFaqs(data.data));
+}, [psyFaqsUrl]);
+
+useEffect(() => {
+  setPsychologyFaqs([]);
+  fetch(psyFaqsUrl)
+    .then((response) => response.json())
+    .then((data) => setPsychologyFaqs(data.data));
+}, [i18n.language]);
+
   return (
     <div className="psychopages">
       <div
@@ -46,9 +67,36 @@ export default function Psychology() {
           </div>
         </div>
       </div>
-      <div className="fullcontent">
+      <div className="fullcontent"> <Grid container spacing={2}>
+      <Grid item xs={4}>
+        <FormControl fullWidth>
+          <Select>
+            <MenuItem value="option1">Option 1</MenuItem>
+            <MenuItem value="option2">Option 2</MenuItem>
+            <MenuItem value="option3">Option 3</MenuItem>
+          </Select>
+        </FormControl>
+      </Grid>
+      <Grid item xs={4}>
+        <FormControl fullWidth>
+          <Select>
+            <MenuItem value="option1">Option 1</MenuItem>
+            <MenuItem value="option2">Option 2</MenuItem>
+            <MenuItem value="option3">Option 3</MenuItem>
+          </Select>
+        </FormControl>
+      </Grid>
+      <Grid item xs={4}>
+        <FormControl fullWidth>
+          <Select>
+            <MenuItem value="option1">Option 1</MenuItem>
+            <MenuItem value="option2">Option 2</MenuItem>
+            <MenuItem value="option3">Option 3</MenuItem>
+          </Select>
+        </FormControl>
+      </Grid></Grid>
         <div className="">
-          <div className="jobchoose">
+          <div className="choose">
             <div className="selecting">
               <Form.Select aria-label="wid">
                 <option>Select the Field...</option>
@@ -185,7 +233,7 @@ export default function Psychology() {
                     vehicula purus sed lorem. Adipiscing nulla amet morbi ipsum
                     nec lobortis egestas nec.
                   </div>
-                  <Link to="/" className="learnMore mb-5">
+                  <Link to="/pages/psychologyAdults" className="learnMore mb-5">
                     <span className="more">Learn more</span>
                   </Link>
                 </div>
@@ -206,7 +254,7 @@ export default function Psychology() {
                     vehicula purus sed lorem. Adipiscing nulla amet morbi ipsum
                     nec lobortis egestas nec.
                   </div>
-                  <Link to="/" className="learnMore">
+                  <Link to="/pages/psychologychildren" className="learnMore">
                     <span className="more">Learn more</span>
                   </Link>
                 </div>
@@ -288,31 +336,13 @@ export default function Psychology() {
               <h2 className="frequent">Most Frequently Asked Questions</h2>
               <div className="freq">
                 <div>
+                  {psychologyFaqs.map((psychologyFaq, index) =>
                   <Mfaq
-                    index={0}
-                    question="Lorem ipsum dolor sit amet consectetur. Est ut vulputate scelerisque nibh?"
-                    answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
-                  />
-                  <Mfaq
-                    index={1}
-                    question="Lorem ipsum dolor sit amet consectetur. Donec at ut diam sit vitae gravida nisi ?"
-                    answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
-                  />
-                  <Mfaq
-                    index={2}
-                    question="Lorem ipsum dolor sit amet consectetur. Nibh nisi nec velit arcu tristique. Justo nulla?"
-                    answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
-                  />
-                  <Mfaq
-                    index={3}
-                    question="Lorem ipsum dolor sit amet consectetur. Ut neque pellentesque felis orci.?"
-                    answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
-                  />
-                  <Mfaq
-                    index={4}
-                    question="Lorem ipsum dolor sit amet consectetur. Amet mi viverra praesent imperdiet proin ne?"
-                    answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
-                  />
+                  key={index}
+                    index={index}
+                    question={psychologyFaq.title_faqs}
+                    answer={psychologyFaq.content_faqs}
+                  />)}
                 </div>
                 <div className="question">
                   <img src={question} alt="faq" className="img-fluid" />

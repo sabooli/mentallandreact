@@ -11,8 +11,8 @@ import {
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-export default function Center({ heading, data }) {
-const [details, setDetails] = useState({});
+export default function Hospital({ heading, data }) {
+  const [details, setDetails] = useState({});
 
   const handleClick = (id) => {
     setDetails((prev) => ({
@@ -21,15 +21,15 @@ const [details, setDetails] = useState({});
     }));
   };
 
-   const [key, setKey] = useState(0);
+  const [key, setKey] = useState(0);
 
-   useEffect(() => {
-     setKey((prevKey) => prevKey + 1);
-   }, [data]);
+  useEffect(() => {
+    setKey((prevKey) => prevKey + 1);
+  }, [data]);
 
-   if (!data) {
-     return null;
-   }
+  if (!data) {
+    return null;
+  }
 
   const { t, i18n } = useTranslation();
   const sliderRef = useRef(null);
@@ -114,8 +114,8 @@ const [details, setDetails] = useState({});
                   <div>
                     <figure className="centerFig">
                       <img
-                        src={`https://portals.mentalland.com/image/hotels/${item.img}`}
-                        alt="mentalland hotel"
+                        src={`https://portals.mentalland.com/image/hospital/${item.img}`}
+                        alt="hospital mentalland"
                         className="drhotel"
                       />
                       <figcaption className="captiontext">

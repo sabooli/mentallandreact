@@ -11,8 +11,8 @@ import {
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-export default function Center({ heading, data }) {
-const [details, setDetails] = useState({});
+export default function TourDoctor({ heading, data }) {
+  const [details, setDetails] = useState({});
 
   const handleClick = (id) => {
     setDetails((prev) => ({
@@ -21,15 +21,15 @@ const [details, setDetails] = useState({});
     }));
   };
 
-   const [key, setKey] = useState(0);
+  const [key, setKey] = useState(0);
 
-   useEffect(() => {
-     setKey((prevKey) => prevKey + 1);
-   }, [data]);
+  useEffect(() => {
+    setKey((prevKey) => prevKey + 1);
+  }, [data]);
 
-   if (!data) {
-     return null;
-   }
+  if (!data) {
+    return null;
+  }
 
   const { t, i18n } = useTranslation();
   const sliderRef = useRef(null);
@@ -105,7 +105,7 @@ const [details, setDetails] = useState({});
                     className="explanation"
                     onClick={() => handleClick(item.id)}
                   >
-                    <strong>{item.title}</strong>
+                    <strong>{item.Fname}</strong>
                     <br /> {item.description}
                   </p>
                 </div>
@@ -114,12 +114,12 @@ const [details, setDetails] = useState({});
                   <div>
                     <figure className="centerFig">
                       <img
-                        src={`https://portals.mentalland.com/image/hotels/${item.img}`}
+                        src={`https://portals.mentalland.com/image/users/cons/degree/${item.avatar}`}
                         alt="mentalland hotel"
                         className="drhotel"
                       />
                       <figcaption className="captiontext">
-                        {item.title}
+                        {item.Fname}
                       </figcaption>
                       <Link
                         to="#"

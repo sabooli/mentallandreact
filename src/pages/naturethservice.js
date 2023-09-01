@@ -10,7 +10,7 @@ import {
   IoIosArrowDropleftCircle,
 } from "react-icons/io";
 
-export default function Naturethservice({ heading }) {
+export default function Naturethservice({ heading, services }) {
   const sliderRef = useRef(null);
   const handlePrev = useCallback(() => {
     if (!sliderRef.current) return;
@@ -62,18 +62,20 @@ export default function Naturethservice({ heading }) {
           },
         }}
       >
+        {services.map((service) => (
+          <SwiperSlide key={service.id}>
+            <div>
+              <figure>
+                <img src={`https://portals.mentalland.com/image/treatments/${service.img}`} alt={service.title} className="drt" />
+                <figcaption class="carecaption">{service.title}</figcaption>
+              </figure>
+            </div>
+          </SwiperSlide>
+        ))}
         <SwiperSlide>
           <div>
             <figure>
-              <img src={eye} alt="Balneotherapy" className="dr" />
-              <figcaption class="carecaption">Balneotherapy</figcaption>
-            </figure>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div>
-            <figure>
-              <img src={neuro} alt="Mud Therapy" className="dr" />
+              <img src={neuro} alt="Mud Therapy" className="drt" />
               <figcaption class="carecaption">Mud Therapy</figcaption>
             </figure>
           </div>
@@ -84,7 +86,7 @@ export default function Naturethservice({ heading }) {
               <img
                 src={plastic}
                 alt="Psammotherapy (Sand bath)"
-                className="dr"
+                className="drt"
               />
               <figcaption class="carecaption">
                 Psammotherapy(Sand bath)
@@ -95,7 +97,7 @@ export default function Naturethservice({ heading }) {
         <SwiperSlide>
           <div>
             <figure>
-              <img src={fertility} alt="Halotherapy" className="dr" />
+              <img src={fertility} alt="Halotherapy" className="drt" />
               <figcaption class="carecaption">Halotherapy</figcaption>
             </figure>
           </div>
@@ -103,7 +105,7 @@ export default function Naturethservice({ heading }) {
         <SwiperSlide>
           <div>
             <figure>
-              <img src={eye} alt="eye care" className="dr" />
+              <img src={eye} alt="eye care" className="drt" />
               <figcaption class="carecaption">Eye care</figcaption>
             </figure>
           </div>
@@ -111,7 +113,7 @@ export default function Naturethservice({ heading }) {
         <SwiperSlide>
           <div>
             <figure>
-              <img src={eye} alt="eye care" className="dr" />
+              <img src={eye} alt="eye care" className="drt" />
               <figcaption class="carecaption">Herniated disc</figcaption>
             </figure>
           </div>
@@ -119,7 +121,7 @@ export default function Naturethservice({ heading }) {
         <SwiperSlide>
           <div>
             <figure>
-              <img src={eye} alt="eye care" className="dr" />
+              <img src={eye} alt="eye care" className="drt" />
               <figcaption class="carecaption">Herniated disc</figcaption>
             </figure>
           </div>
@@ -127,7 +129,7 @@ export default function Naturethservice({ heading }) {
         <SwiperSlide>
           <div>
             <figure>
-              <img src={eye} alt="eye care" className="dr" />
+              <img src={eye} alt="eye care" className="drt" />
               <figcaption class="carecaption">Herniated disc</figcaption>
             </figure>
           </div>

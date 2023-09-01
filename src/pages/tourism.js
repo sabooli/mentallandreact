@@ -1,24 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import tourism from "../icons/Rectangle 47.png";
 import Rhino from "../icons/Rectangle 314.png";
 import general from "../icons/Rectangle 313.png";
 import transplant from "../icons/Rectangle 315.png";
 import IVF from "../icons/Rectangle 316.png";
 import visa from "../icons/Rectangle 318.png";
-import R323 from "../icons/Rectangle 323.png";
-import R324 from "../icons/Rectangle 324.png";
-import R325 from "../icons/Rectangle 325.png";
-import R326 from "../icons/Rectangle 326.png";
-import R327 from "../icons/Rectangle 327.png";
-import R328 from "../icons/Rectangle 328.png";
-import R329 from "../icons/Rectangle 329.png";
-import R330 from "../icons/Rectangle 330.png";
 import medical from "../icons/Medical.svg";
 import travel from "../icons/travel.svg";
 import Medicalservice from "./medicalservice";
 import Wellnessservice from "./wellnessservice";
 import Naturethservice from "./naturethservice";
 import Center from "./center";
+import Hospital from "./hospital";
+import TourDoctor from "./TourDoctor";
 import accomodation from "../icons/accomodation.svg";
 import { HiArrowLongRight } from "react-icons/hi2";
 import Header from "../header";
@@ -29,7 +24,140 @@ import faq from "../icons/Group 1242.png";
 import { Link } from "react-router-dom";
 import { HiOutlineDownload } from "react-icons/hi";
 
-export default function Tourism() {  
+export default function Tourism() {   
+const { i18n } = useTranslation();
+const [tourismFaqs, setTourismFaqs] = useState([]);
+const [surgeries, setSurgeries] = useState([]);
+const [naturalservices, setNaturalServices] = useState([]);
+const [wellnessServices, setWellnessServices] = useState([]);
+const [hotels, setHotels] = useState([]);
+const [hospitals, setHospitals] = useState([]);
+const [consultants, setConsultants] = useState([]);
+
+const url =
+  "https://portals.mentalland.com/api/V1/homepage/consts_list_homepage?lang=" +
+  i18n.language;
+
+useEffect(() => {
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => setConsultants(data.data));
+}, [url]);
+
+useEffect(() => {
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => setConsultants(data.data));
+}, [i18n.language]);
+
+ const hospitalUrl =
+   "https://portals.mentalland.com/api/V1/homepage/hospital_" +
+   i18n.language +
+   "_list";
+
+ useEffect(() => {
+   fetch(hospitalUrl)
+     .then((response) => response.json())
+     .then((data) => setHospitals(data.data));
+ }, [hospitalUrl]);
+
+ useEffect(() => {
+   setHospitals([]);
+   fetch(hospitalUrl)
+     .then((response) => response.json())
+     .then((data) => setHospitals(data.data));
+ }, [i18n.language]);
+
+ const hotelUrl =
+   "https://portals.mentalland.com/api/V1/homepage/hotels_" + i18n.language +"_list";
+
+  useEffect(() => {
+    fetch(hotelUrl)
+      .then((response) => response.json())
+      .then((data) => setHotels(data.data));
+  }, [hotelUrl]);
+  
+useEffect(() => {
+  setHotels([]);
+  fetch(hotelUrl)
+    .then((response) => response.json())
+    .then((data) => setHotels(data.data));
+}, [i18n.language]);
+
+const wellnessUrl =
+  "https://portals.mentalland.com/api/V1/homepage/wellness_services?lang=" + i18n.language;
+
+useEffect(() => {
+  fetch(wellnessUrl)
+    .then((response) => response.json())
+    .then((data) => setWellnessServices(data.data));
+}, [wellnessUrl]);
+
+useEffect(() => {
+  setWellnessServices([]);
+  fetch(wellnessUrl)
+    .then((response) => response.json())
+    .then((data) => setWellnessServices(data.data));
+}, [i18n.language]);
+
+const naturalUrl =
+  "https://portals.mentalland.com/api/V1/homepage/natural_services?lang=" + i18n.language;
+
+useEffect(() => {
+  fetch(naturalUrl)
+    .then((response) => response.json())
+    .then((data) => setNaturalServices(data.data));
+}, [naturalUrl]);
+
+useEffect(() => {
+  setNaturalServices([]);
+  fetch(naturalUrl)
+    .then((response) => response.json())
+    .then((data) => setNaturalServices(data.data));
+}, [i18n.language]);
+
+const treatmentUrl =
+  "https://portals.mentalland.com/api/V1/homepage/popular_treatments?lang=" + i18n.language;
+
+useEffect(() => {
+  fetch(treatmentUrl)
+    .then((response) => response.json())
+    .then((data) => setSurgeries(data.data));
+}, [treatmentUrl]);
+
+useEffect(() => {
+  setSurgeries([]);
+  fetch(treatmentUrl)
+    .then((response) => response.json())
+    .then((data) => setSurgeries(data.data));
+}, [i18n.language]);
+
+  const tourismFaqsUrl =
+    "https://portals.mentalland.com/api/V1/homepage/faqs_tourism_" +
+    i18n.language;
+
+  useEffect(() => {
+    fetch(tourismFaqsUrl)
+      .then((response) => response.json())
+      .then((data) => setTourismFaqs(data.data));
+  }, [tourismFaqsUrl]);
+
+  useEffect(() => {
+    setTourismFaqs([]);
+    fetch(tourismFaqsUrl)
+      .then((response) => response.json())
+      .then((data) => setTourismFaqs(data.data));
+  }, [i18n.language]);
+
+
+  const [showExplanation, setShowExplanation] = useState({});
+  const handleClick = (id) => {
+    setShowExplanation((prev) => ({
+      ...prev,
+      [id]: !prev[id],
+    }));
+  };
+
   return (
     <div>
       <div
@@ -46,7 +174,7 @@ export default function Tourism() {
         <div className="tour">
           <h1>IRAN</h1>
           <h2>Best destination for your beauty and health</h2>
-          <Link className="tourlink">
+          <Link to="/pages/contactus" className="tourlink">
             <span>Free Consultation</span>
           </Link>
         </div>
@@ -178,76 +306,57 @@ export default function Tourism() {
         <div className="ptreatments">
           <h2>popular treatments</h2>
           <div className="popularT">
-            <figure className="figure">
-              <img src={R323} className="img-fluid" alt="liposuction Iran" />
-              <figcaption class="caption-text">Liposuction</figcaption>
-              <Link href="#" class="caption-link">
-                Read More
-              </Link>
-            </figure>
-            <figure>
-              <img src={R324} className="img-fluid" alt="liposuction Iran" />
-              <figcaption class="caption-text">Face lift</figcaption>
-              <Link href="#" class="caption-link">
-                Read More
-              </Link>
-            </figure>
-            <figure>
-              <img src={R325} className="img-fluid" alt="liposuction Iran" />
-              <figcaption class="caption-text">Rhinoplasty</figcaption>
-              <Link href="#" class="caption-link">
-                Read More
-              </Link>
-            </figure>
-            <figure>
-              <img src={R326} className="img-fluid" alt="liposuction Iran" />
-              <figcaption class="caption-text">Smile Correction</figcaption>
-              <Link href="#" class="caption-link">
-                Read More
-              </Link>
-            </figure>
-            <figure>
-              <img src={R327} className="img-fluid" alt="liposuction Iran" />
-              <figcaption class="caption-text">Herniated disc</figcaption>
-              <Link href="#" class="caption-link">
-                Read More
-              </Link>
-            </figure>
-            <figure>
-              <img src={R328} className="img-fluid" alt="liposuction Iran" />
-              <figcaption class="caption-text">
-                Heart disease Treatment
-              </figcaption>
-              <Link href="#" class="caption-link">
-                Read More
-              </Link>
-            </figure>
-            <figure>
-              <img src={R329} className="img-fluid" alt="liposuction Iran" />
-              <figcaption class="caption-text">IVF</figcaption>
-              <Link href="#" class="caption-link">
-                Read More
-              </Link>
-            </figure>
-            <figure>
-              <img src={R330} className="img-fluid" alt="liposuction Iran" />
-              <figcaption class="caption-text">Hair Loss</figcaption>
-              <Link href="#" class="caption-link">
-                Read More
-              </Link>
-            </figure>
+            {surgeries.map((surgery) => (
+              <div key={surgery.id}>
+                {showExplanation[surgery.id] ? (
+                  <div className="capex">
+                    <p
+                      className="explanation"
+                      onClick={() => handleClick(surgery.id)}
+                    >
+                      <strong>{surgery.title}</strong>
+                      <br /> {surgery.des}
+                    </p>
+                  </div>
+                ) : (
+                  <figure className="figure">
+                    <img
+                      src={`https://portals.mentalland.com/image/treatments/${surgery.img}`}
+                      className="treat-img"
+                      alt={surgery.title}
+                    />
+                    <figcaption className="caption-text">
+                      {surgery.title}
+                    </figcaption>{" "}
+                    <button
+                      onClick={() => handleClick(surgery.id)}
+                      className="caption-link"
+                    >
+                      Read More
+                    </button>{" "}
+                  </figure>
+                )}
+              </div>
+            ))}
+            ;
           </div>
         </div>
         <div className="medical-service">
           <h2 className="mb-5">Medical services</h2>
           <Medicalservice heading="Medical services in Iran" />
-          <Wellnessservice heading="Wellness Services in Iran" />
-          <Naturethservice heading="Nature therapy services in Iran" />
+          <Wellnessservice
+            services={wellnessServices}
+            heading="Wellness Services in Iran"
+          />
+          <Naturethservice
+            services={naturalservices}
+            heading="Nature therapy services in Iran"
+          />
         </div>
         <div className="centers">
-          <Center heading="medical centers" />
-          <Center heading="hotels" />
-          <Center heading="doctors" />
+          <Hospital heading="medical centers" data={hospitals} />
+          <Center heading="hotels" data={hotels} />
+          <TourDoctor heading="doctors" data={consultants} />
         </div>
         <div className="travelguide">
           <h2>Iran travel guide</h2>
@@ -288,37 +397,22 @@ export default function Tourism() {
             vitae felis convallis. Egestas enim diam ac nisi orci id tellus
             lobortis. Lacus in etiam rhoncus.
           </div>
-          <Link className="getfreeconsult">Get a free Consultation </Link>
+          <Link to="/pages/contactus" className="getfreeconsult">
+            Get a free Consultation{" "}
+          </Link>
         </div>
         <div className="tourfaq">
           <h2 className="frequent mb-4">Most Frequently Asked Questions</h2>
           <div className="tfreq">
             <div>
-              <HMfaq
-                index={0}
-                question="Lorem ipsum dolor sit amet consectetur. Donec at ut diam sit vitae gravida nisi ?"
-                answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
-              />
-              <HMfaq
-                index={1}
-                question="Lorem ipsum dolor sit amet consectetur. Nibh nisi nec velit arcu tristique. Justo nulla?"
-                answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
-              />
-              <HMfaq
-                index={2}
-                question="Lorem ipsum dolor sit amet consectetur. Ut neque pellentesque felis orci.?"
-                answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
-              />
-              <HMfaq
-                index={3}
-                question="Lorem ipsum dolor sit amet consectetur. Ut neque pellentesque felis orci.?"
-                answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
-              />
-              <HMfaq
-                index={4}
-                question="Lorem ipsum dolor sit amet consectetur. Amet mi viverra praesent imperdiet proin ne?"
-                answer="Lorem ipsum dolor sit amet consectetur. Urna non sit non quisque. Mauris purus neque accumsan purus elementum. Proin faucibus in suspendisse malesuada."
-              />
+              {tourismFaqs.map((tourismFaq, index) => (
+                <HMfaq
+                  key={index}
+                  index={index}
+                  question={tourismFaq.title_faqs}
+                  answer={tourismFaq.content_faqs}
+                />
+              ))}
             </div>
             <div className="Tfaq">
               <img src={faq} alt="faq" className="group731 img-fluid" />
