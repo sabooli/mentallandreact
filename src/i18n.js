@@ -67,7 +67,7 @@ const resources = {
       TextB:
         "Lorem ipsum dolor sit amet consectetur.orci bibendum at purus elit. Vel vehicula donec amet a dolor sollicitudin ut. Lectus cursus ipsum mi feugiat nulla enim. Nisl phasellus viverra quisque egestas in nec luctus ornare amet. In pellentesque volutpat urna ultrices vitae. Sed magna vitae placerat eu leo potenti semper id. Sedeget adipiscing nisl in vestibulum. Volutpat.",
       TextC:
-        "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur. Pretium rutrum nisi mollis sit tortor proin proin sagittis. Id nec suspendisse lacus erat. Vivamus orci bibendum at purus elit. Vel vehicula donec amet a dolor sollicitudin ut. Lectus cursus ipsum mi feugiat nulla enim. Nisl phasellus viverra quisque egestas in nec luctus ornare amet. In pellentesque volutpat urna ultrices vitae. Sed magna vitae placerat eu leo potenti semper id. Sedeget adipiscing nisl in vestibulum. Volutpat.",
+        "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur. Pretium rutrum nisi mollis sit tortor proin proin sagittis. Id nec suspendisse lacus erat. Vivamus orci bibendum at purus elit. Vel vehicula donec amet a dolor sollicitudin ut. Lectus cursus ipsum mi feugiat nulla enim. Sedeget adipiscing nisl in vestibulum. Volutpat.",
     },
   },
   fa: {
@@ -131,7 +131,7 @@ const resources = {
       adultsArtDepartment: "دپارتمان هنر بزرگسالان",
       childrenArtDepartment: "دپارتمان هنر کودکان",
       TextA:
-        " متن روانشناسی متن روانشناسی متن روانشناسی متن روانشناسی متن روانشماسی متن روانشناسی متن روانشناسی متن روانشناسی متن روانشماسیمتن روانشناسی متن روانشناسی متن روانشناسی متن روانشماسیمتن روانشناسی متن روانشناسی متن روانشناسی متن روانشماسیمتن روانشناسی متن روانشناسی متن روانشناسی متن روانشماسیمتن روانشناسی متن روانشناسی متن روانشناسی متن روانشماسیمتن روانشناسی متن روانشناسی متن روانشناسی متن روانشماسیمتن روانشناسی متن روانشناسی متن روانشناسی متن روانشماسی متن روانشناسی",
+        " متن روانشناسی متن روانشناسی متن روانشناسی متن روانشناسی متن روانشماسی متن روانشناسی متن روانشناسی متن روانشناسی متن روانشماسیمتن روانشناسی متن روانشناسی متن روانشناسی متن روانشماسیمتن روانشناسی متن روانشناسی متن روانشناسی متن روانشماسیمتن روانشناسی متن روانشناسی متن روانشناسی متن روانشماسیمتن روانشناسی متن روانشناسی متن روانشناسی متن روانشماسیمتن روانشناسی متن روانشناسی متن روانشناسی متن روانشماسیمتن روانشناسی متن روانشناسی متن روانشناسی",
       TextB:
         "  متن کسب و کامتن کسب و کامتن کسب و کامتن کسب و کامتن کسب و کامتن کسب و کامتن کسب و کامتن کسب و کامتن کسب و کا متن کسب و کار متن کسب و کار",
       TextC:
