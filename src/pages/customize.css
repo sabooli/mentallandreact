@@ -118,9 +118,17 @@ body {
   margin-bottom: 3%;
   text-transform: uppercase;
 }
+.contsimg {
+width: 100%;
+height: 240px;
+object-fit: cover;
+border-top-right-radius: 5px;
+border-top-left-radius: 5px;
+}
 .dr {
-  max-width: 295px;
   width: 100%;
+  height: 160px;
+  object-fit: cover;
 }
 .constext {
   font-family: "Gilroy-Regular", sans-serif;
@@ -295,6 +303,13 @@ figure {
   color: #000b0c;
   margin-bottom: 38px;
 }
+.swps {
+  white-space: "nowrap";
+}
+.swps div {
+  display: 'inline-block'
+}
+
 .swiper-navigation___prev,
 .swiper-navigation___next {
   position: relative;
@@ -444,7 +459,7 @@ figure {
   margin-top: 3%;
 }
 .patientSay {
-  font-size: 1.7em;
+  font-size: 1.5em;
 }
   .subjects {
     grid-template-columns: 1fr;

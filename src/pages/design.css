@@ -77,9 +77,28 @@ body {
   height: 100%;
   border-radius: 30px;
   margin-top: -68px;
-  padding-top: 4%;
-  padding-bottom: 4%;
+  margin-bottom: 40px;
+  padding-top: 2%;
+  padding-bottom: 2%;
   padding-inline: 5%;
+  gap: 5%;
+  background-color: #fafefe;
+}
+
+.jobchoose {
+  display: grid; 
+  grid-template-columns: 2fr 1fr;
+  border-width: 0.2px;
+  box-shadow: 0px 1px 25px rgba(2, 151, 157, 0.1);
+  max-width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  margin-top: -68px;
+  margin-bottom: 40px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-inline: 5%;
+  margin-inline: 85px;
   gap: 5%;
   background-color: #fafefe;
 }
@@ -173,6 +192,9 @@ figure {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+.pusem, .spzsem {
+  margin-bottom: 15%;
+}
 .adps {
   margin-inline-start: -85px;
 }
@@ -256,7 +278,9 @@ figure {
   margin-bottom: 3%;
 }
 .card-content {
-  height: 150px; 
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
 }
 .card-image {
   max-width: 100%;
