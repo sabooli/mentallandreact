@@ -70,7 +70,7 @@ export default function Artchildren() {
       <div className="mastdiv">
         <div className="adultartdep">
           <div className="artsdep">
-            <h2 className="artsdepheading">children art department</h2>
+            <h2 className="artsdepheading">{t("childrenArtDepartment")}</h2>
             <ul>
               <li className="here">
                 <GiMusicalNotes className="svg" /> Music{" "}

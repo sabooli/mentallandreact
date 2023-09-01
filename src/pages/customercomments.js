@@ -15,7 +15,7 @@ import {
 SwiperCore.use([Zoom, Navigation, Pagination]);
 
 export default function Customercomments({ heading, comments }) {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const [key, setKey] = useState(0);
 
  

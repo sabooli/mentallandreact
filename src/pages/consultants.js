@@ -8,11 +8,9 @@ import {
 } from "react-icons/io";
 import { useTranslation } from "react-i18next";
 
-
 export default function Consultants({ heading, color, data }) {
   const [key, setKey] = useState(0);
   const { t, i18n } = useTranslation();
-
 
   useEffect(() => {
     setKey((prevKey) => prevKey + 1);
@@ -22,16 +20,16 @@ export default function Consultants({ heading, color, data }) {
     return null;
   }
 
- const sliderRef = useRef(null);
- const handlePrev = useCallback(() => {
-   if (!sliderRef.current) return;
-   sliderRef.current.swiper.slidePrev();
- }, []);
+  const sliderRef = useRef(null);
+  const handlePrev = useCallback(() => {
+    if (!sliderRef.current) return;
+    sliderRef.current.swiper.slidePrev();
+  }, []);
 
- const handleNext = useCallback(() => {
-   if (!sliderRef.current) return;
-   sliderRef.current.swiper.slideNext();
- }, []);
+  const handleNext = useCallback(() => {
+    if (!sliderRef.current) return;
+    sliderRef.current.swiper.slideNext();
+  }, []);
   return (
     <div className="consultants" style={{ backgroundColor: color }} key={key}>
       <h1 className="cons text-center">{heading}</h1>
@@ -40,7 +38,7 @@ export default function Consultants({ heading, color, data }) {
         tortor proin proin sagittis. Id nec suspendisse lacus erat. Vivamus orci
         bibendum at purus elit. Vel vehicula donec amet a dolor sollicitudin ut.
       </div>
-      { i18n.language === "fa" ? (
+      {i18n.language === "fa" ? (
         <div className="mb-3 fff">
           <IoIosArrowDroprightCircle
             className="swiper-navigation_prev"
@@ -60,7 +58,7 @@ export default function Consultants({ heading, color, data }) {
           <IoIosArrowDroprightCircle
             className="swiper-navigation_next"
             onClick={handleNext}
-          />
+          />{" "}
         </div>
       )}
       <Swiper
@@ -113,7 +111,7 @@ export default function Consultants({ heading, color, data }) {
       </Swiper>
       <div className="text-center">
         <Link to="/pages/depressionadults" className="seeAll mt-5 mb-3">
-          <span className="see">see all</span>
+          <span className="see">{t("see all")}</span>
         </Link>
       </div>
     </div>

@@ -27,13 +27,13 @@ export default function Explain() {
             }
             onClick={() => handleButtonClick(0)}
           >
-            <span className="tx">About me</span>
+            <span className="tx">{t("AboutMe")}</span>
           </span>
           <span
             className={activeButton === 1 ? "active comments" : "comments"}
             onClick={() => handleButtonClick(1)}
           >
-            <span className="tx">Comments</span>
+            <span className="tx">{t("Comments")}</span>
           </span>
           <span
             className={
@@ -43,7 +43,7 @@ export default function Explain() {
             }
             onClick={() => handleButtonClick(2)}
           >
-            <span className="tx">Weekly Plan</span>
+            <span className="tx">{t("WeeklyPlan")}</span>
           </span>
         </div>
         <div className="explain"></div>

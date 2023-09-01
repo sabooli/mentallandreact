@@ -20,7 +20,7 @@ import { useTranslation } from "react-i18next";
 
 export default function Psyadults() {
   const [consultants, setConsultants] = useState([]);
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
 
   const url =
     "https://portals.mentalland.com/api/V1/homepage/consts_list_homepage?lang=" + i18n.language;

@@ -34,7 +34,7 @@ export default function Businessadults() {
               vitae felis convallis. Egestas enim diam ac nisi orci id tellus
               lobortis. Lacus in etiam rhoncus.
             </div>
-            <Link to="#" className="adbeexpertReg">
+            <Link to="/pages/joinus" className="adbeexpertReg">
               <span>Resigter now</span>
             </Link>
           </div>

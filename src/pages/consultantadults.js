@@ -36,13 +36,10 @@ useEffect(() => {
     (subcategory) => subcategory.id === subcategoryId
   );
 
-  if (selectedSubcategory) {
-    { i18n.language === "fa" ? (setSelectedSubcategoryTitle(selectedSubcategory.subcategory_title)) :
-    setSelectedSubcategoryTitle(selectedSubcategory.title_en);
-  }
+  if (selectedSubcategory) { i18n.language === "fa" ? (setSelectedSubcategoryTitle(selectedSubcategory.subcategory_title)) :
+    setSelectedSubcategoryTitle(selectedSubcategory.title_en)
   } else {
-    setSelectedSubcategoryTitle("");
-  }
+    setSelectedSubcategoryTitle("") }
 }, [subcategoryId, subcategories]);
 
 useEffect(() => {
@@ -50,12 +47,10 @@ useEffect(() => {
     (category) => category.id === categoryId
   );
 
-  if (selectedCategory) {
-     { i18n.language === "fa" ? (setSelectedCategoryTitle(selectedCategory.title_category)) :
-    setSelectedCategoryTitle(selectedCategory.title_category_en);
-  }
+  if (selectedCategory) { i18n.language === "fa" ? (setSelectedCategoryTitle(selectedCategory.title_category)) :
+    setSelectedCategoryTitle(selectedCategory.title_category_en)
   } else {
-    setSelectedCategoryTitle("");
+    setSelectedCategoryTitle("")
   }
 }, [categoryId, categories]);
 
@@ -67,6 +62,28 @@ const handlePrice = () => { dispatch({
                                 priceEvent: item ? item.price_event : null,
                               },
                             });}
+
+ const priceUrl = `https://portals.mentalland.com/api/V1/get_const_price/${id}`;
+
+const requestBody = {
+  category_id: categoryId,
+  subcategory_id: subcategoryId,
+};
+
+fetch(priceUrl, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(requestBody),
+})
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });                          
 
 useEffect(() => {
     const lang = i18n.language;
@@ -107,28 +124,6 @@ useEffect(() => {
       console.error("Error:", error);
     });
 }, [categoryId]);
-
-const priceUrl = `https://portals.mentalland.com/api/V1/get_const_price/${id}`;
-
-const requestBody = {
-  category_id: categoryId,
-  subcategory_id: subcategoryId,
-};
-
-fetch(priceUrl, {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify(requestBody),
-})
-  .then((response) => response.json())
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
 
 
     return (
@@ -237,7 +232,7 @@ fetch(priceUrl, {
                 )}
                 <div className="hhh mt-3">
                   <Link onClick={handlePrice} className="counsel">
-                    <div className="justnow">Start Counseling</div>
+                    <div className="justnow">{t("StartCounseling")}</div>
                   </Link>
                 </div>
               </div>

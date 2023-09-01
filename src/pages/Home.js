@@ -136,9 +136,9 @@ useEffect(() => {
                 eleifend{" "}
               </h2>
               <div className="homelink">
-                <a to="#PBA" className="learnMore">
+                <Link to="#PBA" className="learnMore">
                   <span className="more">Learn more</span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
