@@ -12,9 +12,9 @@ import CartContext from "./cartContext";
 
 export default function Counsel() {
 const { t, i18n } = useTranslation();
-const {id} = useParams();
+const { id } = useParams();
 const [item, setItem] = useState({
-  index: "",
+  id: "",
   Fname: "",
   Lname: "",
   avatar: "",
@@ -54,14 +54,7 @@ useEffect(() => {
   }
 }, [categoryId, categories]);
 
-const handlePrice = () => { dispatch({
-                              type: "UPDATE_CART_DATA",
-                              payload: {
-                                titleEvent: selectedCategoryTitle + " " + selectedSubcategoryTitle,
-                                dateEvent: new Date().toISOString().split('T')[0],
-                                priceEvent: item ? item.price_event : null,
-                              },
-                            });}
+
 
  const priceUrl = `https://portals.mentalland.com/api/V1/get_const_price/${id}`;
 
@@ -70,6 +63,7 @@ const requestBody = {
   subcategory_id: subcategoryId,
 };
 
+const handlePrice = () => {
 fetch(priceUrl, {
   method: "POST",
   headers: {
@@ -79,16 +73,38 @@ fetch(priceUrl, {
 })
   .then((response) => response.json())
   .then((data) => {
-    console.log(data);
+    console.log(data.data);
+    if (i18n.language === "en") {
+       dispatch({
+         type: "UPDATE_CART_DATA",
+         payload: {
+           titleEvent: selectedCategoryTitle + " " + selectedSubcategoryTitle,
+           dateEvent: new Date().toISOString().split("T")[0],
+           priceEvent: data.data[0].price_dollar,
+           id: item.id,
+         },
+       });
+      } else {
+         dispatch({
+           type: "UPDATE_CART_DATA",
+           payload: {
+             titleEvent: selectedCategoryTitle + " " + selectedSubcategoryTitle,
+             dateEvent: new Date().toISOString().split("T")[0],
+             priceEvent: data.data[0].price,
+             id: item.id,
+           },
+         });
+      }
   })
   .catch((error) => {
     console.error(error);
   });                          
+}
 
 useEffect(() => {
     const lang = i18n.language;
     const url =
-      "https://portals.mentalland.com/api/V1/homepage/consts_list_homepage?lang=" + lang;
+      "https://portals.mentalland.com/api/V1/homepage/consts_list_homepage_" + lang;
     fetch(url, {
       headers: {
         "Content-Type": "application/json",
@@ -96,7 +112,7 @@ useEffect(() => {
     })
     .then((response) => response.json())
     .then((data) => {
-      const selectedItem = data.data[id - 1];
+      const selectedItem = data.data.find(item => item.id.toString() === id.toString());
       setItem(selectedItem);
     })
     .catch((error) => console.log(error));
@@ -134,11 +150,11 @@ useEffect(() => {
           <div className="connect">
             <div className="gbar">
               <div className="part">
-                <img
+              { item ?  <img
                   src={`https://portals.mentalland.com/image/users/cons/degree/${item.avatar}`}
                   className="photo"
                   alt="personal"
-                />
+                /> : "Loading..." }
               </div>
               <div className="part container-fluid">
                 <div className="sub who">
@@ -158,9 +174,9 @@ useEffect(() => {
                     <span className="experience">+1000 Consultations</span>
                   </div>
                 </div>
-                <div className="workField">
+               { item ? <div className="workField">
                   <span>
-                    {item.Specialties &&
+                {item.Specialties &&
                       JSON.parse(item.Specialties).map((specialty, index) => (
                         <>
                           {index > 0 ? " " : ""}
@@ -168,7 +184,7 @@ useEffect(() => {
                         </>
                       ))}
                   </span>
-                </div>
+                </div> : <></> }
               </div>
               <div className="part mt-4 container-fluid">
                 {i18n.language === "fa" ? (

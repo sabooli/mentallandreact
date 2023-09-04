@@ -185,6 +185,10 @@ max-width: 100%;
 .postitle {
 font-family: "Gilroy-Medium", sans-serif;
 color: rgba(2, 74, 157, 1);
+text-transform: capitalize;
+}
+.cotype {
+text-transform: capitalize;
 }
 .postitleinfo {
   font-family: "Gilroy-Medium", sans-serif;
@@ -236,22 +240,37 @@ color: rgba(2, 74, 157, 1);
 }
 .posfrom, .roleform {
   display: flex;
+  justify-content: space-between;
 }
 .posfrom span {
 font-size: 12px;
 color: #024A9D;
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 4px;
 }
 .originRole {
 font-size: 12px;
 color: #02979D;
 margin-left: auto;
 }
-.origin {
-margin-left: auto;
-}
 .posdesign {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   margin-top: 10px;
 }
@@ -264,6 +283,7 @@ font-size: 18px;
 line-height: 36px;
 text-align: center;
 align-items: center;
+text-transform: uppercase;
 }
 .adcdes {                
 box-shadow: 1px 5px 25px 0px rgba(2, 151, 157, 0.1);
@@ -457,6 +477,12 @@ margin-bottom: 110px;
   color: #fafefe;
   text-align: start;
 }
+.jobMF {
+  max-width: 608px;
+  margin: 50px;
+  margin-inline-start: 685px;
+  color: #fafefe; 
+}
 .jobH {
 font-family: "Alice", sans-serif;
   font-size: 3em;
@@ -566,6 +592,38 @@ color: #EBF7F7;
 font-family: "Gilroy-Bold", sans-serif;
 font-size: 1em;
 }
+.file-input-wrapper {
+ position: relative;
+  display: flex; /* Use flexbox */
+  flex-direction: row-reverse;
+}
+.file-input {
+  width: 140px;
+  height: 40px;
+  padding-left: 100px; 
+}
+.file-input::before {
+  content: 'Choose File';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 100px;
+  background-color: #02979d;
+  color: #EBF7F7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  font-family: "Gilroy-Bold", sans-serif;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.file-input::before:hover {
+  background-color: #137e8c;
+}
 .cvtext {
 color: #858585;
 font-size: 14px;
@@ -615,12 +673,8 @@ display: flex;
 justify-content: center;
 align-items: center;
 }
-.topjob {
-   width: 112px;
-  height: 42px;
-  background: #fafefe;
-  border-radius: 8px;
-  border: 0.5px solid #02979d;
+.category {
+  text-transform: uppercase;
 }
 .alive {
   color: #02979D;
@@ -659,7 +713,7 @@ color: #02979D;
 }
 .jobfilters {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 3%;
   margin-bottom: 50px;
 }
@@ -688,6 +742,32 @@ background-color:#fafefe;
   font-size: 18px;
   color: #02979D;
   display: none;
+}
+.pageNumber {
+  background-color: #fafefe;
+  border: 1px solid #02979D;
+  border-radius: 4px;
+  padding: 4px;
+  padding-inline: 12px;
+  margin-inline-end: 20px;
+  color: #02979D;
+}
+.pageDot {
+  background-color: #fafefe;
+  border: none;
+  padding: 4px;
+  padding-inline: 12px;
+  margin-inline-end: 20px;
+  color: #02979D;
+}
+.activePage {
+background-color: #02979D;
+  border: 1px solid #02979D;
+  border-radius: 4px;
+  padding: 4px;
+  padding-inline: 12px;
+  margin-inline-end: 20px;
+  color: #fafefe;
 }
 
 @media screen and (max-width: 1200px) {

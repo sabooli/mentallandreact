@@ -156,34 +156,40 @@ body {
   align-items: center;
   color: #000b0c;
 }
+.flexContainer {
+  position: relative; 
+  display: flex; 
+  align-items: center;
+  gap: 8px; 
+}
+
 .phname {
   border-radius: 8px;
   border: 0.5px solid #02979d;
   height: 42px;
   width: 369px;
+  padding-right: 110px; 
 }
+
 .phname::placeholder {
   background-image: url(../icons/search-normal.svg);
   background-repeat: no-repeat;
   background-position: flex-end;
-  font-family: "Gilroy-Regular", sans-serif;
-  font-size: 18px;
   line-height: 21px;
   position: relative;
   padding-inline-start: 1.8rem;
   padding-bottom: 1.15rem;
 }
+
 .find {
+  position: absolute;
+  right: 0px; 
   width: 109px;
-  height: 42px;
+  height: 42px; 
   background-color: #02979d;
   color: #fafefe;
   border: 0.5px solid #02979d;
   border-radius: 8px;
-  margin-inline-start: -109px;
-  font-size: 16px;
-  font-family: "Gilroy-Bold", sans-serif;
-  padding-top: 1%;
 }
 .fitext {
   font-family: "Gilroy-bold", sans-serif;

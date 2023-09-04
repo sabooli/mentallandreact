@@ -12,6 +12,7 @@ const cartReducer = (state, action) => {
           item: action.payload.item,
           dateEvent: action.payload.dateEvent,
           priceEvent: action.payload.priceEvent,
+          id: action.payload.id,
         },
       ];
     case "REMOVE_CART_DATA":

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../header";
 import Navbar from "../Navbar";
 import Footer from "../footer";
@@ -10,8 +10,63 @@ import { Link } from "react-router-dom";
 import Customercomments from "./customercomments";
 import Position from "./position";
 import Adultcourses from "./adultcourses";
+import Positioninfo from "./PositionInfo";
+import { useTranslation } from "react-i18next";
 
 export default function Businessadults() {
+  const [businesses, setBusinesses] = useState([]);
+  const [selectedJob, setSelectedJob] = useState([]);
+  const [numJobs, setNumJobs] = useState(6);
+  const [category, setCategory] = useState([]);
+  const [linkClicked, setLinkClicked] = useState(false);
+  const { i18n } = useTranslation();
+
+  const handleAllClicked = () => {
+    setNumJobs(businesses.lenght);
+    setLinkClicked(true);
+  };
+
+const handleJobClick = (positionData) => {
+  setSelectedJob(positionData);
+ setBusinesses(
+    businesses.filter((business) => business.id !== positionData.id)
+  );
+}
+
+const categoryUrl =
+  "https://portals.mentalland.com/api/V1/homepage/adverting_category?lang=" +
+  i18n.language;
+
+useEffect(() => {
+  fetch(categoryUrl)
+    .then((response) => response.json())
+    .then((data) => setCategory(data.data));
+}, [categoryUrl]);
+
+useEffect(() => {
+  setCategory([]);
+  fetch(categoryUrl)
+    .then((response) => response.json())
+    .then((data) => setCategory(data.data));
+}, [i18n.language]);
+
+
+  const businessUrl =
+    "https://portals.mentalland.com/api/V1/homepage/adversting_" +
+    i18n.language;
+
+  useEffect(() => {
+    fetch(businessUrl)
+      .then((response) => response.json())
+      .then((data) => setBusinesses(data.data));
+  }, [businessUrl]);
+
+  useEffect(() => {
+    setBusinesses([]);
+    fetch(businessUrl)
+      .then((response) => response.json())
+      .then((data) => setBusinesses(data.data));
+  }, [i18n.language]);
   return (
     <div>
       <div
@@ -42,9 +97,9 @@ export default function Businessadults() {
         </div>
       </div>
       <div className="business">
-                  <div className="courR">
-
-        <Adultcourses heading="CHILDREN & TEENAGERS COURSES" /></div>
+        <div className="courR">
+          <Adultcourses data={category} heading="CHILDREN & TEENAGERS COURSES" />
+        </div>
         <div className="businesschtwo chbubg">
           <div className="Badtwo">
             <h2 className="Badtwoheading">
@@ -112,27 +167,32 @@ export default function Businessadults() {
             </Link>
           </div>
           <div className="Bchthreeph">
-          <img
-            src={Bchthree}
-            className="img-fluid"
-            alt="MBA for children"
-          /></div>
+            <img src={Bchthree} className="img-fluid" alt="MBA for children" />
+          </div>
         </div>
         <div>
           <h3 className="ljo mb-5">the latest job opportunities</h3>
           <div className="posdesign">
-            <Position /> <Position />
-          </div>
-          <div className="posdesign">
-            <Position /> <Position />
-          </div>
-          <div className="posdesign">
-            <Position /> <Position />
+            {selectedJob.length === 0 ? (
+              businesses.slice(0, numJobs).map((business) => (
+                <div key={business.id}>
+                  <Position business={business} onClick={handleJobClick} />
+                </div>
+              ))
+            ) : (
+              <div>
+                  <Positioninfo position={selectedJob} />
+              </div>
+            )}{" "}
           </div>
           <div className="text-center">
-          <Link to="/" className="seeAll mt-5 mb-3">
-            <span className="see">See all</span>
-          </Link></div>
+           { linkClicked ? null : (   <Link
+              onClick={handleAllClicked}
+              className={selectedJob.length === 0 ? "seeAll mt-5 mb-3" : "d-none"}
+            >
+              <span className="see">See all</span>
+            </Link> )}
+          </div>
           <div className="ljocases"> </div>
         </div>
         <div className="stussay">

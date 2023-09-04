@@ -37,7 +37,7 @@ useEffect(() => {
 
 const fetchTopRatedDoctors = () => {
   const lang = i18n.language;
-  const url = "https://portals.mentalland.com/api/V1/homepage/top_rated_const?lang="+ lang;
+  const url = "https://portals.mentalland.com/api/V1/homepage/top_rated_const_"+ lang;
 
   fetch(url, {
     headers: {
@@ -49,7 +49,7 @@ const fetchTopRatedDoctors = () => {
     .then((data) => {
       const doctorsData = data.data.map((item, index) => {
         return {
-          id: +index + 1,
+          id: item.id,
           name: item.Fname,
           lname: item.Lname,
           star: item.stars,
@@ -70,7 +70,7 @@ useEffect(() => {
 
   const fetchDoctors = () => {
     const lang = i18n.language;
-    const url = "https://portals.mentalland.com/api/V1/homepage/consts_list_homepage?lang=" + lang;   
+    const url = "https://portals.mentalland.com/api/V1/homepage/consts_list_homepage_" + lang;   
 
     fetch(url, {
       headers: {
@@ -82,7 +82,7 @@ useEffect(() => {
       .then((data) => {
         const doctorsData = data.data.map((item, index) => {
           return {
-            id: +index + 1,
+            id: item.id,
             name: item.Fname,
             lname: item.Lname,
             star: item.stars,

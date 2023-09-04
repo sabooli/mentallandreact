@@ -1,38 +1,48 @@
 import React from "react";
-import { HiArrowLongRight } from "react-icons/hi2";
+import { useTranslation } from "react-i18next";
+import { HiArrowLongRight, HiArrowLongLeft } from "react-icons/hi2";
 import { Link } from "react-router-dom";
 
 
-export default function Position({ onClick }) {
+export default function Position({ onClick, business }) {
+  const {i18n} = useTranslation();
                  return (
-                   <div className="posbar mb-4">
-                     <div className="postitle">Graphic Designer</div>
-                     <div>Google</div>
-                     <div>Remote</div>
-                     <div className="postime">
-                       <span>Mon-Fri</span>
-                       <span>Full-Time</span>
-                       <span>$20-$30 An Hour</span>
-                     </div>
-                     <div className="posexp">
-                       -Lorem ipsum dolor sit amet consectetur. Urna tortor
-                       vitae sed nullam rutrum tortor. Sit at senectus diam eg
-                       <br />
-                       -Lorem ipsum dolor sit amet consectetur. Urna tortor
-                     </div>
-                     <div className="posfrom">
-                       <span>Today</span>
-                       <span className="origin">From USA</span>
-                     </div>
-                     <div>Mentalland related courses:</div>
-                     <div className="postime">
-                       <span>Graphic design</span> <span>Motion design</span>
-                       <Link
-                         onClick={() => onClick()}
-                         className="gotopos mt-sm-5 mt-md-0 text-center"
-                       >
-                         <HiArrowLongRight className="arrow" />
-                       </Link>
+                   <div>
+                     <div className="posbar mb-4">
+                       <div className="postitle">{business.ad_title}</div>
+                       <div className="category">{business.full_category}</div>
+                       <div className="cotype">{business.Type_cooperation}</div>
+                       <div className="postime">
+                         <span className="cotype">
+                           {business.minimum_salary}
+                         </span>
+                         <span className="cotype">
+                           {business.Relevant_work_experience} work experience
+                         </span>
+                       </div>
+                       <div className="posexp">
+                         -
+                         {business.ad_content
+                           .split(" ")
+                           .slice(0, 20)
+                           .join(" ")}
+                         ...
+                       </div>
+                       <div className="posfrom">
+                         <span>{business.date_register}</span>
+                         <span className="">
+                           {business.full_country_en}
+                         </span>
+                       </div>
+
+                       <div className="postime">
+                         <Link
+                           onClick={() => onClick(business)}
+                           className="gotopos mt-sm-5 mt-md-0 text-center"
+                         >
+                         { i18n.language === "en" ? <HiArrowLongRight className="arrow" /> : <HiArrowLongLeft className="arrow" /> }
+                         </Link>
+                       </div>
                      </div>
                    </div>
                  );

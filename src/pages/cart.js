@@ -4,12 +4,14 @@ import Navbar from "../Navbar";
 import Footer from "../footer";
 import CartContext from "./cartContext";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import { useTranslation } from "react-i18next";
 
 export default function Cart() {
  const { cartData, dispatch } = useContext(CartContext);
  const [totalPrice, setTotalPrice] = useState(0);
  const [coupon, setCoupon] = useState("");
  const [grandTotal, setGrandTotal] = useState(0);
+ const { i18n } = useTranslation();
 
 
 const handleDeleteReservedList = (index, dispatch) => {
@@ -36,12 +38,56 @@ const handleCouponChange = (event) => {
 };
 
 const handleCheckout = () => {
-  console.log('Checkout button clicked!');
-};
+                               console.log("Checkout button clicked!");                             
+                               const userEmail = "example@gmail.com";
+                               const id = 13;
+                               const data = {
+                                 email: userEmail,
+                                 price: grandTotal,
+                               };
+ if (i18n.language === "en") {
+                               fetch(
+                                 `https://portals.mentalland.com/api/V1/payment/english_gateway.com/${id}`,
+                                 {
+                                   method: "POST",
+                                   headers: {
+                                     "Content-Type": "application/json",
+                                   },
+                                   body: JSON.stringify(data),
+                                 }
+                               )
+                                 .then((response) => response.json())
+                                 .then((result) => {
+                                   "good job";
+                                 })
+                                 .catch((error) => {
+                                   "Email address not found";
+                                 });
+                                } else {
+                                  fetch(
+                                    `https://portals.mentalland.com/api/V1/payment/iranian_gateway.com/${id}`,
+                                    {
+                                      method: "POST",
+                                      headers: {
+                                        "Content-Type": "application/json",
+                                      },
+                                      body: JSON.stringify(data),
+                                    }
+                                  )
+                                    .then((response) => response.json())
+                                    .then((result) => {
+                                      "good job";
+                                    })
+                                    .catch((error) => {
+                                      "ایمیل مورد نظر یافت نشد";
+                                    }); 
+                                }
+                             };
   return (
     <div>
       <Header className="twitter" />
       <Navbar />
+
       <div className="cart">
         <div className="cartH">Cart({cartData.length})</div>
         <div className="cartlist">
@@ -54,18 +100,23 @@ const handleCheckout = () => {
           </div>
           <div>
             {cartData.map((cart, index) => (
-              <div className="reservedlist" key={index}>
-                <div>{cart.dateEvent}</div>
-                <div>{cart.item}</div>
-                <div>{cart.titleEvent}</div>
-                <div>{cart.priceEvent}</div>
-                <div>
-                  <RiDeleteBin6Line
-                    className="svg deleteItem"
-                    onClick={() => handleDeleteReservedList(index, dispatch)}
-                  />
+              <>
+                <div className="reservedlist" key={index}>
+                  <div>{cart.dateEvent}</div>
+                  <div>{cart.item}</div>
+                  <div>
+                    {cart.titleEvent}
+                    <span>{cart.id}</span>
+                  </div>
+                  <div>{cart.priceEvent}</div>
+                  <div>
+                    <RiDeleteBin6Line
+                      className="svg deleteItem"
+                      onClick={() => handleDeleteReservedList(index, dispatch)}
+                    />
+                  </div>
                 </div>
-              </div>
+              </>
             ))}
           </div>
         </div>
@@ -82,16 +133,15 @@ const handleCheckout = () => {
           />
         </label>
         <div class="coupon-wrapper">
-          <label>
-            Coupon Code <br />
+          <div class="input-container">
             <input
               type="text"
               className="coupon"
               value={coupon}
               onChange={handleCouponChange}
             />
-          </label>
-          <button className="addcoupon">Add Coupon</button>
+            <button className="addcoupon">Add Coupon</button>
+          </div>
         </div>
         <label>
           Grand Total <br />

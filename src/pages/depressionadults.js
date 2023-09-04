@@ -34,7 +34,7 @@ useEffect(() => {
 
 const fetchTopRatedDoctors = () => {
   const lang = i18n.language;
-  const url = "https://portals.mentalland.com/api/V1/homepage/top_rated_const?lang="+ lang;
+  const url = "https://portals.mentalland.com/api/V1/homepage/top_rated_const_"+ lang;
 
   fetch(url, {
     headers: {
@@ -44,9 +44,9 @@ const fetchTopRatedDoctors = () => {
   })
     .then((response) => response.json())
     .then((data) => {
-      const doctorsData = data.data.map((item, index) => {
+      const doctorsData = data.data.map((item) => {
         return {
-          id: +index + 1,
+          id: item.id,
           name: item.Fname,
           lname: item.Lname,
           star: item.stars,
@@ -65,20 +65,19 @@ useEffect(() => {
 }, [i18n.language]);
 
   const fetchDoctors = () => {
-    const lang = i18n.language;
-    const url = "https://portals.mentalland.com/api/V1/homepage/consts_list_homepage?lang=" + lang;   
+    const url = "https://portals.mentalland.com/api/V1/homepage/consts_list_homepage_" + i18n.language;   
 
    fetch(url, {
      headers: {
        "Content-Type": "application/json",
-       "Accept-Language": lang,
+       "Accept-Language": i18n.language,
      },
    })
      .then((response) => response.json())
      .then((data) => {
-       const doctorsData = data.data.map((item, index) => {
+       const doctorsData = data.data.map((item) => {
          return {
-           id: +index + 1,
+           id: item.id,
            name: item.Fname,
            lname: item.Lname,
            star: item.stars,
@@ -97,12 +96,16 @@ useEffect(() => {
   }, [i18n.language]); 
 
  useEffect(() => {
-    const newDrInfo = drInfo.filter(
-      (value) =>
-        value.name.toLowerCase().includes(searchValue.toLowerCase()) ||
-        value.lname.toLowerCase().includes(searchValue.toLowerCase()) ||
-        value.madrak.toLowerCase().includes(searchValue.toLowerCase())
+     const newDrInfo = drInfo.filter((value) => {
+    const fullName = `${value.name} ${value.lname}`;
+    const searchValueLowerCase = searchValue.toLowerCase();
+
+    return (
+      fullName.toLowerCase().includes(searchValueLowerCase) ||
+      value.madrak.toLowerCase().includes(searchValueLowerCase)
     );
+  });
+
     setDrInfo(newDrInfo)
   }, [searchValue])   
 
@@ -160,7 +163,10 @@ useEffect(() => {
                   </div>
                 );
               })}
-              <button className="moreDocs" onClick={() => setNumDoctors(numDoctors + 6)}>
+              <button
+                className="moreDocs"
+                onClick={() => setNumDoctors(numDoctors + 6)}
+              >
                 Load more...
               </button>
             </section>

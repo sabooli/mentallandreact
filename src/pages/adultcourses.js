@@ -8,7 +8,7 @@ import {
 } from "react-icons/io";
 
 
-export default function Adultcourses({ heading }) {
+export default function Adultcourses({ heading, data }) {
                  const sliderRef = useRef(null);
                  const handlePrev = useCallback(() => {
                    if (!sliderRef.current) return;
@@ -60,7 +60,8 @@ export default function Adultcourses({ heading }) {
                          },
                        }}
                      >
-                       <SwiperSlide>
+                      { data && data.map((item) => 
+                       <SwiperSlide key={item.id}>
                          <div className="card adcdes swiper-slide mt-4">
                            <div className="">
                              <img
@@ -71,10 +72,10 @@ export default function Adultcourses({ heading }) {
                              />
                            </div>
                            <div className="card-content-course">
-                             <p className="coursename">Digital Marketing</p>
+                             <p className="coursename">{item.title}</p>
                            </div>
                          </div>
-                       </SwiperSlide>
+                       </SwiperSlide>)}
                        <SwiperSlide>
                          <div className="card adcdes swiper-slide mt-4">
                            <div className="card-image-coach">
