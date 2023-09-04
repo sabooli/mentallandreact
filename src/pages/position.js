@@ -31,7 +31,7 @@ export default function Position({ onClick, business }) {
                        <div className="posfrom">
                          <span>{business.date_register}</span>
                          <span className="">
-                           {business.full_country_en}
+                           { i18n.language === "en" ? business.full_country_en : business.full_country_fa}
                          </span>
                        </div>
 

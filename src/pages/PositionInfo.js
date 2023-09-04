@@ -1,85 +1,120 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineHeart } from "react-icons/ai";
+import { useTranslation } from "react-i18next";
 
 
 
-export default function Positioninfo() {
-const [activeButton, setActiveButton] = useState(0);
-const [context, setContext] = useState("Job Description");
-  const [isFilled, setIsFilled] = useState(false);
+export default function Positioninfo({ position }) {
+const [activeButton, setActiveButton] = useState();
+const [context, setContext] = useState();
+const [positionStates, setPositionStates] = useState({});
+const { i18n } = useTranslation();
 
-   const handleClick = () => {
-     setIsFilled(!isFilled);
-   };
+const handleClick = (positionId) => {
+  setPositionStates((prevStates) => ({
+    ...prevStates,
+    [positionId]: !prevStates[positionId],
+  }));
+};
 
+const applyJob = () => {
+ const userEmail = "example@gmail.com";
+ const requestBody = {
+  email: userEmail,
+ };
 
-const handleButtonClick = (index) => {
+ fetch(
+   `https://portals.mentalland.com/api/V1/homepage/apply_adversting/${position.id}`,
+   {
+     method: "POST",
+     headers: {
+       "Content-Type": "application/json",
+     },
+     body: JSON.stringify(requestBody),
+   }
+ )
+   .then((response) => response.json())
+   .then((data) => {
+     console.log("good apply");
+   })
+   .catch((error) => {
+     console.error(error);
+   });
+}
+
+const handleButtonClick = (index) => { 
   setActiveButton(index);
   if (index === 0) {
-    setContext("Job Description");
+    setContext(position && position.ad_content);
   } else if (index === 1) {
-    setContext("Company");
-  } else if (index===2) {
-    setContext("Other Opportunities");
-  }
+    setContext(position && position.compane_name_en);
+  } else if (index === 2) {
+    setContext(position && position.ad_content);
+  }            
 };
 
     return (
       <div className="posbar">
-        <div className="postitleinfo">
-          Graphic Designer{" "}
-          <AiOutlineHeart
-            onClick={handleClick}
-            color={isFilled ? "red" : "black"}
-            style={{ fontSize: 20 }}
-          />
-        </div>
-        <div>Google</div>
-        <div>Remote</div>
-        <div className="postime">
-          <span>Mon-Fri</span>
-          <span>Full-Time</span>
-          <span>$20-$30 An Hour</span>
-         
-        </div>
-        <div className="applyorcancel">
-          <Link to="" className="applyjob">
-            Apply
-          </Link>
-          <Link to="" className="canceljob">
-            Records
-          </Link>
-        </div>
-        <div className="jobdetail text-center">
+        {position && (
           <div>
-            <span
-              className={activeButton === 0 ? "alive" : ""}
-              onClick={() => handleButtonClick(0)}
-            >
-              <span className="">Job Description</span>
-            </span>
+            <div className="postitleinfo cotype">
+              {position.ad_title}
+              <AiOutlineHeart
+                onClick={() => handleClick(position.id)}
+                color={positionStates[position.id] ? "red" : "black"}
+                style={{ fontSize: 20 }}
+              />
+            </div>
+            <div className="category">{position.full_category}</div>
+            <div className="cotype">{position.Type_cooperation}</div>
+            <div className="postime">
+              <span className="cotype"> {position.minimum_salary}</span>
+              <span className="cotype">
+                {position.Relevant_work_experience} work experience
+              </span>
+            </div>
+            <div className="applyorcancel">
+              <Link to="" className="applyjob" onClick={applyJob}>
+                Apply
+              </Link>
+              <Link to="" className="canceljob">
+                Records
+              </Link>
+            </div>
+            <div className="jobdetail text-center">
+              <div>
+                <span
+                  className={
+                    activeButton === 0 ? "alive" : ""
+                  }
+                  onClick={() => handleButtonClick(0)}
+                >
+                  <span>Job Description</span>
+                </span>
+              </div>
+              <div>
+                {" "}
+                <span
+                  className={activeButton === 1 ? "alive" : ""}
+                  onClick={() => handleButtonClick(1)}
+                >
+                  <span>Company</span>
+                </span>
+              </div>
+              <div>
+                {" "}
+                <span
+                  className={activeButton === 2 ? "alive" : ""}
+                  onClick={() => handleButtonClick(2)}
+                >
+                  <span>Other Opportunities</span>
+                </span>
+              </div>
+            </div>
+            {context && <div className="mt-3">{context}</div>}{" "}
           </div>
-          <div>
-            {" "}
-            <span
-              className={activeButton === 1 ? "alive" : ""}
-              onClick={() => handleButtonClick(1)}
-            >
-              <span className="">Company</span>
-            </span>
-          </div>
-          <div>
-            {" "}
-            <span
-              className={activeButton === 2 ? "alive" : ""}
-              onClick={() => handleButtonClick(2)}
-            >
-              <span className="">Other Opportunities</span>
-            </span>
-          </div>
-        </div>
-        {context && <div className="mt-3">{context}</div>}
+        )}
       </div>
     );
 }
