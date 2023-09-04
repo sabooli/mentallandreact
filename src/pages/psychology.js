@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Grid, FormControl, Select, MenuItem } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import Header from "../header";
 import Navbar from "../Navbar";
 import Footer from "../footer";
-import Form from "react-bootstrap/Form";
 import { Link } from "react-router-dom";
 import exp from "../icons/Group 1022.svg";
 import help from "../icons/Group 1023.svg";
@@ -67,65 +65,8 @@ useEffect(() => {
           </div>
         </div>
       </div>
-      <div className="fullcontent"> <Grid container spacing={2}>
-      <Grid item xs={4}>
-        <FormControl fullWidth>
-          <Select>
-            <MenuItem value="option1">Option 1</MenuItem>
-            <MenuItem value="option2">Option 2</MenuItem>
-            <MenuItem value="option3">Option 3</MenuItem>
-          </Select>
-        </FormControl>
-      </Grid>
-      <Grid item xs={4}>
-        <FormControl fullWidth>
-          <Select>
-            <MenuItem value="option1">Option 1</MenuItem>
-            <MenuItem value="option2">Option 2</MenuItem>
-            <MenuItem value="option3">Option 3</MenuItem>
-          </Select>
-        </FormControl>
-      </Grid>
-      <Grid item xs={4}>
-        <FormControl fullWidth>
-          <Select>
-            <MenuItem value="option1">Option 1</MenuItem>
-            <MenuItem value="option2">Option 2</MenuItem>
-            <MenuItem value="option3">Option 3</MenuItem>
-          </Select>
-        </FormControl>
-      </Grid></Grid>
+      <div className="fullcontent">       
         <div className="">
-          <div className="choose">
-            <div className="selecting">
-              <Form.Select aria-label="wid">
-                <option>Select the Field...</option>
-                <option value="1">Depression</option>
-                <option value="2">Anxiety</option>
-                <option value="3">Unhealthy Eating</option>
-                <option value="4">
-                  Life Transitions, Relationship Difficulties
-                </option>
-                <option value="5">Adjustment Issues</option>
-              </Form.Select>
-            </div>
-            <div className="selecting">
-              <Form.Select aria-label="wid">
-                <option>Select the Psychologist...</option>
-                <option value="1">Dr. Mary Green</option>
-                <option value="2">Dr. Tom Brown</option>
-                <option value="3">Dr. Elizabeth Smith</option>
-                <option value="4">Dr. Mary Green</option>
-                <option value="5">Dr. Tom Brown</option>
-                <option value="6">Dr. Hue Smith</option>
-              </Form.Select>
-            </div>
-            <div className="request">
-              <Link to="#" className="appoint">
-                Request Appointment
-              </Link>
-            </div>
-          </div>
           <div className="psycho">
             <div className="flow text-center">
               <div className="thumbnail">
