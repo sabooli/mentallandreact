@@ -1,16 +1,25 @@
-import React, { useRef, useCallback } from "react";
+import React, { useRef, useCallback, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
-import eye from "../icons/R327.png";
 import neuro from "../icons/R328.png";
-import plastic from "../icons/R329.png";
-import fertility from "../icons/R330.png";
 import {
   IoIosArrowDroprightCircle,
   IoIosArrowDropleftCircle,
 } from "react-icons/io";
+import { useTranslation } from "react-i18next";
 
-export default function Medicalservice({ heading }) {
+export default function Medicalservice({ heading, services }) {
+ const [key, setKey] = useState(0);
+ const {i18n} = useTranslation();
+
+ useEffect(() => {
+   setKey((prevKey) => prevKey + 1);
+ }, [services]);
+
+ if (!services) {
+   return null;
+ }
+
   const sliderRef = useRef(null);
   const handlePrev = useCallback(() => {
     if (!sliderRef.current) return;
@@ -22,19 +31,32 @@ export default function Medicalservice({ heading }) {
     sliderRef.current.swiper.slideNext();
   }, []);
   return (
-    <div className="coachback mb-5">
+    <div className="coachback mb-5" key={key}>
       <div className="yyy">
         <h1 className="careH text-start">{heading}</h1>
-        <div>
-          <IoIosArrowDropleftCircle
-            className="swiper-navigation__prev"
-            onClick={handlePrev}
-          />
-          <IoIosArrowDroprightCircle
-            className="swiper-navigation__next"
-            onClick={handleNext}
-          />
-        </div>
+        {i18n.language === "fa" ? (
+          <div style={{ whiteSpace: "nowrap" }}>
+            <IoIosArrowDroprightCircle
+              className="swiper-navigation__prev"
+              onClick={handlePrev}
+            />
+            <IoIosArrowDropleftCircle
+              className="swiper-navigation__next"
+              onClick={handleNext}
+            />
+          </div>
+        ) : (
+          <div style={{ whiteSpace: "nowrap" }}>
+            <IoIosArrowDropleftCircle
+              className="swiper-navigation__prev"
+              onClick={handlePrev}
+            />
+            <IoIosArrowDroprightCircle
+              className="swiper-navigation__next"
+              onClick={handleNext}
+            />
+          </div>
+        )}
       </div>
       <Swiper
         modules={[Navigation, Pagination]}
@@ -62,18 +84,25 @@ export default function Medicalservice({ heading }) {
           },
         }}
       >
+        {services &&
+          services.map((service) => (
+            <SwiperSlide key={service.id}>
+              <div>
+                <figure>
+                  <img
+                    src={`https://portals.mentalland.com/image/treatments/${service.img}`}
+                    alt={service.title}
+                    className="drt"
+                  />
+                  <figcaption class="carecaption">{service.title}</figcaption>
+                </figure>
+              </div>
+            </SwiperSlide>
+          ))}
         <SwiperSlide>
           <div>
             <figure>
-              <img src={eye} alt="eye care" className="dr" />
-              <figcaption class="carecaption">Eye care</figcaption>
-            </figure>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div>
-            <figure>
-              <img src={neuro} alt="Neurosurgery" className="dr" />
+              <img src={neuro} alt="Neurosurgery" className="drt" />
               <figcaption class="carecaption">Neurosurgery</figcaption>
             </figure>
           </div>
@@ -81,54 +110,8 @@ export default function Medicalservice({ heading }) {
         <SwiperSlide>
           <div>
             <figure>
-              <img
-                src={plastic}
-                alt="Plastic and Cosmetic Surgery"
-                className="dr"
-              />
-              <figcaption class="carecaption">
-                Plastic and Cosmetic Surgery
-              </figcaption>
-            </figure>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div>
-            <figure>
-              <img src={fertility} alt="Fertility" className="dr" />
-              <figcaption class="carecaption">Fertility</figcaption>
-            </figure>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div>
-            <figure>
-              <img src={eye} alt="eye care" className="dr" />
-              <figcaption class="carecaption">Eye care</figcaption>
-            </figure>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div>
-            <figure>
-              <img src={eye} alt="eye care" className="dr" />
-              <figcaption class="carecaption">Herniated disc</figcaption>
-            </figure>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div>
-            <figure>
-              <img src={eye} alt="eye care" className="dr" />
-              <figcaption class="carecaption">Herniated disc</figcaption>
-            </figure>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div>
-            <figure>
-              <img src={eye} alt="eye care" className="dr" />
-              <figcaption class="carecaption">Herniated disc</figcaption>
+              <img src={neuro} alt="Neurosurgery" className="drt" />
+              <figcaption class="carecaption">Neurosurgery</figcaption>
             </figure>
           </div>
         </SwiperSlide>

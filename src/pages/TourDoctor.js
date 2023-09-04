@@ -105,8 +105,14 @@ export default function TourDoctor({ heading, data }) {
                     className="explanation"
                     onClick={() => handleClick(item.id)}
                   >
-                    <strong>{item.Fname}</strong>
-                    <br /> {item.description}
+                    <strong className="doctorName text-center">
+                      {item.Fname_Lname}
+                    </strong>
+                    <div className="specialty text-center">
+                      <strong className="mb-5">Specialty:</strong>
+                      <br />
+                      {item.specialty}
+                    </div>
                   </p>
                 </div>
               ) : (
@@ -114,12 +120,12 @@ export default function TourDoctor({ heading, data }) {
                   <div>
                     <figure className="centerFig">
                       <img
-                        src={`https://portals.mentalland.com/image/users/cons/degree/${item.avatar}`}
+                        src={`https://portals.mentalland.com/image/doctors/${item.img}`}
                         alt="mentalland hotel"
                         className="drhotel"
                       />
-                      <figcaption className="captiontext">
-                        {item.Fname}
+                      <figcaption className="captiontext cotype">
+                        {item.Fname_Lname}
                       </figcaption>
                       <Link
                         to="#"

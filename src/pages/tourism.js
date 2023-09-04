@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
+import ReactModal from "react-modal";
 import { useTranslation } from "react-i18next";
 import tourism from "../icons/Rectangle 47.png";
 import Rhino from "../icons/Rectangle 314.png";
-import general from "../icons/Rectangle 313.png";
-import transplant from "../icons/Rectangle 315.png";
-import IVF from "../icons/Rectangle 316.png";
 import visa from "../icons/Rectangle 318.png";
 import medical from "../icons/Medical.svg";
 import travel from "../icons/travel.svg";
@@ -30,24 +28,62 @@ const [tourismFaqs, setTourismFaqs] = useState([]);
 const [surgeries, setSurgeries] = useState([]);
 const [naturalservices, setNaturalServices] = useState([]);
 const [wellnessServices, setWellnessServices] = useState([]);
+const [medicalServices, setMedicalServices] = useState([]);
 const [hotels, setHotels] = useState([]);
 const [hospitals, setHospitals] = useState([]);
-const [consultants, setConsultants] = useState([]);
+const [tourPackages, setTourPackages] = useState([]);
+const [doctors, setDoctors] = useState([]);
+const [numTours, setNumTours] = useState(4);
+const [modalOpened, setModalOpened] = useState(false);
+const [linkClicked, setLinkClicked] = useState(false);
+
+const handleSeeClick = () => {
+  setNumTours(tourPackages.lenght)
+  setLinkClicked(true);
+}
+
+const handleTourClick = () => {
+  setModalOpened(true);
+}
+
+const medicalUrl =
+  "https://portals.mentalland.com/api/V1/homepage/medical_service";
+
+useEffect(() => {
+  fetch(medicalUrl)
+    .then((response) => response.json())
+    .then((data) => setMedicalServices(data.data));
+}, [medicalUrl]);
+
+const tourUrl =
+  "https://portals.mentalland.com/api/V1/homepage/tour_package?lang=en";
+
+useEffect(() => {
+  fetch(tourUrl)
+    .then((response) => response.json())
+    .then((data) => {
+      const tourPackages = data.data;
+      const filteredTours = tourPackages.filter(
+        (tourPackage) => tourPackage.lang === i18n.language
+      );
+      setTourPackages(filteredTours);
+    });
+}, [i18n.language]);
+
 
 const url =
-  "https://portals.mentalland.com/api/V1/homepage/consts_list_homepage?lang=" +
-  i18n.language;
+  "https://portals.mentalland.com/api/V1/homepage/doctors_list?lang=en";
 
 useEffect(() => {
   fetch(url)
     .then((response) => response.json())
-    .then((data) => setConsultants(data.data));
-}, [url]);
-
-useEffect(() => {
-  fetch(url)
-    .then((response) => response.json())
-    .then((data) => setConsultants(data.data));
+    .then((data) => {
+      const doctors = data.data;
+      const filteredDoctors = doctors.filter(
+        (doctor) => doctor.lang === i18n.language
+      );
+      setDoctors(filteredDoctors);
+    });
 }, [i18n.language]);
 
  const hospitalUrl =
@@ -183,64 +219,48 @@ useEffect(() => {
         <div className="tour-pack">
           <h2>Top tour packages in Iran</h2>
           <div className="packages">
-            <div className="Rhino">
-              <figure>
-                <img src={Rhino} className="img-fluid" alt="Rhinoplasty" />
-                <figcaption>
-                  Rhinoplasty <br />
-                  1800$
-                  <Link className="tourbeauty">
-                    <HiArrowLongRight className="text-end" />
-                  </Link>
-                </figcaption>
-              </figure>
-            </div>
-            <div className="Rhino">
-              <figure>
-                <img
-                  src={general}
-                  className="img-fluid"
-                  alt="general surgery Iran"
-                />
-                <figcaption>
-                  General Surgery <br />
-                  1800$
-                  <Link className="tourbeauty">
-                    <HiArrowLongRight className="text-end" />
-                  </Link>
-                </figcaption>
-              </figure>
-            </div>{" "}
-            <div className="Rhino">
-              <figure>
-                <img
-                  src={transplant}
-                  className="img-fluid"
-                  alt="transplant Iran"
-                />
-                <figcaption>
-                  Hair Transplant <br />
-                  1800$
-                  <Link className="tourbeauty">
-                    <HiArrowLongRight className="text-end" />
-                  </Link>
-                </figcaption>
-              </figure>{" "}
-            </div>{" "}
-            <div className="Rhino">
-              <figure>
-                <img src={IVF} className="img-fluid" alt="ivf Iran" />
-                <figcaption>
-                  IVF <br />
-                  1800$
-                  <Link className="tourbeauty">
-                    <HiArrowLongRight className="text-end" />
-                  </Link>
-                </figcaption>
-              </figure>{" "}
-            </div>
+            {tourPackages &&
+              tourPackages.slice(0, numTours).map((tourPackage) => (
+                <div className="Rhino" key={tourPackage.id}>
+                  <figure>
+                    <img src={Rhino} className="img-fluid" alt="Rhinoplasty" />
+                    <figcaption>
+                      {tourPackage.title} <br />
+                      {tourPackage.price}
+                      <Link className="tourbeauty">
+                        <HiArrowLongRight
+                          className="text-end"
+                          onClick={handleTourClick}
+                        />
+                      </Link>
+                    </figcaption>
+                  </figure>
+                  <ReactModal
+                    isOpen={modalOpened}
+                    onRequestClose={() => setModalOpened(false)}
+                  >
+                    <strong className="tourtitle  ps-5 pe-5 mb-5">
+                      {" "}
+                      {tourPackage.title}
+                    </strong>
+                    <div className="tourdes ps-5 pt-3 pe-5">
+                      {tourPackage.description}
+                    </div>
+                    <div className="tourprice  ps-5 pe-5 mt-4 mb-5">
+                      Price: {tourPackage.price}
+                    </div>
+                    <Link to="#" className="applytour mt-2 ms-5">
+                      Reservation
+                    </Link>
+                  </ReactModal>
+                </div>
+              ))}
           </div>
-          <Link className="packagelink">See All Packages</Link>
+          {linkClicked ? null : (
+            <Link className="packagelink" onClick={handleSeeClick}>
+              See All Packages
+            </Link>
+          )}
         </div>
         <div className="tour-all-pack">
           <h2 className="mb-5">All-inclusive Packages</h2>
@@ -343,7 +363,10 @@ useEffect(() => {
         </div>
         <div className="medical-service">
           <h2 className="mb-5">Medical services</h2>
-          <Medicalservice heading="Medical services in Iran" />
+          <Medicalservice
+            services={medicalServices}
+            heading="Medical services in Iran"
+          />
           <Wellnessservice
             services={wellnessServices}
             heading="Wellness Services in Iran"
@@ -356,7 +379,7 @@ useEffect(() => {
         <div className="centers">
           <Hospital heading="medical centers" data={hospitals} />
           <Center heading="hotels" data={hotels} />
-          <TourDoctor heading="doctors" data={consultants} />
+          <TourDoctor heading="doctors" data={doctors} />
         </div>
         <div className="travelguide">
           <h2>Iran travel guide</h2>

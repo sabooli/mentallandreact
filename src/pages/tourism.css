@@ -112,6 +112,39 @@ margin-bottom: 140px;
   color: rgba(250, 254, 254, 1);
   padding: 10px;
 }
+.tourtitle {
+  font-family: "Gilroy-semiBold", sans-serif;
+  font-size: 1.5em;
+  padding: 40px;
+  padding-inline: 10px;
+}
+.doctorName {
+text-transform: capitalize;
+  font-family: "Gilroy-Bold", sans-serif;
+margin-top: 15px;
+
+}
+.specialty {
+    font-family: "Gilroy-Regular", sans-serif;
+font-size: 1.1em;
+margin: 40px;
+}
+.tourdes {
+  font-family: "Gilroy-Regular", sans-serif;
+}
+.tourprice {
+  font-family: "Gilroy-Regular", sans-serif;
+font-size: 1.2em;
+}
+.applytour {
+border: 1px solid  rgba(143, 77, 174, 1);;
+text-decoration: none;
+border-radius: 25px;
+background-color:  rgba(143, 77, 174, 1);;
+color: #FAFEFE;
+padding: 10px;
+padding-inline: 40px;
+}
 .tourbeauty {
   background-color: rgba(250, 254, 254, 1);
   color: rgba(143, 77, 174, 1);
@@ -119,7 +152,6 @@ margin-bottom: 140px;
   border-radius: 20px;
   padding-inline: 12px;
   padding-bottom: 3px;
-  margin-inline-start: -36px;
   font-family: "Gilroy-Regular", sans-serif;
   float: right;
 }
@@ -306,6 +338,7 @@ font-family: "Gilroy-Medium", sans-serif;
   font-family: "Gilroy-Bold", sans-serif;
   height: 50px;
   padding-top: 4%;
+  text-transform: capitalize;
 }
 .captiontext, .captionlink {
 display: none;

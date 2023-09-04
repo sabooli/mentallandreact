@@ -1,4 +1,5 @@
-import React, { useRef, useCallback } from "react";
+import React, { useRef, useCallback, useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
 import eye from "../icons/Rec327.png";
@@ -11,6 +12,17 @@ import {
 } from "react-icons/io";
 
 export default function Naturethservice({ heading, services }) {
+  const [key, setKey] = useState(0);
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    setKey((prevKey) => prevKey + 1);
+  }, [services]);
+
+  if (!services) {
+    return null;
+  }
+
   const sliderRef = useRef(null);
   const handlePrev = useCallback(() => {
     if (!sliderRef.current) return;
@@ -22,10 +34,22 @@ export default function Naturethservice({ heading, services }) {
     sliderRef.current.swiper.slideNext();
   }, []);
   return (
-    <div className="coachback mb-5">
+    <div className="coachback mb-5" key={key}>
       <div className="yyy">
         <h1 className="careH text-start">{heading}</h1>
-        <div>
+        {i18n.language === "fa" ? (
+          <div style={{ whiteSpace: "nowrap" }}>
+            <IoIosArrowDroprightCircle
+              className="swiper-navigation__prev"
+              onClick={handlePrev}
+            />
+            <IoIosArrowDropleftCircle
+              className="swiper-navigation__next"
+              onClick={handleNext}
+            />
+          </div>
+        ) : (
+          <div style={{ whiteSpace: "nowrap" }}>
           <IoIosArrowDropleftCircle
             className="swiper-navigation__prev"
             onClick={handlePrev}
@@ -35,6 +59,7 @@ export default function Naturethservice({ heading, services }) {
             onClick={handleNext}
           />
         </div>
+        )}
       </div>
       <Swiper
         modules={[Navigation, Pagination]}
@@ -107,30 +132,6 @@ export default function Naturethservice({ heading, services }) {
             <figure>
               <img src={eye} alt="eye care" className="drt" />
               <figcaption class="carecaption">Eye care</figcaption>
-            </figure>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div>
-            <figure>
-              <img src={eye} alt="eye care" className="drt" />
-              <figcaption class="carecaption">Herniated disc</figcaption>
-            </figure>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div>
-            <figure>
-              <img src={eye} alt="eye care" className="drt" />
-              <figcaption class="carecaption">Herniated disc</figcaption>
-            </figure>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div>
-            <figure>
-              <img src={eye} alt="eye care" className="drt" />
-              <figcaption class="carecaption">Herniated disc</figcaption>
             </figure>
           </div>
         </SwiperSlide>
