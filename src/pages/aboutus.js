@@ -10,10 +10,12 @@ import { Link } from "react-router-dom";
 import { AiOutlineWhatsApp } from "react-icons/ai"
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { AiOutlineInstagram } from "react-icons/ai";
-import { FaLongArrowAltRight } from "react-icons/fa";
+import { FaLongArrowAltRight, FaLongArrowAltLeft } from "react-icons/fa";
 import Teamslider from "./teamslider";
+import { useTranslation } from "react-i18next";
 
 export default function About() {
+  const { i18n } = useTranslation();
   return (
     <div>
       <Header className="twitter" />
@@ -87,7 +89,7 @@ export default function About() {
                 <Link to="/pages/positions" className="to">
                   <span className="op">
                     See open positions
-                    <FaLongArrowAltRight />
+                     { i18n.language === "en" ? <FaLongArrowAltRight /> : <FaLongArrowAltLeft /> }
                   </span>
                 </Link>
               </div>
