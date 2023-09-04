@@ -24,7 +24,7 @@ export default function Position({ onClick, business }) {
                          -
                          {business.ad_content
                            .split(" ")
-                           .slice(0, 20)
+                           .slice(0, 18)
                            .join(" ")}
                          ...
                        </div>

@@ -1,34 +1,60 @@
 import React from "react";
 import openRoleImg from "../icons/Rectangle 101job.png";
-import { HiArrowLongRight } from "react-icons/hi2";
+import { HiArrowLongRight, HiArrowLongLeft } from "react-icons/hi2";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
-export default function Openrole() {
-  return (
-    <div className="rolebar">
-      <div className="roleimg">
-        <img src={openRoleImg} className="img-fluid" alt="open positions in mentalland" />
-      </div>
-      <div className="rolebarcontext">
-        <div className="roleform">
-          <span className="roletitle">Graphic Designer</span>
-          <span className="originRole">Today</span>
-        </div>
-        <div>Remote</div>
-        <div className="roletime">
-          <span>Mon-Fri</span>
-          <span>Full-Time</span>
-          <span>$20-$30 An Hour</span>
-        </div>
-        <div className="posexp">
-          -Lorem ipsum dolor sit amet consectetur. Sit at senectus diam eg
-          <br />
-          -Lorem ipsum dolor sit amet consectetur.
-        </div>
-        <Link to="/" className="gotorole text-center">
-          <HiArrowLongRight className="arrow" />
-        </Link>
-      </div>
-    </div>
-  );
-}
+export default function Openrole({ onClick, business }) {
+  const { i18n } = useTranslation();
+                 return (
+                   <div>
+                     <div className="rolebar" key={business.id}>
+                       <div className="roleimg">
+                         <img
+                           src={openRoleImg}
+                           className="img-fluid"
+                           alt="open positions in mentalland"
+                         />
+                       </div>
+                       <div className="rolebarcontext">
+                         <div className="roleform">
+                           <span className="roletitle">
+                             {business.ad_title}
+                           </span>
+                           <span
+                             className="originRole"
+                             style={{ whiteSpace: "nowrap" }}
+                           >
+                             {business.date_register}
+                           </span>
+                         </div>
+                         <div className="cotype">
+                           {business.Type_cooperation}
+                         </div>
+                         <div className="roletime">
+                           <span className="cotype">
+                             {business.minimum_salary}
+                           </span>
+                           <span className="cotype">
+                             {business.Relevant_work_experience} Work Experience
+                           </span>
+                         </div>
+                         <div className="posexp">
+                           -
+                           {business.ad_content
+                             .split(" ")
+                             .slice(0, 18)
+                             .join(" ")}
+                           ...
+                         </div>
+                         <Link
+                           onClick={() => onClick(business)}
+                           className="gotorole text-center"
+                         >
+                           { i18n.language === "en" ? <HiArrowLongRight className="arrow" /> : <HiArrowLongLeft className="arrow" /> }
+                         </Link>
+                       </div>
+                     </div>
+                   </div>
+                 );
+               }
