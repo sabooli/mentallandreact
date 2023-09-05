@@ -3,20 +3,30 @@ import joinus from "../icons/Rectangle 45 (1).png";
 import Header from "../header";
 import Navbar from "../Navbar";
 import Footer from "../footer";
+import { useTranslation } from "react-i18next";
 
 export default function Joinus() {
-  const [countries, setCountries] = useState([]);
-   const [cities, setCities] = useState([]);
-   const [selectedCountry, setSelectedCountry] = useState("");
+const [countries, setCountries] = useState([]);
+const [cities, setCities] = useState([]);
+const [selectedCountry, setSelectedCountry] = useState("");
 const [email, setEmail] = useState("");
 const [invalidEmail, setInvalidEmail] = useState(false);
 const [phone, setPhone] = useState("");
 const [invalidPhone, setInvalidPhone] = useState(false);
- const [mobile, setMobile] = useState("");
- const [invalidMobile, setInvalidMobile] = useState(false);
-  const [address, setAddress] = useState("");
-  const [invalidAddress, setInvalidAddress] = useState(false);
-  
+const [mobile, setMobile] = useState("");
+const [invalidMobile, setInvalidMobile] = useState(false);
+const [address, setAddress] = useState("");
+const [invalidAddress, setInvalidAddress] = useState(false);
+const {i18n} = useTranslation();
+const [name, setName] = useState('');
+const [surname, setSurname] = useState('');
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+     if (!name || !surname) {
+      alert('Please fill in all required fields.')
+     }
+  }
 
   function checkAddress() {
     const addressPattern = /^[A-Za-z0-9\s,'-]*$/;
@@ -65,26 +75,26 @@ function handleFileSelect(event) {
   console.log(file);
 }
 
+const countryUrl =
+  "https://portals.mentalland.com/api/V1/homepage/countries_list";
+  
   useEffect(() => {
-    fetch("https://restcountries.com/v2/all")
+    fetch(countryUrl)
       .then((response) => response.json())
-      .then((data) => setCountries(data));
-  }, []);
+      .then((data) => setCountries(data.data));
+  }, [countryUrl]);
+
+ 
 
   useEffect(() => {
-    if (selectedCountry) {
-      fetch(`https://countriesnow.space/api/v0.1/countries/cities`,
-      {
-        method : 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body : JSON.stringify({ country: selectedCountry })
-      })
-      .then((response) => response.json())
-      .then((data) => setCities(data.data));
-    }
-  }, [selectedCountry]);
+   if (selectedCountry) {
+      fetch(
+        `https://portals.mentalland.com/api/V1/homepage/city_list/${selectedCountry}`)
+        .then((response) => response.json())
+        .then((data) => { setCities(data.data);
+        console.log(data); 
+        })
+}}, []);
 
   function handleCountryChange(event) {
     setSelectedCountry(event.target.value);
@@ -177,14 +187,31 @@ function handleFileSelect(event) {
                tellus lobortis. Lacus in etiam rhoncus.
              </div>
              <div className="NLD">
-               <div className="">
-                 <div>Name</div>
-                 <input type="text" />
-               </div>
-               <div>
-                 <div>Last Name</div>
-                 <input type="text" />
-               </div>
+               <form onSubmit={handleSubmit}>
+                 <div className="">
+                   <div>Name</div>
+                   <input
+                     type="text"
+                     id="name"
+                     name="name"
+                     value={name}
+                     onChange={(e) => setName(e.target.value)}
+                     required
+                   />
+                 </div> </form>
+                 
+                   <form onSubmit={handleSubmit}><div>
+                   <div>Last Name</div>
+                   <input
+                     type="text"
+                     id="surname"
+                     name="surname"
+                     value={surname}
+                     onChange={(e) => setSurname(e.target.value)}
+                     required
+                   />
+                 </div></form>
+              
                <div>
                  <label>Date of Birth</label>
                  <div className="Datesplit">
@@ -289,11 +316,12 @@ function handleFileSelect(event) {
                    onChange={handleCountryChange}
                  >
                    <option value=""></option>
-                   {countries.map((country) => (
-                     <option key={country.alpha2Code} value={country.name}>
-                       {country.name}
-                     </option>
-                   ))}
+                   {countries &&
+                     countries.map((country) => (
+                       <option key={country.id} value={country.id}>
+                         {country.name}
+                       </option>
+                     ))}
                  </select>
                </div>
                <div>
@@ -301,8 +329,10 @@ function handleFileSelect(event) {
                  <select className="year">
                    <option value=""></option>
                    {cities.map((city) => (
-                     <option key={city} value={city}>
-                       {city}
+                     <option key={city.id} value={city.id}>
+                       {i18n.language === "en"
+                         ? `${city.nameState}`
+                         : `${city.name_fa}`}
                      </option>
                    ))}
                  </select>
@@ -310,48 +340,41 @@ function handleFileSelect(event) {
                <div>
                  <form>
                    <div>
-                     <div>
-                       Address</div>
-                       <textarea
-                         value={address}
-                         onChange={handleAddressChange}
-                         className="adrsinput"
-                       />
-                     </div>
-                     {invalidAddress && (
-                       <p className="error">
-                         Invalid address format (only letters, numbers, spaces,
-                         commas, apostrophes, and dashes are allowed)
-                       </p>
-                     )}
-                  
+                     <div>Address</div>
+                     <textarea
+                       value={address}
+                       onChange={handleAddressChange}
+                       className="adrsinput"
+                     />
+                   </div>
+                   {invalidAddress && (
+                     <p className="error">
+                       Invalid address format (only letters, numbers, spaces,
+                       commas, apostrophes, and dashes are allowed)
+                     </p>
+                   )}
                  </form>
                </div>{" "}
                <div>
                  {" "}
                  <form>
                    <div>
-                     <div>
-                       Postal Code</div>
-                       <input className="postalcodeinput" />
+                     <div>Postal Code</div>
+                     <input className="postalcodeinput" />
                    </div>
                  </form>
                </div>
                <div>
                  <div>CV</div>
-                 <input
-                   placeholder=" No file chosen"
-                   onChange={handleFileSelect}
-                   ref={inputRef}
-                   className="file-input"
-                   type="file"
-                 />
-                 <button
-                   className="cvbutton"
-                   onClick={() => inputRef.current.click()}
-                 >
-                   Choose File
-                 </button>
+                 <div className="file-input-wrapper">
+                   <input
+                     placeholder=" No file chosen"
+                     onChange={handleFileSelect}
+                     ref={inputRef}
+                     className="file-input"
+                     type="file"
+                   />
+                 </div>
                  <div className="cvtext mb-5">
                    Please upload your file in PDF format.
                  </div>

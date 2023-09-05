@@ -11,7 +11,11 @@ import { TiSocialFacebook, TiSocialTwitter } from "react-icons/ti";
 
 export default function Header(props) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
- 
+  
+ const handleLogin = () => {
+  setIsLoggedIn(true);
+ }
+
   return (
     <nav className="header">
       <div className="buttons">
@@ -27,6 +31,7 @@ export default function Header(props) {
             <Link
               className="btn-head"
               to="https://portals.mentalland.com/login"
+              onDoubleClick={handleLogin}
             >
               <span className="login">
                 <BiLogIn className="svg" /> Login{" "}

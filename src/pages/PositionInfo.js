@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineHeart } from "react-icons/ai";
-import { useTranslation } from "react-i18next";
 
 
 
@@ -9,7 +8,6 @@ export default function Positioninfo({ position }) {
 const [activeButton, setActiveButton] = useState();
 const [context, setContext] = useState();
 const [positionStates, setPositionStates] = useState({});
-const { i18n } = useTranslation();
 
 const handleClick = (positionId) => {
   setPositionStates((prevStates) => ({

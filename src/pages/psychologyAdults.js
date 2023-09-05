@@ -23,7 +23,7 @@ export default function Psyadults() {
   const { i18n } = useTranslation();
 
   const url =
-    "https://portals.mentalland.com/api/V1/homepage/consts_list_homepage?lang=" + i18n.language;
+    "https://portals.mentalland.com/api/V1/homepage/consts_list_homepage_" + i18n.language;
 
   useEffect(() => {
     fetch(url)
