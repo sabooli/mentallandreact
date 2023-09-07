@@ -65,7 +65,7 @@ export default function Adultcourses({ heading, data }) {
                          <div className="card adcdes swiper-slide mt-4">
                            <div className="">
                              <img
-                               src={marketing}
+                               src={`https://portals.mentalland.com/image/category_adversting/${item.img}`}
                                alt="adult courses"
                                className="IT"
                                width="100%"
