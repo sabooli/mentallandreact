@@ -10,11 +10,26 @@ export default function Seminars() {
 const [eventData, setEventData] = useState([]);
 const [seminarData, setSeminarData] = useState([]);
 const [spseminarData, setSpSeminarData] = useState([]);
+const [spEventData, setSpEventData] = useState([]);
 const {t, i18n} = useTranslation()
 
 const eventUrl = t("eventUrl");
 const seminarUrl = t("seminarUrl");
 const spseminarUrl = t("spseminarUrl");
+const speventUrl = t("speventUrl");
+
+useEffect(() => {
+  fetch(speventUrl)
+    .then((response) => response.json())
+    .then((data) => setSpEventData(data.data));
+}, [speventUrl]);
+
+useEffect(() => {
+  setSpEventData([]);
+  fetch(speventUrl)
+    .then((response) => response.json())
+    .then((data) => setSpEventData(data.data));
+}, [i18n.language]);
 
 useEffect(() => {
   fetch(spseminarUrl)
@@ -74,7 +89,7 @@ console.log(eventData);
             </div>
             <div className="spzevents">
               <Upcoming
-                eventData={eventData}
+                eventData={spEventData}
                 heading="SpecializedEvents"
                 color="#fafefe"
               />

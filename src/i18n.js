@@ -11,6 +11,8 @@ const resources = {
         "https://www.portals.mentalland.com/api/V1/homepage/event_general_en",
       spseminarUrl:
         "https://www.portals.mentalland.com/api/V1/homepage/event_special_en",
+      speventUrl:
+        "https://portals.mentalland.com/api/V1/homepage/event_special_en",
       articleUrl:
         "https://www.portals.mentalland.com/api/V1/homepage/blogs_en_list",
       paintUrl:
@@ -67,7 +69,7 @@ const resources = {
       TextB:
         "Lorem ipsum dolor sit amet consectetur.orci bibendum at purus elit. Vel vehicula donec amet a dolor sollicitudin ut. Lectus cursus ipsum mi feugiat nulla enim. Nisl phasellus viverra quisque egestas in nec luctus ornare amet. In pellentesque volutpat urna ultrices vitae. Sed magna vitae placerat eu leo potenti semper id. Sedeget adipiscing nisl in vestibulum. Volutpat.",
       TextC:
-        "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur. Pretium rutrum nisi mollis sit tortor proin proin sagittis. Id nec suspendisse lacus erat. Vivamus orci bibendum at purus elit. Vel vehicula donec amet a dolor sollicitudin ut. Lectus cursus ipsum mi feugiat nulla enim. Sedeget adipiscing nisl in vestibulum. Volutpat.",
+        "Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur. Pretium rutrum nisi mollis sit tortor proin proin sagittis. Id nec suspendisse lacus erat. Vivamus orci bibendum at purus elit. Lectus cursus ipsum mi feugiat nulla enim. Sedeget adipiscing nisl in vestibulum. Volutpat.",
     },
   },
   fa: {
@@ -79,6 +81,8 @@ const resources = {
         "https://www.portals.mentalland.com/api/V1/homepage/event_general_fa",
       spseminarUrl:
         "https://www.portals.mentalland.com/api/V1/homepage/event_special_fa",
+      speventUrl:
+        "https://portals.mentalland.com/api/V1/homepage/event_special_fa",
       articleUrl:
         "https://www.portals.mentalland.com/api/V1/homepage/blogs_fa_list",
       paintUrl:
