@@ -107,7 +107,7 @@ if (!comments) {
                   <div className="patientName text-center">
                     {comment.Fname_Lname}
                   </div>
-                  <div className="cu">
+                  <div className="cu" style={{ whiteSpace: "nowrap" }}>
                     <span>{comment.date}</span>
                     <span>{comment.role}</span>
                   </div>

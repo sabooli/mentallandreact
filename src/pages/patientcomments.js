@@ -68,7 +68,7 @@ export default function Patientcomments({heading, comments}) {
                     <img
                       src={`https://portals.mentalland.com/image/users/comments/${comment.img}`}
                       alt="patient comment"
-                      className="card-img patient"
+                      className="card-img patient img-fluid"
                       loading="lazy"
                     />
                   </div>
@@ -76,7 +76,7 @@ export default function Patientcomments({heading, comments}) {
                     {" "}
                     {comment.Fname_Lname}
                   </div>
-                  <div className="date">
+                  <div className="date" style={{ whiteSpace: "nowrap" }}>
                     <span>{comment.date}</span>
                     <span>{comment.role}</span>
                   </div>
