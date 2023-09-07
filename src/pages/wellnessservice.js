@@ -5,6 +5,7 @@ import { Navigation, Pagination } from "swiper";
 import eye from "../icons/Re327.png";
 import neuro from "../icons/Re328.png";
 import plastic from "../icons/Re329.png";
+
 import {
   IoIosArrowDroprightCircle,
   IoIosArrowDropleftCircle,
