@@ -13,7 +13,6 @@ export default function Contact() {
   const { isLoaded } = useLoadScript({
     Api_Key: "process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY",
   });
-  if (!isLoaded) return <div>Loading...</div>;
   return (
     <div>
       <div
@@ -62,9 +61,13 @@ export default function Contact() {
           </figcaption>
         </figure>
       </div>
-      <div>
-        <Map />
-      </div>
+      {!isLoaded ? (
+        <div> Loading... </div>
+      ) : (
+        <div>
+          <Map />
+        </div>
+      )}
       <div className="subscribe">
         <div>
           <div className="newsletter">Subscribe to our newsletter</div>
