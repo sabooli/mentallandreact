@@ -291,6 +291,12 @@ figure {
   text-overflow: ellipsis;
 }
 .card-image {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  margin: 0 auto;
+}
+.card-image-circle {
   max-width: 220px;
   height: auto;
   display: inline-block;

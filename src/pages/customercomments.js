@@ -150,7 +150,7 @@ if (!comments) {
           <div className="swiper-zoom-container">
             <div className="cardp swiper-slide">
               <div className="image-content">
-                <div className="card-image">
+                <div className="card-image-circle">
                   <img
                     src={patientc}
                     alt="patient comment"

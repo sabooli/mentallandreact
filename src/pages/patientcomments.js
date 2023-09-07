@@ -64,7 +64,7 @@ export default function Patientcomments({heading, comments}) {
             <div className="swiper-zoom-container">
               <div className="cardp swiper-slide">
                 <div className="image-content">
-                  <div className="card-image">
+                  <div className="card-image-circle">
                     <img
                       src={`https://portals.mentalland.com/image/users/comments/${comment.img}`}
                       alt="patient comment"
