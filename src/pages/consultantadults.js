@@ -30,6 +30,9 @@ const [subcategories, setSubcategories] = useState([]);
 const { dispatch } = useContext(CartContext);
 const [selectedCategoryTitle, setSelectedCategoryTitle] = useState("");
 const [selectedSubcategoryTitle, setSelectedSubcategoryTitle] = useState("");
+const [comments, setComments] = useState([]);
+const [selectedComments, setSelectedComments] = useState(null);
+
 
 useEffect(() => {
   const selectedSubcategory = subcategories.find(
@@ -54,9 +57,26 @@ useEffect(() => {
   }
 }, [categoryId, categories]);
 
+const commnetUrl = `https://portals.mentalland.com/api/V1/homepage/comments_consts/${id}?lang=` + i18n.language;
+
+ useEffect(() => {
+   fetch(commnetUrl)
+     .then((response) => response.json())
+     .then((data) => {
+       setComments(data.data);
+     })
+     .catch((error) => {
+       console.log(error);
+     });
+ }, [commnetUrl]);
+
+ useEffect(() => {
+   const foundComment = comments.filter((comment) => comment.const_id === id);
+   setSelectedComments(foundComment);
+ }, [comments, id]);
 
 
- const priceUrl = `https://portals.mentalland.com/api/V1/get_const_price/${id}`;
+const priceUrl = `https://portals.mentalland.com/api/V1/get_const_price/${id}`;
 
 const requestBody = {
   category_id: categoryId,
@@ -150,11 +170,15 @@ useEffect(() => {
           <div className="connect">
             <div className="gbar">
               <div className="part">
-              { item ?  <img
-                  src={`https://portals.mentalland.com/image/users/cons/degree/${item.avatar}`}
-                  className="photo"
-                  alt="personal"
-                /> : "Loading..." }
+                {item ? (
+                  <img
+                    src={`https://portals.mentalland.com/image/users/cons/degree/${item.avatar}`}
+                    className="photo"
+                    alt="personal"
+                  />
+                ) : (
+                  "Loading..."
+                )}
               </div>
               <div className="part container-fluid">
                 <div className="sub who">
@@ -174,17 +198,21 @@ useEffect(() => {
                     <span className="experience">+1000 Consultations</span>
                   </div>
                 </div>
-               { item ? <div className="workField">
-                  <span>
-                {item.Specialties &&
-                      JSON.parse(item.Specialties).map((specialty, index) => (
-                        <>
-                          {index > 0 ? " " : ""}
-                          <span className="field">{specialty}</span>
-                        </>
-                      ))}
-                  </span>
-                </div> : <></> }
+                {item ? (
+                  <div className="workField">
+                    <span>
+                      {item.Specialties &&
+                        JSON.parse(item.Specialties).map((specialty, index) => (
+                          <>
+                            {index > 0 ? " " : ""}
+                            <span className="field">{specialty}</span>
+                          </>
+                        ))}
+                    </span>
+                  </div>
+                ) : (
+                  <></>
+                )}
               </div>
               <div className="part mt-4 container-fluid">
                 {i18n.language === "fa" ? (
@@ -254,7 +282,7 @@ useEffect(() => {
               </div>
             </div>
           </div>
-          <Explain />
+          <Explain data={item} comments={selectedComments} />
         </div>
         <Footer />
       </div>

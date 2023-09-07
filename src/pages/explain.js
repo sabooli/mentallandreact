@@ -2,13 +2,22 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 
-export default function Explain() {
+export default function Explain( {data, comments} ) {
   const [activeButton, setActiveButton] = useState(0);
   const { t, i18n } = useTranslation();
 
   const handleButtonClick = (index) => {
     setActiveButton(index);
   };
+
+   let content;
+   if (activeButton === 0) {
+     content = data.about_us;
+   } else if (activeButton === 1) {
+     content = comments.map((comment) => comment.answer_comment);
+   } else if (activeButton === 2) {
+     content = "Content for WeeklyPlan";
+   }
   
   const activeClass = activeButton === 0 ? "active" : "";
   const activePlan = activeButton === 2 ? "active" : "";
@@ -46,7 +55,9 @@ export default function Explain() {
             <span className="tx">{t("WeeklyPlan")}</span>
           </span>
         </div>
-        <div className="explain"></div>
+        <div className="explain">
+{content}
+        </div>
       </section>
     </div>
   );
