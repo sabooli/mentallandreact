@@ -23,7 +23,6 @@ export default function Businessadults() {
   const [linkClicked, setLinkClicked] = useState(false);
   const { i18n } = useTranslation();
 
-
 const handleAllClicked = () => {
   setNumJobs(businesses.lenght);
   setLinkClicked(true);
